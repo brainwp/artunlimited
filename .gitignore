@@ -1,0 +1,12 @@
+error_log
+.htaccess
+
+wp-config.php
+wp-content/uploads/
+wp-content/upgrade/
+
+.vagrant
+Vagrantfile
+
+*.swp
+*.swo
