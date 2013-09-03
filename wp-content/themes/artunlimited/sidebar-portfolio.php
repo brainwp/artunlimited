@@ -17,7 +17,14 @@
 <div class="">
 </div><!--  -->
 </div><!-- .compartilhe-sidebar -->
-<div class="outros-projetos">		<h2 class="fonte-roxa">outros projetos:</h2>			<div class="setas-outros">		<div class="seta-outros-anteriores">		</div><!-- .seta-outros-anteriores -->		<div class="seta-outros-posteriores">		</div><!-- .seta-outros-posteriores -->			</div><!-- setas-outros -->		<div class="outros-slider">		</div><!-- .outros-slider -->	</div><!-- .outros-projetos -->
-		<?php do_action( 'before_sidebar' ); ?>
-		<?php if ( ! dynamic_sidebar( 'sidebar-1' ) ) : ?>
-		<?php endif; // end sidebar widget area ?>	</div><!-- #secondary -->
+<div class="outros-projetos">
+<h2 class="fonte-roxa">outros projetos:</h2>
+<div class="setas-outros">
+<div class="seta-outros-anteriores">
+</div><!-- .seta-outros-anteriores -->
+<div class="seta-outros-posteriores">
+</div><!-- .seta-outros-posteriores -->
+</div><!-- setas-outros -->
+<div class="outros-slider">
+</div><!-- .outros-slider -->
+</div><!-- .outros-projetos -->
