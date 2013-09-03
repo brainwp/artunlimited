@@ -1277,20 +1277,16 @@ h4 {
         right: auto;
     }
     .csstransforms #navigation .primary .toggle-projects .wrapper {
-        padding: 0 20px;
-        margin-left: 50px;
-        height: 50px;
-        white-space: nowrap;
-        -webkit-transform: rotate(90deg);
-        -moz-transform: rotate(90deg);
-        -ms-transform: rotate(90deg);
-        -o-transform: rotate(90deg);
-        transform: rotate(90deg);
-        -webkit-transform-origin: left top;
-        -moz-transform-origin: left top;
-        -ms-transform-origin: left top;
-        -o-transform-origin: left top;
-        transform-origin: left top;
+		/*padding: 0 20px;*/
+	margin: 100px 0 0 -43px;
+    height: 50px;
+    white-space: nowrap;
+	font-size: 1.3em;
+	-moz-transform: scale(1) rotate(270deg) translateX(0px) translateY(0px) skewX(0deg) skewY(0deg);
+	-webkit-transform: scale(1) rotate(270deg) translateX(0px) translateY(0px) skewX(0deg) skewY(0deg);
+	-o-transform: scale(1) rotate(270deg) translateX(0px) translateY(0px) skewX(0deg) skewY(0deg);
+	-ms-transform: scale(1) rotate(270deg) translateX(0px) translateY(0px) skewX(0deg) skewY(0deg);
+	transform: scale(1) rotate(270deg) translateX(0px) translateY(0px) skewX(0deg) skewY(0deg);
     }
     .no-csstransforms #navigation .primary .toggle-projects .wrapper {
         width: 50px;
@@ -1299,11 +1295,15 @@ h4 {
         background: url(base.png) -140px -225px no-repeat;
     }
 }
+#navigation .primary .toggle-projects .wrapper .title-aba {
+	margin: 0px 35px 0px -15px;
+}
+
 
 #navigation .primary .toggle-projects .wrapper .icon {
     display: inline-block;
-    vertical-align: -1px;
-    margin-left: 5px;
+    vertical-align: -5px;
+	/*margin: 28px 0 0;*/
     -webkit-transition: all 400ms cubic-bezier(0.77, 0, .175, 1);
     -moz-transition: all 400ms cubic-bezier(0.77, 0, .175, 1);
     -ms-transition: all 400ms cubic-bezier(0.77, 0, .175, 1);
@@ -1312,9 +1312,9 @@ h4 {
     font: 0/0 a;
     text-shadow: none;
     color: transparent;
-    width: 12px;
-    height: 12px;
-    background: transparent url(base.png) -465px -286px no-repeat;
+	width: 30px;
+	height: 34px;
+	background: url("../images/img-sprite.png") no-repeat scroll -4px -95px transparent;
 }
 
 @media all and (max-width: 599px) {
@@ -1517,10 +1517,10 @@ h4 {
     #navigation .projects-bar .search input {padding: 0 0 0 60px;}
 }
 
-#navigation .projects-bar .categories {
+#navigation .projects-bar .categories , #navigation .projects-bar .header-categories {
     position: relative;
     padding: 10px 2px;
-    background: #fff;
+    background: #e5e5e5;
     -webkit-box-shadow: 0 2px 2px rgba(0, 0, 0, .15);
     -moz-box-shadow: 0 2px 2px rgba(0, 0, 0, .15);
     box-shadow: 0 2px 2px rgba(0, 0, 0, .15);
@@ -1528,17 +1528,42 @@ h4 {
 	text-transform: lowercase;
 }
 
+#busca-aba {
+	background: none repeat scroll 0 0 #fff;
+	float: left;
+	height: auto;
+	padding: 10px 20px 10px 20px;
+}
+
+#busca-aba #searchform {
+	border: 0;
+	color: #bcbcbc;
+	float: left;
+}
+
+#busca-aba #searchform input {
+	padding: 7px;
+	border: 0;
+}
+
+#busca-aba #lupa-aba {
+	width: 30px;
+	height: 30px;
+	float: left;
+	background: url("../images/img-sprite.png") no-repeat scroll -74px -97px transparent;
+}
+
 @media all and (min-width: 600px) {
-#navigation .projects-bar .categories {
+#navigation .projects-bar .categories, #navigation .projects-bar .header-categories {
     overflow: hidden;
     padding: 16px 20px;
     width: 100%
 }
 }
 
-#navigation .projects-bar .categories ul {
-    width: 70%;
-	float: left;
+#navigation .projects-bar .categories ul, #navigation .projects-bar .header-categories ul {
+	/*width: 70%;*/
+	margin-right: 25px;	float: left;
     overflow: hidden;
 	text-transform: lowercase;
 }

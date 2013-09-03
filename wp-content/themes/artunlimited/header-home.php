@@ -8,7 +8,6 @@
  */
 ?>
 <!DOCTYPE html>
-
 <!--[if lt IE 7 ]> <html class="ie ie6 lte-ie6"> <![endif]-->
 <!--[if IE 7 ]>    <html class="ie ie7 lte-ie7"> <![endif]-->
 <!--[if IE 8 ]>    <html class="ie ie8 lte-ie8"> <![endif]-->
@@ -21,8 +20,8 @@
 <title><?php wp_title( '|', true, 'right' ); ?></title>
 <link rel="profile" href="http://gmpg.org/xfn/11" />
 <link rel="pingback" href="<?php bloginfo( 'pingback_url' ); ?>" />
-<link href='http://fonts.googleapis.com/css?family=Roboto:400,400italic,500,500italic,700,700italic' rel='stylesheet' type='text/css'>
-<link href='http://fonts.googleapis.com/css?family=Gentium+Book+Basic' rel='stylesheet' type='text/css'>
+<!-- <link href='http://fonts.googleapis.com/css?family=Roboto:400,400italic,500,500italic,700,700italic' rel='stylesheet' type='text/css'>
+<link href='http://fonts.googleapis.com/css?family=Gentium+Book+Basic' rel='stylesheet' type='text/css'>-->
 
 <!--[if lt IE 9 ]><script src="/lib/respond.min.js"></script><![endif]-->
 <?php wp_head(); ?>
@@ -86,30 +85,42 @@
 
 					<a class="toggle-projects" href="">
 						<div class="wrapper">
-							Portfolio <span class="icon"></span>
+							<span class="title-aba">Portfolio</span> <span class="icon"></span>
 						</div>
 					</a>
 				</div>
 
 				<div class="projects-bar">
 					<div class="categories">
-						<ul class="separated-list">
-							<li class="selected"><a href="#" data-id="all">Todas</a></li>
-							<li><a href="#" data-id="strategy">Exposicoes</a></li>                                    
-							<li><a href="#" data-id="identity">Educacao Ambiental</a></li>
-							<li class="last-on-line"><a href="#" data-id="print">Projetos Especiais</a></li>
-						</ul>
-					<form class="search" autocomplete="off">
-						<div class="clear"></div>
-
-						<div class="field">
-							<label style="opacity: 1;" for="search">Busca</label>
-							<input id="search" name="q" type="text">
-						</div>
-					</form>
-					</div>
-
-					
+						</div><!-- .categories -->
+                        <div class="header-categories">
+                        
+                            <ul class="separated-list">
+                                <?php
+                                  $myterms = get_terms( 'tipo' );
+                                  foreach($myterms as $term){
+                                    $root_url = get_bloginfo('url');
+                                    $term_taxonomy=$term->taxonomy;
+                                    $term_slug=$term->slug;
+                                    $term_name =$term->name;
+                                    $link = $root_url.'/'.$term_taxonomy.'/'.$term_slug;
+                                    $output .="<option value='".$link."'>".$term_name."</option>";
+                                  echo "<li><a href=";
+                                  echo $link . ">" . $term_name;
+                                  echo "</a></li>";
+                                  }
+                                ?>
+                            </ul>
+                            <div id="busca-aba">
+                            <div id="lupa-aba"></div>
+                            <form id="searchform" action="<?php bloginfo('url'); ?>/" method="get">
+                            <input class="inlineSearch" type="text" name="s" value="Pesquisar" onblur="if (this.value == '') {this.value = 'Pesquisar';}" onfocus="if (this.value == 'Pesquisar') {this.value = '';}" />
+                            <input type="hidden" name="post_type" value="portfolio" />
+                            <!-- <input class="inlineSubmit" id="searchsubmit" type="submit" alt="Search" value="Buscar" /> -->
+                            </form>
+                            </div><!-- #busca-aba -->
+                        </div><!-- .header-categories -->
+				
 <?php
 	/* $paged é a variável para paginação do Loop CPT Projetos */
 	$paged = (get_query_var('paged')) ? get_query_var('paged') : 1;
