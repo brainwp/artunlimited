@@ -27,7 +27,6 @@
 <?php wp_head(); ?>
 
 <script type="text/javascript">
-    var x = jQuery(window).height(); 
 
     /*jQuery(function() {
 	    if (jQuery('.scroll-pane').length)
