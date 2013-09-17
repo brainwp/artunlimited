@@ -1,4 +1,50 @@
-<?php get_header( 'interno' ); ?>
+<?php get_header( 'portfolio' ); ?>
+
+<div id="primary" class="content-area">
+		<div id="content-interno" class="site-content" role="main">
+			<div class="entry-content">
+			
+							<div class="primary">
+					<a class="home" href="http://work.no/">
+						<div class="wrapper">
+							<span class="action top-active">
+								<span class="top-action"><span class="icon"></span> Topo</span>
+								<span class="home-action"><span class="icon"></span> Home</span>
+							</span>
+							<span class="logo">Art</span>
+						</div>
+					</a>
+
+						</div>
+
+			
+			        <div class="header-categories">
+                            <ul class="separated-list">
+                                <?php
+                                  $myterms = get_terms( 'tipo' );
+                                  foreach($myterms as $term){
+                                    $root_url = get_bloginfo('url');
+                                    $term_taxonomy=$term->taxonomy;
+                                    $term_slug=$term->slug;
+                                    $term_name =$term->name;
+                                    $link = $root_url.'/'.$term_taxonomy.'/'.$term_slug;
+                                    $output .="<option value='".$link."'>".$term_name."</option>";
+                                  echo "<li><a href=";
+                                  echo $link . ">" . $term_name;
+                                  echo "</a></li>";
+                                  }
+                                ?>
+                            </ul>
+                            <div id="busca-aba">
+                            <div id="lupa-aba"></div>
+                            <form id="searchform" action="<?php bloginfo('url'); ?>/" method="get">
+                            <input class="inlineSearch" type="text" name="s" value="Pesquisar" onblur="if (this.value == '') {this.value = 'Pesquisar';}" onfocus="if (this.value == 'Pesquisar') {this.value = '';}" />
+                            <input type="hidden" name="post_type" value="portfolio" />
+                            <!-- <input class="inlineSubmit" id="searchsubmit" type="submit" alt="Search" value="Buscar" /> -->
+                            </form>
+                            </div><!-- #busca-aba -->
+                    </div><!-- .header-categories -->
+			
 <?php
 	/* $paged é a variável para paginação do Loop CPT Projetos */	$paged = (get_query_var('paged')) ? get_query_var('paged') : 1;
 
@@ -26,5 +72,7 @@
 	endwhile;
 }
 ?>
-
+	</div><!-- .entry-content -->
+		</div><!-- #content -->
+	</div><!-- #primary -->
 <?php get_footer(); ?>
