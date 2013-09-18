@@ -1459,7 +1459,6 @@ a:active {
 }
 
 #main {
-	position: relative;
 	clear: both;
 	padding: 0;
 }
@@ -2240,7 +2239,7 @@ max-width: 1000px !important;
 }
 
 .cada-projeto {
-	width: 45%;
+	width: 30%;
 	height: 280px;
 	background: #E6E6E6;
 	float: left;
@@ -2309,7 +2308,7 @@ max-width: 1000px !important;
 
 .archive-portfolio {
 	float: left;
-	width: 85%;
+	width: 95%;
 	margin: 0 0 0 5%;
 }
 
