@@ -40,16 +40,16 @@
 	}
 
 	jQuery(document).ready(function(){
-	    jQuery('.tgl').before('<span class="link-tgl"><?php echo $d; ?></span>');
+	    jQuery('.tgl').before('<span class="link-tgl">Login</span>');
 	    jQuery('.tgl').css('display', 'none')
 	    jQuery('span', '#link-login').click(function() {
 	        jQuery(this).next().slideToggle('slow')
                 .siblings('.tgl:visible')
                 .slideToggle('fast');
             // aqui começa o funcionamento do plugin
-	        jQuery(this).toggleText('Revelar','Esconder')
+	        jQuery(this).toggleText('Login','Fechar')
 	            .siblings('span').next('.tgl:visible').prev()
-	            .toggleText('Revelar','Esconder')
+	            .toggleText('Login','Fechar')
 	    });
     });
 
@@ -127,7 +127,7 @@
 				</form>
 				<a href="<?php bloginfo( 'home' ); ?>/wp-login.php?action=lostpassword">Esqueceu a Senha?</a>
 				<?php } else { ?>
-				<a href="<?php echo wp_logout_url( get_permalink() ); ?>" title="Sair">Sair</a><br />
+				<a href="<?php echo wp_logout_url( get_permalink() ); ?>" title="Sair">Sair</a>
 				<a href="<?php bloginfo( 'home' ); ?>/wp-admin/">Admin</a>
 				<?php }?>
 
