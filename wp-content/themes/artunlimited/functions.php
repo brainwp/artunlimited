@@ -187,9 +187,6 @@ function artunlimited_scripts() {
 	wp_enqueue_script( 'jquery.jscrollpane', get_template_directory_uri() . '/js/scroll/script/jquery.jscrollpane.js', array('jquery') );
 	wp_enqueue_script( 'jquery-mousewheel', get_template_directory_uri() . '/js/scroll/script/jquery.mousewheel.js', array('jquery') );
 	wp_enqueue_script( 'mwheelIntent', get_template_directory_uri() . '/js/scroll/script/mwheelIntent.js' );
-	wp_enqueue_script( 'vendor-head', get_stylesheet_directory_uri() . '/js/vendor-head.js' );
-    wp_enqueue_script( 'vendor', get_stylesheet_directory_uri() . '/js/vendor.js', array(), null, true );
-    wp_enqueue_script( 'app', get_stylesheet_directory_uri() . '/js/app.js', array(), null, true );
 
     if(!is_admin()){
         wp_enqueue_script('thickbox',null,array('jquery'));

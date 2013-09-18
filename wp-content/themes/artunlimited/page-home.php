@@ -214,4 +214,4 @@ get_header( 'home' ); ?>
   			<div class="">
             </div><!--  -->
 
-<?php get_footer(); ?>
+<?php get_footer('home'); ?>

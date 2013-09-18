@@ -2306,6 +2306,21 @@ max-width: 1000px !important;
 	font-size: 3em;
 }
 
+
+.archive-portfolio {
+	float: left;
+	width: 85%;
+	margin: 0 0 0 5%;
+}
+
+.header-categories {
+float: left;
+width: 80%;
+margin: 0;
+padding: 1em;
+}
+
+
 .esquerda-single-portfolio {
 	float: left;
 	width: 60%;

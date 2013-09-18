@@ -18,7 +18,7 @@
 </head>
 <body <?php body_class(); ?>>
 <div id="page" class="hfeed site">
-<a href="<?php bloginfo( 'home' )?>">
+<a class="barra" href="<?php bloginfo( 'home' )?>">
 <div class="barra">
 	<div class="top-barra"></div>
     <div class="seta-barra"></div>

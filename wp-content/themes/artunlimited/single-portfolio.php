@@ -75,7 +75,14 @@ get_header( 'portfolio' ); ?>
 			) );
 		?>
 	</div><!-- .entry-content -->
-			<?php artunlimited_content_nav( 'nav-below' ); ?>		<?php endwhile; // end of the loop. ?></div><!-- .esquerda-single-portfolio --><div class="direita-single-portfolio">	<?php get_sidebar( 'portfolio' ); ?></div><!-- #direita-single-portfolio -->
+			<?php artunlimited_content_nav( 'nav-below' ); ?>
+			<?php endwhile; // end of the loop. ?>
+</div>
+			<!-- .esquerda-single-portfolio -->
+			<div class="direita-single-portfolio">
+			<?php get_sidebar( 'portfolio' ); ?>
+			</div><!-- #direita-single-portfolio -->
+			
 		</div><!-- #content -->
 	</div><!-- #primary -->
 <?php get_footer(); ?>
