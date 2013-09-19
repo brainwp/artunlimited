@@ -163,8 +163,8 @@ get_header( 'home' ); ?>
 			            </div><!-- .content-cada-noticia -->
                         
                         <div class="footer-cada-noticia">
-                        <div class="categorias-cada-noticia"><?php the_category(); ?></div>
-						<a class="mais-cada-noticia" href="<?php the_permalink(); ?>">+</a>
+                        <div class="categorias-cada-noticia"><?php the_category(', '); ?></div>
+						<div class="mais-cada-noticia"><a href="<?php the_permalink(); ?>">+</a></div>
 			            </div><!-- .footer-cada-noticia -->
                     </div><!-- .cada-noticia -->
 					<?php endwhile; ?>

@@ -1630,7 +1630,7 @@ max-width: 1000px !important;
 .todas-noticias {
     float: left;
     height: auto;
-    margin: 15px 0 30px 10%;
+    margin: 15px 0 50px 10%;
     overflow: hidden;
     width: auto;
 }
@@ -1739,8 +1739,17 @@ text-decoration: none;
     border-radius: 50px 50px 50px 50px;
     color: #FFFFFF;
     float: right;
+    font-weight: bold;
     overflow: hidden;
-    padding: 0 8px;
+    padding: 3px 10px;
+}
+
+.mais-cada-noticia a{
+	color: #CCC;
+}
+
+.mais-cada-noticia a:hover{
+	color: #FFFFFF;
 }
 
 #sidebar {
