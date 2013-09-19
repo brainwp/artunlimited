@@ -40,16 +40,16 @@
 	}
 
 	jQuery(document).ready(function(){
-	    jQuery('.tgl').before('<span class="link-tgl">Login</span>');
+	    jQuery('.tgl').before('<span class="link-tgl">Acesso Restrito</span>');
 	    jQuery('.tgl').css('display', 'none')
 	    jQuery('span', '#link-login').click(function() {
 	        jQuery(this).next().slideToggle('slow')
                 .siblings('.tgl:visible')
                 .slideToggle('fast');
             // aqui começa o funcionamento do plugin
-	        jQuery(this).toggleText('Login','Fechar')
+	        jQuery(this).toggleText('Acesso Restrito','Fechar')
 	            .siblings('span').next('.tgl:visible').prev()
-	            .toggleText('Login','Fechar')
+	            .toggleText('Acesso Restrito','Fechar')
 	    });
     });
 
@@ -69,14 +69,6 @@
 <body <?php body_class(); ?>>
 
 <div id="page" class="hfeed site">
-
-<div id="home">
-
-			<div class="top-wrapper">
-					<nav class="internal-navigation fixed closed visible">
-							<div class="container">
-								
-
 
 	<header id="masthead" class="site-header" role="banner">
 		        
@@ -136,13 +128,6 @@
         </div><!-- .area-4-header -->
         
 	</header><!-- #masthead -->
-
-
-
-							</div>
-					</nav>
-
-				</div>
 
 
 	<?php do_action( 'before' ); ?>

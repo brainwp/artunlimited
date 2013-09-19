@@ -46,10 +46,10 @@ get_header( 'home' ); ?>
 
 	<div class="center">
     
-<div class="header-sub-content">
-	<div class="seta-header"></div>
-    <div class="titulo-header"><h2><?php echo $quem_somos->post_title; ?></h2></div>
-</div>
+		<div class="header-sub-content">
+			<div class="seta-header"></div>
+			<div class="titulo-header"><h2><?php echo $quem_somos->post_title; ?></h2></div>
+		</div>
         <?php $content_quem_somos = apply_filters('the_content', $quem_somos->post_content); ?>
         <div class="content-quem-somos">
             <?php echo $content_quem_somos; ?>
@@ -102,7 +102,7 @@ get_header( 'home' ); ?>
 	$content_clientes = preg_replace(array('{<a[^>]*><img}','{/></a>}'), array('<img','/>'), $content_clientes);
 	?>
 
-	<div id="a" class="sub-content">
+	<div class="sub-content">
    
 	<div style="background: url('<?php echo $thumbnail_clientes[0]; ?>')" class="thumb-sub-content-direita">
 	</div><!-- .thumb-sub-content-direita -->
@@ -128,19 +128,18 @@ get_header( 'home' ); ?>
     
     
 <!-- Notícias -->
+
 	<div class="sub-content">
             <?php
             $noticias = get_page_by_title( 'Noticias' );
-			$content_noticias = apply_filters('the_content', $noticias->post_content);
             ?>
-           
-            <div class="seta-noticias">
-            </div><!-- .seta-noticias -->
+			
+		<div class="header-sub-content">
+	<div class="seta-header"></div>
+    <div class="titulo-todas-noticias"> <h2><?php echo $noticias->post_title; ?></h2><span><a href="<?php bloginfo( 'home' ); ?>/noticias">Ver todas</a></span></div>
+		</div>
 
 					<div class="todas-noticias">
-                    <div class="titulo-todas-noticias">
-                    <h2><?php echo $noticias->post_title; ?></h2><span><a href="<?php bloginfo( 'home' ); ?>/noticias">Ver todas</a></span>
-                    </div><!-- .titulo-todas-noticias -->
 					<?php $custom_query = new WP_Query('posts_per_page=3');
                     while($custom_query->have_posts()) : $custom_query->the_post(); ?>
                     
@@ -164,7 +163,7 @@ get_header( 'home' ); ?>
 			            </div><!-- .content-cada-noticia -->
                         
                         <div class="footer-cada-noticia">
-                        <div class="categorias-cada-noticia"><?php the_category(', '); ?></div>
+                        <div class="categorias-cada-noticia"><?php the_category(); ?></div>
 						<a class="mais-cada-noticia" href="<?php the_permalink(); ?>">+</a>
 			            </div><!-- .footer-cada-noticia -->
                     </div><!-- .cada-noticia -->
@@ -175,6 +174,8 @@ get_header( 'home' ); ?>
 <!-- Final Notícias -->
 
    	<!-- Contatos -->
+	
+
         <div class="sub-content">
             <?php
             $contatos = get_page_by_title( 'Contatos' );
@@ -188,10 +189,15 @@ get_header( 'home' ); ?>
    			<div style="background: url('<?php echo $thumbnail_contatos[0]; ?>')" class="thumb-sub-content">
             	<?php echo do_shortcode('[google-map-sc id="22" width="280" height="730" margin="0" zoom="15"]'); ?>
             </div><!-- .thumb-sub-content-direita -->
-
-            	<div class="seta-contatos"></div>                    
-                <div class="content-contatos">
-                <h2>Onde nos Encontrar:</h2>
+			
+				<div class="header-sub-content">
+					<div class="seta-header">
+					</div>
+					<div class="titulo-header"><h2>Onde nos Encontrar:</h2>
+					</div>
+				</div>
+             
+        <div class="content-contatos">
 				
   			<div class="esquerda-contatos">
             <?php echo get_post_meta($contatos->ID,'meta_endereco',true); ?><br />
@@ -204,14 +210,14 @@ get_header( 'home' ); ?>
             Tel. <?php echo get_post_meta($contatos->ID,'meta_telefone_a',true); ?><br />
             <?php echo get_post_meta($contatos->ID,'meta_telefone_b',true); ?><br />
             </div><!-- .direita-contatos -->
-                
-				<?php echo $content_contatos; ?>
-                </div><!-- .content-contatos -->
+            
+			<div class="clear"></div>
+			
+			<?php echo $content_contatos; ?>
+			
+        </div><!-- .content-contatos -->
 
         </div><!-- .sub-content -->
-	<!-- Final Contatos -->
+		<!-- Final Contatos -->
 
-  			<div class="">
-            </div><!--  -->
-
-<?php get_footer('home'); ?>
+<?php get_footer(); ?>

@@ -18,8 +18,8 @@ along with Nicolas Gallagher and Jonathan Neal http://necolas.github.com/normali
 and Blueprint http://www.blueprintcss.org/
 
 Google Fonts
-font-family: 'Roboto', sans-serif;
-font-family: 'Gentium Book Basic', serif;
+font-family: 'Roboto', Arial, sans-serif;
+font-family: 'Gentium Book Basic', Times, serif;
 
 */
 
@@ -42,13 +42,11 @@ table, caption, tbody, tfoot, thead, tr, th, td {
 	outline: 0;
 	padding: 0;
 	vertical-align: baseline;
-	font-family: 'Roboto', sans-serif;
 }
 
 
 html {
 
-	font-size: 62.5%; /* Corrects text resizing oddly in IE6/7 when body font-size is set using em units http://clagnut.com/blog/348/#c790 */
 	overflow-y: scroll; /* Keeps page centred in all browsers regardless of content height */
 	-webkit-text-size-adjust: 100%; /* Prevents iOS text size adjust after orientation change, without disabling user zoom */
 	-ms-text-size-adjust: 100%; /* www.456bereastreet.com/archive/201012/controlling_text_size_in_safari_for_ios_without_disabling_user_zoom/ */
@@ -56,44 +54,27 @@ html {
 }
 
 h1 {
-
 	font-size: 2em;
-
 }
 
 h2 {
-
 	font-size: 1.8em;
-
 }
 
 h3 {
-
 	font-size: 1.6em;
-
 }
 
 h4 {
-
 	font-size: 1.4em;
-
 }
 
 h5 {
-
 	font-size: 1.2em;
-
 }
 
 h6 {
-
 	font-size: 1.0em;
-
-}
-
-body {
-
-	background: #fff;
 }
 
 article,
@@ -162,6 +143,18 @@ a img {
 /* =Global
 
 ----------------------------------------------- */
+
+body {
+	color: #404040;
+	font-family: 'Roboto', Arial, sans-serif;
+	font-size: 14px;
+	background-color: #FFFFFF;
+	line-height: 1.5;
+	margin: 0;
+	padding: 0;
+}
+
+
 .fonte-roxa {
 	color: #4d449b;	
 }
@@ -177,24 +170,27 @@ a img {
 .center {
     height: auto;
     margin: 0 auto;
-    max-width: 70%;
+    max-width: 90%;
     overflow: hidden;
 }
 
-body,
 button,
 input,
 select,
 textarea {
 
 	color: #404040;
-	font-family: sans-serif;
-	font-size: 16px;
-	font-size: 1.6rem;
-	line-height: 1.5;
+	font-family: 'Roboto', Arial,sans-serif;
+	font-size: 14px;
+	line-height: 16px;
 }
 
+.clear {
+clear: both;
+width: 100%;
+height: 1px;
 
+}
 
 /* Headings */
 
@@ -207,11 +203,8 @@ h1,h2,h3,h4,h5,h6 {
 hr {
 
 	background-color: #ccc;
-
 	border: 0;
-
 	height: 1px;
-
 	margin-bottom: 1.5em;
 
 }
@@ -222,7 +215,8 @@ hr {
 
 p {
 
-	margin-bottom: 1.5em;
+	margin-bottom: 1.25em;
+	margin-top: 0;
 
 }
 
@@ -656,41 +650,24 @@ a:active {
 
 
 .screen-reader-text:hover,
-
 .screen-reader-text:active,
-
 .screen-reader-text:focus {
 
 	background-color: #f1f1f1;
-
 	border-radius: 3px;
-
 	box-shadow: 0 0 2px 2px rgba(0, 0, 0, 0.6);
-
 	clip: auto !important;
-
 	color: #21759b;
-
 	display: block;
-
 	font-size: 14px;
-
 	font-weight: bold;
-
 	height: auto;
-
 	left: 5px;
-
 	line-height: normal;
-
 	padding: 15px 23px 14px;
-
 	text-decoration: none;
-
 	top: 5px;
-
 	width: auto;
-
 	z-index: 100000; /* Above WP toolbar */
 
 }
@@ -699,37 +676,21 @@ a:active {
 
 /* Clearing */
 
-.clear:before,
-
-.clear:after,
-
+.clear:before, .clear:after,
 [class*="content"]:before,
-
 [class*="content"]:after,
-
 [class*="site"]:before,
-
 [class*="site"]:after {
 
 	content: '';
-
 	display: table;
-
 }
-
-
 
 .clear:after,
-
 [class*="content"]:after,
-
 [class*="site"]:after {
-
 	clear: both;
-
 }
-
-
 
 /* =Header
 
@@ -738,13 +699,9 @@ a:active {
 #masthead {
 
 	overflow: hidden;
-
 	background: #E6E6E6;
-
 	-webkit-box-shadow: 0px 5px 10px 0px rgba(48,48,48,0.4);
-
 	-moz-box-shadow: 0px 5px 10px 0px rgba(48,48,48,0.4);
-
 	box-shadow: 0px 5px 10px 0px rgba(48,48,48,0.4);
 
 }
@@ -752,13 +709,9 @@ a:active {
 #masthead-interno {
 
 	height: 60px;
-
 	background: #E6E6E6;
-
 	-webkit-box-shadow: 0px 2px 6px rgba(50, 50, 50, 0.5);
-
 	-moz-box-shadow:    0px 2px 6px rgba(50, 50, 50, 0.5);
-
 	box-shadow:         0px 2px 6px rgba(50, 50, 50, 0.5);
 
 }
@@ -781,14 +734,9 @@ a:active {
 	margin: 25px 0 30px 35px;
 }
 
-
-
 #logo:hover {
-
 	background-position: 1px -48px;
-
 }
-
 
 
 .a-logo {
@@ -797,10 +745,6 @@ a:active {
 
 }
 
-
-
-/* Area 2 Header */
-
 /* =Menu
 
 ----------------------------------------------- */
@@ -808,7 +752,6 @@ a:active {
 #search-interno {
 
     float: right;
-
     margin: 13px 15px 0 0;
 
 }
@@ -816,15 +759,9 @@ a:active {
 .navigation-main {
 
 	display: block;
-
 	float: left;
-
 	width: 50%;
-
-	font-size: 1.1em;
-
-	font-family: 'Roboto', sans-serif;
-
+	font-family: 'Roboto', Arial, sans-serif;
 	margin: 45px 5px 0 10px;
 
 }
@@ -832,13 +769,9 @@ a:active {
 .navigation-main-interno {
 
 	display: block;
-
 	float: left;
-
 	width: 50%;
-
 	margin: 15px 10px 0 10px;
-
 	text-transform: lowercase;
 
 }
@@ -846,11 +779,8 @@ a:active {
 .navigation-main ul, .navigation-main-interno ul {
 
 	list-style: disc;
-
 	color: #4D449C;
-
 	margin: 0;
-
 	padding-left: 0;
 
 }
@@ -858,9 +788,7 @@ a:active {
 .navigation-main li, .navigation-main-interno li {
 
     float: left;
-
     margin: 0 0 0 14px;
-
     position: relative;
 
 }
@@ -868,7 +796,7 @@ a:active {
 .navigation-main a, .navigation-main-interno a {
     display: block;
     margin: 0 10px 0 0;
-	font-size: 0.9em;
+	font-size: 1.1em;
     text-decoration: none;
 }
 
@@ -877,8 +805,8 @@ a:active {
 	display: none;
 	float: left;
 	position: absolute;
-		top: 1.5em;
-		left: 0;
+	top: 1.5em;
+	left: 0;
 	z-index: 99999;
 }
 
@@ -925,7 +853,6 @@ a:active {
 }
 
 
-
 .first-menu-item {
 
 	list-style: none !important;
@@ -933,13 +860,11 @@ a:active {
 }
 
 
-
 /* Small menu */
 
 .menu-toggle {
 
 	display: none;
-
 	cursor: pointer;
 
 }
@@ -951,7 +876,6 @@ a:active {
 	display: none;
 
 }
-
 
 
 @media screen and (max-width: 600px) {
@@ -1194,7 +1118,6 @@ a:active {
 .a-login {
 
 	margin: 7px 0 0 0;
-
 	display: block;
 
 }
@@ -1202,14 +1125,11 @@ a:active {
 
 
 .link-tgl {
-
-	margin: 8px 0 41px 0;
-
-	display: block;
-
-	cursor: pointer;
-
-	color: #0077b6;
+    color: #0077B6;
+    cursor: pointer;
+    display: block;
+    font-size: 0.9em;
+    margin: 12px 0 38px;
 
 }
 
@@ -1273,15 +1193,10 @@ a:active {
 .linha-form input[type="submit"] {
 
 	border: 0;
-
 	background: #ccc;
-
 	color: #666;
-
 	cursor: pointer; /* Improves usability and consistency of cursor style between image-type 'input' and others */
-
 	-webkit-appearance: button; /* Corrects inability to style clickable 'input' types in iOS */
-
 	font-size: 12px;
 	font-size: 1.2rem;
 	line-height: 1;
@@ -1299,14 +1214,15 @@ a:active {
 	position: absolute;
 	right: 100px;
 	top: 600px;
-	font-weight: 400;
 }
 
 .title-home h1 {
 	color: #FFF;
 	font-family: 'Gentium Book Basic', serif;
 	text-transform: lowercase;
-	font-size: 5.5em;
+    font-size: 6em;
+    font-weight: lighter;
+    letter-spacing: 4px;
 }
 
 /* =Notícias
@@ -1318,7 +1234,7 @@ a:active {
 }
 
 .entry-meta {	
-	font-family: 'Roboto', sans-serif;
+	font-family: 'Roboto', Arial, sans-serif;
 	font-weight: 400;
 	font-size: 12px;
 	color: #888;
@@ -1329,8 +1245,8 @@ a:active {
 }
 
 .titulo-noticias {
-	font-family: 'Roboto', sans-serif;
-	font-weight: 400;
+	font-family: 'Roboto', Arial, sans-serif;
+	font-weight: 500;
 	color: #86755f;
 }
 
@@ -1370,23 +1286,12 @@ a:active {
 }
 
 
-
-
-
-
-
-
-
-
-
 #page {
 
 	margin: 0 auto;
-
 	max-width: 1280px;
 
 }
-
 
 
 /* =Content
@@ -1440,7 +1345,6 @@ div.sharedaddy div.sd-block {
 }
 
 .single .byline,
-
 .group-blog .byline {
 
 	display: inline;
@@ -1448,7 +1352,6 @@ div.sharedaddy div.sd-block {
 }
 
 .entry-content,
-
 .entry-summary {
 
 	margin: 1.5em 0 0;
@@ -1460,17 +1363,13 @@ div.sharedaddy div.sd-block {
 .no-results {
 
 	width: 90%;
-
 	margin: 0 auto;
-
 	position: relative;
 
 }
 
 .page-links {
-
 	clear: both;
-
 	margin: 0 0 1.5em;
 
 }
@@ -1486,13 +1385,9 @@ div.sharedaddy div.sd-block {
 .sub-content {
 
     background: none repeat scroll 0 0 #FFFFFF;
-
     border-bottom: 1px solid #CCCCCC;
-
     /*height: 600px;*/
-
     overflow: hidden;
-
     position: relative;
 
 }
@@ -1506,9 +1401,7 @@ div.sharedaddy div.sd-block {
 {
 
 	/*width: 100%;*/
-
 	height: 600px;
-
 	overflow: auto;
 
 }
@@ -1518,9 +1411,7 @@ div.sharedaddy div.sd-block {
 {
 
 	/*width: 100%;*/
-
 	height: 600px;
-
 	overflow: auto;
 
 }
@@ -1531,22 +1422,10 @@ max-width: 1000px !important;
 
 }
 
-/*#a .jspContainer {
 
-	width: 800px !important;
-
-	float: left;
-
-}*/
-
-
-
-.horizontal-only
-
-{
+.horizontal-only {
 
 	height: auto;
-
 	max-height: 200px;
 
 }
@@ -1558,8 +1437,6 @@ max-width: 1000px !important;
 	color: #4D449C;
 
 }
-
-
 
 .thumb-sub-content {
 	float: left;
@@ -1593,30 +1470,18 @@ max-width: 1000px !important;
     width: 25%;
 }
 
-
-
 .texto-sub-content {
-
 	width: 75%;
-
 	max-width: 650px;
-
 	float: left;
-
 }
-
-
 
 .seta-titulo {
 
 	width: 56px;
-
 	margin: 10px 0 0 0;
-
 	float: left;
-
 	height: 56px;
-
 	background: url("images/img-sprite.png") no-repeat scroll -605px 0 transparent;
 
 }
@@ -1629,8 +1494,6 @@ max-width: 1000px !important;
 	margin: 0 0 0 20px;
 }
 
-.titulo-sub-content h2 {
-}
 
 #thumbs-quem-somos {
 	width: 150%;
@@ -1648,10 +1511,10 @@ max-width: 1000px !important;
 }
 
 .content-quem-somos {
-	width: 70%;
+	width: 80%;
 	float: left;
-	margin: 0 20px 40px 125px;
-	font-size: 1.1em;
+	margin: 0 20px 0 125px;
+	font-size: 1.15em;
 }
 
 .imagens-post {
@@ -1660,26 +1523,27 @@ max-width: 1000px !important;
 }
 
 .content-premios {
-	width: 65%;
+	width: 70%;
 	float: left;
-	margin: 65px 0 50px 130px;
+	margin: 0 0 50px 128px;
 }
 
 .header-sub-content {
 	/*height: 70px;*/
 	width: 75%;
 	overflow: hidden;
+	margin-top: 10px;
 }
 
 .footer-sub-content {
 	height: 90px;
-	width: 75%;
+	width: 100%;
 	overflow: hidden;
 }
 
 .seta-header {
 	width: 56px;
-	margin: 35px 0 35px 40px;
+	margin: 30px 0 10px 40px;
 	float: left;
 	height: 56px;
 	background: url("images/img-sprite.png") no-repeat scroll -605px 0 transparent;
@@ -1688,8 +1552,9 @@ max-width: 1000px !important;
 
 .titulo-header {
     float: left;
-    margin: 45px 0 0 30px;
+    margin: 10px 0 0 30px;
     width: 80%;
+	font-family: 'Roboto', Arial, sans-serif
 }
 
 
@@ -1702,31 +1567,35 @@ max-width: 1000px !important;
 }
 
 .header-sub-content h2{
-	width: 100%;
-	margin-bottom: 20px;
+	margin-bottom: 10px;
+	font-size: 2.2em;
+	font-weight: 500;
+	letter-spacing: 1px;
 }
 
 .content-contatos {
 	width: 50%;
 	float: left;
-	margin: 65px 0 0 40px;
+    margin: 0 0 0 128px;
 }
 
 .esquerda-contatos {
-	width: 60%;
-	float: left;
-	min-height: 100px;
-	color: #4d449d;
-	margin: 20px 0;
+    color: #4D449D;
+    float: left;
+    font-size: 1.2em;
+    margin: 0 0 20px;
+    min-height: 85px;
+    width: 45%;
 }
 
 .direita-contatos {
-	width: 40%;
-	float: left;
-	min-height: 100px;
-	color: #4d449d;
-	margin: 20px 0;
-	text-align: right;
+    color: #4D449D;
+    float: left;
+    font-size: 1.2em;
+    margin: 0 0 20px;
+    min-height: 85px;
+    text-align: right;
+    width: 35%;
 }
 
 .contact-submit {
@@ -1750,43 +1619,42 @@ max-width: 1000px !important;
 /* Clientes
 ----------------------------------------------- */
 .content-clientes {
-	width: 60%;
-	float: left;
-	margin: 65px 0 50px 100px;
+    float: left;
+    margin: 0 0 0 110px;
+    width: 80%;
 }
 
 /* Notícias
 ----------------------------------------------- */
-.seta-noticias {
-	width: 56px;
-	margin: 55px 0 0 40px;
-	float: left;
-	height: 100%;
-	min-height: 500px;
-	background: url("images/img-sprite.png") no-repeat scroll -605px 0 transparent;
-}
+
 .todas-noticias {
     float: left;
     height: auto;
-    margin: 65px 0 30px 40px;
+    margin: 15px 0 30px 10%;
     overflow: hidden;
     width: auto;
 }
 .titulo-todas-noticias {
-	width: 100%;
+	width: 80%;
 	height: auto;
-	margin-bottom: 3em;
+	margin-bottom: 2em;
 	overflow: hidden;
 }
 .titulo-todas-noticias h2 {
-	width: auto;
 	float: left;
+    font-family: 'Roboto',Arial,sans-serif;
+    margin: 30px 0 0 30px;
+	font-size: 2.2em;
+	font-weight: 500;
+	letter-spacing: 1px;
+
 }
 .titulo-todas-noticias span a {
 	display: block;
-	margin: 7px 0 0 12px;
+	margin: 42px 0 0 12px;
 	float: left;
 	padding: 3px 5px;
+	text-decoration: none;
 }
 
 .titulo-todas-noticias span a:hover {
@@ -1802,6 +1670,10 @@ max-width: 1000px !important;
 	min-height: 285px;
 	background: #efefef;
 	margin: 0 50px 25px 0;
+}
+
+.cada-noticia a{
+text-decoration: none;
 }
 
 .top-barra:hover {
@@ -1840,12 +1712,14 @@ max-width: 1000px !important;
 .content-cada-noticia {
 	width: 90%;
 	margin: 10px auto 0 auto;
-	font-size: 0.8em;
+	font-size: 0.9em;
 }
 
 .titulo-cada-noticia {
 	text-transform: uppercase;
 	font-size: 1.4em;
+	font-family: 'Roboto', Arial, sans-serif;
+	font-weight: 500;
 }
 
 .footer-cada-noticia {
@@ -1867,6 +1741,11 @@ max-width: 1000px !important;
     float: right;
     overflow: hidden;
     padding: 0 8px;
+}
+
+#sidebar {
+float: right;
+width: 20%;
 }
 
 /* Contato
