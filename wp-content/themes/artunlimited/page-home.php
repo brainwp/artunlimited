@@ -44,7 +44,7 @@ get_header( 'home' ); ?>
 
 	    <?php wp_reset_postdata(); // reset the query ?>   
 
-	<div class="center">
+	<div class="center" id="nav-quem-somos">
     
 		<div class="header-sub-content">
 			<div class="seta-header"></div>

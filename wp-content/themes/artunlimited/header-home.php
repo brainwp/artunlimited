@@ -78,6 +78,8 @@
 
 		<nav id="site-navigation" class="navigation-main" role="navigation">
 			<?php wp_nav_menu( array( 'theme_location' => 'primary', 'items_wrap' => '<ul><li class="first-menu-item"></li>%3$s</ul>' ) ); ?>
+		
+		<a href="javascript:scroll_to('#nav-quem-somos');">Quem Somos</a>
 		</nav><!-- #site-navigation -->
         
         <div class="area-3-header">
