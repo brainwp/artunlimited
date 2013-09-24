@@ -77,9 +77,18 @@
         </div><!-- #logo -->
 
 		<nav id="site-navigation" class="navigation-main" role="navigation">
-			<?php wp_nav_menu( array( 'theme_location' => 'primary', 'items_wrap' => '<ul><li class="first-menu-item"></li>%3$s</ul>' ) ); ?>
+			<?php // wp_nav_menu( array( 'theme_location' => 'primary', 'items_wrap' => '<ul><li class="first-menu-item"></li>%3$s</ul>' ) ); ?>
 		
-		<a href="javascript:scroll_to('#nav-quem-somos');">Quem Somos</a>
+	<ul>
+		<li class="first-menu-item menu-item menu-item-type-post_type menu-item-object-page menu-item-336" id="menu-item-336"><a href="javascript:scroll_to('#nav-quem-somos');">Quem Somos</a></li>
+		<li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-335" id="menu-item-335"><a href="http://beta.brasa.art.br/artunlimited/portfolio/">Portfolio</a></li>
+		<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-30" id="menu-item-30"><a href="javascript:scroll_to('#nav-premios');">Pr&ecirc;mios</a></li>
+		<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-28" id="menu-item-28"><a href="javascript:scroll_to('#nav-clientes-parceiros');">Clientes e Parceiros</a></li>
+		<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-288" id="menu-item-288"><a href="javascript:scroll_to('#nav-noticias');">Not&iacute;cias</a></li>
+		<li class="last-menu-item menu-item menu-item-type-post_type menu-item-object-page menu-item-29" id="menu-item-29"><a href="javascript:scroll_to('#nav-contatos');">Contatos</a></li>
+	</ul>
+		
+		
 		</nav><!-- #site-navigation -->
         
         <div class="area-3-header">
@@ -111,11 +120,14 @@
 				<?php if (!(current_user_can('level_0'))){ ?>
 				<form action="<?php bloginfo( 'home' ); ?>/wp-login.php" method="post">
 				<div class="linha-form">
-					<div class="linha-form-a">Login</div> <div class="linha-form-b"><input type="text" name="log" id="log" value="<?php echo wp_specialchars(stripslashes($user_login), 1) ?>" size="20" /></div>
+					<div class="linha-form-a">Login</div>
+					<div class="linha-form-b"><input type="text" name="log" id="log" value="<?php echo wp_specialchars(stripslashes($user_login), 1) ?>" size="20" />
+					</div>
 				</div>
 
 				<div class="linha-form">
-					<div class="linha-form-a">Senha</div> <div class="linha-form-b"><input type="password" name="pwd" id="pwd" size="14" /><input type="submit" name="submit" value="ok" class="button" /></div>
+					<div class="linha-form-a">Senha</div>
+					<div class="linha-form-b"><input type="password" name="pwd" id="pwd" size="14" /><input type="submit" name="submit" value="ok" class="button" /></div>
 				</div>
 					<input type="hidden" name="redirect_to" value="<?php echo $_SERVER['REQUEST_URI']; ?>" />
 				</form>

@@ -13,7 +13,7 @@ get_header( 'home' ); ?>
 </div><!-- #slider -->
 	
 <!-- Quem Somos -->
-    <div class="sub-content">
+    <div class="sub-content" id="nav-quem-somos">
     
     <div id="thumbs-quem-somos">
     <?php
@@ -44,7 +44,7 @@ get_header( 'home' ); ?>
 
 	    <?php wp_reset_postdata(); // reset the query ?>   
 
-	<div class="center" id="nav-quem-somos">
+	<div class="center">
     
 		<div class="header-sub-content">
 			<div class="seta-header"></div>
@@ -61,7 +61,7 @@ get_header( 'home' ); ?>
 <!-- Final Quem Somos -->
 
 <!-- Prêmios -->
-    <div class="sub-content">
+    <div class="sub-content" id="nav-premios">
         <?php
         $premios = get_page_by_title( 'Premios' );
         $thumbnail_premios = wp_get_attachment_image_src( get_post_thumbnail_id($premios->ID), '', false, '' );
@@ -102,7 +102,7 @@ get_header( 'home' ); ?>
 	$content_clientes = preg_replace(array('{<a[^>]*><img}','{/></a>}'), array('<img','/>'), $content_clientes);
 	?>
 
-	<div class="sub-content">
+	<div class="sub-content" id="nav-clientes-parceiros">
    
 	<div style="background: url('<?php echo $thumbnail_clientes[0]; ?>')" class="thumb-sub-content-direita">
 	</div><!-- .thumb-sub-content-direita -->
@@ -129,12 +129,12 @@ get_header( 'home' ); ?>
     
 <!-- Notícias -->
 
-	<div class="sub-content">
+	<div class="sub-content" id="nav-noticias">
             <?php
             $noticias = get_page_by_title( 'Noticias' );
             ?>
 			
-		<div class="header-sub-content">
+		<div class="header-sub-content" div="noticias">
 	<div class="seta-header"></div>
     <div class="titulo-todas-noticias"> <h2><?php echo $noticias->post_title; ?></h2><span><a href="<?php bloginfo( 'home' ); ?>/noticias">Ver todas</a></span></div>
 		</div>
@@ -163,7 +163,7 @@ get_header( 'home' ); ?>
 			            </div><!-- .content-cada-noticia -->
                         
                         <div class="footer-cada-noticia">
-                        <div class="categorias-cada-noticia"><?php the_category(', '); ?></div>
+                        <div class="categorias-cada-noticia"><?php the_category(' | '); ?></div>
 						<div class="mais-cada-noticia"><a href="<?php the_permalink(); ?>">+</a></div>
 			            </div><!-- .footer-cada-noticia -->
                     </div><!-- .cada-noticia -->
@@ -176,7 +176,7 @@ get_header( 'home' ); ?>
    	<!-- Contatos -->
 	
 
-        <div class="sub-content">
+        <div class="sub-content" id="nav-contatos">
             <?php
             $contatos = get_page_by_title( 'Contatos' );
 			/*$thumbnail_contatos = wp_get_attachment_image_src( get_post_thumbnail_id($contatos->ID), '', false, '' );*/
