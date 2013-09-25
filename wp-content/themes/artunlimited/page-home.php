@@ -2,13 +2,14 @@
 
 get_header( 'home' ); ?>
  
-<div class="title-home">
-    <h1><?php the_title(); ?></h1>
-</div><!-- .title-home -->
+<!-- <div class="title-home">
+    <h1><?php // the_title(); ?></h1>
+</div> -->
+<!-- .title-home -->
 
 <div id="slider">
 
-	<?php /* echo do_shortcode( '[orbit-slider]' ); */?>
+	<?php echo do_shortcode( '[orbit-slider]' );?>
 
 </div><!-- #slider -->
 	

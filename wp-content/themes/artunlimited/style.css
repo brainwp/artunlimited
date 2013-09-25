@@ -1195,6 +1195,24 @@ a:active {
     letter-spacing: 4px;
 }
 
+.slide-content {
+	color: #FFF;
+	font-family: 'Gentium Book Basic', serif;
+	text-transform: lowercase;
+    font-size: 6em;
+    font-weight: lighter;
+    letter-spacing: 4px;
+	position: absolute;
+	height: 275px !important;
+    left: 40% !important;
+	right: 0 !important;
+    padding: 0 !important;
+    position: absolute;
+    top: 65% !important;
+    width: 725px !important;
+	line-height: 1.2;
+}
+
 /* =Notícias
 ----------------------------------------------- */
 
@@ -2117,7 +2135,7 @@ width: 20%;
     float: left;
     overflow: hidden;
     text-transform: lowercase;
-    width: 70%;
+    width: 80%;
 }
 
 
@@ -2129,9 +2147,9 @@ width: 20%;
 
 .separated-list li {
     float: left;
-    height: 0.9em;
-    list-style: disc outside none;
-    margin: 0.4em 0;
+    height: auto;
+    list-style: none;
+    margin: 1em;
 }
 
 .search-categorias-portfolio {
@@ -2214,15 +2232,22 @@ width: 20%;
 
 .archive-portfolio {
 	float: left;
-	width: 95%;
-	margin: 0 0 0 5%;
+	width: 96%;
+	margin: 0 0 0 4%;
 }
 
 .header-categories {
 float: left;
-width: 80%;
+width: 100%;
 margin: 0;
-padding: 1em;
+padding: 0;
+}
+
+#busca-aba {
+float: left;
+width: 16%;
+margin: 1em 0 0 0;
+padding: 0;
 }
 
 
