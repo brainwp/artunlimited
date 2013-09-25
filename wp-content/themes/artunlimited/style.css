@@ -1203,13 +1203,13 @@ a:active {
     font-weight: lighter;
     letter-spacing: 4px;
 	position: absolute;
-	height: 275px !important;
+	height: 31% !important;
     left: 40% !important;
 	right: 0 !important;
     padding: 0 !important;
     position: absolute;
     top: 65% !important;
-    width: 725px !important;
+    width: 55% !important;
 	line-height: 1.2;
 }
 
@@ -1256,15 +1256,17 @@ a:active {
 /* =Slider Home - Orbit Slider
 ----------------------------------------------- */
 #slider {
-	width: 100%;
-	min-height: 800px;
+	max-width: 1280px;
+	height: 100%;
+	max-height: 800px;
 	font-family: 'Gentium Book Basic', serif;
-	background: url(images/slider-provisorio.jpg) center top;
+	/* background: url(images/slider-provisorio.jpg) center top;*/
 }
 
-#slider img {
-	margin: 0 auto;
-}
+#orbit-inside img.orbit-slide {
+    height: 100%;
+	width: 100%;
+	}
 
 /* =Slider Single
 ----------------------------------------------- */
@@ -1377,6 +1379,7 @@ div.sharedaddy div.sd-block {
     /*height: 600px;*/
     overflow: hidden;
     position: relative;
+	 z-index: 3;
 
 }
 
@@ -1518,7 +1521,7 @@ max-width: 1000px !important;
 
 .header-sub-content {
 
-	width: 75%;
+	width: auto;
 	overflow: hidden;
 	margin-top: 10px;
 
@@ -1548,7 +1551,7 @@ max-width: 1000px !important;
 .titulo-header {
     float: left;
     margin: 10px 0 0 30px;
-    width: 80%;
+    width: auto;
 	font-family: 'Roboto', Arial, sans-serif
 }
 
@@ -1630,7 +1633,7 @@ max-width: 1000px !important;
     width: auto;
 }
 .titulo-todas-noticias {
-	width: 80%;
+	width: auto;
 	height: auto;
 	margin-bottom: 2em;
 	overflow: hidden;
@@ -1956,6 +1959,26 @@ width: 20%;
 		min-height: 200px !important;
 
 	}
+	
+	
+	.slide-content {
+	color: #FFF;
+	font-family: 'Gentium Book Basic', serif;
+	text-transform: lowercase;
+    font-size: 4em;
+    font-weight: lighter;
+    letter-spacing: 4px;
+	position: absolute;
+	height: 31% !important;
+    left: 40% !important;
+	right: 0 !important;
+    padding: 0 !important;
+    position: absolute;
+    top: 65% !important;
+    width: 55% !important;
+	line-height: 1.2;
+}
+	
 
 }
 
