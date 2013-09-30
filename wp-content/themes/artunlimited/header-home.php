@@ -77,9 +77,9 @@
         </div><!-- #logo -->
 
 		<nav id="site-navigation" class="navigation-main" role="navigation">
-			<?php // wp_nav_menu( array( 'theme_location' => 'primary', 'items_wrap' => '<ul><li class="first-menu-item"></li>%3$s</ul>' ) ); ?>
+			<?php  // wp_nav_menu( array( 'theme_location' => 'primary', 'items_wrap' => '<ul class="menu"><li class="first-menu-item"></li>%3$s</ul>' ) ); ?>
 		
-	<ul>
+	<ul class="menu">
 		<li class="first-menu-item menu-item menu-item-type-post_type menu-item-object-page menu-item-336" id="menu-item-336"><a href="javascript:scroll_to('#nav-quem-somos');">Quem Somos</a></li>
 		<li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-335" id="menu-item-335"><a href="http://beta.brasa.art.br/artunlimited/portfolio/">Portfolio</a></li>
 		<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-30" id="menu-item-30"><a href="javascript:scroll_to('#nav-premios');">Pr&ecirc;mios</a></li>

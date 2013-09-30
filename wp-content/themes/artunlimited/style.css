@@ -859,6 +859,10 @@ a:active {
 
 }
 
+nav select {
+  display: none;
+}
+
 
 /* Small menu */
 
@@ -889,11 +893,14 @@ a:active {
 	}
 
 
-
-	.navigation-main ul {
+	nav.navigation-main li {
 
 		display: none;
 
+	}
+	
+	nav select {
+	display: inline-block;
 	}
 
 }
