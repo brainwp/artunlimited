@@ -699,7 +699,7 @@ a:active {
 #masthead {
 
     background: none repeat scroll 0 0 #E6E6E6;
-    height: 100px;
+    min-height: 100px;
     margin: 0 auto;
     max-width: 1280px;
     overflow: hidden;
@@ -1317,8 +1317,12 @@ nav select {
 #main {
 	clear: both;
 	padding: 0;
+}
+
+#main .site-main-home {
 	margin-top: 100px;
 }
+
 
 div.sharedaddy div.sd-block {
     border-top: none !important;
