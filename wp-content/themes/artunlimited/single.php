@@ -4,7 +4,7 @@
  *
  * @package artunlimited
  */
-get_header( 'home' ); ?>
+get_header(); ?>
 
 	<div id="primary" class="content-area">
 

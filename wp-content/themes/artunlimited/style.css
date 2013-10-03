@@ -222,13 +222,13 @@ p {
 
 ul, ol {
 
-	margin: 0 0 1.5em 3em;
+	margin: 0;
 
 }
 
 ul {
 
-	list-style: disc;
+	list-style: none;
 
 }
 
@@ -239,12 +239,11 @@ ol {
 }
 
 li > ul,
-
 li > ol {
 
 	margin-bottom: 0;
 
-	margin-left: 1.5em;
+	margin-left: 0;
 
 }
 
@@ -1253,6 +1252,7 @@ nav select {
 
 .titulo-noticias a {
 	color: #0273b1;
+	text-decoration: none;
 }
 
 .titulo-noticias a:hover {
@@ -1306,7 +1306,8 @@ nav select {
 }
 
 #content.site-content {
-	margin: 5em 0 0 0;
+	margin: 0;
+	background: none repeat scroll 0 0 #FFFFFF;
 }
 
 #content-interno {
@@ -1322,6 +1323,19 @@ nav select {
 #main .site-main-home {
 	margin-top: 100px;
 }
+
+#primary {
+    float: left;
+    margin: 7em -26.4% 0 0;
+    width: 100%;
+}
+
+#secondary {
+	float: right;
+	margin-right: 7.6%;
+	width: 18.8%;
+}
+
 
 
 div.sharedaddy div.sd-block {
@@ -1369,11 +1383,11 @@ div.sharedaddy div.sd-block {
 .hentry,
 
 .no-results {
-
-	width: 90%;
-	margin: 0 auto;
-	position: relative;
-
+	float: left;
+    margin: 0 auto;
+    position: relative;
+    width: 70%;
+	padding-left: 3em;
 }
 
 .page-links {
@@ -1777,8 +1791,9 @@ text-decoration: none;
 }
 
 #sidebar {
-float: right;
-width: 20%;
+	float: right;
+	width: 25%;
+	margin-top: 10em;
 }
 
 /* Contato

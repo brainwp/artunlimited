@@ -70,22 +70,14 @@
 
 <div id="page" class="hfeed site">
 
-<div id="home">
-
-			<div class="top-wrapper">
-					<nav class="internal-navigation fixed closed visible">
-							<div class="container">
-								
-
-
-	<header id="masthead" class="site-header" role="banner">
+		<header id="masthead" class="site-header" role="banner">
 		        
         <div id="logo">
         	<a class="a-logo" href="<?php bloginfo( 'home' ); ?>"></a>
         </div><!-- #logo -->
 
 		<nav id="site-navigation" class="navigation-main" role="navigation">
-			<?php wp_nav_menu( array( 'theme_location' => 'primary', 'items_wrap' => '<ul><li class="first-menu-item"></li>%3$s</ul>' ) ); ?>
+			<?php wp_nav_menu( array( 'theme_location' => 'primary', 'items_wrap' => '<ul class="menu"><li class="first-menu-item"></li>%3$s</ul>' ) ); ?>	
 		</nav><!-- #site-navigation -->
         
         <div class="area-3-header">
@@ -117,17 +109,20 @@
 				<?php if (!(current_user_can('level_0'))){ ?>
 				<form action="<?php bloginfo( 'home' ); ?>/wp-login.php" method="post">
 				<div class="linha-form">
-					<div class="linha-form-a">Login</div> <div class="linha-form-b"><input type="text" name="log" id="log" value="<?php echo wp_specialchars(stripslashes($user_login), 1) ?>" size="20" /></div>
+					<div class="linha-form-a">Login</div>
+					<div class="linha-form-b"><input type="text" name="log" id="log" value="<?php echo wp_specialchars(stripslashes($user_login), 1) ?>" size="20" />
+					</div>
 				</div>
 
 				<div class="linha-form">
-					<div class="linha-form-a">Senha</div> <div class="linha-form-b"><input type="password" name="pwd" id="pwd" size="14" /><input type="submit" name="submit" value="ok" class="button" /></div>
+					<div class="linha-form-a">Senha</div>
+					<div class="linha-form-b"><input type="password" name="pwd" id="pwd" size="14" /><input type="submit" name="submit" value="ok" class="button" /></div>
 				</div>
 					<input type="hidden" name="redirect_to" value="<?php echo $_SERVER['REQUEST_URI']; ?>" />
 				</form>
 				<a href="<?php bloginfo( 'home' ); ?>/wp-login.php?action=lostpassword">Esqueceu a Senha?</a>
 				<?php } else { ?>
-				<a href="<?php echo wp_logout_url( get_permalink() ); ?>" title="Sair">Sair</a><br />
+				<a href="<?php echo wp_logout_url( get_permalink() ); ?>" title="Sair">Sair</a>
 				<a href="<?php bloginfo( 'home' ); ?>/wp-admin/">Admin</a>
 				<?php }?>
 
@@ -136,14 +131,6 @@
         </div><!-- .area-4-header -->
         
 	</header><!-- #masthead -->
-
-
-
-							</div>
-					</nav>
-
-				</div>
-
 
 	<?php do_action( 'before' ); ?>
 
