@@ -35,6 +35,7 @@ function artunlimited_setup() {
 	add_image_size( 'thumb-premios', 200, 400 );
 	add_image_size( 'thumb-projetos', 520, 9999999, true );
 	add_image_size( 'thumb-noticias', 350, 9999999 );
+	add_image_size( 'thumb-outros-projetos', 300, 250 );
 	/**
 	 * Enable support for Post Thumbnails on posts and pages
 	 *

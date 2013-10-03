@@ -1115,7 +1115,7 @@ nav select {
     cursor: pointer;
     display: block;
     font-size: 0.9em;
-    margin: 12px 0 36px;
+    margin: 15px 0 36px;
 }
 
 
@@ -2131,8 +2131,13 @@ width: 20%;
     position: relative;
     text-transform: lowercase;
     z-index: 1;
+	float: left;
+    margin: 0;
 }
 
+.header-categories a{
+	text-decoration: none;
+}
 
 .header-categories  .search {
     border-radius: 5px 5px 5px 5px;
@@ -2205,7 +2210,7 @@ width: 20%;
 
 .cada-projeto {
 	width: 30%;
-	height: 280px;
+	min-height: 280px;
 	background: #E6E6E6;
 	float: left;
 	margin: 2.5% 0 0 2.5%;
@@ -2245,7 +2250,7 @@ width: 20%;
 
 
 .rodape-cada-projeto  h3, .data-cada-post {
-
+	line-height: 1.2;
 	margin: 10px 0 0 15px;
 
 }
@@ -2258,6 +2263,9 @@ width: 20%;
 
 }
 
+a.titulo-resumo {
+ text-decoration: none;
+}
 
 
 #slider-projetos {
@@ -2275,13 +2283,6 @@ width: 20%;
 	float: left;
 	width: 96%;
 	margin: 0 0 0 4%;
-}
-
-.header-categories {
-float: left;
-width: 100%;
-margin: 0;
-padding: 0;
 }
 
 #busca-aba {

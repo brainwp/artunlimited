@@ -6,7 +6,7 @@
 		<div class="archive-portfolio">
 			
 			        <div class="header-categories">
-                            <ul class="separated-list">
+                            <ul class="separated-list menu">
                                 <?php
                                   $myterms = get_terms( 'tipo' );
                                   foreach($myterms as $term){
@@ -36,7 +36,12 @@
 							/* $paged é a variável para paginação do Loop CPT Projetos */	$paged = (get_query_var('paged')) ? get_query_var('paged') : 1;
 
 							/* $args_loop_cpt_projetos são os argumentos para o Loop */
-							$args_loop_cpt_projetos = array(		'post_type' => 'portfolio',		'orderby' => 'date',		'order' => 'DESC',		'posts_per_page' => '12',		'paged' => $paged
+							$args_loop_cpt_projetos = array(
+							'post_type' => 'portfolio',
+							'orderby' => 'date',
+							'order' => 'DESC',
+							'posts_per_page' => '12',
+							'paged' => $paged
 							);
 							$loop_cpt_projetos = new WP_Query( $args_loop_cpt_projetos ); if ( $loop_cpt_projetos->have_posts() ) {
 							while ( $loop_cpt_projetos->have_posts() ) : $loop_cpt_projetos->the_post();

@@ -54,6 +54,8 @@ get_header( 'portfolio' ); ?>
                             </li>
                             <?php } } ?>
                         </ul>
+					
+						
                         <div class="clearfix"></div>
                         
                     </div>
@@ -77,6 +79,8 @@ get_header( 'portfolio' ); ?>
 	</div><!-- .entry-content -->
 			<?php artunlimited_content_nav( 'nav-below' ); ?>
 			<?php endwhile; // end of the loop. ?>
+			
+			<?php wp_reset_query(); // reset query ?>
 </div>
 			<!-- .esquerda-single-portfolio -->
 			<div class="direita-single-portfolio">

@@ -18,13 +18,48 @@
 </div><!--  -->
 </div><!-- .compartilhe-sidebar -->
 <div class="outros-projetos">
+
+		<?php while ( have_posts() ) : the_post(); ?>
 <h2 class="fonte-roxa">outros projetos:</h2>
 <div class="setas-outros">
-<div class="seta-outros-anteriores">
-</div><!-- .seta-outros-anteriores -->
-<div class="seta-outros-posteriores">
-</div><!-- .seta-outros-posteriores -->
+<a id="prev3" href="#"><div class="seta-outros-anteriores">
+</div></a>
+<!-- .seta-outros-anteriores -->
+<a id="next3" href="#"><div class="seta-outros-posteriores">
+</div></a><!-- .seta-outros-posteriores -->
 </div><!-- setas-outros -->
 <div class="outros-slider">
+
+        <div class="list_carousel">
+                        <ul id="foo3">
+                            <?php
+
+                        $args3 = array(
+                                'post_type' => 'portfolio',
+                                'numberposts' => 8,
+                                'post_status' => 'publish',
+                                );
+                            
+                            $outrosprojetos = get_posts( $args3 );
+                            if ( $outrosprojetos ) {
+                                foreach ( $outrosprojetos as $outroprojeto ) { ?>
+                                								
+                            <li>
+							<div class="cada-outro-projeto">                        
+								<a class="a-outro" href="<?php the_permalink(); ?>">
+									<?php the_post_thumbnail('thumb-outros-projetos'); ?>
+								</a><!-- .a-outro  -->
+							</div><!-- cada-outro-projeto -->
+                            </li>
+                            <?php } } ?>
+                        </ul>
+						
+						<?php wp_reset_query(); // reset query ?>
+                        <div class="clearfix"></div>
+                        
+        </div> <!-- .list_carrousel -->
+					
+
 </div><!-- .outros-slider -->
+<?php endwhile; // end of the loop. ?>
 </div><!-- .outros-projetos -->
