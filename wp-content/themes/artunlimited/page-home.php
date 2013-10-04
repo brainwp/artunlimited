@@ -126,17 +126,22 @@ get_header( 'home' ); ?>
 <!-- Notícias -->
 
 	<div class="sub-content" id="nav-noticias">
-            <?php
+	
+	        <?php
             $noticias = get_page_by_title( 'Noticias' );
+			$thumbnail_noticias = wp_get_attachment_image_src( get_post_thumbnail_id($noticias->ID), '', false, '' );		
             ?>
+	
+	<div style="background: url('<?php echo $thumbnail_noticias[0]; ?>')" class="thumb-sub-content-noticias">
+	</div><!-- .thumb-sub-content-direita -->
 			
-		<div class="header-sub-content" div="noticias">
+		<div class="header-sub-content">
 	<div class="seta-header"></div>
-    <div class="titulo-todas-noticias"> <h2><?php echo $noticias->post_title; ?></h2><span><a href="<?php bloginfo( 'home' ); ?>/noticias">Ver todas</a></span></div>
+    <div class="titulo-header"> <h2><?php echo $noticias->post_title; ?></h2><span><a href="<?php bloginfo( 'home' ); ?>/noticias">Ver todas</a></span></div>
 		</div>
 
 					<div class="todas-noticias">
-					<?php $custom_query = new WP_Query('posts_per_page=3');
+					<?php $custom_query = new WP_Query('posts_per_page=4');
                     while($custom_query->have_posts()) : $custom_query->the_post(); ?>
                     
                     <div class="cada-noticia">
@@ -182,7 +187,7 @@ get_header( 'home' ); ?>
 			$bairro = get_post_meta($contatos->ID,'meta_bairro',true);
             ?>
 
-   			<div style="background: url('<?php echo $thumbnail_contatos[0]; ?>')" class="thumb-sub-content">
+   			<div style="background: url('<?php echo $thumbnail_contatos[0]; ?>')" class="thumb-sub-content-direita">
             	<?php echo do_shortcode('[google-map-sc id="22" width="280" height="730" margin="0" zoom="15"]'); ?>
             </div><!-- .thumb-sub-content-direita -->
 			
