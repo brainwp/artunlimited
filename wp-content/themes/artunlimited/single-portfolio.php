@@ -77,7 +77,7 @@ get_header( 'portfolio' ); ?>
 			) );
 		?>
 	</div><!-- .entry-content -->
-			<?php artunlimited_content_nav( 'nav-below' ); ?>
+			<?php // artunlimited_content_nav( 'nav-below' ); ?>
 			<?php endwhile; // end of the loop. ?>
 			
 			<?php wp_reset_query(); // reset query ?>

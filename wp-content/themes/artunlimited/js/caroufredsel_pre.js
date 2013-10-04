@@ -24,6 +24,9 @@ jQuery(function() {
 		jQuery('#foo3').carouFredSel({
 		prev: '#prev3',
 		next: '#next3',
+		auto: {
+			play: false,
+		},
 		circular: true,
 		infinite: true,
 		responsive: true,
