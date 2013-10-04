@@ -75,44 +75,7 @@
         <div id="logo">
         	<a class="a-logo" href="<?php bloginfo( 'home' ); ?>"></a>
         </div><!-- #logo -->
-
-		<nav id="site-navigation" class="navigation-main" role="navigation">
-			<?php  // wp_nav_menu( array( 'theme_location' => 'primary', 'items_wrap' => '<ul class="menu"><li class="first-menu-item"></li>%3$s</ul>' ) ); ?>
-		
-	<ul class="menu">
-		<li class="first-menu-item menu-item menu-item-type-post_type menu-item-object-page menu-item-336" id="menu-item-336"><a href="javascript:scroll_to('#nav-quem-somos');">Quem Somos</a></li>
-		<li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-335" id="menu-item-335"><a href="http://beta.brasa.art.br/artunlimited/portfolio/">Portfolio</a></li>
-		<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-30" id="menu-item-30"><a href="javascript:scroll_to('#nav-premios');">Pr&ecirc;mios</a></li>
-		<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-28" id="menu-item-28"><a href="javascript:scroll_to('#nav-clientes-parceiros');">Clientes e Parceiros</a></li>
-		<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-288" id="menu-item-288"><a href="javascript:scroll_to('#nav-noticias');">Not&iacute;cias</a></li>
-		<li class="last-menu-item menu-item menu-item-type-post_type menu-item-object-page menu-item-29" id="menu-item-29"><a href="javascript:scroll_to('#nav-contatos');">Contatos</a></li>
-	</ul>
-		
-		
-		</nav><!-- #site-navigation -->
-        
-        <div class="area-3-header">
-        <div id="redes">
-        	<div id="facebook">
-            	<a class="a-redes" href="<?php echo get_option( 'mo_facebook' ); ?>"></a>
-            </div><!-- #facebook -->
-            
-            <div id="linkedin">
-            	<a class="a-redes" href="<?php echo get_option( 'mo_linkedin' ); ?>"></a>
-		    </div><!-- #linkedin -->
-        </div><!-- #redes -->
-        
-        <div id="linguas">
-        	<div id="en">
-            	<a class="a-linguas" href=""></a>
-		    </div><!-- #en -->
-            
-            <div id="pt">
-				<a class="a-linguas" href=""></a>	
-		    </div><!-- #pt -->
-        </div><!-- #linguas -->
-        </div><!-- .area-3-header -->
-        
+                
         <div class="area-4-header">
         <div id="link-login">
         	<div id="cadeado"></div><!-- #cadeado -->
@@ -140,6 +103,44 @@
 			</div><!-- #form-login -->
         </div><!-- #link-login -->
         </div><!-- .area-4-header -->
+		
+		 <div class="area-3-header">
+        <div id="redes">
+        	<div id="facebook">
+            	<a class="a-redes" href="<?php echo get_option( 'mo_facebook' ); ?>"></a>
+            </div><!-- #facebook -->
+            
+            <div id="linkedin">
+            	<a class="a-redes" href="<?php echo get_option( 'mo_linkedin' ); ?>"></a>
+		    </div><!-- #linkedin -->
+        </div><!-- #redes -->
+        
+        <div id="linguas">
+        	<div id="en">
+            	<a class="a-linguas" href=""></a>
+		    </div><!-- #en -->
+            
+            <div id="pt">
+				<a class="a-linguas" href=""></a>	
+		    </div><!-- #pt -->
+        </div><!-- #linguas -->
+        </div><!-- .area-3-header -->
+		
+		
+			<nav id="site-navigation" class="navigation-main" role="navigation">
+			<?php  // wp_nav_menu( array( 'theme_location' => 'primary', 'items_wrap' => '<ul class="menu"><li class="first-menu-item"></li>%3$s</ul>' ) ); ?>
+		
+	<ul class="menu">
+		<li class="first-menu-item menu-item menu-item-type-post_type menu-item-object-page menu-item-336" id="menu-item-336"><a href="javascript:scroll_to('#nav-quem-somos');">Quem Somos</a></li>
+		<li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-335" id="menu-item-335"><a href="http://beta.brasa.art.br/artunlimited/portfolio/">Portfolio</a></li>
+		<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-30" id="menu-item-30"><a href="javascript:scroll_to('#nav-premios');">Pr&ecirc;mios</a></li>
+		<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-28" id="menu-item-28"><a href="javascript:scroll_to('#nav-clientes-parceiros');">Clientes e Parceiros</a></li>
+		<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-288" id="menu-item-288"><a href="javascript:scroll_to('#nav-noticias');">Not&iacute;cias</a></li>
+		<li class="last-menu-item menu-item menu-item-type-post_type menu-item-object-page menu-item-29" id="menu-item-29"><a href="javascript:scroll_to('#nav-contatos');">Contatos</a></li>
+	</ul>
+		
+		
+		</nav><!-- #site-navigation -->
         
 	</header><!-- #masthead -->
 

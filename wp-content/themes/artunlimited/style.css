@@ -725,15 +725,17 @@ a:active {
 
 /* Area 1 Header */
 
-#logo, .a-logo {
-	width: 17%;
-	min-width: 267px;
-	max-width: 267px;
+.a-logo {
+	position: absolute;
+	width: 267px;
 	height: 48px;
 
 }
 
 #logo {
+	min-width: 17%;
+	min-width: 267px;
+	height: 48px;
 	background: url(images/img-sprite.png) 1px 0px no-repeat;
 	float: left;
 	margin: 25px 0 30px 35px;
@@ -765,7 +767,7 @@ a:active {
 
 	display: block;
 	float: left;
-	width: 50%;
+	width: 48%;
 	font-family: 'Roboto', Arial, sans-serif;
 	margin: 45px 5px 0 10px;
 
@@ -887,29 +889,6 @@ nav select {
 }
 
 
-@media screen and (max-width: 600px) {
-
-	.menu-toggle,
-
-	.main-small-navigation ul.nav-menu.toggled-on {
-
-		display: block;
-
-	}
-
-
-	nav.navigation-main li {
-
-		display: none;
-
-	}
-	
-	nav select {
-	display: inline-block;
-	}
-
-}
-
 
 
 
@@ -920,9 +899,9 @@ nav select {
 
 .area-3-header {
 
-	/*width: 13%;*/
+	min-width: 13%;
 
-	float: left;
+	float: right;
 
 }
 
@@ -937,8 +916,6 @@ nav select {
 
 }
 
-
-
 #facebook, #linkedin {
 	width: 34px;
 	height: 34px;
@@ -948,8 +925,6 @@ nav select {
 	float: left
 
 }
-
-
 
 #facebook {
 
@@ -988,9 +963,7 @@ nav select {
 .a-redes {
 
 	width: 34px;
-
 	height: 34px;
-
 	position: absolute;
 
 }
@@ -998,7 +971,7 @@ nav select {
 
 
 #linguas {
-	/*width: 80px;*/
+	width: 36px;
 	height: 35px;
 	float: left;
 	margin: 35px 5px 0 0;
@@ -1061,9 +1034,9 @@ nav select {
 
 .area-4-header {
 
-	width: 7%;
+	min-width: 13%;
 
-	float: left;
+	float: right;
 
 }
 
@@ -1842,11 +1815,8 @@ text-decoration: none;
 .list_carousel ul {
 
     margin: 0;
-
     padding: 0;
-
     list-style: none;
-
     display: block;
 
 }
@@ -1856,25 +1826,15 @@ text-decoration: none;
 .list_carousel li {
 
     font-size: 14px;
-
     color: #333;
-
     width: auto;
-
 	height: auto;
-
 	overflow: hidden;
-
     padding: 0;
-
     margin: 0 1px 0 1px;
-
     display: block;
-
     float: left;
-
 	background: url(images/loader.gif) 20px 20px no-repeat;
-
 	position: relative;
 
 }
@@ -1884,9 +1844,7 @@ text-decoration: none;
 .cada-slide {
 
     max-height: 500px;
-
     overflow: hidden;
-
 	width: 100%;
 
 }
@@ -1904,7 +1862,6 @@ text-decoration: none;
 .list_carousel.responsive {
 
     width: auto;
-
     margin-left: 0;
 
 }
@@ -1924,17 +1881,11 @@ text-decoration: none;
 .list_carousel a.prev {
 
     background: url("images/setas.png") no-repeat scroll -5px center transparent;
-
     display: block;
-
     min-height: 70px;
-
 	position: absolute;
-
     top: 40%;
-
     width: 70px;
-
 	z-index: 50;
 
 
@@ -1944,91 +1895,31 @@ text-decoration: none;
 
 
 .list_carousel a.next {
-
     background: url("images/setas.png") no-repeat scroll -75px center transparent;
-
 	display: block;
-
 	min-height: 70px;
-
     position: absolute;
-
     top: 40%;
-
     width: 70px;
-
 	z-index: 50;
-
 	/* add */
-
 	right: 0;
 
 }
 
-
-
 .caroufredsel_wrapper {
 
 	width: 100% !important;
-
 	min-height: 500px !important;
-
 	left: 0 !important;
-
 	right: 0 !important;
 
 }
-
-
-
-@media (max-width:900px) {
-
-	.caroufredsel_wrapper {
-
-		min-height: 200px !important;
-
-	}
-	
-	
-	.slide-content {
-	color: #FFF;
-	font-family: 'Gentium Book Basic', serif;
-	text-transform: lowercase;
-    font-size: 4em;
-    font-weight: lighter;
-    letter-spacing: 4px;
-	position: absolute;
-	height: 31% !important;
-    left: 40% !important;
-	right: 0 !important;
-    padding: 0 !important;
-    position: absolute;
-    top: 65% !important;
-    width: 55% !important;
-	line-height: 1.2;
-}
-	
-
-}
-
-
-
-@media (max-width:400px) {
-
-	.caroufredsel_wrapper {
-
-		min-height: 80px !important;
-
-	}
-
-}
-
 
 
 .caroufredsel_wrapper ul {
 
 	margin: 0 !important;
-
 	padding: 0 !important;
 
 }
@@ -2038,7 +1929,6 @@ text-decoration: none;
 .list_carousel a.prev.disabled, a.next.disabled {
 
     cursor: default;
-
 }
 
 
@@ -2046,7 +1936,6 @@ text-decoration: none;
 .list_carousel a.prev span, a.next span {
 
     display: none;
-
 }
 
 
@@ -2054,9 +1943,7 @@ text-decoration: none;
 #foo2 {
 
     /*left: 20px;*/
-
     margin: 0 2px;
-
     position: relative;
 
 }
@@ -2066,19 +1953,12 @@ text-decoration: none;
 #desc-slide {
 
 	color: #FFF;
-
 	background: none repeat scroll 0 0 #000;
-
     bottom: 0;
-
     left: 70px;
-
     padding: 20px;
-
     position: absolute;
-
 	filter: alpha(opacity=60);
-
 	opacity: 0.6;
 
 }
@@ -2245,7 +2125,6 @@ text-decoration: none;
 .attachment-thumb-projetos {
 
 	margin: 0 auto;
-
 	text-align: center;
 
 }
@@ -2253,7 +2132,6 @@ text-decoration: none;
 .rodape-cada-projeto {
 
 	width: 100%;
-
 	height: 80px;
 
 }
@@ -2297,10 +2175,10 @@ a.titulo-resumo {
 }
 
 #busca-aba {
-float: left;
-width: 16%;
-margin: 1em 0 0 0;
-padding: 0;
+	float: left;
+	width: 16%;
+	margin: 1em 0 0 0;
+	padding: 0;
 }
 
 
@@ -2392,14 +2270,9 @@ padding: 0;
 }
 
 
-
-
-
 /* =Media
 
 ----------------------------------------------- */
-
-
 
 .entry-content img.wp-smiley,
 
@@ -2460,9 +2333,7 @@ padding: 0;
 .site-content .gallery a img {
 
 	border: none;
-
 	height: auto;
-
 	max-width: 90%;
 
 }
@@ -2481,14 +2352,10 @@ padding: 0;
 
 }
 
-
-
 /* Make sure embeds and iframes fit their containers */
 
 embed,
-
 iframe,
-
 object {
 
 	max-width: 100%;
@@ -2496,19 +2363,12 @@ object {
 }
 
 
-
-
-
 /* =Navigation
 
 ----------------------------------------------- */
-
-
-
 .site-content [class*="navigation"] {
 
 	margin: 0 0 1.5em;
-
 	overflow: hidden;
 
 }
@@ -2516,7 +2376,6 @@ object {
 [class*="navigation"] .nav-previous {
 
 	float: left;
-
 	width: 50%;
 
 }
@@ -2524,21 +2383,14 @@ object {
 [class*="navigation"] .nav-next {
 
 	float: right;
-
 	text-align: right;
-
 	width: 50%;
 
 }
 
-
-
 /* =Comments
 
 ----------------------------------------------- */
-
-
-
 .comment-content a {
 
 	word-wrap: break-word;
@@ -2549,26 +2401,17 @@ object {
 
 }
 
-
-
 /* =Widgets
 
 ----------------------------------------------- */
 
-
-
 .widget {
-
 	margin: 0 0 1.5em;
-
 }
-
-
 
 /* Make sure select elements fit in widgets */
 
 .widget select {
-
 	max-width: 100%;
 
 }
@@ -2578,7 +2421,6 @@ object {
 /* Search widget */
 
 .widget_search .submit {
-
 	display: none;
 
 }
@@ -2590,11 +2432,9 @@ object {
 ----------------------------------------------- */
 
 
-
 /* Globally hidden elements when Infinite Scroll is supported and in use. */
 
 .infinite-scroll .navigation-paging, /* Older / Newer Posts Navigation (always hidden) */
-
 .infinite-scroll.neverending .site-footer { /* Theme Footer (when set to scrolling) */
 
 	display: none;
@@ -2622,13 +2462,9 @@ object {
 .slide-out-div {
 
           padding: 20px;
-
           width: 60%;
-
           background: #ddd;
-
           border: none;
-
 		  height: 100%;
 
       }
@@ -2638,10 +2474,483 @@ object {
 .handle	  {
 
 	   background: url("images/projetos-btn.jpg") no-repeat top center #4d449b;
-
 	   width: 40px;
-
 	   height: 100%;
 
 	   }
 
+	   
+
+/* =Responsive Structure
+
+----------------------------------------------- */
+
+@media (max-width:990px) {
+
+	.caroufredsel_wrapper {
+
+		min-height: 200px !important;
+
+	}
+	
+	
+	.slide-content {
+	color: #FFF;
+	font-family: 'Gentium Book Basic', serif;
+	text-transform: lowercase;
+    font-size: 4em;
+    font-weight: lighter;
+    letter-spacing: 4px;
+	position: absolute;
+	height: 31% !important;
+    left: 40% !important;
+	right: 0 !important;
+    padding: 0 !important;
+    position: absolute;
+    top: 65% !important;
+    width: 55% !important;
+	line-height: 1.2;
+	}
+
+	.navigation-main {
+		display: block;
+		float: left;
+		font-family: 'Roboto',Arial,sans-serif;
+		margin: 10px 20px;
+		width: 100%;
+	}
+
+	#main #content {
+
+		margin: 0 7.6%;
+		width: auto;
+
+	}
+
+	#nav-below {
+
+		border-bottom: 1px solid #ddd;
+		margin-bottom: 1.625em;
+
+	}
+
+	#main #secondary {
+
+		float: none;
+		margin: 0 7.6%;
+		width: auto;
+
+	}
+
+	/* Simplify the showcase template */
+
+	.page-template-showcase-php .featured-posts {
+
+		min-height: 280px;
+
+	}
+
+	.featured-posts section.featured-post {
+
+		height: auto;
+
+	}
+
+	.page-template-showcase-php section.recent-posts {
+
+		float: none;
+		margin: 0;
+		width: 100%;
+
+	}
+
+	.page-template-showcase-php #main .widget-area {
+
+		float: none;
+		margin: 0;
+		width: auto;
+
+	}
+
+	.page-template-showcase-php .other-recent-posts {
+
+		border-bottom: 1px solid #ddd;
+
+	}
+
+	/* Simplify the showcase template when small feature */
+
+	section.featured-post .attachment-small-feature,
+
+	.one-column section.featured-post .attachment-small-feature {
+
+		border: none;
+		display: block;
+		float: left;
+		height: auto;
+		margin: 0.625em auto 1.025em;
+		max-width: 30%;
+		position: static;
+
+	}
+
+	article.feature-image.small {
+
+		float: right;
+		margin: 0 0 1.625em;
+		width: 64%;
+
+	}
+
+	.one-column article.feature-image.small .entry-summary {
+
+		height: auto;
+
+	}
+
+	article.feature-image.small .entry-summary p a {
+	
+		left: 0;
+		padding-left: 20px;
+		padding-right: 20px;
+		width: auto;
+
+	}
+
+	/* Remove the margin on singular articles */
+	.singular .entry-header,
+	.singular .entry-content,
+	.singular footer.entry-meta,
+	.singular #comments-title {
+
+		width: 100%;
+
+	}
+
+	/* Simplify the pullquotes and pull styles */
+
+	.singular blockquote.pull {
+
+		margin: 0 0 1.625em;
+
+	}
+
+	.singular .pull.alignleft {
+
+		margin: 0 1.625em 0 0;
+
+	}
+
+	.singular .pull.alignright {
+
+		margin: 0 0 0 1.625em;
+
+	}
+
+	.singular .entry-meta .edit-link a {
+
+		left: 0;
+		position: absolute;
+		top: 40px;
+
+	}
+
+	.singular #author-info {
+
+		margin: 2.2em -8.8% 0;
+		padding: 20px 8.8%;
+
+	}
+
+	/* Make sure we have room for our comment avatars */
+
+	.commentlist {
+
+		width: 100%;
+
+	}
+
+	.commentlist > li.comment,
+	.commentlist .pingback {
+
+		margin-left: 102px;
+		width: auto;
+
+	}
+
+	/* And a full-width comment form */
+
+	#respond {
+
+		width: auto;
+
+	}
+
+	/* No need to float footer widgets at this size */
+
+	#colophon #supplementary .widget-area {
+		float: none;
+		margin-right: 0;
+		width: auto;
+	}
+
+	/* No need to float 404 widgets at this size */
+
+	.error404 #main .widget {
+
+		float: none;
+		margin-right: 0;
+		width: auto;
+
+	}
+
+
+	
+
+}
+
+
+/* @media (max-width: 650px) Reduce font-sizes for better readability on smaller devices */
+@media screen and (max-width: 650px) {
+
+	body, input, textarea {
+
+		font-size: 13px;
+
+	}
+
+	#site-title a {
+
+		font-size: 24px;
+
+	}
+
+	#site-description {
+
+		font-size: 12px;
+
+	}
+
+	#access ul {
+
+		font-size: 12px;
+
+	}
+
+	article.intro .entry-content {
+
+		font-size: 12px;
+
+	}
+
+	.entry-title {
+
+		font-size: 21px;
+
+	}
+
+	.featured-post .entry-title {
+
+		font-size: 14px;
+
+	}
+
+	.singular .entry-title {
+
+		font-size: 28px;
+
+	}
+
+	.entry-meta {
+
+		font-size: 12px;
+
+	}
+
+	blockquote {
+
+		margin: 0;
+
+	}
+
+	blockquote.pull {
+
+		font-size: 17px;
+
+	}
+
+	/* Reposition the site title and description slightly */
+
+	#site-title {
+
+		padding: 5.30625em 0 0;
+
+	}
+
+	#site-title,
+	#site-description {
+
+		margin-right: 0;
+
+	}
+
+	/* Make sure the logo and search form don't collide */
+
+	#branding #searchform {
+
+		top: 1.625em !important;
+
+	}
+
+	/* Floated content doesn't work well at this size */
+
+	.alignleft,
+
+	.alignright {
+
+		display: block;
+		float: none;
+		margin-left: 0;
+		margin-right: 0;
+
+	}
+
+	/* Make sure the post-post navigation doesn't collide with anything */
+
+	#nav-single {
+
+		display: block;
+		position: static;
+
+	}
+
+	.singular .hentry {
+
+		padding: 1.625em 0 0;
+
+	}
+
+	.singular.page .hentry {
+
+		padding: 1.625em 0 0;
+
+	}
+
+	/* Talking avatars take up too much room at this size */
+
+	.commentlist > li.comment,
+	.commentlist > li.pingback {
+
+		margin-left: 0 !important;
+
+	}
+
+	.commentlist .avatar {
+
+	background: transparent;
+	display: block;
+	padding: 0;
+	position: static;
+
+	}
+
+	.commentlist .children .avatar {
+
+	background: none;
+	left: 2.2em;
+	padding: 0;
+	position: absolute;
+	top: 2.2em;
+
+	}
+
+	/* Use the available space in the smaller comment form */
+
+	#respond input[type="text"] {
+
+		width: 95%;
+	}
+
+	#respond .comment-form-author .required,
+	#respond .comment-form-email .required {
+
+		left: 95%;
+
+	}
+
+	#content .gallery-columns-3 .gallery-item {
+
+		width: 31%;
+		padding-right: 2%;
+
+	}
+
+	#content .gallery-columns-3 .gallery-item img {
+
+		width: 100%;
+		height: auto;
+
+	}
+	
+	.menu-toggle,
+	.main-small-navigation ul.nav-menu.toggled-on {
+
+		display: block;
+
+	}
+
+
+	nav.navigation-main li {
+
+		display: none;
+
+	}
+	
+	nav select {
+	display: inline-block;
+	}
+
+
+}
+
+@media (max-width: 360px) {
+
+	#content .gallery-columns-2 .gallery-item {
+		width: 45%;
+		padding-right: 4%;
+	}
+
+	#content .gallery-columns-2 .gallery-item img {
+
+		width: 100%;
+		height: auto;
+
+	}
+	
+	.caroufredsel_wrapper {
+
+		min-height: 80px !important;
+
+	}
+
+
+
+}
+
+@media only screen and (min-device-width: 320px) and (max-device-width: 480px) {
+
+	body {
+		padding: 0;
+	}
+
+	#page {
+
+	margin-top: 0;
+
+	}
+
+	#branding {
+		border-top: none;
+	}
+
+}
