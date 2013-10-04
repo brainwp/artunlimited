@@ -1616,7 +1616,7 @@ max-width: 1000px !important;
 .content-contatos {
 	width: 50%;
 	float: left;
-    margin: 0 0 0 128px;
+    margin: 0 0 82px 128px;
 }
 
 .esquerda-contatos {
@@ -1661,7 +1661,7 @@ max-width: 1000px !important;
 .content-clientes {
     float: left;
     margin: 0 0 0 110px;
-    width: 85%;
+    width: 70%;
 }
 
 /* Notícias
