@@ -68,12 +68,16 @@
 
 <body <?php body_class(); ?>>
 
-<div id="page" class="hfeed site">
+<div id="page" class="hfeed site site-home">
+
+	<a href="<?php echo home_url('portfolio'); ?>"><div class="barra-portfolio">
+		<div class="etiqueta-barra-portfolio"></div>
+	</div></a>
 
 	<header id="masthead" class="site-header" role="banner">
 		        
         <div id="logo">
-        	<a class="a-logo" href="<?php bloginfo( 'home' ); ?>"></a>
+        	<a class="a-logo" href="javascript:scroll_to('#page');"></a>
         </div><!-- #logo -->
                 
         <div class="area-4-header">
@@ -132,7 +136,6 @@
 		
 	<ul class="menu">
 		<li class="first-menu-item menu-item menu-item-type-post_type menu-item-object-page menu-item-336" id="menu-item-336"><a href="javascript:scroll_to('#nav-quem-somos');">Quem Somos</a></li>
-		<li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-335" id="menu-item-335"><a href="http://beta.brasa.art.br/artunlimited/portfolio/">Portfolio</a></li>
 		<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-30" id="menu-item-30"><a href="javascript:scroll_to('#nav-premios');">Pr&ecirc;mios</a></li>
 		<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-28" id="menu-item-28"><a href="javascript:scroll_to('#nav-clientes-parceiros');">Clientes e Parceiros</a></li>
 		<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-288" id="menu-item-288"><a href="javascript:scroll_to('#nav-noticias');">Not&iacute;cias</a></li>

@@ -898,22 +898,15 @@ nav select {
 
 
 .area-3-header {
-
-	min-width: 13%;
-
 	float: right;
-
+	width: auto;
 }
 
-
-
 #redes {
-
 	width: 80px;
 	height: 35px;
 	float: left;
 	margin: 35px 5px 0 0;
-
 }
 
 #facebook, #linkedin {
@@ -927,9 +920,7 @@ nav select {
 }
 
 #facebook {
-
 	background: url(images/img-sprite.png) -269px 0 no-repeat;
-
 }
 
 
@@ -1033,11 +1024,9 @@ nav select {
 /* Area 4 Header */
 
 .area-4-header {
-
-	min-width: 13%;
-
+	min-width: 11%;
 	float: right;
-
+	margin-right: 50px;
 }
 
 #link-login {
@@ -1164,13 +1153,40 @@ nav select {
 /* =Home
 
 ----------------------------------------------- */
+.master {
+	max-width: 1330px;
+	margin: 0 auto;
+	overflow: hidden;
+	position: relative;
+}
+.site-home {
+	max-width: 1230px !important;
+	position: relative;
+}
+.barra-portfolio {
+    background-color: #4D449B;
+    height: 100%;
+    position: absolute;
+    right: -50px;
+    width: 50px;
+	-webkit-box-shadow: -7px 0px 6px rgba(50, 50, 50, 0.27);
+	-moz-box-shadow:    -7px 0px 6px rgba(50, 50, 50, 0.27);
+	box-shadow:         -7px 0px 6px rgba(50, 50, 50, 0.27);
+	z-index: 999999;
+}
+
+.etiqueta-barra-portfolio {
+	background: url("images/escrita-portfolio.png") no-repeat scroll 0 15px #4D449B;
+	width: 50px;
+	height: 192px;
+	position: fixed;
+}
 
 .title-home {
 	position: absolute;
 	right: 100px;
 	top: 600px;
 }
-
 .title-home h1 {
 	color: #FFF;
 	font-family: 'Gentium Book Basic', serif;
