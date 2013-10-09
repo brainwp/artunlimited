@@ -1188,6 +1188,13 @@ nav select {
 	position: fixed;
 }
 
+.etiqueta-barra-portfolio-archive {
+    background: url("images/escrita-portfolio.png") no-repeat scroll 0 -51px #4D449B;
+    height: 192px;
+    margin: 20px 0 0;
+    width: 50px;
+}
+
 .title-home {
 	position: absolute;
 	right: 100px;

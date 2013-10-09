@@ -18,11 +18,10 @@
 </head>
 <body <?php body_class(); ?>>
 <div id="page" class="hfeed site">
-<a class="barra" href="<?php bloginfo( 'home' )?>">
+<a class="barra" href="<?php echo home_url(); ?>">
 <div class="barra">
 	<div class="top-barra"></div>
-    <div class="seta-barra"></div>
-	<div class="wrapper-barra">	Portfolio <span class="icon"></span></div>
+	<div class="etiqueta-barra-portfolio-archive"></div>
 </div><!-- .barra -->
 </a>
 <?php do_action( 'before' ); ?>
