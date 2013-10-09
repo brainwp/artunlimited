@@ -87,21 +87,23 @@
 				<?php if (!(current_user_can('level_0'))){ ?>
 				<form action="<?php bloginfo( 'home' ); ?>/wp-login.php" method="post">
 				<div class="linha-form">
-					<div class="linha-form-a">Login</div>
+					<div class="linha-form-a-login">Login</div>
 					<div class="linha-form-b"><input type="text" name="log" id="log" value="<?php echo wp_specialchars(stripslashes($user_login), 1) ?>" size="20" />
 					</div>
 				</div>
 
 				<div class="linha-form">
-					<div class="linha-form-a">Senha</div>
-					<div class="linha-form-b"><input type="password" name="pwd" id="pwd" size="14" /><input type="submit" name="submit" value="ok" class="button" /></div>
+					<div class="linha-form-a-senha">Senha</div>
+					<div class="linha-form-b"><input type="password" name="pwd" id="pwd" size="15" /><input type="submit" name="submit" value="ok" class="button" /></div>
 				</div>
 					<input type="hidden" name="redirect_to" value="<?php echo $_SERVER['REQUEST_URI']; ?>" />
 				</form>
 				<a href="<?php bloginfo( 'home' ); ?>/wp-login.php?action=lostpassword">Esqueceu a Senha?</a>
 				<?php } else { ?>
+				<div class="linha-form-logada">				
 				<a href="<?php echo wp_logout_url( get_permalink() ); ?>" title="Sair">Sair</a>
 				<a href="<?php bloginfo( 'home' ); ?>/wp-admin/">Admin</a>
+				</div>
 				<?php }?>
 
 			</div><!-- #form-login -->

@@ -1044,6 +1044,7 @@ nav select {
     font-size: 0.8em;
     margin: 0;
     font-style: italic;
+	margin: 0 5px 0 0;
 }
 
 
@@ -1093,7 +1094,7 @@ nav select {
     color: #FFFFFF;
     display: none;
     height: auto;
-    margin: 0 0 0 -95px;
+    margin: 0 0 0 -115px;
     max-width: 300px;
     overflow: hidden;
     padding: 10px;
@@ -1105,33 +1106,38 @@ nav select {
 
 }
 
-
-
 .linha-form {
-
     overflow: hidden;
     width: 100%;
 	margin: 0 0 5px 0;
 }
 
+.linha-form-logada {
+	font-size: 1.2em;
+    overflow: hidden;
+    width: 100%;
+	margin: 0 0 5px 0;
+}
 
-
-.linha-form-a {
+.linha-form-a-login {
 
 	float: left;
 	margin: 0 15px 0 0;
 
 }
 
+.linha-form-a-senha {
 
-
-.linha-form-b {
-
-    float: right;
+	float: left;
+	margin: 0 11px 0 0;
 
 }
 
 
+.linha-form-b {
+    float: left;
+
+}
 
 .linha-form input[type="submit"] {
 
@@ -1142,7 +1148,7 @@ nav select {
     font-size: 1em;
     line-height: 1;
     margin: 0 0 0 5px;
-    padding: 0.2em 0.8em;
+    padding: 0.2em 0.7em;
 	cursor: pointer; /* Improves usability and consistency of cursor style between image-type 'input' and others */
 	-webkit-appearance: button; /* Corrects inability to style clickable 'input' types in iOS */
 	
