@@ -91,17 +91,17 @@ get_header( 'home' ); ?>
     
 <!-- Clientes e Parceiros -->
 
-	<?php
+	<div class="sub-content" id="nav-clientes-parceiros">
+<?php
+	$clientes = "";
 	$clientes = get_page_by_title( 'Clientes e Parceiros' );
 	$thumbnail_clientes = wp_get_attachment_image_src( get_post_thumbnail_id($clientes->ID), '', false, '' );
-	$content_clientes = apply_filters( 'the_content', $clientes->post_content );
-	$content_clientes = preg_replace(array('{<a[^>]*><img}','{/></a>}'), array('<img','/>'), $content_clientes);
-	?>
-
-	<div class="sub-content" id="nav-clientes-parceiros">
-   
+	$attachment_clientes = get_attachment_link($clientes->ID);
+?>  
 	<div style="background: url('<?php echo $thumbnail_clientes[0]; ?>')" class="thumb-sub-content-direita">
 	</div><!-- .thumb-sub-content-direita -->
+
+
 
 <div class="header-sub-content">
 	<div class="seta-header"></div>
@@ -110,8 +110,27 @@ get_header( 'home' ); ?>
 
 	<div class="scroll-panes">            	                   
 			<div class="content-clientes">
- 
-			<?php echo $content_clientes; ?>
+
+	<?php if ( have_posts() ) : while ( have_posts() ) : the_post();    
+    	$args_clientes = array(
+        	'post_type' => 'attachment',
+            'numberposts' => -1,
+            'post_status' => null,
+            'post_parent' => $clientes->ID,
+		);
+
+		$attachments_clientes = get_posts( $args_clientes );
+		if ( $attachments_clientes ) {
+			foreach ( $attachments_clientes as $attachment_cliente ) {
+			$image_attributes_cliente = wp_get_attachment_image_src( $attachment_cliente->ID );
+			echo '<div class="imagens-cliente">';
+			echo '<img src="'.$image_attributes_cliente[0].'">';
+			echo '</div>';
+	  		}
+		}
+    	endwhile; endif; ?>
+
+	    <?php wp_reset_postdata(); // reset the query ?>   
 
 			</div><!-- .content-clientes -->
 	</div><!-- .scroll-pane -->
