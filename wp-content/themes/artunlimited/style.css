@@ -2076,7 +2076,6 @@ a.titulo-resumo {
 	background-color: #4d449b;
 }
 
-
 .outros-slider {
 	float: left;
 	width: 100%;
@@ -2104,7 +2103,8 @@ a.titulo-resumo {
 	width: auto;
 	height: auto;
 	padding: 12px 15px 12px 12px;
-	color: #444;
+	color: #222;
+	font-weight: 100;
 }
 
 
