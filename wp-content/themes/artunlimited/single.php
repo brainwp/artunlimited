@@ -6,6 +6,8 @@
  */
 get_header(); ?>
 
+<div class="altura-header"></div>
+
 	<div id="primary" class="content-area">
 
 		<div id="content" class="site-content" role="main">
