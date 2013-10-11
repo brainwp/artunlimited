@@ -43,40 +43,29 @@ table, caption, tbody, tfoot, thead, tr, th, td {
 	padding: 0;
 	vertical-align: baseline;
 }
-
-
 html {
-
 	overflow-y: scroll; /* Keeps page centred in all browsers regardless of content height */
 	-webkit-text-size-adjust: 100%; /* Prevents iOS text size adjust after orientation change, without disabling user zoom */
 	-ms-text-size-adjust: 100%; /* www.456bereastreet.com/archive/201012/controlling_text_size_in_safari_for_ios_without_disabling_user_zoom/ */
-
 }
-
 h1 {
 	font-size: 2em;
 }
-
 h2 {
 	font-size: 1.8em;
 }
-
 h3 {
 	font-size: 1.6em;
 }
-
 h4 {
 	font-size: 1.4em;
 }
-
 h5 {
 	font-size: 1.2em;
 }
-
 h6 {
 	font-size: 1.0em;
 }
-
 article,
 aside,
 details,
@@ -86,64 +75,39 @@ footer,
 header,
 nav,
 section {
-
 	display: block;
-
 }
-
 ol, ul {
-
 	list-style: none;
-
 }
-
 table { /* tables still need 'cellspacing="0"' in the markup */
-
 	border-collapse: separate;
-
 	border-spacing: 0;
-
 }
-
 caption, th, td {
-
 	font-weight: normal;
-
 	text-align: left;
-
 }
-
 blockquote:before, blockquote:after,
-
 q:before, q:after {
-
 	content: "";
-
 }
-
 blockquote, q {
 	quotes: "" "";
 }
-
 a:focus {
 	outline: thin dotted;
 }
-
 a:hover,
-
 a:active { /* Improves readability when focused and also mouse hovered in all browsers people.opera.com/patrickl/experiments/keyboard/test */
-
 	outline: 0;
-
 }
 a img {
 	border: 0;
 }
 
 /* =Global
-
 ----------------------------------------------- */
-
 body {
 	color: #404040;
 	font-family: 'Roboto', Arial, sans-serif;
@@ -153,64 +117,45 @@ body {
 	margin: 0;
 	padding: 0;
 }
-
-
 .fonte-roxa {
 	color: #4d449b;	
 }
-
 #home .top-wrapper {
 	margin-top: 0px;
 }
-
 #comments {
 	margin: 50px 0 0 0;
 }
-
 .center {
     height: auto;
     margin: 0 auto;
     max-width: 90%;
     overflow: hidden;
 }
-
 button,
 input,
 select,
 textarea {
-
 	color: #404040;
 	font-family: 'Roboto', Arial,sans-serif;
 	font-size: 14px;
 	line-height: 16px;
 }
-
 .clear {
-clear: both;
-width: 100%;
-height: 1px;
-
-}
-
-/* Headings */
-
-h1,h2,h3,h4,h5,h6 {
-
 	clear: both;
-
+	width: 100%;
+	height: 1px;
 }
-
+/* Headings */
+h1,h2,h3,h4,h5,h6 {
+	clear: both;
+}
 hr {
-
 	background-color: #ccc;
 	border: 0;
 	height: 1px;
 	margin-bottom: 1.5em;
-
 }
-
-
-
 /* Text elements */
 
 p {
@@ -284,175 +229,91 @@ address {
 }
 
 pre {
-
 	background: #eee;
-
 	font-family: "Courier 10 Pitch", Courier, monospace;
-
 	font-size: 15px;
-
 	font-size: 1.5rem;
-
 	line-height: 1.6;
-
 	margin-bottom: 1.6em;
-
 	padding: 1.6em;
-
 	overflow: auto;
-
 	max-width: 100%;
-
 }
-
 code, kbd, tt, var {
 	font: 15px Monaco, Consolas, "Andale Mono", "DejaVu Sans Mono", monospace;
 }
-
 abbr, acronym {
-
 	border-bottom: 1px dotted #666;
-
 	cursor: help;
-
 }
-
 mark, ins {
-
 	background: #fff9c0;
-
 	text-decoration: none;
-
 }
-
 sup,
-
 sub {
-
 	font-size: 75%;
-
 	height: 0;
-
 	line-height: 0;
-
 	position: relative;
-
 	vertical-align: baseline;
-
 }
-
 sup {
-
 	bottom: 1ex;
-
 }
-
 sub {
-
 	top: .5ex;
-
 }
-
 small {
-
 	font-size: 75%;
-
 }
-
 big {
-
 	font-size: 125%;
-
 }
-
 figure {
-
 	margin: 0;
-
 }
-
 table {
-
 	margin: 0 0 1.5em;
-
 	width: 100%;
-
 }
-
 th {
-
 	font-weight: bold;
-
 }
-
 img {
-
 	height: auto; /* Make sure images are scaled correctly. */
-
 	max-width: 100%; /* Adhere to container width. */
-
 }
-
 button,
-
 input,
-
 select,
-
 textarea {
-
 	font-size: 100%; /* Corrects font size not being inherited in all browsers */
-
 	margin: 0; /* Addresses margins set differently in IE6/7, F3/4, S5, Chrome */
-
 	vertical-align: baseline; /* Improves appearance and consistency in all browsers */
-
 	*vertical-align: middle; /* Improves appearance and consistency in all browsers */
-
 }
-
 button,
-
 input {
-
 	line-height: normal; /* Addresses FF3/4 setting line-height using !important in the UA stylesheet */
-
 }
-
 button,
-
 html input[type="button"],
-
 input[type="reset"],
-
 /*input[type="submit"]*/ {
-
 	border: 1px solid #ccc;
-
 	border-color: #ccc #ccc #bbb #ccc;
-
 	border-radius: 3px;
-
 	background: #e6e6e6;
-
 	box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.5), inset 0 15px 17px rgba(255, 255, 255, 0.5), inset 0 -5px 12px rgba(0, 0, 0, 0.05);
-
 	color: rgba(0, 0, 0, .8);
-
 	cursor: pointer; /* Improves usability and consistency of cursor style between image-type 'input' and others */
-
 	-webkit-appearance: button; /* Corrects inability to style clickable 'input' types in iOS */
-
 	font-size: 12px;
-
 	font-size: 1.2rem;
-
 	line-height: 1;
-
 	padding: .6em 1em .4em;
-
 	text-shadow: 0 1px 0 rgba(255, 255, 255, 0.8);
-
 }
 
 button:hover,
@@ -671,8 +532,6 @@ a:active {
 
 }
 
-
-
 /* Clearing */
 
 .clear:before, .clear:after,
@@ -692,7 +551,6 @@ a:active {
 }
 
 /* =Header
-
 ----------------------------------------------- */
 
 #masthead {
@@ -708,9 +566,7 @@ a:active {
 	-webkit-box-shadow: 0px 5px 10px 0px rgba(48,48,48,0.4);
 	-moz-box-shadow: 0px 5px 10px 0px rgba(48,48,48,0.4);
 	box-shadow: 0px 5px 10px 0px rgba(48,48,48,0.4);
-
 }
-
 #masthead-interno {
 
 	height: 60px;
@@ -720,8 +576,6 @@ a:active {
 	box-shadow:         0px 2px 6px rgba(50, 50, 50, 0.5);
 
 }
-
-
 
 /* Area 1 Header */
 
@@ -757,49 +611,35 @@ a:active {
 ----------------------------------------------- */
 
 #search-interno {
-
     float: right;
     margin: 13px 15px 0 0;
-
 }
 
 .navigation-main {
-
 	display: block;
 	float: left;
 	width: 48%;
 	font-family: 'Roboto', Arial, sans-serif;
 	margin: 45px 5px 0 10px;
-
 }
-
 .navigation-main-interno {
-
 	display: block;
 	float: left;
 	width: 50%;
 	margin: 15px 10px 0 10px;
 	text-transform: lowercase;
-
 }
-
 .navigation-main ul, .navigation-main-interno ul {
-
 	list-style: disc;
 	color: #4D449C;
 	margin: 0;
 	padding-left: 0;
-
 }
-
 .navigation-main li, .navigation-main-interno li {
-
     float: left;
     margin: 0 0 0 14px;
     position: relative;
-
 }
-
 .navigation-main a, .navigation-main-interno a {
     display: block;
     margin: 0 10px 0 0;
@@ -825,78 +665,41 @@ a:active {
 .navigation-main ul ul a, .navigation-main-interno ul ul a {
 	width: 200px;
 }
-
 .navigation-main ul ul li, .navigation-main-interno ul ul li {
 }
-
 .navigation-main li:hover > a, .navigation-main-interno li:hover > a {
 	color: #4D449C;
 }
-
 .navigation-main ul ul :hover > a, .navigation-main-interno ul ul :hover >a {
-
 }
-
 .navigation-main ul ul a:hover, .navigation-main-interno ul ul a:hover {
-
 }
-
 .navigation-main ul li:hover > ul, .navigation-main-interno ul li:hover >ul {
-
 	display: block;
-
 }
 
 .navigation-main li.current_page_item a,
-
 .navigation-main-interno li.current_page_item a,
-
 .navigation-main li.current-menu-item a,
-
 .navigation-main-interno main li.current-menu-item a,{
-
 	color: #FFF !important;
-
 }
-
-
 .first-menu-item {
-
 	list-style: none !important;
-
 }
-
 nav select {
   display: none;
 }
-
-
 /* Small menu */
-
 .menu-toggle {
-
 	display: none;
 	cursor: pointer;
-
 }
-
-
-
 .main-small-navigation ul {
-
 	display: none;
-
 }
-
-
-
-
-
 
 /* Area 3 Header */
-
-
-
 .area-3-header {
 	float: right;
 	width: auto;
@@ -1328,7 +1131,8 @@ nav select {
 
 #primary {
     float: left;
-    margin: 7em -26.4% 0 0;
+    margin: 0 -26.4% 0 0;
+	/* margin: 7em -26.4% 0 0; */
     width: 100%;
 }
 
@@ -1949,45 +1753,24 @@ text-decoration: none;
 	min-height: 500px !important;
 	left: 0 !important;
 	right: 0 !important;
-
 }
-
-
 .caroufredsel_wrapper ul {
-
 	margin: 0 !important;
 	padding: 0 !important;
-
 }
-
-
-
 .list_carousel a.prev.disabled, a.next.disabled {
-
     cursor: default;
 }
-
-
-
 .list_carousel a.prev span, a.next span {
-
     display: none;
 }
-
-
-
 #foo2 {
-
     /*left: 20px;*/
     margin: 0 2px;
     position: relative;
-
 }
 
-
-
 #desc-slide {
-
 	color: #FFF;
 	background: none repeat scroll 0 0 #000;
     bottom: 0;
@@ -1996,14 +1779,10 @@ text-decoration: none;
     position: absolute;
 	filter: alpha(opacity=60);
 	opacity: 0.6;
-
 }
-
-
 
 /* =Projetos / Portfolio
 ----------------------------------------------- */
-
 .barra {
     background: none repeat scroll 0 0 #4D449D;
     height: 100%;
@@ -2013,29 +1792,23 @@ text-decoration: none;
     transition: margin-top 400ms cubic-bezier(0.77, 0, 0.175, 1) 0s;
     width: 50px;
 }
-
 .barra a {
 	line-height: 50px;
 }
-
 .single-portfolio #main {
 	max-width: 1230px;
 	clear: none;
 	margin-left: 50px;
 }
-
 .top-barra {
 	background: url("images/mini-art.png") no-repeat 0 25px #f0f0f0;
 	width: 50px;
 	height: 200px;
 }
-
 .seta-barra {
 	background: url("images/setas-outros.png") no-repeat scroll 4px -36px transparent;
 	width: 50px;
-	/*height: 50px;*/
 }
-
 .wrapper-barra {
     color: #FFFFFF;
     font-family: "Basic Commercial Bold",Helvetica,Arial,sans-serif;
@@ -2047,12 +1820,11 @@ text-decoration: none;
     transform-origin: left top 0;
     white-space: nowrap;
 }
-
-
 .header-categories  {
     overflow: hidden;
     padding: 16px 20px;
-    width: 100%;
+	max-width: 1190px;
+	width: 100%;
     background: none repeat scroll 0 0 #e5e5e5;
     box-shadow: 0 2px 2px rgba(0, 0, 0, 0.15);
     position: relative;
@@ -2061,11 +1833,9 @@ text-decoration: none;
 	float: left;
     margin: 0;
 }
-
 .header-categories a{
 	text-decoration: none;
 }
-
 .header-categories  .search {
     border-radius: 5px 5px 5px 5px;
     border-top: 0 none;
@@ -2108,7 +1878,7 @@ text-decoration: none;
     float: left;
     overflow: hidden;
     text-transform: lowercase;
-    width: 80%;
+    width: 70%;
 }
 
 
@@ -2120,9 +1890,16 @@ text-decoration: none;
 
 .separated-list li {
     float: left;
-    height: auto;
-    list-style: none;
-    margin: 1em;
+    margin: 0 0 0 14px;
+    position: relative;
+}
+
+.separated-list li a {
+    display: block;
+    font-size: 1.1em;
+    margin: 0 10px 0 0;
+    text-decoration: none;
+	color: #4D4899;
 }
 
 .search-categorias-portfolio {
@@ -2212,12 +1989,29 @@ a.titulo-resumo {
 
 #busca-aba {
 	float: left;
-	width: 16%;
+	width: 25%;
 	margin: 1em 0 0 0;
 	padding: 0;
 }
 
 
+#busca-aba #searchform {
+	border: 0;
+	color: #bcbcbc;
+	float: left;
+}
+
+#busca-aba #searchform input {
+	padding: 7px 7px 7px 30px;
+	border: 0;
+}
+
+#busca-aba #lupa-aba {
+	width: 30px;
+	height: 30px;
+	position: absolute;
+	background: url("images/img-sprite.png") no-repeat scroll -74px -97px transparent;
+}
 .esquerda-single-portfolio {
 	float: left;
 	width: 60%;
@@ -2258,6 +2052,7 @@ a.titulo-resumo {
 .outros-projetos {
 	width: 100%;
 	max-width: 350px;
+	overflow: hidden;
 }
 
 .setas-outros {
@@ -2286,8 +2081,30 @@ a.titulo-resumo {
 	float: left;
 	width: 100%;
 	max-width: 300px;
-	height: 250px;
+	height: 300px;
 	background: #e3e3e3;
+}
+
+.outros-slider a {
+	text-decoration: none;
+}
+
+.outros-slider .cada-outro-projeto {
+	max-width: 300px;
+	max-height: 250px;
+	overflow: hidden;
+}
+
+.outros-slider img {
+	max-width: 350px;
+	margin: 0 auto;
+}
+
+.titulo-outros-projetos {
+	width: auto;
+	height: auto;
+	padding: 12px 15px 12px 12px;
+	color: #444;
 }
 
 

@@ -11,11 +11,11 @@
                                   $myterms = get_terms( 'tipo' );
                                   foreach($myterms as $term){
                                     $root_url = get_bloginfo('url');
-                                    $term_taxonomy=$term->taxonomy;
-                                    $term_slug=$term->slug;
-                                    $term_name =$term->name;
+                                    $term_taxonomy = $term->taxonomy;
+                                    $term_slug = $term->slug;
+                                    $term_name = $term->name;
                                     $link = $root_url.'/'.$term_taxonomy.'/'.$term_slug;
-                                    $output .="<option value='".$link."'>".$term_name."</option>";
+                                    $output .= "<option value='".$link."'>".$term_name."</option>";
                                   echo "<li><a href=";
                                   echo $link . ">" . $term_name;
                                   echo "</a></li>";

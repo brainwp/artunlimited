@@ -18,8 +18,7 @@
 	</div><!-- .compartilhe-sidebar -->
 	
 	<div class="outros-projetos">
-
-		<?php while ( have_posts() ) : the_post(); ?>
+		
 			<h2 class="fonte-roxa">outros projetos:</h2>
 			<div class="setas-outros">
 			<a id="prev3" href="#"><div class="seta-outros-anteriores">
@@ -34,20 +33,26 @@
 			<div class="list_carousel">
 				<ul id="foo3">
 					<?php
-					$query = new WP_Query( array( 'post_type' => 'portfolio' ) );
+					$esse_id = array(get_the_ID());
+					$query = new WP_Query( array( 'post_type' => 'portfolio', 'orderby' => 'rand', 'post__not_in' => $esse_id ) );
 
 					if ( $query->have_posts() ) : ?>
 						   <?php while ( $query->have_posts() ) : $query->the_post(); ?> 				
 					<li>
-					<div class="cada-outro-projeto">                        
-						<a class="a-outro" href="<?php the_permalink(); ?>">
-							<?php the_post_thumbnail('thumb-outros-projetos'); ?>
-						</a><!-- .a-outro  -->
-					<div id="titulo-outros-projetos">
+                    <a class="a-outro" href="<?php the_permalink(); ?>">
+					<div class="cada-outro-projeto">
+
+						<?php if ( has_post_thumbnail() ) {
+						the_post_thumbnail( 'thumb-outros-projetos' );
+						} else { ?>
+						<img src="<?php echo get_stylesheet_directory_uri(); ?>/images/default-outros-<?php echo mt_rand(1,3); ?>.jpg" alt="<?php the_title(); ?>" />
+						<?php } ?>
+                        
+					</div><!-- .cada-outro-projeto -->
+					<div class="titulo-outros-projetos">
 					 <?php the_title(); ?> 
-					</div>
-						
-					</div><!-- cada-outro-projeto -->
+					</div><!-- .titulo-outros-projetos -->
+                    </a><!-- .a-outro  -->		
 					</li>
 				   <?php endwhile; wp_reset_postdata(); ?>
 				   <!-- show pagination here -->
@@ -63,5 +68,5 @@
 					
 
 		</div><!-- .outros-slider -->
-		<?php endwhile; // end of the loop. ?>
+		
 	</div><!-- .outros-projetos -->
