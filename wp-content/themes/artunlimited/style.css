@@ -321,7 +321,7 @@ button:hover,
 html input[type="button"]:hover,
 input[type="reset"]:hover,
 input[type="submit"]:hover {
-	background: #262e5d;
+	cursor: pointer;
 }
 
 button:focus,
@@ -1584,17 +1584,35 @@ text-decoration: none;
 #sidebar {
 	float: right;
 	width: 25%;
-	margin-top: 10em;
+	margin-top: 9em;
 }
-
+#sidebar ul h2 {
+	font-family: 'Roboto', Arial, sans-serif;
+	font-weight: 200;
+	color: #006bb5;
+	text-transform: uppercase;
+}
+#sidebar ul{
+    margin: 10px;
+	padding: 10px;
+}
+#sidebar ul ul {
+    margin: 0;
+    padding: 0;
+}
+#sidebar ul li {
+	list-style: none;
+}
+#sidebar ul li a {
+	text-decoration: none;
+	padding: 3px 5px;
+}
 /* Contato
 ----------------------------------------------- */
-
 .contact-form input[type="text"], .contact-form input[type="email"], .contact-form textarea {
 	background: #CCC;
 	border: 0;
 }
-
 .contact-form label {
     display: block;
     float: none;
