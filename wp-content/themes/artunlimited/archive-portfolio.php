@@ -1,5 +1,7 @@
 <?php get_header('portfolio'); ?>
 
+<div class="altura-header"></div>
+
 	<div id="primary" class="content-area">
 		<div id="content-interno" class="site-content" role="main">
 		
