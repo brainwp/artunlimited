@@ -6,9 +6,6 @@
  */
 ?>
 
-	</div><!-- #main -->
-	</div><!-- #page -->
-
     <div class="footer">
 		<?php wp_footer(); ?>
 		<div class="infos-rodape">
@@ -30,6 +27,9 @@
 		    </div><!-- #linkedin -->
         </div><!-- #redes -->
     </div><!-- .footer -->
-
+    
+	</div><!-- #main -->
+	</div><!-- #page -->
+    
 </body>
 </html>
