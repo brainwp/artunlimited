@@ -5,15 +5,18 @@
  * @package artunlimited
  */
 
-get_header(); ?>
+get_header( 'interno' ); ?>
 
+<div class="altura-header"></div>
 	<div id="primary" class="content-area">
 		<div id="content" class="site-content" role="main">
 
 			<article id="post-0" class="post not-found">
-				<header class="entry-header">
-					<h1 class="entry-title"><?php _e( 'Oops! That page can&rsquo;t be found.', 'artunlimited' ); ?></h1>
-				</header><!-- .entry-header -->
+            
+            	<header class="entry-header-page-404">
+                    <div class="seta-page"></div>
+                    <div class="titulo-page"><h1><?php _e( 'Oops! That page can&rsquo;t be found.', 'artunlimited' ); ?></h1></div>
+                </header><!-- .entry-header-page-404 -->
 
 				<div class="entry-content">
 					<p><?php _e( 'It looks like nothing was found at this location. Maybe try one of the links below or a search?', 'artunlimited' ); ?></p>
@@ -53,4 +56,4 @@ get_header(); ?>
 		</div><!-- #content -->
 	</div><!-- #primary -->
 
-<?php get_footer(); ?>
+<?php get_footer( 'noticias' ); ?>

@@ -5,16 +5,18 @@
  * @package artunlimited
  */
 
-get_header(); ?>
+get_header( 'interno' ); ?>
 
+<div class="altura-header"></div>
 	<section id="primary" class="content-area">
 		<div id="content" class="site-content" role="main">
 
 		<?php if ( have_posts() ) : ?>
-
-			<header class="page-header">
-				<h1 class="page-title"><?php printf( __( 'Search Results for: %s', 'artunlimited' ), '<span>' . get_search_query() . '</span>' ); ?></h1>
-			</header><!-- .page-header -->
+            
+            <header class="entry-header-page-404">
+                <div class="seta-page"></div>
+                <div class="titulo-page"><h1><?php printf( __( 'Search Results for: %s', 'artunlimited' ), '<span>' . get_search_query() . '</span>' ); ?></h1></div>
+            </header><!-- .entry-header-page-404 -->
 
 			<?php /* Start the Loop */ ?>
 			<?php while ( have_posts() ) : the_post(); ?>
@@ -35,4 +37,4 @@ get_header(); ?>
 	</section><!-- #primary -->
 
 <?php get_sidebar(); ?>
-<?php get_footer(); ?>
+<?php get_footer( 'noticias' ); ?>

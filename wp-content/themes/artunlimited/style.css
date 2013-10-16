@@ -1048,6 +1048,11 @@ nav select {
     width: 100%;
 	overflow: hidden;
 }
+.entry-header-page-404 {
+    margin: 25px 0 20px 0;
+    width: 100%;
+	overflow: hidden;
+}
 .seta-page {
 	width: 56px;
 	margin: 10px 14px 10px 0;
@@ -1165,6 +1170,7 @@ nav select {
     margin: 0 -26.4% 0 0;
 	/* margin: 7em -26.4% 0 0; */
     width: 100%;
+	background: #FFF;
 }
 
 #secondary {
