@@ -967,6 +967,20 @@ nav select {
 	max-width: 1230px !important;
 	position: relative;
 }
+.top-barra:hover {
+	background-position: -50px 20px;
+}
+.etiqueta-barra-portfolio-archive {
+    background: url("images/escrita-portfolio.png") no-repeat scroll 0 -20px #4D449B;
+    height: 4000px;
+    margin: 230px 0 0;
+    width: 50px;
+}
+.a-etiqueta a {
+	line-height: 50px;
+    height: 400px;
+    width: 50px;
+}
 .barra-portfolio {
     background-color: #4D449B;
     height: 100%;
@@ -978,19 +992,11 @@ nav select {
 	box-shadow:         -7px 0px 6px rgba(50, 50, 50, 0.27);
 	z-index: 999999;
 }
-
 .etiqueta-barra-portfolio {
 	background: url("images/escrita-portfolio.png") no-repeat scroll 0 15px #4D449B;
 	width: 50px;
 	height: 192px;
 	position: fixed;
-}
-
-.etiqueta-barra-portfolio-archive {
-    background: url("images/escrita-portfolio.png") no-repeat scroll 0 -51px #4D449B;
-    height: 192px;
-    margin: 20px 0 0;
-    width: 50px;
 }
 
 .title-home {
@@ -1536,9 +1542,6 @@ div.sharedaddy div.sd-block {
 .cada-noticia a{
 text-decoration: none;
 }
-.top-barra:hover {
-	background-position: -50px 20px;
-}
 .data-cada-noticia {
     background: #4D4899;
     color: #FFFFFF;
@@ -1825,6 +1828,8 @@ text-decoration: none;
 }
 .barra a {
 	line-height: 50px;
+    height: 200px;
+    width: 50px;
 }
 .single-portfolio #main {
 	max-width: 1230px;

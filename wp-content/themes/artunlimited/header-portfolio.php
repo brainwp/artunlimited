@@ -18,11 +18,13 @@
 </head>
 <body <?php body_class(); ?>>
 <div id="page" class="hfeed site">
-<a class="barra" href="<?php echo home_url(); ?>">
 <div class="barra">
-	<div class="top-barra"></div>
+	<a class="barra" href="<?php echo home_url(); ?>">
+    <div class="top-barra"></div>
+    </a>
+    <a class="a-etiqueta" href="<?php echo home_url(); ?>">
 	<div class="etiqueta-barra-portfolio-archive"></div>
+    </a>
 </div><!-- .barra -->
-</a>
 <?php do_action( 'before' ); ?>
 <div id="main" class="site-main">
