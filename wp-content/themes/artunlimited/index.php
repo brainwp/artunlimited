@@ -82,7 +82,9 @@ get_header( 'interno' ); ?>
 		<?php endif; ?>
 
 		</div><!-- #content -->
+
+	<?php get_footer( 'noticias' ); ?>
+
 	</div><!-- #primary -->
 
 <?php  get_sidebar(); ?>
-<?php get_footer(); ?>

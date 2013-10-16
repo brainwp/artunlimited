@@ -68,6 +68,7 @@
 		</div> <!-- .archive-portfolio -->
 
 		</div><!-- #content -->
+	
+		<?php get_footer(); ?>
+        
 	</div><!-- #primary -->
-
-<?php get_footer(); ?>

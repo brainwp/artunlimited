@@ -63,6 +63,8 @@ get_header(); ?>
 
 		</div><!-- #content -->
 
+	<?php get_footer( 'noticias' ); ?>
+
 	</div><!-- #primary -->
 
-<?php get_footer(); ?>
+<?php get_sidebar(); ?>

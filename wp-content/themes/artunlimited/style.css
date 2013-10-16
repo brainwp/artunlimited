@@ -1122,8 +1122,8 @@ nav select {
 }
 
 #content-interno {
-	background: #FFF;
-	margin: 0 0 0 0;
+	background: none repeat scroll 0 0 #FFFFFF;
+    padding: 0 0 60px;
 }
 
 #main {
@@ -1936,20 +1936,15 @@ text-decoration: none;
 }
 
 .attachment-thumb-projetos {
-
 	margin: 0 auto;
 	text-align: center;
-
 }
 
 .rodape-cada-projeto {
-
+	overflow: hidden;
 	width: 100%;
-	height: 80px;
-
+	height: 100px;
 }
-
-
 
 .rodape-cada-projeto  h3, .data-cada-post {
 	line-height: 1.2;
@@ -1957,16 +1952,14 @@ text-decoration: none;
 
 }
 
-
-
 .data-cada-post {
-
-	color: #CCC;
-
+	color: #666;
 }
 
 a.titulo-resumo {
- text-decoration: none;
+    font-size: 0.8em;
+    font-weight: lighter;
+    text-decoration: none;
 }
 
 
@@ -1979,22 +1972,19 @@ a.titulo-resumo {
 	font-family: 'Roboto', sans-serif;
 	font-size: 3em;
 }
-
-
 .archive-portfolio {
-	float: left;
-	width: 96%;
-	margin: 0 0 0 4%;
+    float: left;
+    margin: 0 0 0 4%;
+    overflow: hidden;
+    padding: 0 0 50px;
+    width: 96%;
 }
-
 #busca-aba {
 	float: left;
 	width: 25%;
 	margin: 1em 0 0 0;
 	padding: 0;
 }
-
-
 #busca-aba #searchform {
 	border: 0;
 	color: #bcbcbc;
@@ -2075,7 +2065,6 @@ a.titulo-resumo {
 .seta-outros-posteriores:hover, .seta-outros-anteriores:hover {
 	background-color: #4d449b;
 }
-
 .outros-slider {
 	float: left;
 	width: 100%;
@@ -2083,7 +2072,6 @@ a.titulo-resumo {
 	height: 300px;
 	background: #e3e3e3;
 }
-
 .outros-slider a {
 	text-decoration: none;
 }
@@ -2107,17 +2095,10 @@ a.titulo-resumo {
 	font-weight: 100;
 }
 
-
 /* =Asides
-
 ----------------------------------------------- */
-
-
-
 .blog .format-aside .entry-title,
-
 .archive .format-aside .entry-title {
-
 	display: none;
 
 }
@@ -2305,8 +2286,37 @@ object {
 }
 
 .footer {
-	height: 60px;
-	width: 100%;
+    background: none repeat scroll 0 0 #E5E5E5;
+    height: 70px;
+    margin: 0 0 0 50px;
+    max-width: 1190px;
+    overflow: hidden;
+    padding: 16px 20px;
+    position: relative;
+    width: 100%;
+}
+
+.footer #redes, .footer-noticias #redes {
+    margin: 25px 0 0;
+}
+
+.infos-rodape {
+    color: #000000;
+    float: left;
+    font-weight: 300;
+    margin: 20px 0 0 10px;
+    width: 90%;
+}
+
+.footer-noticias {
+    background: none repeat scroll 0 0 #E5E5E5;
+    height: 70px;
+    margin: 0 0 0 0;
+    max-width: 1190px;
+    overflow: hidden;
+    padding: 16px 20px;
+    position: relative;
+    width: 100%;
 }
 
 
