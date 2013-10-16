@@ -2417,9 +2417,9 @@ object {
 
 	.navigation-main {
 		display: block;
-		float: left;
+		float: none;
 		font-family: 'Roboto',Arial,sans-serif;
-		margin: 10px 20px;
+		margin: 10px auto;
 		width: 100%;
 	}
 
