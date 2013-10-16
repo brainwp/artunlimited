@@ -1042,7 +1042,7 @@ nav select {
 .entry-header-noticias {
     float: left;
     margin: 5px 0 20px 5px;
-    width: 80%;
+    width: 90%;
 }
 
 .entry-header-noticias h1 {
@@ -1153,8 +1153,9 @@ nav select {
 }
 
 #content.site-content {
-	margin: 0;
-	background: none repeat scroll 0 0 #FFFFFF;
+    background: none repeat scroll 0 0 #FFFFFF;
+    margin: 25px 0 0 15px;
+    max-width: 880px;
 }
 
 #content-interno {
@@ -1228,7 +1229,7 @@ div.sharedaddy div.sd-block {
 
 .page-template-default .entry-content {
 	margin: 1.5em 1.5em 0 5em;
-	max-width: 840px;
+	max-width: 880px;
 
 }
 
@@ -1632,6 +1633,16 @@ text-decoration: none;
 	color: #006bb5;
 	text-transform: uppercase;
 }
+
+
+.widget-title {
+
+	font-family: 'Roboto', Arial, sans-serif;
+	font-weight: 200;
+	color: #006bb5;
+	text-transform: uppercase;
+}
+
 #sidebar ul{
     margin: 10px;
 	padding: 10px;
