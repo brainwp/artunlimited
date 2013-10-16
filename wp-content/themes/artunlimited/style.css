@@ -1043,6 +1043,31 @@ nav select {
 	margin: 18px 0 0 0;
 }
 
+.entry-header-page {
+    margin: 5px 0 20px 0;
+    width: 100%;
+	overflow: hidden;
+}
+.seta-page {
+	width: 56px;
+	margin: 10px 14px 10px 0;
+	float: left;
+	height: 56px;
+	background: url("images/img-sprite.png") no-repeat scroll -605px 0 transparent;
+}
+.titulo-page {
+	width: 70%;
+	float: left;
+}
+
+.titulo-page h1 {
+	margin: 18px 0 0 0;
+	color: #4d449b;
+    text-transform: uppercase;
+    font-family: 'Roboto',Arial,sans-serif;
+    font-weight: 200;
+}
+
 .entry-meta {	
 	font-family: 'Roboto', Arial, sans-serif;
 	font-weight: 400;
@@ -1193,9 +1218,9 @@ div.sharedaddy div.sd-block {
 .no-results {
     float: left;
     margin: 0 auto;
-    padding: 20px 0 0 3em;
+    padding: 20px 0 60px 3em;
     position: relative;
-    width: 70%;
+    width: 90%;
 }
 .page-links {
 	clear: both;
