@@ -77,7 +77,7 @@
 	<header id="masthead" class="site-header" role="banner">
 		        
         <div id="logo">
-        	<a class="a-logo" href="javascript:scroll_to('#page');"></a>
+        	<a class="a-logo" href="<?php bloginfo( 'home' ); ?>"></a>
         </div><!-- #logo -->
                 
         <div class="area-4-header">
