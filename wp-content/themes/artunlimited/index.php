@@ -11,7 +11,7 @@
  * @package artunlimited
  */
 
-get_header( ); ?>
+get_header( 'interno' ); ?>
 
 <div class="altura-header"></div>
 	<div id="primary" class="content-area">
