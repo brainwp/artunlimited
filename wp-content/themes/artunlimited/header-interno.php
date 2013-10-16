@@ -135,9 +135,9 @@
 			<nav id="site-navigation" class="navigation-main" role="navigation">
 			<?php  // wp_nav_menu( array( 'theme_location' => 'primary', 'items_wrap' => '<ul class="menu"><li class="first-menu-item"></li>%3$s</ul>' ) ); ?>
 		
-	<ul class="menu">
+	
 			<?php wp_nav_menu( array( 'theme_location' => 'primary' ) ); ?>
-	</ul>
+	
 		
 		</nav><!-- #site-navigation -->
         

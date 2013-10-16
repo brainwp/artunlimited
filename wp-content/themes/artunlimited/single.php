@@ -61,10 +61,10 @@ get_header(); ?>
 			?>
 		<?php endwhile; // end of the loop. ?>
 
+	<?php get_sidebar(); ?>
+
 		</div><!-- #content -->
 
 	<?php get_footer( 'noticias' ); ?>
 
 	</div><!-- #primary -->
-
-<?php get_sidebar(); ?>
