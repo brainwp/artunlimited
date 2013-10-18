@@ -69,6 +69,6 @@
 
 		</div><!-- #content -->
 	
-		<?php get_footer( 'portfolio' ); ?>
-        
 	</div><!-- #primary -->
+    
+<?php get_footer( 'portfolio' ); ?>

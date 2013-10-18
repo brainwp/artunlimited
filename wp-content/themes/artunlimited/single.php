@@ -67,4 +67,4 @@ get_header( 'interno' ); ?>
     
 <?php get_sidebar(); ?>
 
-<?php get_footer( 'noticias' ); ?>
+<?php get_footer(); ?>

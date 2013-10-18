@@ -6,7 +6,13 @@
  */
 ?>
 
-    <div class="footer footer-portfolio">
+<?php if (is_single()) {
+	$classe = "footer";
+} else {
+	$classe = "footer footer-single";
+} ?>
+
+    <div class="<?php echo $classe; ?>">
 		<?php wp_footer(); ?>
 		<div class="infos-rodape">
 			<?php $contatos = get_page_by_title( 'Contatos' ); ?>
