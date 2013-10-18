@@ -6,7 +6,7 @@
  */
 ?>
 
-    <div class="footer-noticias">
+    <div class="footer footer-portfolio">
 		<?php wp_footer(); ?>
 		<div class="infos-rodape">
 			<?php $contatos = get_page_by_title( 'Contatos' ); ?>
@@ -26,10 +26,10 @@
             	<a class="a-redes" href="<?php echo get_option( 'mo_linkedin' ); ?>"></a>
 		    </div><!-- #linkedin -->
         </div><!-- #redes -->
-    </div><!-- .footer-noticias -->
-
+    </div><!-- .footer -->
+    
 	</div><!-- #main -->
 	</div><!-- #page -->
-
+    
 </body>
 </html>

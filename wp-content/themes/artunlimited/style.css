@@ -2406,26 +2406,25 @@ object {
 /* When Infinite Scroll has reached its end we need to re-display elements that were hidden (via .neverending) before */
 
 .infinity-end.neverending .site-footer {
-
 	display: block;
-
 }
 
 .footer {
     background: none repeat scroll 0 0 #E5E5E5;
     height: 70px;
-    margin: 0 0 0 50px;
+    margin: 0 0 0 0;
     max-width: 1190px;
     overflow: hidden;
     padding: 16px 20px;
     position: relative;
     width: 100%;
 }
-
+.footer-portfolio {
+   margin: 0 0 0 50px;
+}
 .footer #redes, .footer-noticias #redes {
     margin: 25px 0 0;
 }
-
 .infos-rodape {
     color: #000000;
     float: left;
@@ -2441,6 +2440,17 @@ object {
     max-width: 1190px;
     overflow: hidden;
     padding: 16px 20px;
+    position: relative;
+    width: 100%;
+}
+
+.footer-portfolo {
+    background: none repeat scroll 0 0 #E5E5E5;
+    height: 40px;
+    margin: 0 0 0 0;
+    max-width: 1190px;
+    overflow: hidden;
+    padding: 0px 20px 16px 30px;
     position: relative;
     width: 100%;
 }

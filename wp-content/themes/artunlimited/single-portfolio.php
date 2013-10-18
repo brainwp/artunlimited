@@ -91,4 +91,4 @@ get_header( 'portfolio' ); ?>
 
 	</div><!-- #primary -->
 
-<?php get_footer(); ?>
+<?php get_footer( 'portfolio' ); ?>
