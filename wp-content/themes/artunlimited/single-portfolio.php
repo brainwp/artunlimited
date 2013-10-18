@@ -15,10 +15,10 @@ get_header( 'portfolio' ); ?>
 		<div id="slider-projetos">
 <div id="slider-single">
                 
-                    <div class="list_carousel">
+                    <div id="carousel_wrap">
 						<a class="prev" id="prev2" href="#"><span>anterior</span></a>
                         <a class="next" id="next2" href="#"><span>seguinte</span></a>
-                        <ul id="foo2">
+                        <ul id="carousel">
                             <?php
                         $args = array(
                                 'post_type' => 'attachment',
@@ -41,7 +41,7 @@ get_header( 'portfolio' ); ?>
 									$url = wp_get_attachment_url( $attachment_id ); 
                                     ?>
                             <li>
-							<div class="cada-slide">                        
+							<div class="cada-slides">                        
 							<?php
                             if ($description):
                             echo '<div id="desc-slide">' . $description . '</div>';
@@ -60,7 +60,7 @@ get_header( 'portfolio' ); ?>
                         
                     </div>
                 
-				</div><!-- #slider-single -->
+				</div><!-- <div id="carousel_wrap"> -->
 		</div><!-- #sider-projetos -->
 <div class="esquerda-single-portfolio">
 

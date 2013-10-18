@@ -1809,6 +1809,85 @@ text-decoration: none;
 .list_carousel a.prev span, a.next span {
     display: none;
 }
+
+
+
+/* carousel */
+#carousel_wrap {
+	height: 520px;
+	left: 0;
+	overflow: hidden;
+	position: relative;
+	width: 100%;
+}
+body.single-projects #carousel_wrap { margin: 15px 0 30px }
+
+ul#carousel li {
+	display: block;
+	float: left;
+	height: 520px;
+	margin: 0 7.5px;
+	max-width: 750px;
+	position: relative;
+    text-align: center;
+    overflow: hidden;
+}
+ul#carousel li img {
+	max-width: none;
+}
+ul#carousel li .content {
+	background-color: rgba(255, 255, 255, 0.8);
+	position: absolute;
+}
+ul#carousel li .content > div {
+	padding: 30px;
+}
+ul#carousel li .content p { margin-bottom: 0; }
+
+ul#carousel li .content.center {
+	bottom: 40%;
+	text-align: center;
+	width: 100%;
+}
+
+.bottom-left, .bottom-right { bottom: 1px; max-width: 50% }
+.bottom-left { left: 1px; text-align: left; }
+.bottom-right { right: 1px; text-align: right; }
+
+.carousel_nav {
+	/* background-color: rgba(255, 255, 255, 0.5); */
+	height: 700px;
+    position: absolute;
+    top: 0;
+    width: 50%;
+}
+
+#carousel_wrap a.prev {
+    background: url("images/setas.png") no-repeat scroll -5px center transparent;
+    display: block;
+    min-height: 70px;
+	position: absolute;
+    top: 40%;
+    width: 70px;
+	z-index: 50;
+	text-indent: -200px;
+}
+
+#carousel_wrap a.next {
+    background: url("images/setas.png") no-repeat scroll -75px center transparent;
+	display: block;
+	min-height: 70px;
+    position: absolute;
+    top: 40%;
+    width: 70px;
+	z-index: 50;
+	right: 0;
+	text-indent: -200px;
+}
+
+
+
+
 #foo2 {
     /*left: 20px;*/
     margin: 0 2px;
