@@ -1134,6 +1134,14 @@ nav select {
 	/* background: url(images/slider-provisorio.jpg) center top;*/
 }
 
+div.slider-nav span.left {
+	background: url("images/setas.png") no-repeat scroll -5px center transparent !important;
+}
+
+div.slider-nav span.right {
+	background: url("images/setas.png") no-repeat scroll -75px center transparent !important;
+}
+
 #orbit-inside img.orbit-slide {
     height: 100%;
 	width: 100%;
@@ -1145,18 +1153,12 @@ nav select {
 	overflow: hidden;
 	height: auto;
 }
-
-
 #page {
-
 	margin: 0 auto;
 	max-width: 1280px;
-
 }
 
-
 /* =Content
-
 ----------------------------------------------- */
 
 #content {
