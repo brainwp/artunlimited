@@ -1127,9 +1127,10 @@ nav select {
 /* =Slider Home - Orbit Slider
 ----------------------------------------------- */
 #slider {
-	max-width: 1210px;
+	max-width: 1230px;
 	height: 100%;
 	max-height: 750px;
+	margin-right:50px;
 	font-family: 'Gentium Book Basic', serif;
 	/* background: url(images/slider-provisorio.jpg) center top;*/
 }
@@ -2122,7 +2123,7 @@ a.titulo-resumo {
     margin: 0 0 0 50px;
     max-width: 1230px;
     overflow: hidden;
-    width: 100%;
+    width: auto;
 }
 #busca-aba {
 	float: left;
@@ -2436,7 +2437,7 @@ object {
     overflow: hidden;
     padding: 16px 20px;
     position: relative;
-    width: 100%;
+    width: auto;
 }
 .footer-single {
    margin: 0 0 0 50px;
@@ -2755,7 +2756,7 @@ object {
 	}
 	
 	.area-3-header {
-    margin-right: 50px;
+    margin-right: 65px;
 	}
 	
 	.slide-content {
