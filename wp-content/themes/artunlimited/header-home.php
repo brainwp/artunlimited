@@ -70,9 +70,9 @@
 
 <div id="page" class="hfeed site site-home">
 
-	<a href="<?php echo home_url('portfolio'); ?>"><div class="barra-portfolio">
+	<div class="barra-portfolio"><a href="<?php echo home_url('portfolio'); ?>">
 		<div class="etiqueta-barra-portfolio"></div>
-	</div></a>
+	</a></div>
 
 	<header id="masthead" class="site-header" role="banner">
 		        

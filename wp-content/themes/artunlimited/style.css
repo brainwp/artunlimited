@@ -964,7 +964,7 @@ nav select {
 	position: relative;
 }
 .site-home {
-	max-width: 1230px !important;
+	max-width: 1280px !important;
 	position: relative;
 }
 .top-barra:hover {
@@ -985,7 +985,7 @@ nav select {
     background-color: #4D449B;
     height: 100%;
     position: absolute;
-    right: -50px;
+    right: 0;
     width: 50px;
 	-webkit-box-shadow: -7px 0px 6px rgba(50, 50, 50, 0.27);
 	-moz-box-shadow:    -7px 0px 6px rgba(50, 50, 50, 0.27);
@@ -2527,21 +2527,10 @@ object {
 	
 	
 	.slide-content {
-	color: #FFF;
-	font-family: 'Gentium Book Basic', serif;
-	text-transform: lowercase;
-    font-size: 4em;
-    font-weight: lighter;
-    letter-spacing: 4px;
-	position: absolute;
-	height: 31% !important;
-    left: 40% !important;
-	right: 0 !important;
-    padding: 0 !important;
-    position: absolute;
-    top: 65% !important;
-    width: 55% !important;
-	line-height: 1.2;
+    left: 20% !important;
+    top: 40% !important;
+    width: 70% !important;
+
 	}
 
 	#main #content {
@@ -2760,6 +2749,20 @@ object {
 		font-size: 12px;
 
 	}
+	
+	.area-4-header {
+    display: none;
+	}
+	
+	.area-3-header {
+    margin-right: 50px;
+	}
+	
+	.slide-content {
+    left: 20% !important;
+    top: 55% !important;
+    width: 70% !important;
+	}
 
 	article.intro .entry-content {
 
@@ -2932,6 +2935,7 @@ object {
 	
 	nav select {
 	display: inline-block;
+	margin-left: 15px;
 	}
 
 
