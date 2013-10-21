@@ -25,7 +25,8 @@ get_header( 'portfolio' ); ?>
                                 'numberposts' => -1,
                                 'post_status' => null,
                                 'post_parent' => $post->ID,
-                                'orderby' => 'rand'
+								'order' => 'ASC',
+                                'orderby' => 'menu_order'
                                 );
                             
                             $anexos = get_posts ( $args );
