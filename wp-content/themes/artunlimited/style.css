@@ -2023,10 +2023,10 @@ ul#carousel li .content.center {
 .header-categories ul {
     float: left;
     overflow: hidden;
+    padding: 0;
     text-transform: lowercase;
-    width: 70%;
+    width: 80%;
 }
-
 
 .separated-list {
     display: inline-block;
@@ -2038,13 +2038,23 @@ ul#carousel li .content.center {
     float: left;
     margin: 0 0 0 14px;
     position: relative;
+    list-style: disc outside none;
+}
+
+.separated-list li.primeiro-li {
+	list-style: none;
 }
 
 .separated-list li a {
+	color: #4d4e5a;
     display: block;
-    font-size: 1.1em;
-    margin: 0 10px 0 0;
+    font-size: 1.4em;
+    font-weight: inherit;
+    margin: 5px 10px 0 0;
     text-decoration: none;
+}
+
+.separated-list li a:hover {
 	color: #4D4899;
 }
 
@@ -2127,8 +2137,8 @@ a.titulo-resumo {
 }
 #busca-aba {
 	float: left;
-	width: 25%;
-	margin: 1em 0 0 0;
+	width: auto;
+	margin: 10px 0;
 	padding: 0;
 }
 #busca-aba #searchform {
@@ -2138,15 +2148,18 @@ a.titulo-resumo {
 }
 
 #busca-aba #searchform input {
-	padding: 7px 7px 7px 30px;
+	padding: 13px 7px 13px 40px;
 	border: 0;
+	color: #999999;
+	text-transform: lowercase;
 }
 
 #busca-aba #lupa-aba {
-	width: 30px;
-	height: 30px;
-	position: absolute;
-	background: url("images/img-sprite.png") no-repeat scroll -74px -97px transparent;
+    background: url("images/img-sprite.png") no-repeat scroll -74px -97px transparent;
+    height: 30px;
+    margin: 7px 0 0 9px;
+    position: absolute;
+    width: 30px;
 }
 .esquerda-single-portfolio {
 	float: left;
