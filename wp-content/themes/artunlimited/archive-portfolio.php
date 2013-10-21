@@ -1,4 +1,4 @@
-<?php get_header('portfolio'); ?>
+<?php get_header( 'portfolio' ); ?>
 
 		<div id="content-interno" class="site-content" role="main">
 		

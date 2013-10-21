@@ -7,9 +7,9 @@
 ?>
 
 <?php if (is_single()) {
-	$classe = "footer";
-} else {
 	$classe = "footer footer-single";
+} else {
+	$classe = "footer";
 } ?>
 
     <div class="<?php echo $classe; ?>">

@@ -1,7 +1,6 @@
 <?php
 /**
  * The Template for displaying all single posts.
- *
  * @package artunlimited
  */
 
@@ -13,7 +12,7 @@ get_header( 'portfolio' ); ?>
 		<?php while ( have_posts() ) : the_post(); ?>
 
 		<div id="slider-projetos">
-<div id="slider-single">
+			<div id="slider-single">
                 
                     <div id="carousel_wrap">
 						<a class="prev" id="prev2" href="#"><span>anterior</span></a>
@@ -61,8 +60,10 @@ get_header( 'portfolio' ); ?>
                         
                     </div>
                 
-				</div><!-- <div id="carousel_wrap"> -->
+				</div><!-- carousel_wrap -->
+                </div><!-- slider-single -->
 		</div><!-- #sider-projetos -->
+        
 <div class="esquerda-single-portfolio">
 
 	<header class="entry-header">
