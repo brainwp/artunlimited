@@ -1861,7 +1861,6 @@ text-decoration: none;
 }
 
 .caroufredsel_wrapper {
-
 	width: 100% !important;
 	min-height: 500px !important;
 	left: 0 !important;
@@ -1894,14 +1893,15 @@ ul#carousel li {
 	display: block;
 	float: left;
 	height: 520px;
-	margin: 0 7.5px;
-	max-width: 750px;
+	margin: 0 3px;
+	max-width: 900px;
+	width: 100% !important;
 	position: relative;
     text-align: center;
     overflow: hidden;
 }
 ul#carousel li img {
-	max-width: none;
+	max-width: 100%;
 }
 ul#carousel li .content {
 	background-color: rgba(255, 255, 255, 0.8);

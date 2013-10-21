@@ -36,7 +36,7 @@ get_header( 'portfolio' ); ?>
                                 
                                 <?php 
                                     $attachment_id = $anexo->ID;
-                                    $image_attributes = wp_get_attachment_image_src( $attachment_id, 'full' );
+                                    $image_attributes = wp_get_attachment_image_src( $attachment_id, 'projetos' );
                                     $attachment_page = get_attachment_link( $attachment_id ); 
                                     $description = $anexo->post_content;
 									$url = wp_get_attachment_url( $attachment_id ); 
@@ -49,7 +49,7 @@ get_header( 'portfolio' ); ?>
                             endif;
                             ?>
                             <a href="<?php echo $url; ?>" class="thickbox image">
-                            <img src="<?php echo $image_attributes[0]; ?>" width="<?php echo $image_attributes[1]; ?>" height="<?php echo $image_attributes[2]; ?>" alt="<?php echo apply_filters('the_title', $anexo->post_title); ?>">
+                            <img src="<?php echo $image_attributes[0]; ?>" alt="<?php echo apply_filters('the_title', $anexo->post_title); ?>">
 							</a>
 							</div>
                             </li>

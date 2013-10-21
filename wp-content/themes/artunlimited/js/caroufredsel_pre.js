@@ -19,6 +19,7 @@ jQuery(function() {
 	prev: '#prev2',
 	next: '#next2',
     swipe: true
+
 });
 	
 	
