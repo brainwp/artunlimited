@@ -1762,21 +1762,14 @@ text-decoration: none;
 	clear: left;
 }
 
-
-
 .list_carousel ul {
-
     margin: 0;
     padding: 0;
     list-style: none;
     display: block;
-
 }
 
-
-
 .list_carousel li {
-
     font-size: 14px;
     color: #333;
     width: auto;
@@ -1788,17 +1781,12 @@ text-decoration: none;
     float: left;
 	background: url(images/loader.gif) 20px 20px no-repeat;
 	position: relative;
-
 }
 
-
-
 .cada-slide {
-
-    max-height: 500px;
+/*    max-height: 500px;
     overflow: hidden;
-	width: 100%;
-
+	width: 100%;*/
 }
 
 
@@ -1894,7 +1882,7 @@ ul#carousel li {
 	height: 520px;
 	margin: 0 3px;
 	max-width: 900px;
-	width: 100% !important;
+	/*width: 100% !important;*/
 	position: relative;
     text-align: center;
     overflow: hidden;
