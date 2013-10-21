@@ -1081,9 +1081,8 @@ nav select {
 .titulo-page h1 {
     color: #4D449B;
     font-family: 'Roboto',Arial,sans-serif;
-    font-size: 7em;
-    font-weight: 800;
-    line-height: 41px;
+    font-size: 2em;
+    font-weight: 200;
     margin: 18px 0 0;
     text-transform: uppercase;
 }
