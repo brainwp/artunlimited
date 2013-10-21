@@ -1,6 +1,5 @@
 <?php get_header('portfolio'); ?>
 
-	<div id="primary" class="content-area">
 		<div id="content-interno" class="site-content" role="main">
 		
 		<div class="archive-portfolio">
@@ -68,7 +67,5 @@
 		</div> <!-- .archive-portfolio -->
 
 		</div><!-- #content -->
-	
-	</div><!-- #primary -->
-    
+  
 <?php get_footer( 'portfolio' ); ?>
