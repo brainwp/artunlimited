@@ -14,41 +14,20 @@ get_header( 'interno' ); ?>
 			<article id="post-0" class="post not-found">
             
             	<header class="entry-header-page-404">
-                    <div class="seta-page"></div>
-                    <div class="titulo-page"><h1><?php _e( 'Oops! That page can&rsquo;t be found.', 'artunlimited' ); ?></h1></div>
+                    <div class="seta-page-404"></div>
+                    <div class="titulo-page-404"><h1><?php _e( 'Erro 404', 'artunlimited' ); ?></h1></div>
                 </header><!-- .entry-header-page-404 -->
 
 				<div class="entry-content">
-					<p><?php _e( 'It looks like nothing was found at this location. Maybe try one of the links below or a search?', 'artunlimited' ); ?></p>
+					<p><?php _e( 'Parece que n&atilde;o foi poss&iacute;vel encontrar o que voc&ecirc; est&aacute; buscando. Talvez fazer uma pesquisa possa ajudar.', 'artunlimited' ); ?></p>
 
-					<?php get_search_form(); ?>
-
-					<?php the_widget( 'WP_Widget_Recent_Posts' ); ?>
-
-					<?php if ( artunlimited_categorized_blog() ) : // Only show the widget if site has multiple categories. ?>
-					<div class="widget widget_categories">
-						<h2 class="widgettitle"><?php _e( 'Most Used Categories', 'artunlimited' ); ?></h2>
-						<ul>
-						<?php
-							wp_list_categories( array(
-								'orderby'    => 'count',
-								'order'      => 'DESC',
-								'show_count' => 1,
-								'title_li'   => '',
-								'number'     => 10,
-							) );
-						?>
-						</ul>
-					</div><!-- .widget -->
-					<?php endif; ?>
-
-					<?php
-					/* translators: %1$s: smiley */
-					$archive_content = '<p>' . sprintf( __( 'Try looking in the monthly archives. %1$s', 'artunlimited' ), convert_smilies( ':)' ) ) . '</p>';
-					the_widget( 'WP_Widget_Archives', 'dropdown=1', "after_title=</h2>$archive_content" );
-					?>
-
-					<?php the_widget( 'WP_Widget_Tag_Cloud' ); ?>
+					<div class="form-content-interno">					
+						<form method="get" id="searchform-interno" class="searchform-interno" action="<?php echo esc_url( home_url( '/' ) ); ?>" role="search">
+						<label for="s" class="screen-reader-text"><?php _ex( 'Search', 'assistive text', 'artunlimited' ); ?></label>
+						<input type="search" class="field-interno" name="s" value="<?php echo esc_attr( get_search_query() ); ?>" placeholder="<?php echo esc_attr_x( 'pesquisar', 'placeholder', 'artunlimited' ); ?>" />
+						<input type="submit" class="submit-interno" id="searchsubmit" value="<?php echo esc_attr_x( 'busca', 'submit button', 'artunlimited' ); ?>" />
+					</form>
+					</div><!-- .form-content-interno ->
 
 				</div><!-- .entry-content -->
 			</article><!-- #post-0 .post .not-found -->
