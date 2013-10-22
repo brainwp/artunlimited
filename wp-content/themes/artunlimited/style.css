@@ -283,7 +283,6 @@ th {
 }
 img {
 	height: auto; /* Make sure images are scaled correctly. */
-	max-width: 100%; /* Adhere to container width. */
 	width: auto;
 }
 button,
@@ -563,7 +562,7 @@ a:active {
     overflow: hidden;
     position: fixed;
     width: 100%;
-    z-index: 99999;
+    z-index: 9999;
 	-webkit-box-shadow: 0px 5px 10px 0px rgba(48,48,48,0.4);
 	-moz-box-shadow: 0px 5px 10px 0px rgba(48,48,48,0.4);
 	box-shadow: 0px 5px 10px 0px rgba(48,48,48,0.4);
@@ -992,12 +991,12 @@ nav select {
 	-webkit-box-shadow: -7px 0px 6px rgba(50, 50, 50, 0.27);
 	-moz-box-shadow:    -7px 0px 6px rgba(50, 50, 50, 0.27);
 	box-shadow:         -7px 0px 6px rgba(50, 50, 50, 0.27);
-	z-index: 999999;
+	z-index: 99999;
 }
 .etiqueta-barra-portfolio {
 	background: url("images/escrita-portfolio.png") no-repeat scroll 0 15px #4D449B;
 	width: 50px;
-	height: 192px;
+	height: 210px;
 	position: fixed;
 }
 
@@ -1392,11 +1391,10 @@ height: 70px;
 
 .thumb-sub-content-esquerda {
     height: 100%;
-    max-width: 280px;
+    width: 280px;
     min-height: 500px;
     position: absolute;
     left: 0;
-    width: 25%;
 }
 
 .thumb-sub-content-noticias {
@@ -1594,9 +1592,9 @@ height: 70px;
     float: left;
     height: auto;
     margin: 15px 0 90px 10%;
-	max-width: 59%;
+	max-width: 800px;
     overflow: hidden;
-    width: auto;
+    width: 100%;
 }
 .titulo-header span a {
    display: block;
