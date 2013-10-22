@@ -1630,8 +1630,8 @@ text-decoration: none;
     line-height: 0.9;
 }
 .thumb-cada-noticia {
-    height: 120px;
-    max-width: 400px;
+    height: 130px;
+    max-width: 310px;
     overflow: hidden;
     width: 100%;
 }
@@ -2004,14 +2004,12 @@ ul#carousel li .content.center {
 .header-categories  {
     overflow: hidden;
     padding: 16px 20px;
-	max-width: 1190px;
-	width: 100%;
+	max-width: 1230px;
+	position: relative;
     background: none repeat scroll 0 0 #e5e5e5;
     box-shadow: 0 2px 2px rgba(0, 0, 0, 0.15);
-    position: relative;
     text-transform: lowercase;
     z-index: 1;
-	float: left;
     margin: 0;
 }
 .header-categories a{
@@ -2059,12 +2057,12 @@ ul#carousel li .content.center {
     overflow: hidden;
     padding: 0;
     text-transform: lowercase;
-    width: 80%;
+    width: 75%;
 }
 
 .separated-list {
     display: inline-block;
-    margin: 10px 0 0;
+    margin: 10px 0;
     vertical-align: middle;
 }
 
@@ -2139,6 +2137,7 @@ ul#carousel li .content.center {
 .rodape-cada-projeto  h3, .data-cada-post {
 	line-height: 1.2;
 	margin: 10px 0 0 15px;
+	display: block;
 
 }
 
@@ -2171,8 +2170,8 @@ a.titulo-resumo {
 }
 #busca-aba {
 	float: left;
-	width: auto;
-	margin: 10px 0;
+	width: 17%;
+	margin: 10px 3% 0 3%;
 	padding: 0;
 }
 #busca-aba #searchform {
@@ -2186,6 +2185,7 @@ a.titulo-resumo {
 	border: 0;
 	color: #999999;
 	text-transform: lowercase;
+	width: 100%
 }
 
 #busca-aba #lupa-aba {
@@ -2479,12 +2479,12 @@ object {
 .footer {
     background: none repeat scroll 0 0 #E5E5E5;
     height: 70px;
-    margin: 0 0 0 0;
+    margin: 0 0 0 50px;
     max-width: 1190px;
     overflow: hidden;
     padding: 16px 20px;
     position: relative;
-    width: auto;
+    max-width: 1230px;
 }
 .footer-single {
    margin: 0 0 0 50px;
@@ -2573,6 +2573,10 @@ object {
 
 	}
 	
+	.cada-projeto {
+    margin: 2.5% 0 0 2.5%;
+    width: 46%;
+	}
 	
 	.slide-content {
     left: 20% !important;
@@ -2765,6 +2769,16 @@ object {
 
 	}
 
+	
+	a.titulo-resumo {
+	font-size: 0.6em;
+	}
+	
+	
+.separated-list li a {
+
+    font-size: 1.15em;
+	}
 
 	
 
@@ -2779,6 +2793,12 @@ object {
 		font-size: 13px;
 
 	}
+	
+	.cada-projeto {
+    margin: 2.5% 0 0 2.5%;
+    width: 95%;
+	}
+
 
 	#site-title a {
 
@@ -2811,7 +2831,7 @@ object {
     top: 55% !important;
     width: 70% !important;
 	}
-
+		
 	article.intro .entry-content {
 
 		font-size: 12px;
@@ -3010,7 +3030,6 @@ object {
 	}
 
 
-
 }
 
 @media only screen and (min-device-width: 320px) and (max-device-width: 480px) {
@@ -3028,5 +3047,6 @@ object {
 	#branding {
 		border-top: none;
 	}
+	
 
 }
