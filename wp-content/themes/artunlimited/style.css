@@ -284,6 +284,7 @@ th {
 img {
 	height: auto; /* Make sure images are scaled correctly. */
 	max-width: 100%; /* Adhere to container width. */
+	width: auto;
 }
 button,
 input,
@@ -1603,7 +1604,7 @@ div.sharedaddy div.sd-block {
 	float: left;
 	max-width: 310px;
 	min-width: 200px;
-	min-height: 300px;
+	min-height: 305px;
 	background: #efefef;
 	margin: 0 50px 25px 0;
 }
