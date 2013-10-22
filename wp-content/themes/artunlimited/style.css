@@ -2121,8 +2121,14 @@ ul#carousel li .content.center {
 .thumb-cada-projeto {
 	overflow: hidden;
 	height: 200px;
-	width: 100%;
 }
+
+
+.thumb-cada-projeto img{
+width: 105%;
+ min-height: 200px;
+ }
+
 
 .attachment-thumb-projetos {
 	margin: 0 auto;
@@ -2137,7 +2143,7 @@ ul#carousel li .content.center {
 
 .rodape-cada-projeto  h3, .data-cada-post {
 	line-height: 1.2;
-	margin: 10px 0 0 15px;
+	margin: 10px 10px 0 15px;
 	display: block;
 
 }
@@ -2488,7 +2494,7 @@ object {
     max-width: 1230px;
 }
 .footer-single {
-   margin: 0 0 0 50px;
+   margin: 0;
 }
 .footer #redes, .footer-noticias #redes {
     margin: 25px 0 0;
@@ -2772,7 +2778,7 @@ object {
 
 	
 	a.titulo-resumo {
-	font-size: 0.6em;
+	font-size: 0.65em;
 	}
 	
 	
