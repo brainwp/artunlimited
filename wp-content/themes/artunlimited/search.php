@@ -13,8 +13,7 @@ get_header( 'interno' ); ?>
 
 		<?php if ( have_posts() ) : ?>
             
-            <header class="entry-header-page-404">
-                <div class="seta-page"></div>
+            <header class="entry-header-page-search">
                 <div class="titulo-page"><h1><?php printf( __( 'Search Results for: %s', 'artunlimited' ), '<span>' . get_search_query() . '</span>' ); ?></h1></div>
             </header><!-- .entry-header-page-404 -->
 
@@ -34,7 +33,10 @@ get_header( 'interno' ); ?>
 		<?php endif; ?>
 
 		</div><!-- #content -->
+		
+			            <div class="clearfix">
+						</div>
+						
+				<?php get_footer( 'noticias' ); ?>
+		
 	</section><!-- #primary -->
-
-<?php get_sidebar(); ?>
-<?php get_footer( 'noticias' ); ?>
