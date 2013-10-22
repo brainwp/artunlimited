@@ -2204,7 +2204,7 @@ a.titulo-resumo {
 }
 .esquerda-single-portfolio {
 	float: left;
-	width: 60%;
+	width: 55%;
 	margin: 0 0 0 5%;
 }
 
@@ -2240,8 +2240,7 @@ a.titulo-resumo {
 }
 
 .outros-projetos {
-	width: 100%;
-	max-width: 350px;
+	width: 350px;
 	overflow: hidden;
 }
 
@@ -2324,7 +2323,7 @@ a.titulo-resumo {
 
 .wp-caption {
 
-	border: 1px solid #ccc;
+	border: none;
 
 	margin-bottom: 1.5em;
 
@@ -2586,9 +2585,10 @@ object {
 	}
 	
 	.slide-content {
-    left: 20% !important;
-    top: 40% !important;
-    width: 70% !important;
+
+	font-size: 4em;
+    left: 40% !important;
+    width: 57% !important;
 
 	}
 
