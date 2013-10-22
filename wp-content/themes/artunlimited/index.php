@@ -14,7 +14,7 @@
 get_header( 'interno' ); ?>
 
 <div class="altura-header"></div>
-	<div id="primary" class="content-area">
+	<div id="primary" class="content-noticias">
 		<div id="content" class="site-content" role="main">
 
 		<?php if ( have_posts() ) : ?>

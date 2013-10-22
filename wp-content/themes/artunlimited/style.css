@@ -1151,7 +1151,7 @@ nav select {
 	width: 100%;
 	max-height: 600px;
 	overflow: hidden;
-	background-color: #F1F1F1;
+	background-color: none;
 }
 
 /* =Slider Home - Orbit Slider
@@ -1977,6 +1977,10 @@ ul#carousel li .content.center {
 ----------------------------------------------- */
 
 #primary.content-single-portfolio {
+	padding-top: 0 !important;
+	}
+	
+	#primary.content-noticias {
 	padding-top: 0 !important;
 	}
 .barra {
@@ -2821,6 +2825,15 @@ object {
     margin: 2.5% 0 0 2.5%;
     width: 95%;
 	}
+	
+	#busca-aba {
+	display: none;
+	}
+	
+	
+.header-categories ul {
+width: 100%;
+}
 
 
 	#site-title a {
