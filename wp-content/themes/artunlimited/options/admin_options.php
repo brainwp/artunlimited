@@ -27,28 +27,9 @@ array( "name" => "Facebook",
 	"type" => "text",
 	"std" => ""),
 	
-array( "name" => "E-mail",
-	"desc" => "Adicione um E-mail de contato",
-	"id" => $shortname."_email",
-	"type" => "text",
-	"std" => ""),
-	
-array( "type" => "close"),
-
- //* Rodapé */
-array( "name" => "Rodap&eacute;",
-	"type" => "section"),
-array( "type" => "open"),
-	
-array( "name" => "Nome no Rodap&eacute;", //* Endereço no Rodapé */
-	"desc" => "Adicione o nome ou descriç&atilde;o do projeto.",
-	"id" => $shortname."_footer_end",
-	"type" => "text",
-	"std" => ""),
-
-array( "name" => "Contatos no Rodap&eacute;", //* E-mail no Rodapé */
-	"desc" => "Adicione a Rua, N&uacute;mero, Bairro, Cidade, CEP e e-mail de contato.",
-	"id" => $shortname."_footer_mail",
+array( "name" => "Linkedin",
+	"desc" => "Adicione a URL do Linkedin",
+	"id" => $shortname."_linkedin",
 	"type" => "text",
 	"std" => ""),
 	
