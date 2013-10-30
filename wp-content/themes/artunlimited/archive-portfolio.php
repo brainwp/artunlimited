@@ -47,7 +47,7 @@
 							'post_type' => 'portfolio',
 							'orderby' => 'date',
 							'order' => 'DESC',
-							'posts_per_page' => '12',
+							'posts_per_page' => '66',
 							'paged' => $paged
 							);
 							$loop_cpt_projetos = new WP_Query( $args_loop_cpt_projetos ); if ( $loop_cpt_projetos->have_posts() ) {
