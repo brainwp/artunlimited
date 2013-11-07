@@ -2176,7 +2176,6 @@ a.titulo-resumo {
     text-decoration: none;
 }
 
-
 #slider-projetos {
 	margin: 0 0 30px 0;
 }
@@ -2190,8 +2189,9 @@ a.titulo-resumo {
 	float: left;
     margin: 0 0 0 50px;
     max-width: 1230px;
+	height: auto;
     overflow: hidden;
-    width: auto;
+    width: 100%;
 }
 #busca-aba {
 	float: left;
@@ -2538,8 +2538,8 @@ object {
 .footer-portfolo {
     background: none repeat scroll 0 0 #E5E5E5;
     height: 40px;
-    margin: 0 0 0 0;
-    max-width: 1190px;
+    margin: 0 0 0 50px;
+    max-width: 1180px;
     overflow: hidden;
     padding: 0px 20px 16px 30px;
     position: relative;
