@@ -38,7 +38,7 @@ function artunlimited_setup() {
 	 */
 	add_theme_support( 'automatic-feed-links' );
 	// This theme uses Featured Images (also known as post thumbnails) for per-post/per-page Custom Header images
-	add_image_size( 'thumb-premios', 200, 400 );
+	add_image_size( 'thumb-premios', 200, 200 );
 	add_image_size( 'thumb-projetos', 370, 370 );
 	add_image_size( 'thumb-noticias', 310, 310 );
 	add_image_size( 'thumb-outros-projetos', 300, 300 );
