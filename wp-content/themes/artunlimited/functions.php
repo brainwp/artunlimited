@@ -26,28 +26,25 @@ function artunlimited_setup() {
 	 */
 	load_theme_textdomain( 'artunlimited', get_template_directory() . '/languages' );
 	
+	/* Enable support for Post Thumbnails on posts and pages
+	 *
+	 * @link http://codex.wordpress.org/Function_Reference/add_theme_support#Post_Thumbnails
+	 */
+	add_theme_support( 'post-thumbnails' );
+	/**
+	
 	/**
 	 * Add default posts and comments RSS feed links to head
 	 */
 	add_theme_support( 'automatic-feed-links' );
 	// This theme uses Featured Images (also known as post thumbnails) for per-post/per-page Custom Header images
-	add_theme_support( 'post-thumbnails' );
 	add_image_size( 'thumb-premios', 200, 400 );
 	add_image_size( 'thumb-projetos', 370, 370 );
 	add_image_size( 'thumb-noticias', 310, 310 );
 	add_image_size( 'thumb-outros-projetos', 300, 300 );
-	add_image_size( 'projetos', 980, 550, true );
+	add_image_size( 'projetos', 960, 500, true );
 	/**
-	 * Enable support for Post Thumbnails on posts and pages
-	 *
-	 * @link http://codex.wordpress.org/Function_Reference/add_theme_support#Post_Thumbnails
-	 */
-	//add_theme_support( 'post-thumbnails' );
-
-	/**
-
 	 * This theme uses wp_nav_menu() in one location.
-
 	 */
 
 	register_nav_menus( array(
@@ -56,12 +53,8 @@ function artunlimited_setup() {
 
 	) );
 
-
-
 	/**
-
 	 * Enable support for Post Formats
-
 	 */
 
 	add_theme_support( 'post-formats', array( 'aside', 'image', 'video', 'quote', 'link' ) );
@@ -171,13 +164,6 @@ function artunlimited_scripts() {
 }
 add_action( 'wp_enqueue_scripts', 'artunlimited_scripts' );
 
-
-/**
- * Implement the Custom Header feature.
- */
-
-//require get_template_directory() . '/inc/custom-header.php';
-
 /**
  * Custom template tags for this theme.
  */
@@ -213,6 +199,14 @@ require get_template_directory() . '/inc/metaboxes.php';
  */
 
 require get_template_directory() . '/custom-portfolio.php';
+
+/**
+ * Load CPT Novos Projetos
+ */
+
+// require get_template_directory() . '/custom-novos-projetos.php';
+
+
 
 function id_por_slug( $slug ) {
 
