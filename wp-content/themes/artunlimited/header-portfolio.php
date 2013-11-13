@@ -12,13 +12,6 @@
 <title><?php wp_title( '|', true, 'right' ); ?></title>
 <link rel="profile" href="http://gmpg.org/xfn/11" />
 <link rel="pingback" href="<?php bloginfo( 'pingback_url' ); ?>" />
-<script type="text/javascript" src="<?php bloginfo( 'stylesheet_directory' ); ?>/js/jquery.preloader.js"></script>  
-<script type="text/javascript">
-jQuery(function(){
-	$(".cada-slides").preloader();
-	});
-</script>
-<link rel="stylesheet" href="<?php bloginfo( 'stylesheet_directory' ); ?>/preloader.css" type="text/css" />  
 <link href='http://fonts.googleapis.com/css?family=Roboto:400,300,300italic,400italic,500,500italic,700,700italic' rel='stylesheet' type='text/css'>
 <link href='http://fonts.googleapis.com/css?family=Gentium+Book+Basic' rel='stylesheet' type='text/css'>
 <?php wp_head(); ?>
