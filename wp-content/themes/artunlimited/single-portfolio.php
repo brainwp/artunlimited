@@ -47,9 +47,7 @@ get_header( 'portfolio' ); ?>
 									echo '<div id="desc-slide">' . $description . '</div>';
 									endif;
 									?>
-									<a href="<?php echo $url; ?>" class="thickbox image">
 									<img src="<?php echo $image_attributes[0]; ?>" alt="<?php echo apply_filters('the_title', $anexo->post_title); ?>">
-									</a>
 								</div>
 								</li>
 								<?php } } ?>
