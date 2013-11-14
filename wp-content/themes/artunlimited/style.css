@@ -133,6 +133,21 @@ body {
     max-width: 90%;
     overflow: hidden;
 }
+
+.right-sub-content {
+    height: auto;
+    margin: 0 70px 0 280px;
+    width: auto;
+    overflow: hidden;
+}
+
+.left-sub-content {
+    height: auto;
+    margin: 20px 330px 0 30px;
+    width: auto;
+    overflow: hidden;
+}
+
 button,
 input,
 select,
@@ -1030,6 +1045,7 @@ nav select {
     top: 65% !important;
     width: 55% !important;
 	line-height: 1.2;
+	display: none;
 }
 
 /* =Notícias
@@ -1331,7 +1347,7 @@ height: 70px;
 
     background: none repeat scroll 0 0 #FFFFFF;
     border-bottom: 1px solid #CCCCCC;
-    /*height: 600px;*/
+    height: auto;
     overflow: hidden;
     position: relative;
 	 z-index: 3;
@@ -1384,42 +1400,40 @@ height: 70px;
 
 .thumb-sub-content {
 	float: left;
-	width: 25%;
-	max-width: 280px;
+	width: 280px;
 	min-height: 500px;;
 }
 
 .thumb-sub-content-esquerda {
-    height: 100%;
     width: 280px;
-    min-height: 500px;
+	height: 100%;
     position: absolute;
     left: 0;
+	overflow: hidden;
 }
 
-.thumb-sub-content-noticias {
-    height: 100%;
-    max-width: 280px;
-    min-height: 860px;
-   float: left;
-    left: 0;
-    width: 25%;
+.thumb-sub-content-esquerda img{
+	height: 100%;
 }
 
 .falsa {
     float: left;
     height: 500px;
-    max-width: 280px;
-    width: 25%;
+    width: 280px;
+	margin: 0;
+	padding: 0;
 }
 
 .thumb-sub-content-direita {
-    height: 100%;
-    max-width: 280px;
-    min-height: 500px;
+    width: 280px;
+	height: 100%;
     position: absolute;
-    right: 0;
-    width: 25%;
+    right: 50px;
+	overflow: hidden;
+}
+
+.thumb-sub-content-direita img {
+height: 100%;
 }
 
 .texto-sub-content {
@@ -1463,7 +1477,7 @@ height: 70px;
 }
 
 .content-quem-somos {
-	width: 80%;
+	width: 77%;
 	float: left;
 	margin: 0 20px 0 125px;
 	font-size: 1.15em;
@@ -1475,16 +1489,15 @@ height: 70px;
 }
 
 .content-premios {
-	width: 70%;
 	float: left;
-	margin: 0 0 50px 128px;
+	margin: 0 50px 50px 130px;
+    width: auto;
 }
 
 .header-sub-content {
 
 	width: auto;
 	overflow: hidden;
-	margin-top: 10px;
 
 }
 
@@ -1498,14 +1511,14 @@ height: 70px;
 }
 .seta-header {
 	width: 56px;
-	margin: 30px 0 10px 40px;
+	margin: 40px 0 10px 40px;
 	float: left;
 	height: 56px;
 	background: url("images/img-sprite.png") no-repeat scroll -605px 0 transparent;
 }
 .titulo-header {
     float: left;
-    margin: 10px 0 0 30px;
+    margin: 20px 0 0 30px;
     width: auto;
 	font-family: 'Roboto', Arial, sans-serif
 }
@@ -1526,9 +1539,9 @@ height: 70px;
 }
 
 .content-contatos {
-	width: 50%;
+	width: 70%;
 	float: left;
-    margin: 0 0 82px 128px;
+    margin: 0 0 -30px 128px;
 }
 
 .esquerda-contatos {
@@ -1591,10 +1604,9 @@ height: 70px;
 .todas-noticias {
     float: left;
     height: auto;
-    margin: 15px 0 90px 10%;
-	max-width: 800px;
+    margin: 15px 0 50px 80px;
     overflow: hidden;
-    width: 100%;
+    width: auto;
 }
 .titulo-header span a {
    display: block;
@@ -1795,39 +1807,29 @@ text-decoration: none;
 }
 
 .cada-slide {
-/*    max-height: 500px;
+	max-height: 500px;
     overflow: hidden;
-	width: 100%;*/
+	width: 100%;
 }
 
-
-
 .list_carousel li img {
-
 	width: 100%;
-
 }
 
 
 
 .list_carousel.responsive {
-
     width: auto;
     margin-left: 0;
-
 }
-
 
 
 .list_carousel .clearfix {
 
     float: none;
-
     clear: both;
 
 }
-
-
 
 .list_carousel a.prev {
 
@@ -1839,11 +1841,7 @@ text-decoration: none;
     width: 70px;
 	z-index: 50;
 
-
-
 }
-
-
 
 .list_carousel a.next {
     background: url("images/setas.png") no-repeat scroll -75px center transparent;
@@ -1879,7 +1877,7 @@ text-decoration: none;
 
 /* carousel */
 #carousel_wrap {
-	height: 520px;
+	height: 500px;
 	left: 0;
 	overflow: hidden;
 	position: relative;
@@ -1890,17 +1888,14 @@ body.single-projects #carousel_wrap { margin: 15px 0 30px }
 ul#carousel li {
 	display: block;
 	float: left;
-	height: 520px;
+	height: 500px;
 	margin: 0 3px;
 	max-width: 900px;
-	/*width: 100% !important;*/
 	position: relative;
     text-align: center;
     overflow: hidden;
 }
-ul#carousel li img {
-	max-width: 100%;
-}
+
 ul#carousel li .content {
 	background-color: rgba(255, 255, 255, 0.8);
 	position: absolute;
@@ -1950,8 +1945,6 @@ ul#carousel li .content.center {
 	right: 0;
 	text-indent: -200px;
 }
-
-
 
 
 #foo2 {

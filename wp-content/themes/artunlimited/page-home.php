@@ -63,26 +63,25 @@ get_header( 'home' ); ?>
         $thumbnail_premios = wp_get_attachment_image_src( get_post_thumbnail_id($premios->ID), '', false, '' );
         $content_premios = apply_filters('the_content', $premios->post_content);
         ?>
-        <div style="background: url('<?php echo $thumbnail_premios[0]; ?>')" class="thumb-sub-content-esquerda">
-        </div><!-- .thumb-sub-content-esquerda -->
+        <div class="thumb-sub-content-esquerda">
+				<img src="<?php echo $thumbnail_premios[0]; ?>" /> 
+		</div><!-- .thumb-sub-content-esquerda -->
 
-<div class="falsa">
-</div>
-        
+	<div class="right-sub-content">
 
-<div class="header-sub-content">
-	<div class="seta-header"></div>
-    <div class="titulo-header"><h2><?php echo $premios->post_title; ?></h2></div>
-</div>
-            <div class="scroll-pane">
-                  
+		<div class="header-sub-content">
+			<div class="seta-header"></div>
+			<div class="titulo-header"><h2><?php echo $premios->post_title; ?></h2></div>
+		</div>
+						  
 				<div class="content-premios">
                 <?php echo $content_premios; ?>
                 </div><!-- .content-premios -->
-            </div><!-- .scroll-pane -->
             
-<div class="footer-sub-content">
-</div>
+<!-- <div class="footer-sub-content">
+</div> -->
+
+	</div><!-- right-sub-content -->
 
     </div><!-- .sub-content -->
       
@@ -98,10 +97,11 @@ get_header( 'home' ); ?>
 	$thumbnail_clientes = wp_get_attachment_image_src( get_post_thumbnail_id($clientes->ID), '', false, '' );
 	$attachment_clientes = get_attachment_link($clientes->ID);
 ?>  
-	<div style="background: url('<?php echo $thumbnail_clientes[0]; ?>')" class="thumb-sub-content-direita">
+	<div class="thumb-sub-content-direita">
+		<img src="<?php echo $thumbnail_clientes[0]; ?>" /> 
 	</div><!-- .thumb-sub-content-direita -->
 
-
+<div class="left-sub-content">
 
 <div class="header-sub-content">
 	<div class="seta-header"></div>
@@ -134,6 +134,8 @@ get_header( 'home' ); ?>
 
 			</div><!-- .content-clientes -->
 	</div><!-- .scroll-pane -->
+	
+	</div>
 
 <div class="footer-sub-content">
 </div>
@@ -151,8 +153,11 @@ get_header( 'home' ); ?>
 			$thumbnail_noticias = wp_get_attachment_image_src( get_post_thumbnail_id($noticias->ID), '', false, '' );		
             ?>
 	
-	<div style="background: url('<?php echo $thumbnail_noticias[0]; ?>')" class="thumb-sub-content-noticias">
-	</div><!-- .thumb-sub-content-direita -->
+	<div class="thumb-sub-content-esquerda">
+	<img src="<?php echo $thumbnail_noticias[0]; ?>" /> 
+	</div><!-- .thumb-sub-content-esquerda -->
+	
+		<div class="right-sub-content">
 			
 		<div class="header-sub-content">
 	<div class="seta-header"></div>
@@ -174,7 +179,7 @@ get_header( 'home' ); ?>
             			</div><!-- .data-cada-noticia -->
                         
                         <div class="thumb-cada-noticia">
-                        <a href="<?php the_permalink(); ?>"><?php the_post_thumbnail( 'thumb-noticias' ); ?></a>
+                        <a href="<?php the_permalink(); ?>"><?php the_post_thumbnail( 'thumb-projetos' ); ?></a>
             			</div><!-- .thumb-cada-noticia -->
                         
                         <div class="content-cada-noticia">
@@ -190,6 +195,8 @@ get_header( 'home' ); ?>
 					<?php endwhile; ?>
                     <?php wp_reset_postdata(); // reset the query ?>  
 					</div><!-- .todas-noticia -->
+			</div><!-- .right-sub-content -->
+					
     </div><!-- .sub-content -->
 <!-- Final Notícias -->
 
@@ -199,16 +206,17 @@ get_header( 'home' ); ?>
         <div class="sub-content" id="nav-contatos">
             <?php
             $contatos = get_page_by_title( 'Contatos' );
-			/*$thumbnail_contatos = wp_get_attachment_image_src( get_post_thumbnail_id($contatos->ID), '', false, '' );*/
 			$content_contatos = apply_filters('the_content', $contatos->post_content);
 
 			$endereco = get_post_meta($contatos->ID,'meta_endereco',true);
 			$bairro = get_post_meta($contatos->ID,'meta_bairro',true);
             ?>
 
-   			<div style="background: url('<?php echo $thumbnail_contatos[0]; ?>')" class="thumb-sub-content-direita">
-            	<?php echo do_shortcode('[google-map-sc id="22" width="280" height="730" margin="0" zoom="15"]'); ?>
+   			<div class="thumb-sub-content-direita">
+            	<?php echo do_shortcode('[google-map-sc id="22" width="280" height="760" margin="0" zoom="15"]'); ?>
             </div><!-- .thumb-sub-content-direita -->
+			
+			<div class="left-sub-content">
 			
 				<div class="header-sub-content">
 					<div class="seta-header">
@@ -236,6 +244,11 @@ get_header( 'home' ); ?>
 			<?php echo $content_contatos; ?>
 			
         </div><!-- .content-contatos -->
+		
+		<div class="footer-sub-content">
+		</div>
+		
+		</div>
 
         </div><!-- .sub-content -->
 		<!-- Final Contatos -->
