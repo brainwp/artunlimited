@@ -41,7 +41,7 @@ function artunlimited_setup() {
 	add_image_size( 'thumb-premios', 120, 9999);
     add_image_size( 'thumb-projetos',370, 9999);
 	add_image_size( 'thumb-outros-projetos', 300, 9999);
-	add_image_size( 'projetos', 900, 9999);
+	add_image_size( 'projetos', 900, 500);
 	
 	/**
 	 * This theme uses wp_nav_menu() in one location.
