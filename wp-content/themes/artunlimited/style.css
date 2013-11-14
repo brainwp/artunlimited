@@ -1591,8 +1591,7 @@ height: 100%;
 }
 
 .imagens-cliente {
-	width: 150px;
-	height: 150px;
+	height: 170px;
 	overflow: hidden;
 	float: left;
 	margin: 0 10px 10px 0;

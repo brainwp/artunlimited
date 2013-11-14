@@ -38,10 +38,10 @@ function artunlimited_setup() {
 	 */
 	add_theme_support( 'automatic-feed-links' );
 	// This theme uses Featured Images (also known as post thumbnails) for per-post/per-page Custom Header images
-	add_image_size( 'thumb-premios', 150, 9999999, true );
-    add_image_size( 'thumb-projetos',370, 9999999, true );
-	add_image_size( 'thumb-outros-projetos', 300, 9999999,  true  );
-	add_image_size( 'projetos', 900, 9999999, true );
+	add_image_size( 'thumb-premios', 120, 9999);
+    add_image_size( 'thumb-projetos',370, 9999);
+	add_image_size( 'thumb-outros-projetos', 300, 9999);
+	add_image_size( 'projetos', 900, 9999);
 	
 	/**
 	 * This theme uses wp_nav_menu() in one location.
