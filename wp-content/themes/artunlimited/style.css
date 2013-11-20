@@ -129,7 +129,8 @@ body {
 }
 .center {
     height: auto;
-    margin: 0 auto;
+	float: left;
+    margin: 0 0 0 30px;
     max-width: 90%;
     overflow: hidden;
 }
@@ -1196,9 +1197,7 @@ div.slider-nav span.left {
 div.slider-nav span.left {
     background: url("images/setas.png") no-repeat scroll -5px center rgba(0, 0, 0, 0) !important;
 }
-div.slider-nav span {
-	top: 35% !important;
-}
+
 
 #orbit-inside img.orbit-slide {
     height: 100%;
@@ -1489,9 +1488,9 @@ height: 100%;
 }
 
 .content-quem-somos {
-	width: 77%;
+	width: 75%;
 	float: left;
-	margin: 0 20px 0 125px;
+	margin: 0 0 0 125px;
 	font-size: 1.15em;
 }
 
@@ -2590,6 +2589,11 @@ object {
 		margin: 10px 0 10px 20px;
 		width: 95%;
 	}
+	
+	#slider {
+    margin-top: 125px;
+
+	}
 }
 
 @media (max-width:990px) {
@@ -2809,6 +2813,31 @@ object {
 	}
 
 	
+
+}
+
+@media (max-width:790px) {
+
+	.thumb-sub-content-esquerda {
+	display: none;
+	}
+	
+	.thumb-sub-content-direita {
+	display: none;
+	}
+	
+	.right-sub-content {
+	margin: 0 50px 0 0;
+	}
+	
+	.left-sub-content {
+	margin:  0 50px 0 0;
+	}
+	
+	.center {
+	
+	margin: 0;
+	width: 80%;
 
 }
 
