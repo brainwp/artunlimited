@@ -128,10 +128,10 @@ body {
 	clear: both;
 }
 .center {
+    float: left;
     height: auto;
-	float: left;
-    margin: 0 0 0 30px;
-    max-width: 90%;
+    margin: 0 50px 0 30px;
+    max-width: 100%;
     overflow: hidden;
 }
 
@@ -1008,12 +1008,33 @@ nav select {
 	box-shadow:         -7px 0px 6px rgba(50, 50, 50, 0.27);
 	z-index: 99999;
 }
+
 .etiqueta-barra-portfolio {
 	background: url("images/escrita-portfolio.png") no-repeat scroll 0 15px #4D449B;
 	width: 50px;
 	height: 210px;
 	position: fixed;
 }
+
+
+.botao-portfolio-menu {
+    background-color: #4D449B;
+    height: 40px;
+    position: absolute;
+    right: 0;
+	bottom:0;
+    width: 45%;
+	z-index: 99999;
+	display: none;
+}
+
+.etiqueta-barra-botao-portfolio-menu {
+	background:  url("images/escrita-portfolio-horizontal.png")  no-repeat scroll 0 0;
+	width: 155px;
+	height: 40px;
+	position: absolute;
+}
+
 
 .title-home {
 	position: absolute;
@@ -1488,10 +1509,10 @@ height: 100%;
 }
 
 .content-quem-somos {
-	width: 75%;
-	float: left;
-	margin: 0 0 0 125px;
-	font-size: 1.15em;
+    float: left;
+    font-size: 1.15em;
+    margin: 0 100px 0 125px;
+    width: auto;
 }
 
 .imagens-post {
@@ -1756,7 +1777,8 @@ text-decoration: none;
 ----------------------------------------------- */
 .contact-form input[type="text"], .contact-form input[type="email"], .contact-form textarea {
 	background: #CCC;
-	border: 0;
+	border: 0 none;
+    padding: 4px;
 }
 .contact-form label {
     display: block;
@@ -2835,10 +2857,7 @@ object {
 	}
 	
 	.center {
-	
 	margin: 0;
-	width: 80%;
-
 }
 
 
@@ -2851,6 +2870,10 @@ object {
 
 	}
 	
+	#thumbs-quem-somos {
+    display: none;
+	}
+	
 	.cada-projeto {
     margin: 2.5% 0 0 2.5%;
     width: 95%;
@@ -2860,28 +2883,41 @@ object {
 	display: none;
 	}
 	
+	.header-categories ul {
+	width: 100%;
+	}
 	
-.header-categories ul {
-width: 100%;
-}
-
+	.barra-portfolio {
+	display: none;
+	}
+	
+	#slider {
+    margin-right: 0;
+	}
+	
+	.left-sub-content {
+	margin: 0;
+	}
+	
+	.right-sub-content {
+	margin: 0;
+	}
+	
+	.botao-portfolio-menu {
+	display: block;
+	}
 
 	#site-title a {
-
 		font-size: 24px;
 
 	}
 
 	#site-description {
-
 		font-size: 12px;
-
 	}
 
 	#access ul {
-
 		font-size: 12px;
-
 	}
 	
 	.area-4-header {
@@ -2899,43 +2935,36 @@ width: 100%;
 	}
 		
 	article.intro .entry-content {
-
 		font-size: 12px;
 
 	}
 
 	.entry-title {
-
 		font-size: 21px;
 
 	}
 
 	.featured-post .entry-title {
-
 		font-size: 14px;
 
 	}
 
 	.singular .entry-title {
-
 		font-size: 28px;
 
 	}
 
 	.entry-meta {
-
 		font-size: 12px;
 
 	}
 
 	blockquote {
-
 		margin: 0;
 
 	}
 
 	blockquote.pull {
-
 		font-size: 17px;
 
 	}
@@ -2943,7 +2972,6 @@ width: 100%;
 	/* Reposition the site title and description slightly */
 
 	#site-title {
-
 		padding: 5.30625em 0 0;
 
 	}
@@ -2958,7 +2986,6 @@ width: 100%;
 	/* Make sure the logo and search form don't collide */
 
 	#branding #searchform {
-
 		top: 1.625em !important;
 
 	}
@@ -2966,9 +2993,7 @@ width: 100%;
 	/* Floated content doesn't work well at this size */
 
 	.alignleft,
-
 	.alignright {
-
 		display: block;
 		float: none;
 		margin-left: 0;
@@ -2979,20 +3004,17 @@ width: 100%;
 	/* Make sure the post-post navigation doesn't collide with anything */
 
 	#nav-single {
-
 		display: block;
 		position: static;
 
 	}
 
 	.singular .hentry {
-
 		padding: 1.625em 0 0;
 
 	}
 
 	.singular.page .hentry {
-
 		padding: 1.625em 0 0;
 
 	}
@@ -3007,7 +3029,6 @@ width: 100%;
 	}
 
 	.commentlist .avatar {
-
 	background: transparent;
 	display: block;
 	padding: 0;
@@ -3016,7 +3037,6 @@ width: 100%;
 	}
 
 	.commentlist .children .avatar {
-
 	background: none;
 	left: 2.2em;
 	padding: 0;
@@ -3071,11 +3091,16 @@ width: 100%;
 	display: inline-block;
 	margin-left: 15px;
 	}
+	
+	#redes {
+	display: none;
+	}
 
 
 }
 
 @media (max-width: 360px) {
+
 
 	#content .gallery-columns-2 .gallery-item {
 		width: 45%;
