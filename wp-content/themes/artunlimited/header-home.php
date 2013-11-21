@@ -23,16 +23,13 @@
 <link href='http://fonts.googleapis.com/css?family=Roboto:400,400italic,500,500italic,700,700italic' rel='stylesheet' type='text/css'>
 <link href='http://fonts.googleapis.com/css?family=Gentium+Book+Basic' rel='stylesheet' type='text/css'>
 <!--[if lt IE 9 ]><script src="/lib/respond.min.js"></script><![endif]-->
-<!-- <script type="text/javascript">
-	jQuery(function(){
-		$(".imagens-post").preloader();
-	});
-	</script> -->
+<?php wp_head(); ?>
 <script type="text/javascript">
     jQuery(function() {
 	    if (jQuery('.scroll-pane').length)
 	        jQuery('.scroll-pane').jScrollPane();
-
+	    if (jQuery('.scroll-panes').length)
+            jQuery('.scroll-panes').jScrollPane();
     });
 
     jQuery.fn.toggleText = function(a,b) {
@@ -53,7 +50,6 @@
 	    });
     });
 </script>
-<?php wp_head(); ?>
 </head>
 
 <?php
