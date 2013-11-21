@@ -1252,7 +1252,7 @@ div.slider-nav span.left {
 
 #content-interno {
 	background: none repeat scroll 0 0 #FFFFFF;
-    padding: 0 0 60px;
+    padding: 0 0 50px;
 }
 
 .form-content-interno {
@@ -2222,20 +2222,16 @@ a.titulo-resumo {
     max-width: 1230px;
 	height: auto;
     overflow: hidden;
-    width: 100%;
 }
 #busca-aba {
 	float: left;
-	width: 20%;
 	margin: 10px 10px 0;
 	padding: 0;
 }
 
 #busca-aba.portfolio {
 	float: right !important;
-    margin: 1.5% 35px 0 !important;
-    padding: 0 !important;
-    width: 20%;
+    margin: 1.5% 3% 0 !important;
 }
 
 #busca-aba.portfolio #searchform input{
@@ -2253,7 +2249,6 @@ a.titulo-resumo {
 	border: 0;
 	color: #999999;
 	text-transform: lowercase;
-	width: 100%
 }
 
 #busca-aba #lupa-aba {
