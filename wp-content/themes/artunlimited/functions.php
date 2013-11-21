@@ -186,6 +186,8 @@ require get_template_directory() . '/inc/jetpack.php';
 
 require get_template_directory() . '/inc/metaboxes.php';
 
+require get_template_directory() . '/inc/metaboxes-portfolio.php';
+
 /**
  * Load CPT Portfolios.
  */

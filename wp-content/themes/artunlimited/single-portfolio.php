@@ -57,11 +57,32 @@ get_header( 'portfolio' ); ?>
                 
 				</div><!-- carousel_wrap -->
 		</div><!-- #sider-projetos -->
+		
+		        <?php
+				// Pega os dados e salva em variáveis
+                $metabrasa_credito = get_post_meta($post->ID,'metabrasa_credito',TRUE);
+				?>
+		
+				<?php if (empty($metabrasa_credito)) {
+                } else { ?>
+                <div class="creditos-portfolio">
+				<p><span>Fotografias: </span>&copy; <?php echo $metabrasa_credito; ?></p>
+				</div><!-- #creditos-portfolio -->
+				<?php }	?>
         
 	<div class="esquerda-single-portfolio">
 
 		<header class="entry-header">
 			<h1 class="entry-title-interno"><?php the_title(); ?></h1>
+			
+			    <?php
+				// Pega os dados e salva em variáveis
+                $metabrasa_subtitulo = get_post_meta($post->ID,'metabrasa_subtitulo',TRUE);
+				?>
+				<?php if (empty($metabrasa_subtitulo)) {
+                } else { ?>
+				<h3 class="entry-sub-title-interno"><?php echo $metabrasa_subtitulo; ?></h3>
+				<?php }	?>
 		</header><!-- .entry-header -->
 
 		<div class="entry-content">

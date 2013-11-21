@@ -2214,8 +2214,20 @@ a.titulo-resumo {
 .entry-title-interno {
 	color: #4d449c;
 	font-family: 'Roboto', sans-serif;
-	font-size: 2.7em;
+    font-size: 2.5em;
+    line-height: 1.2;
 }
+
+.entry-sub-title-interno {
+	color: #4d449c;
+    line-height: 1.2;
+}
+
+.creditos-portfolio {
+float: right;
+margin-right: 30px;
+}
+
 .archive-portfolio {
 	float: left;
     margin: 0 0 0 50px;
