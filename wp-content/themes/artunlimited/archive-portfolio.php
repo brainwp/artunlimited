@@ -4,39 +4,15 @@
 		
 		<div class="archive-portfolio">
 			
-			        <div class="header-categories">
-                            <ul class="separated-list menu">
-                                <?php
-                                  $myterms = get_terms( 'tipo' );
-									$conta = 0;
-                                  foreach($myterms as $term){
-                                    $root_url = get_bloginfo('url');
-                                    $term_taxonomy = $term->taxonomy;
-                                    $term_slug = $term->slug;
-                                    $term_name = $term->name;
-                                    $link = $root_url.'/'.$term_taxonomy.'/'.$term_slug;
-                                    /*$output .= "<option value='".$link."'>".$term_name."</option>";*/
-																		
-								 if ($conta < 1){
-									$i = "<li class=\"primeiro-li\"><a href=";
-								} else {
-									$i = "<li><a href=";
-								}
-								echo $i;
-                                  echo $link . ">" . $term_name;
-                                  echo "</a></li>";
-								$conta++;
-                                  }
-                                ?>
-                            </ul>
-                            <div id="busca-aba">
+			        <div class="header-portfolio">
+                        <div id="busca-aba" class="portfolio">
                             <div id="lupa-aba"></div>
                             <form id="searchform" action="<?php bloginfo('url'); ?>/" method="get">
-                            <input class="inlineSearch" type="text" name="s" value="busca" onblur="if (this.value == '') {this.value = 'busca';}" onfocus="if (this.value == 'busca') {this.value = '';}" />
-                            <input type="hidden" name="post_type" value="portfolio" />
-                            <!-- <input class="inlineSubmit" id="searchsubmit" type="submit" alt="Search" value="Buscar" /> -->
+								<input class="inlineSearch" type="text" name="s" value="busca" onblur="if (this.value == '') {this.value = 'busca';}" onfocus="if (this.value == 'busca') {this.value = '';}" />
+								<input type="hidden" name="post_type" value="portfolio" />
+								<!-- <input class="inlineSubmit" id="searchsubmit" type="submit" alt="Search" value="Buscar" /> -->
                             </form>
-                            </div><!-- #busca-aba -->
+                        </div><!-- #busca-aba -->
                     </div><!-- .header-categories -->
 			
 						<?php

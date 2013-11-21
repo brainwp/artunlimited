@@ -2056,6 +2056,16 @@ ul#carousel li .content.center {
     z-index: 1;
     margin: 0;
 }
+
+.header-portfolio  {
+    overflow: hidden;
+    padding: 0;
+	max-width: 1230px;
+	position: relative;
+    z-index: 1;
+    margin: 0;
+}
+
 .header-categories a{
 	text-decoration: none;
 }
@@ -2149,7 +2159,7 @@ ul#carousel li .content.center {
 	min-height: 280px;
 	background: #E6E6E6;
 	float: left;
-	margin: 2.5% 0 0 2.5%;
+	margin: 1.5% 0 0 2.5%;
 	-webkit-box-shadow: 0px 1px 6px rgba(50, 50, 50, 0.4);
 	-moz-box-shadow:    0px 1px 6px rgba(50, 50, 50, 0.4);
 	box-shadow:         0px 1px 6px rgba(50, 50, 50, 0.4);
@@ -2216,10 +2226,22 @@ a.titulo-resumo {
 }
 #busca-aba {
 	float: left;
-	width: 17%;
-	margin: 10px 3% 0 3%;
+	width: 20%;
+	margin: 10px 10px 0;
 	padding: 0;
 }
+
+#busca-aba.portfolio {
+	float: right !important;
+    margin: 1.5% 35px 0 !important;
+    padding: 0 !important;
+    width: 20%;
+}
+
+#busca-aba.portfolio #searchform input{
+	background: none repeat scroll 0 0 #E5E5E5;
+}
+
 #busca-aba #searchform {
 	border: 0;
 	color: #bcbcbc;
