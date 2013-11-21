@@ -2,17 +2,18 @@
 # This file is distributed under the GNU General Public License v2 or later.
 msgid ""
 msgstr ""
-"Project-Id-Version: artunlimited\n"
+"Project-Id-Version: underscores\n"
 "Report-Msgid-Bugs-To: http://wordpress.org/tags/_s\n"
 "POT-Creation-Date: 2013-05-28 16:41:49+00:00\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"PO-Revision-Date: 2013-10-22 20:01-0300\n"
+"PO-Revision-Date: 2013-11-21 11:21-0300\n"
 "Last-Translator: Diego Rojas <diego@brasa.art.br>\n"
 "Language-Team: BRASA <suporte@brasa.art.br>\n"
-"Language: Português d Brasil\n"
+"Language: Brazilian Portuguese\n"
 "X-Generator: Poedit 1.5.5\n"
+"Plural-Forms: nplurals=2; plural=(n > 1);\n"
 
 #: 404.php:15
 msgid "Oops! That page can&rsquo;t be found."
@@ -61,7 +62,7 @@ msgstr "Arquivo do Ano: %"
 
 #: archive.php:48
 msgid "Asides"
-msgstr ""
+msgstr "Asides"
 
 #: archive.php:51
 msgid "Images"
@@ -87,8 +88,8 @@ msgstr "Arquivos"
 msgctxt "comments title"
 msgid "One thought on &ldquo;%2$s&rdquo;"
 msgid_plural "%1$s thoughts on &ldquo;%2$s&rdquo;"
-msgstr[0] ""
-msgstr[1] ""
+msgstr[0] "Um pensamento em &ldquo;%2$s&rdquo;"
+msgstr[1] "%1$s pensamentos em &ldquo;%2$s&rdquo;"
 
 #: comments.php:36 comments.php:56
 msgid "Comment navigation"
@@ -125,28 +126,36 @@ msgid ""
 "This entry was tagged %2$s. Bookmark the <a href=\"%3$s\" title=\"Permalink "
 "to %4$s\" rel=\"bookmark\">permalink</a>."
 msgstr ""
+"Este post foi tagueado %2$s. Faça o Bookmark do <a href=\"%3$s\" title="
+"\"Permalink to %4$s\" rel=\"bookmark\">permalink</a>."
 
 #: content-single.php:39
 msgid ""
 "Bookmark the <a href=\"%3$s\" title=\"Permalink to %4$s\" rel=\"bookmark"
 "\">permalink</a>."
 msgstr ""
+"Faça o Bookmark do <a href=\"%3$s\" title=\"Permalink to %4$s\" rel="
+"\"bookmark\">permalink</a>."
 
 #: content-single.php:45
 msgid ""
 "This entry was posted in %1$s and tagged %2$s. Bookmark the <a href=\"%3$s\" "
 "title=\"Permalink to %4$s\" rel=\"bookmark\">permalink</a>."
 msgstr ""
+"Essta postagem foi feita em %1$s e tagueada %2$s. Faça o Bookmark do <a href="
+"\"%3$s\" title=\"Permalink para %4$s\" rel=\"bookmark\">permalink</a>."
 
 #: content-single.php:47
 msgid ""
 "This entry was posted in %1$s. Bookmark the <a href=\"%3$s\" title="
 "\"Permalink to %4$s\" rel=\"bookmark\">permalink</a>."
 msgstr ""
+"Essa postagem foi feita em %1$s. Faça o Bookmark do <a href=\"%3$s\" title="
+"\"Permalink para %4$s\" rel=\"bookmark\">permalink</a>."
 
 #: content.php:24
 msgid "Continue reading <span class=\"meta-nav\">&rarr;</span>"
-msgstr ""
+msgstr "Leia mais <span class=\"meta-nav\">&rarr;</span>"
 
 #: content.php:42
 msgid "Posted in %1$s"
@@ -194,7 +203,7 @@ msgstr "Menu"
 
 #: header.php:32
 msgid "Skip to content"
-msgstr ""
+msgstr "Vá para o conteúdo"
 
 #: image.php:23
 msgid ""
@@ -203,6 +212,10 @@ msgid ""
 "image\">%4$s &times; %5$s</a> in <a href=\"%6$s\" title=\"Return to %7$s\" "
 "rel=\"gallery\">%8$s</a>"
 msgstr ""
+"Publicado <span class=\"entry-date\"><time class=\"entry-date\" datetime="
+"\"%1$s\">%2$s</time></span> às <a href=\"%3$s\" title=\"Link to full-size "
+"image\">%4$s &times; %5$s</a> em <a href=\"%6$s\" title=\"Voltar para %7$s\" "
+"rel=\"gallery\">%8$s</a>"
 
 #: image.php:38
 msgid "<span class=\"meta-nav\">&larr;</span> Previous"
@@ -218,6 +231,10 @@ msgid ""
 "comment</a> or leave a trackback: <a class=\"trackback-link\" href=\"%s\" "
 "title=\"Trackback URL for your post\" rel=\"trackback\">Trackback URL</a>."
 msgstr ""
+"<a class=\"comment-link\" href=\"#respond\" title=\"Deixe um comentário"
+"\">Deixe um comentário</a> ou faça um trackback: <a class=\"trackback-link\" "
+"href=\"%s\" title=\"Trackback URL para seu post\" rel=\"trackback"
+"\">Trackback URL</a>."
 
 #: image.php:106
 msgid ""
@@ -225,16 +242,21 @@ msgid ""
 "\" href=\"%s\" title=\"Trackback URL for your post\" rel=\"trackback"
 "\">Trackback URL</a>."
 msgstr ""
+"Comentários estão desativados , mas você pode fazer um trackback: <a class="
+"\"trackback-link\" href=\"%s\" title=\"Trackback URL de seu post\" rel="
+"\"trackback\">Trackback URL</a>."
 
 #: image.php:108
 msgid ""
 "Trackbacks are closed, but you can <a class=\"comment-link\" href=\"#respond"
 "\" title=\"Post a comment\">post a comment</a>."
 msgstr ""
+"Trackbacks estão desativados, mas vocês pode <a class=\"comment-link\" href="
+"\"#respond\" title=\"Postar comentários\">Postar um comentário</a>."
 
 #: image.php:110
 msgid "Both comments and trackbacks are currently closed."
-msgstr ""
+msgstr "Comentários e  trackbacks estão desativados."
 
 #: inc/extras.php:66
 msgid "Page %s"
@@ -286,6 +308,10 @@ msgid ""
 "<span class=\"author vcard\"><a class=\"url fn n\" href=\"%5$s\" title=\"%6$s"
 "\" rel=\"author\">%7$s</a></span></span>"
 msgstr ""
+"Postado em <a href=\"%1$s\" title=\"%2$s\" rel=\"bookmark\"><time class="
+"\"entry-date\" datetime=\"%3$s\">%4$s</time></a><span class=\"byline\"> por "
+"<span class=\"author vcard\"><a class=\"url fn n\" href=\"%5$s\" title=\"%6$s"
+"\" rel=\"author\">%7$s</a></span></span>"
 
 #: inc/template-tags.php:123
 msgid "View all posts by %s"
@@ -299,18 +325,22 @@ msgstr "Nada Encontrado"
 msgid ""
 "Ready to publish your first post? <a href=\"%1$s\">Get started here</a>."
 msgstr ""
+"Pronto para publicar seu primeiro post? <a href=\"%1$s\">Comece aqui</a>."
 
 #: no-results.php:23
 msgid ""
 "Sorry, but nothing matched your search terms. Please try again with some "
 "different keywords."
 msgstr ""
+"Desculpe, mas não foram encontrados resultados. Por favor tente novamente "
+"com outra palavra-chave."
 
 #: no-results.php:28
 msgid ""
 "It seems we can&rsquo;t find what you&rsquo;re looking for. Perhaps "
 "searching can help."
 msgstr ""
+"Não foi possível encontrar o que estava procurando. Talvez a Busca ajude."
 
 #: search.php:16
 msgid "Search Results for: %s"
@@ -350,6 +380,10 @@ msgid ""
 "Theme</em>. Instead try turning me into the next, most awesome, WordPress "
 "theme out there. That's what I'm here for."
 msgstr ""
+"Olá. Sou um tema inicial chamado<code>_s</code>, ou <em>underscores</em>, se "
+"preferir.  Sou um tema feito para ser hackeado, não me use como <em>Tema "
+"Pai</em>. Ao invés disso, tente me usar para criar um nova tema WordPress "
+"incrível. Foi para isso que fui criado."
 
 #. Author of the plugin/theme
 msgid "Automattic"
