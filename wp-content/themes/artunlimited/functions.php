@@ -53,12 +53,6 @@ function artunlimited_setup() {
 
 	) );
 
-	/**
-	 * Enable support for Post Formats
-	 */
-
-	// add_theme_support( 'post-formats', array( 'aside', 'image', 'video', 'quote', 'link' ) );
-
 }
 
 endif; // artunlimited_setup
@@ -135,10 +129,11 @@ function artunlimited_scripts() {
 	wp_enqueue_style( 'artunlimited-style', get_stylesheet_uri() );
 	wp_enqueue_style( 'twentyeleven-style', get_template_directory_uri() . '/twentyeleven-style.css' );
 	wp_enqueue_style( 'jquery.jscrollpane', get_template_directory_uri() . '/js/scroll/script/jquery.jscrollpane.css' );
-	
+	//wp_enqueue_style( 'preloader-style', get_template_directory_uri() . '/preloader.css' );
 	wp_enqueue_script( 'jquery' );
 	// wp_enqueue_script( 'artunlimited-navigation', get_template_directory_uri() . '/js/navigation.js', array(), null, true );
 	wp_enqueue_script( 'artunlimited-skip-link-focus-fix', get_template_directory_uri() . '/js/skip-link-focus-fix.js', array(), null, true );
+	//wp_enqueue_script( 'jquery.preloader', get_template_directory_uri() . '/js/jquery.preloader.js' );
     wp_enqueue_script( 'caroufredsel', get_template_directory_uri() . '/js/jquery.carouFredSel-6.1.0-packed.js', array('jquery') );
     wp_enqueue_script( 'caroufredsel_pre', get_template_directory_uri() . '/js/caroufredsel_pre.js', array('caroufredsel') );
 	wp_enqueue_script( 'jquery.jscrollpane', get_template_directory_uri() . '/js/scroll/script/jquery.jscrollpane.js', array('jquery') );
