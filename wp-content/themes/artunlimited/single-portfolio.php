@@ -11,8 +11,7 @@ get_header( 'portfolio' ); ?>
 
 		<?php while ( have_posts() ) : the_post(); ?>
 
-		<div id="slider-projetos">
-			<div id="slider-single">
+		<div id="slider-portfolio">
                 
 				<div id="carousel_wrap">
 								<a class="prev" id="prev2" href="#"><span>anterior</span></a>
@@ -57,7 +56,6 @@ get_header( 'portfolio' ); ?>
 						</div>
                 
 				</div><!-- carousel_wrap -->
-                </div><!-- slider-single -->
 		</div><!-- #sider-projetos -->
         
 	<div class="esquerda-single-portfolio">
