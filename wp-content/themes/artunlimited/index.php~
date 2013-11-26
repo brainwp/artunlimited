@@ -86,4 +86,4 @@ get_header( 'interno' ); ?>
 	</div><!-- #primary -->
 
 <?php  get_sidebar(); ?>
-<?php get_footer( 'noticias' ); ?>
+<?php get_footer( 'vazio' ); ?>

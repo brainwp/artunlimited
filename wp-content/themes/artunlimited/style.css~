@@ -1290,9 +1290,10 @@ div.slider-nav span.left {
 }
 
 #primary {
-	float: left;
-	margin: 0 -30% 0 0;
-   	width: 100%;
+    float: left;
+    margin: 0 -26.4% 0 0;
+	/* margin: 7em -26.4% 0 0; */
+    width: 100%;
 	background: #FFF;
 	padding-top: 2em;
 }
@@ -1741,7 +1742,6 @@ text-decoration: none;
 	float: right;
 	width: 25%;
 	margin-top: 2em;
-	margin-right: 50px;
 }
 #sidebar ul h2 {
 	font-family: 'Roboto', Arial, sans-serif;
