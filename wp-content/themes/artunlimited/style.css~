@@ -2629,16 +2629,6 @@ object {
 
 ----------------------------------------------- */
 
-.zilla-toggle {
-    background: none repeat scroll 0 0 #4D449B !important;
-    border: none !important;
-    border-radius: 8px;
-    cursor: pointer;
-    display: block;
-    outline: medium none;
-    position: relative;
-}
-
 .zilla-toggle-title {
     background: none repeat scroll 0 0 #4D449B !important;
 }

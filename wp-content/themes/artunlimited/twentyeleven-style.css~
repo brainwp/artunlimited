@@ -956,6 +956,7 @@
 }
 
 .entry-content,
+
 .entry-summary {
 
 	padding: 0 0 0;
@@ -963,13 +964,18 @@
 }
 
 .entry-content h1,
+
 .entry-content h2,
+
 .comment-content h1,
+
 .comment-content h2 {
 
 	color: #000;
+
 	font-weight: bold;
- 	margin: 0.8125em 0;
+
+	margin: 0 0 .8125em;
 
 }
 
