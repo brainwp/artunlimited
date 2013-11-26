@@ -1075,7 +1075,7 @@ nav select {
 
 .entry-header {
 	width: 100%;
-	margin: 0 0 20px 0;
+	margin: 20px 0;
 }
 
 .entry-header-noticias {
@@ -1551,7 +1551,7 @@ height: 100%;
 }
 .titulo-header {
     float: left;
-    margin: 20px 0 0 30px;
+    margin: 40px 0 0 30px;
     width: auto;
 	font-family: 'Roboto', Arial, sans-serif
 }

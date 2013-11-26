@@ -1551,7 +1551,7 @@ height: 100%;
 }
 .titulo-header {
     float: left;
-    margin: 20px 0 0 30px;
+    margin: 40px 0 0 30px;
     width: auto;
 	font-family: 'Roboto', Arial, sans-serif
 }
@@ -2628,6 +2628,16 @@ object {
 /* = Shortcodes
 
 ----------------------------------------------- */
+
+.zilla-toggle {
+    background: none repeat scroll 0 0 #4D449B !important;
+    border: none !important;
+    border-radius: 8px;
+    cursor: pointer;
+    display: block;
+    outline: medium none;
+    position: relative;
+}
 
 .zilla-toggle-title {
     background: none repeat scroll 0 0 #4D449B !important;
