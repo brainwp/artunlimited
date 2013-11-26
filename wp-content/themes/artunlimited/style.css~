@@ -576,7 +576,6 @@ a:active {
     margin: 0 auto;
     max-width: 1280px;
     overflow: hidden;
-    position: fixed;
     width: 100%;
     z-index: 9999;
 	-webkit-box-shadow: 0px 5px 10px 0px rgba(48,48,48,0.4);
@@ -1011,20 +1010,22 @@ nav select {
 }
 
 .etiqueta-barra-portfolio {
-	background: url("images/escrita-portfolio.png") no-repeat scroll 0 15px #4D449B;
+	background: url("images/escrita-portfolio.png") no-repeat scroll center top #4D449B;
 	width: 50px;
 	height: 210px;
 	position: fixed;
+	top: 10px;
+	display: block;
 }
 
 
 .botao-portfolio-menu {
-    background-color: #4D449B;
-    height: 40px;
-    position: absolute;
-    right: 0;
+   	background-color: #4D449B;
+   	height: 40px;
+   	position: absolute;
+    	right: 0;
 	bottom:0;
-    width: 45%;
+   	width: 45%;
 	z-index: 99999;
 	display: none;
 }
@@ -1624,10 +1625,10 @@ height: 100%;
 }
 
 .imagens-cliente {
-	height: 170px;
-	overflow: hidden;
 	float: left;
 	margin: 0 10px 10px 0;
+	overflow: hidden;
+	width: 180px;
 }
 
 /* Notícias
@@ -2226,8 +2227,9 @@ a.titulo-resumo {
 }
 
 .creditos-portfolio {
-float: right;
-margin-right: 30px;
+    float: right;
+    font-size: 0.9em;
+    margin-right: 80px;
 }
 
 .archive-portfolio {
