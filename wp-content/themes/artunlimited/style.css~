@@ -1075,7 +1075,7 @@ nav select {
 
 .entry-header {
 	width: 100%;
-	margin: 0 0 20px 0;
+	margin: 20px 0;
 }
 
 .entry-header-noticias {
@@ -1644,7 +1644,7 @@ height: 100%;
    display: block;
     float: left;
     font-weight: bold;
-    margin: 38px 0 0 12px;
+    margin: 12px 0 0 12px;
     padding: 3px 5px;
     text-decoration: none;
     text-transform: uppercase;
@@ -1698,6 +1698,7 @@ text-decoration: none;
 .titulo-cada-noticia {
 	text-transform: uppercase;
 	font-size: 1.4em;
+	line-height: 1.3;
 	font-family: 'Roboto', Arial, sans-serif;
 	font-weight: 500;
 }
@@ -2913,6 +2914,12 @@ object {
 	
 	.center {
 	margin: 0;
+	}
+
+	.cada-noticia {
+	    max-width: 250px;
+	    min-height: 295px;
+	}
 }
 
 
