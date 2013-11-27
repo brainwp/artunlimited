@@ -576,6 +576,7 @@ a:active {
     margin: 0 auto;
     max-width: 1280px;
     overflow: hidden;
+    position: fixed;
     width: 100%;
     z-index: 9999;
 	-webkit-box-shadow: 0px 5px 10px 0px rgba(48,48,48,0.4);
@@ -998,11 +999,11 @@ nav select {
     width: 50px;
 }
 .barra-portfolio {
-    background-color: #4D449B;
-    height: 100%;
-    position: absolute;
-    right: 0;
-    width: 50px;
+	    background-color: #4D449B;
+	    height: 100%;
+	    position: fixed;
+	    right: 0;
+	    width: 50px;
 	-webkit-box-shadow: -7px 0px 6px rgba(50, 50, 50, 0.27);
 	-moz-box-shadow:    -7px 0px 6px rgba(50, 50, 50, 0.27);
 	box-shadow:         -7px 0px 6px rgba(50, 50, 50, 0.27);
@@ -1013,8 +1014,8 @@ nav select {
 	background: url("images/escrita-portfolio.png") no-repeat scroll center top #4D449B;
 	width: 50px;
 	height: 210px;
-	position: fixed;
-	top: 10px;
+	position: absolute;
+	margin-top: 10px;
 	display: block;
 }
 
@@ -1254,7 +1255,8 @@ div.slider-nav span.left {
 
 #content-interno {
 	background: none repeat scroll 0 0 #FFFFFF;
-    padding: 0 0 50px;
+    	padding: 0 0 50px;
+	width: auto;
 }
 
 .form-content-interno {
@@ -2282,7 +2284,7 @@ a.titulo-resumo {
 
 .direita-single-portfolio {
 	float: left;
-	width: 30%;
+	width: 350px;
 	margin: 6% 0 0 5%;
 }
 
@@ -2874,24 +2876,44 @@ object {
 	/* No need to float 404 widgets at this size */
 
 	.error404 #main .widget {
-
 		float: none;
 		margin-right: 0;
 		width: auto;
-
 	}
-
 	
 	a.titulo-resumo {
 	font-size: 0.65em;
 	}
 	
 	
-.separated-list li a {
+	.separated-list li a {
 
-    font-size: 1.15em;
+	    font-size: 1.15em;
+	}
+	
+	.esquerda-single-portfolio {
+	width: 80%;
 	}
 
+	.direita-single-portfolio {
+	 margin: 0 0 0 5%;
+
+	}
+
+	.compartilhe-sidebar-facebook {
+	   float: left;
+	}
+
+	.compartilhe-sidebar-email {
+	    background: url("images/compartilhe.png") no-repeat scroll 0 -36px rgba(0, 0, 0, 0);
+	    float: left;
+	    margin: 0 0 0 20px;
+	}
+
+
+	.compartilhe-sidebar {
+	    margin-bottom: 25px;
+	}
 	
 
 }
