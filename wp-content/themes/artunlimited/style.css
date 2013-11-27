@@ -1000,7 +1000,7 @@ nav select {
 .barra-portfolio {
 	    background-color: #4D449B;
 	    height: 100%;
-	    position: fixed;
+	    position: absolute;
 	    right: 0;
 	    width: 50px;
 	-webkit-box-shadow: -7px 0px 6px rgba(50, 50, 50, 0.27);
@@ -1013,7 +1013,7 @@ nav select {
 	background: url("images/escrita-portfolio.png") no-repeat scroll center top #4D449B;
 	width: 50px;
 	height: 210px;
-	position: absolute;
+	position: fixed;
 	display: block;
 }
 
