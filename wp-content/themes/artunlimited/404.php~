@@ -9,7 +9,7 @@ get_header( 'interno' ); ?>
 
 <div class="altura-header"></div>
 	<div id="content-pages">
-		<div id="content" class="page404-content" role="main">
+		<div id="content" class="page-content" role="main">
 
 			<article id="post-0" class="post not-found">
             

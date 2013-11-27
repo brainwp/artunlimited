@@ -138,6 +138,11 @@
 		
 		
 		</nav><!-- #site-navigation -->
+
+	<div class="botao-portfolio-menu">
+		<a class="etiqueta-barra-botao-portfolio-menu" href="<?php echo home_url('portfolio'); ?>">
+		</a>
+	</div>
         
 	</header><!-- #masthead -->
 

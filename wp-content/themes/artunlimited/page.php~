@@ -13,7 +13,7 @@
 get_header( 'interno' ); ?>
 
 <div class="altura-header"></div>
-	<div id="content-pages">
+	<div id="content-interno">
 		<div id="content" class="page-content" role="main">
 
 			<?php while ( have_posts() ) : the_post(); ?>
@@ -23,6 +23,6 @@ get_header( 'interno' ); ?>
 			<?php endwhile; // end of the loop. ?>
 
 		</div><!-- #content -->
-	</div><!-- #content-pages -->
+	</div><!-- #content-interno -->
 
 <?php get_footer( 'noticias' ); ?>

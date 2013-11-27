@@ -39,4 +39,4 @@ get_header( 'interno' ); ?>
 						
 				<?php get_footer( 'noticias' ); ?>
 		
-	</div><!-- #content-pages -->
+	</section><!-- #content-pages -->

@@ -1001,6 +1001,7 @@ nav select {
 	    background-color: #4D449B;
 	    height: 100%;
 	    position: absolute;
+	    right: 0;
 	    width: 50px;
 	-webkit-box-shadow: -7px 0px 6px rgba(50, 50, 50, 0.27);
 	-moz-box-shadow:    -7px 0px 6px rgba(50, 50, 50, 0.27);
@@ -1092,6 +1093,13 @@ nav select {
     width: 100%;
 	overflow: hidden;
 }
+
+.entry-header-category {
+    margin: 5px 0 20px 3em;
+    width: 100%;
+	overflow: hidden;
+}
+
 .entry-header-page-404 {
     margin: 25px 0 20px 0;
     width: 100%;
@@ -1235,6 +1243,7 @@ div.slider-nav span.left {
 #page {
 	margin: 0 auto;
 	max-width: 1280px;
+	padding: 0;
 }
 
 /* =Content
@@ -1254,6 +1263,26 @@ div.slider-nav span.left {
 	background: none repeat scroll 0 0 #FFFFFF;
     	padding: 0 0 50px;
 	width: auto;
+}
+
+#content-pages {
+	background: none repeat scroll 0 0 #FFFFFF;
+    	padding: 0;
+	width: auto;
+}
+
+
+#content.page-content {
+    background: none repeat scroll 0 0 #FFFFFF;
+    margin: 0;
+    padding: 2em 0 0 0;
+    max-width: 950px;
+}
+
+#content.page404-content {
+    background: none repeat scroll 0 0 #FFFFFF;
+    margin: 0 0 0 70px;
+    max-width: 950px;
 }
 
 #content-index {
@@ -1295,10 +1324,7 @@ div.slider-nav span.left {
 #main {
 	clear: both;
 	padding: 0;
-}
-
-#main .site-main-home {
-	margin-top: 100px;
+	margin: 0;
 }
 
 #primary {
@@ -2511,8 +2537,9 @@ object {
 
 }
 
-.bypostauthor {
 
+#respond input#submit {
+    background: none repeat scroll 0 0 #4D449B !important;
 }
 
 /* =Widgets
@@ -3200,6 +3227,11 @@ object {
 	
 	#redes {
 	display: none;
+	}
+
+
+	.footer-noticias {
+	    margin: 0;
 	}
 
 

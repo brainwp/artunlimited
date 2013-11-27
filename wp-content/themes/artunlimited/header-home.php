@@ -152,4 +152,4 @@
 
 	<?php do_action( 'before' ); ?>
 
-	<div id="main" class="site-main-home">
+	<div id="main">
