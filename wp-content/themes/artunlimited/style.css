@@ -981,7 +981,6 @@ nav select {
 	position: relative;
 }
 .site-home {
-	max-width: 1280px !important;
 	position: relative;
 }
 .top-barra:hover {
@@ -1082,7 +1081,7 @@ nav select {
 .entry-header-noticias {
     float: left;
     margin: 5px 0 20px 5px;
-    width: 90%;
+    width: 87%;
 }
 
 .entry-header-noticias h1 {
@@ -1258,6 +1257,17 @@ div.slider-nav span.left {
 	width: auto;
 }
 
+#content-index {
+	background: none repeat scroll 0 0 #FFFFFF;
+    	padding: 0;
+    	width: auto;
+	margin-right: 50px;
+	max-width: 1230px;
+	padding: 0;
+}
+
+
+
 .form-content-interno {
 	width: 35%;
 	margin: 20px 0 250px 0;
@@ -1294,8 +1304,8 @@ div.slider-nav span.left {
 
 #primary {
 	float: left;
-	margin: 0 -30% 0 0;
-   	width: 100%;
+	margin: 0 -25% 0 0;
+   	width: 75%;
 	background: #FFF;
 	padding-top: 2em;
 }
@@ -1745,7 +1755,6 @@ text-decoration: none;
 	float: right;
 	width: 25%;
 	margin-top: 2em;
-	margin-right: 50px;
 }
 #sidebar ul h2 {
 	font-family: 'Roboto', Arial, sans-serif;
@@ -2582,15 +2591,14 @@ object {
 .footer-noticias {
     background: none repeat scroll 0 0 #E5E5E5;
     height: 70px;
-    margin: 0 0 0 0;
+    margin: 0 50px 0 0;
     max-width: 1190px;
     overflow: hidden;
     padding: 16px 20px;
     position: relative;
-    width: 100%;
 }
 
-.footer-portfolo {
+.footer-portfolio {
     background: none repeat scroll 0 0 #E5E5E5;
     height: 40px;
     margin: 0 0 0 50px;
@@ -2913,6 +2921,10 @@ object {
 	.compartilhe-sidebar {
 	    margin-bottom: 25px;
 	}
+
+	.seta-noticias {
+	    display: none;
+	}
 	
 
 }
@@ -2943,6 +2955,16 @@ object {
 	    max-width: 250px;
 	    min-height: 295px;
 	}
+
+	#sidebar {
+	display: none;
+	}
+	
+	#primary {
+	width: 100%;
+	margin: 0;
+	}
+
 }
 
 

@@ -6,7 +6,7 @@
 
 get_header( 'portfolio' ); ?>
 
-	<div id="primary" class="content-single-portfolio">
+	<div class="content-single-portfolio">
 		<div id="content-interno" class="site-content" role="main">
 
 		<?php while ( have_posts() ) : the_post(); ?>
@@ -54,6 +54,6 @@ get_header( 'portfolio' ); ?>
 
 <?php get_footer( 'portfolio' ); ?>
 
-	</div><!-- #primary -->
+	</div><!-- #content-single-portfolio -->
 	
 
