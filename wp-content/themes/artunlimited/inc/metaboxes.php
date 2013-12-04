@@ -59,7 +59,7 @@ add_action('admin_menu', 'mytheme_add_box');
 function mytheme_add_box() {
     global $meta_box;
 	$post_id = $_GET['post'] ? $_GET['post'] : $_POST['post_ID'] ;    
-	$o_id = id_por_slug( 'Contatos' );
+	$o_id = id_por_slug( 'contatos' );
 	if ($post_id == $o_id)
 	{
 	add_meta_box(

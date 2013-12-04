@@ -48,23 +48,18 @@ html {
 	-webkit-text-size-adjust: 100%; /* Prevents iOS text size adjust after orientation change, without disabling user zoom */
 	-ms-text-size-adjust: 100%; /* www.456bereastreet.com/archive/201012/controlling_text_size_in_safari_for_ios_without_disabling_user_zoom/ */
 }
-h1 {
-	font-size: 2em;
-}
-h2 {
-	font-size: 1.8em;
-}
-h3 {
-	font-size: 1.6em;
-}
+
 h4 {
 	font-size: 1.4em;
+	margin: 0 0 0.8125em;
 }
 h5 {
 	font-size: 1.2em;
+	margin: 0 0 0.8125em;
 }
 h6 {
 	font-size: 1.0em;
+	margin: 0 0 0.8125em;
 }
 article,
 aside,
@@ -3229,9 +3224,12 @@ object {
 	display: none;
 	}
 
-
 	.footer-noticias {
 	    margin: 0;
+	}
+	.titulo-page-404 h1 {
+	    font-size: 6em;
+	    margin: 50px 0 0;
 	}
 
 
