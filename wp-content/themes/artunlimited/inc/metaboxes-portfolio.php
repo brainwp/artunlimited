@@ -1,64 +1,69 @@
 <?php
 
 /*
-Classe MetaBrasa para criação de MetaBox's
+Classe metabox-portfolio para criação de MetaBox's
 Versão 0.1
 */
 
-$prefixo = 'metabrasa_';
+$prefix = 'metaportfolio_';
 
-$meta_box = array(
-	'id' => 'metabox-metabrasa',
+$meta_box_portfolio = array(
+	'id' => 'metabox-portfolio',
 	// Título do MetaBox
 	'title' => 'Informa&ccedil;&otilde;es do Projeto',
 	// Tipo de Post a usar os MetaBox's
 	'page' => 'portfolio',
 	'context' => 'normal',
-	'priority' => 'default',
+	'priority' => 'high',
 	// Campos
 	'fields' => array(
 		array(
+		'name' => '2&ordf; Linha do T&iacute;tulo do Projeto',
+		'desc' => 'Adicione a 2&ordf; linha do T&iacute;tulo do Projeto',
+		'id' => $prefix . '2alinhatitulo',
+		'type' => 'text',
+		'std' => ''
+		),
+		array(
 		'name' => 'Sub T&iacute;tulo do Projeto',
 		'desc' => 'Adicione o Sub T&iacute;tulo do Projeto',
-		'id' => $prefixo . 'subtitulo',
+		'id' => $prefix . 'subtitulo',
 		'type' => 'text',
 		'std' => ''
 		),	
 		array(
 		'name' => 'Cr&eacute;dito das Fotografias do Projeto',
 		'desc' => 'Adicione o nome do Fot&oacute;grafo do Projeto',
-		'id' => $prefixo . 'credito',
+		'id' => $prefix . 'credito',
 		'type' => 'text',
 		'std' => ''
 		),
 	)
 );
 
+add_action('admin_menu', 'add_metaportfolio');
 
-// Adiciona os MetaBox's (MetaBrasa)	
-add_action('admin_menu', 'add_metabrasa');
-
-function add_metabrasa() {
-    global $meta_box;
+function add_metaportfolio() {
+    global $meta_box_portfolio;
     add_meta_box(
-		$meta_box['id'],
-		$meta_box['title'], 
-		'show_metabrasa',
-		$meta_box['page'],
-		$meta_box['context'],
-		$meta_box['priority']);
+		$meta_box_portfolio['id'],
+		$meta_box_portfolio['title'], 
+		'show_metaportfolio',
+		$meta_box_portfolio['page'],
+		$meta_box_portfolio['context'],
+		$meta_box_portfolio['priority']);
 }
 	
 	
-// Mostra os MetaBox's (MetaBrasa)
-function show_metabrasa() {
-    global $meta_box, $post;
+// Mostra os MetaBox's (metaportfolio)
+function show_metaportfolio() {
+    global $meta_box_portfolio, $post;
     // Use nonce for verification
-    echo '<input type="hidden" name="metabrasa_nonce" value="', wp_create_nonce(basename(__FILE__)), '" />';
+    echo '<input type="hidden" name="metaportfolio_nonce" value="', wp_create_nonce(basename(__FILE__)), '" />';
 
 	// Inicia a tabela
-	echo '<table class="metabrasa-table">';
-    foreach ($meta_box['fields'] as $field) {
+	echo '<table class="agenda-table">';
+    foreach ($meta_box_portfolio['fields'] as $field) {
     // get current post meta data
     $meta = get_post_meta($post->ID, $field['id'], true);
     
@@ -68,7 +73,7 @@ function show_metabrasa() {
     '<td>';
     switch ($field['type']) {
     case 'text':
-    echo '<input type="text" name="', $field['id'], '" id="', $field['id'], '" value="', $meta ? $meta : $field['std'], '" size="30" style="width:97%" />', '<br />', '<span class="metabrasa-table-desc">', $field['desc'], '</span>';
+    echo '<input type="text" name="', $field['id'], '" id="', $field['id'], '" value="', $meta ? $meta : $field['std'], '" size="30" style="width:97%" />', '<br />', '<span class="agenda-table-desc">', $field['desc'], '</span>';
     break;
     case 'textarea':
     echo '<textarea name="', $field['id'], '" id="', $field['id'], '" cols="60" rows="4" style="width:97%">', $meta ? $meta : $field['std'], '</textarea>', '<br />', $field['desc'];
@@ -93,18 +98,18 @@ function show_metabrasa() {
     '</tr>';
     }
     // Fecha a tabela
-	echo '</table><!-- .metabrasa-table -->';
+	echo '</table><!-- .metaportfolio-table -->';
     }
 	
-	add_action('save_post', 'save_metabrasa');
+	add_action('save_post', 'save_metaportfolio');
     // Save data from meta box
-    function save_metabrasa($post_id) {
-    global $meta_box;
+    function save_metaportfolio($post_id) {
+    global $meta_box_portfolio;
 	
 
 	
     // verify nonce
-    if (!wp_verify_nonce($_POST['metabrasa_nonce'], basename(__FILE__))) {
+    if (!wp_verify_nonce($_POST['metaportfolio_nonce'], basename(__FILE__))) {
     return $post_id;
     }
     // Checa se AutoSave está ativo e o ignora
@@ -120,7 +125,7 @@ function show_metabrasa() {
     return $post_id;
     }
     
-	foreach ($meta_box['fields'] as $field) {
+	foreach ($meta_box_portfolio['fields'] as $field) {
     $old = get_post_meta($post_id, $field['id'], true);
     $new = $_POST[$field['id']];
     if ($new && $new != $old) {
@@ -130,17 +135,15 @@ function show_metabrasa() {
     }
     }
     }
-
  /**
- * Adiciona CSS
+ * Adiciona o CSS para o jQuery DatePicker da Agenda e demais estilos
  */
-function estilo_metrabrasa() {
+function metabox_portfolio_css() {
 	wp_enqueue_style(
-		'metaboxes-estilo',
-		get_bloginfo('stylesheet_directory') . '/metaboxes-estilo.css'
+		'estilo-metaboxes',
+		get_bloginfo('stylesheet_directory') . '/inc/estilo-metaboxes.css'
 	);
 }
-add_action('admin_print_styles-post-new.php', 'estilo_metrabrasa');
-add_action('admin_print_styles-post.php', 'estilo_metrabrasa');
+add_action('admin_print_styles-post.php', 'metaboxes_css');
 
 ?>

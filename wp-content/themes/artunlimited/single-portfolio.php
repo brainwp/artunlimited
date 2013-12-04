@@ -60,13 +60,13 @@ get_header( 'portfolio' ); ?>
 		
 		        <?php
 				// Pega os dados e salva em variáveis
-                $metabrasa_credito = get_post_meta($post->ID,'metabrasa_credito',TRUE);
+                $metaportfolio_credito = get_post_meta($post->ID,'metaportfolio_credito',TRUE);
 				?>
 		
-				<?php if (empty($metabrasa_credito)) {
+				<?php if (empty($metaportfolio_credito)) {
                 } else { ?>
                 <div class="creditos-portfolio">
-				<p><span>Fotografias: </span>&copy; <?php echo $metabrasa_credito; ?></p>
+				<p><span>Fotografias: </span>&copy; <?php echo $metaportfolio_credito; ?></p>
 				</div><!-- #creditos-portfolio -->
 				<?php }	?>
         
@@ -74,14 +74,24 @@ get_header( 'portfolio' ); ?>
 
 		<header class="entry-header">
 			<h1 class="entry-title-interno"><?php the_title(); ?></h1>
+
+ 			  <?php
+				// Pega os dados e salva em variáveis
+                $metaportfolio_2alinhatitulo = get_post_meta($post->ID,'metaportfolio_2alinhatitulo',TRUE);
+				?>
+		
+				<?php if (empty($metaportfolio_2alinhatitulo)) {
+                } else { ?>
+              <h1 class="entry-title-interno"><?php echo $metaportfolio_2alinhatitulo; ?></h1>
+				<?php }	?>
 			
 			    <?php
 				// Pega os dados e salva em variáveis
-                $metabrasa_subtitulo = get_post_meta($post->ID,'metabrasa_subtitulo',TRUE);
+                $metaportfolio_subtitulo = get_post_meta($post->ID,'metaportfolio_subtitulo',TRUE);
 				?>
-				<?php if (empty($metabrasa_subtitulo)) {
+				<?php if (empty($metaportfolio_subtitulo)) {
                 } else { ?>
-				<h3 class="entry-sub-title-interno"><?php echo $metabrasa_subtitulo; ?></h3>
+				<h3 class="entry-sub-title-interno"><?php echo $metaportfolio_subtitulo; ?></h3>
 				<?php }	?>
 		</header><!-- .entry-header -->
 

@@ -16,14 +16,24 @@ get_header( 'portfolio' ); ?>
 
 		<header class="entry-header">
 			<h1 class="entry-title-interno"><?php the_title(); ?></h1>
+
+			<?php
+				// Pega os dados e salva em variáveis
+                $metanovosprojetos_2alinhatitulo = get_post_meta($post->ID,'metanovosprojetos_2alinhatitulo',TRUE);
+				?>
+		
+				<?php if (empty($metanovosprojetos_2alinhatitulo)) {
+                } else { ?>
+              <h1 class="entry-title-interno"><?php echo $metanovosprojetos_2alinhatitulo; ?></h1>
+			<?php } ?>
 			
 			    <?php
 				// Pega os dados e salva em variáveis
-                $metabrasa_subtitulo = get_post_meta($post->ID,'metabrasa_subtitulo',TRUE);
+                $metanovosprojetos_subtitulo = get_post_meta($post->ID,'metanovosprojetos_subtitulo',TRUE);
 				?>
-				<?php if (empty($metabrasa_subtitulo)) {
+				<?php if (empty($metanovosprojetos_subtitulo)) {
                 } else { ?>
-				<h3 class="entry-sub-title-interno"><?php echo $metabrasa_subtitulo; ?></h3>
+				<h3 class="entry-sub-title-interno"><?php echo $metanovosprojetos_subtitulo; ?></h3>
 				<?php }	?>
 		</header><!-- .entry-header -->
 

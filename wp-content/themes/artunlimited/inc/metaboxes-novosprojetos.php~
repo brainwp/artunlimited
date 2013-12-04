@@ -1,57 +1,62 @@
 <?php
 
 /*
-Classe MetaBrasa para criação de MetaBox's
+Classe metabox-novosprojetos para criação de MetaBox's
 Versão 0.1
 */
 
-$prefixo = 'metabrasa2_';
+$prefix = 'metanovosprojetos_';
 
-$meta_box = array(
-	'id' => 'metabox-metabrasa2',
+$meta_box_novosprojetos = array(
+	'id' => 'metabox-novosprojetos',
 	// Título do MetaBox
 	'title' => 'Informa&ccedil;&otilde;es do Projeto',
 	// Tipo de Post a usar os MetaBox's
 	'page' => 'novosprojetos',
 	'context' => 'normal',
-	'priority' => 'default',
-	// Campos
+	'priority' => 'high',
+		// Campos
 	'fields' => array(
+		array(
+		'name' => '2&ordf; Linha do T&iacute;tulo do Projeto',
+		'desc' => 'Adicione a 2&ordf; linha do T&iacute;tulo do Projeto',
+		'id' => $prefix . '2a-linha-titulo',
+		'type' => 'text',
+		'std' => ''
+		),
 		array(
 		'name' => 'Sub T&iacute;tulo do Projeto',
 		'desc' => 'Adicione o Sub T&iacute;tulo do Projeto',
-		'id' => $prefixo . 'subtitulo',
+		'id' => $prefix . 'subtitulo',
 		'type' => 'text',
 		'std' => ''
 		)
 	)
 );
 
+add_action('admin_menu', 'add_metanovosprojetos');
 
-// Adiciona os MetaBox's (MetaBrasa)	
-add_action('admin_menu', 'add_metabrasa2');
-
-function add_metabrasa2() {
-    global $meta_box;
+function add_metanovosprojetos() {
+    global $meta_box_novosprojetos;
     add_meta_box(
-		$meta_box['id'],
-		$meta_box['title'], 
-		'show_metabrasa2',
-		$meta_box['page'],
-		$meta_box['context'],
-		$meta_box['priority']);
+		$meta_box_novosprojetos['id'],
+		$meta_box_novosprojetos['title'], 
+		'show_metanovosprojetos',
+		$meta_box_novosprojetos['page'],
+		$meta_box_novosprojetos['context'],
+		$meta_box_novosprojetos['priority']);
 }
 	
 	
-// Mostra os MetaBox's (MetaBrasa)
-function show_metabrasa2() {
-    global $meta_box, $post;
+// Mostra os MetaBox's (metanovosprojetos)
+function show_metanovosprojetos() {
+    global $meta_box_novosprojetos, $post;
     // Use nonce for verification
-    echo '<input type="hidden" name="metabras_nonce" value="', wp_create_nonce(basename(__FILE__)), '" />';
+    echo '<input type="hidden" name="metanovosprojetos_nonce" value="', wp_create_nonce(basename(__FILE__)), '" />';
 
 	// Inicia a tabela
-	echo '<table class="metabrasa-table">';
-    foreach ($meta_box['fields'] as $field) {
+	echo '<table class="agenda-table">';
+    foreach ($meta_box_novosprojetos['fields'] as $field) {
     // get current post meta data
     $meta = get_post_meta($post->ID, $field['id'], true);
     
@@ -61,7 +66,7 @@ function show_metabrasa2() {
     '<td>';
     switch ($field['type']) {
     case 'text':
-    echo '<input type="text" name="', $field['id'], '" id="', $field['id'], '" value="', $meta ? $meta : $field['std'], '" size="30" style="width:97%" />', '<br />', '<span class="metabrasa-table-desc">', $field['desc'], '</span>';
+    echo '<input type="text" name="', $field['id'], '" id="', $field['id'], '" value="', $meta ? $meta : $field['std'], '" size="30" style="width:97%" />', '<br />', '<span class="agenda-table-desc">', $field['desc'], '</span>';
     break;
     case 'textarea':
     echo '<textarea name="', $field['id'], '" id="', $field['id'], '" cols="60" rows="4" style="width:97%">', $meta ? $meta : $field['std'], '</textarea>', '<br />', $field['desc'];
@@ -86,18 +91,18 @@ function show_metabrasa2() {
     '</tr>';
     }
     // Fecha a tabela
-	echo '</table><!-- .metabrasa-table -->';
+	echo '</table><!-- .metanovosprojetos-table -->';
     }
 	
-	add_action('save_post', 'save_metabrasa2');
+	add_action('save_post', 'save_metanovosprojetos');
     // Save data from meta box
-    function save_metabrasa2($post_id) {
-    global $meta_box;
+    function save_metanovosprojetos($post_id) {
+    global $meta_box_novosprojetos;
 	
 
 	
     // verify nonce
-    if (!wp_verify_nonce($_POST['metabrasa2_nonce'], basename(__FILE__))) {
+    if (!wp_verify_nonce($_POST['metanovosprojetos_nonce'], basename(__FILE__))) {
     return $post_id;
     }
     // Checa se AutoSave está ativo e o ignora
@@ -113,7 +118,7 @@ function show_metabrasa2() {
     return $post_id;
     }
     
-	foreach ($meta_box['fields'] as $field) {
+	foreach ($meta_box_novosprojetos['fields'] as $field) {
     $old = get_post_meta($post_id, $field['id'], true);
     $new = $_POST[$field['id']];
     if ($new && $new != $old) {
@@ -123,17 +128,15 @@ function show_metabrasa2() {
     }
     }
     }
-
  /**
- * Adiciona CSS
+ * Adiciona o CSS para o jQuery DatePicker da Agenda e demais estilos
  */
-function estilo_metrabrasa() {
+function metabox_novosprojetos_css() {
 	wp_enqueue_style(
-		'metaboxes-estilo',
-		get_bloginfo('stylesheet_directory') . '/metaboxes-estilo.css'
+		'estilo-metaboxes',
+		get_bloginfo('stylesheet_directory') . '/inc/estilo-metaboxes.css'
 	);
 }
-add_action('admin_print_styles-post-new.php', 'estilo_metrabrasa');
-add_action('admin_print_styles-post.php', 'estilo_metrabrasa');
+add_action('admin_print_styles-post.php', 'metaboxes_css');
 
 ?>
