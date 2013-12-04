@@ -50,7 +50,8 @@
                         
 					</div><!-- .cada-outro-projeto -->
 					<div class="titulo-outros-projetos">
-					 <?php the_title(); ?> 
+					 <?php the_title(); ?>
+					<span class="data-cada-outro-projeto"><?php the_time( 'Y' ); ?></span>
 					</div><!-- .titulo-outros-projetos -->
                     </a><!-- .a-outro  -->		
 					</li>

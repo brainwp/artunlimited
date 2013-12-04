@@ -11,7 +11,7 @@
 	<a class="a-compartilhe" href="<?php the_permalink() ?>?share=facebook&nb=1" target="_blank"></a>
 	</div><!-- .compartilhe-sidebar-facebook -->
 	<div class="compartilhe-sidebar-email">
-	<a class="a-compartilhe" href="<?php the_permalink() ?>?share=email&nb=1" target="_blank"></a>
+	<a class="a-compartilhe" href="mailto:<?php echo get_option( 'mo_email' ); ?>" target="_blank"></a>
 	</div><!-- .compartilhe-sidebar-email -->
 	<div class="">
 	</div><!--  -->
@@ -50,7 +50,8 @@
                         
 					</div><!-- .cada-outro-projeto -->
 					<div class="titulo-outros-projetos">
-					 <?php the_title(); ?> 
+					 <?php the_title(); ?>
+					<span class="data-outro-projeto"><?php the_time( 'Y' ); ?></span>
 					</div><!-- .titulo-outros-projetos -->
                     </a><!-- .a-outro  -->		
 					</li>
