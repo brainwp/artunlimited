@@ -10,7 +10,7 @@
 
 get_header(); ?>
 
-	<div id="content-interno">
+	<div id="content-pages">
 		<div id="content" class="page-content" role="main">
 
  <form name="form1" method="POST" action="">
