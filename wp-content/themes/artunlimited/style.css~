@@ -187,6 +187,7 @@ ol.comment-list {
 .comment-list .children li.comment .comment-meta {
     line-height: 1.625em;
     margin-left: 50px;
+	margin-top: 10px;
 }
 .comment-list .children li.comment .comment-content {
     -moz-hyphens: auto;
@@ -215,10 +216,10 @@ ol.comment-list {
 .comment-list .avatar {
     border-radius: 3px;
     box-shadow: 0 1px 2px #CCCCCC;
-    left: -50px;
+    left: -20px;
     padding: 0;
-    top: 2.2em;
-	position: absolute;
+    position: absolute;
+    top: 2.6em;
 }
 
 .comment-list .children .avatar {
@@ -2785,33 +2786,6 @@ object {
 }
 
 
-/* = Slide CSS
-
------------------------------------------------ */
-
-
-
-.slide-out-div {
-
-          padding: 20px;
-          width: 60%;
-          background: #ddd;
-          border: none;
-		  height: 100%;
-
-      }
-
-	  
-
-.handle	  {
-
-	   background: url("images/projetos-btn.jpg") no-repeat top center #4d449b;
-	   width: 40px;
-	   height: 100%;
-
-	   }
-
-
 /* = Shortcodes
 
 ----------------------------------------------- */
@@ -2840,6 +2814,23 @@ object {
 
 
 
+/* Testes de Aba
+----------------------------------------------- */
+
+.slide-out-div {
+       padding: 20px;
+        width: 70%;
+        background: #f2f2f2;
+	z-index: 99999;
+    }
+
+.handle	  {
+
+	   background: url("images/contact_tab.gif") no-repeat top center #4d449b;
+	   width: 40px;
+	   height: 100%;
+
+	   }
 
 /* =Responsive Structure
 

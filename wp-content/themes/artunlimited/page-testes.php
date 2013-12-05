@@ -8,7 +8,7 @@
 
 
 
-get_header('home'); ?>
+get_header('hometestes'); ?>
  
 <div id="slider">
 
