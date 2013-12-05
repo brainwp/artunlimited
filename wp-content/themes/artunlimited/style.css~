@@ -141,18 +141,18 @@ body {
 .comments-title {
     color: #0273B1;
     line-height: 2.6em;
-    padding: 0 0 2.6em;
+    padding: 0 0 0.6em;
     text-transform: uppercase;
 }
 
-ol.commentlist {
+ol.comment-list {
     list-style: none outside none;
     margin: 0 auto;
-    width: 68.9%;
+    width: auto;
 }
 
 
-.commentlist > li.comment {
+.comment-list > li.comment {
     background: none repeat scroll 0 0 #F6F6F6;
     border: 1px solid #DDDDDD;
     border-radius: 3px;
@@ -160,25 +160,22 @@ ol.commentlist {
     padding: 1.625em;
     position: relative;
 }
-.commentlist .pingback {
+.comment-list .pingback {
     margin: 0 0 1.625em;
     padding: 0 1.625em;
 }
-.commentlist .children {
+.comment-list .children {
     list-style: none outside none;
     margin: 0;
 }
-.commentlist .children li.comment {
+.comment-list .children li.comment {
     background: none repeat scroll 0 0 #FFFFFF;
-    border-left: 1px solid #DDDDDD;
     border-radius: 0 3px 3px 0;
     margin: 1.625em 0 0;
     padding: 1.625em;
     position: relative;
 }
-.commentlist .children li.comment .fn {
-    display: block;
-}
+
 .comment-meta .fn {
     font-style: normal;
 }
@@ -187,11 +184,11 @@ ol.commentlist {
     font-size: 12px;
     line-height: 2.2em;
 }
-.commentlist .children li.comment .comment-meta {
+.comment-list .children li.comment .comment-meta {
     line-height: 1.625em;
     margin-left: 50px;
 }
-.commentlist .children li.comment .comment-content {
+.comment-list .children li.comment .comment-content {
     -moz-hyphens: auto;
     margin: 1.625em 0 0;
     word-wrap: break-word;
@@ -199,25 +196,32 @@ ol.commentlist {
 .comment-meta a {
     font-weight: bold;
 }
-.comment-meta a:focus, .comment-meta a:active, .comment-meta a:hover {
+.comment-meta {
+    color: #666666;
+    font-size: 12px;
+    line-height: 2.2em;
 }
-.commentlist .avatar {
+
+.comment-author {
+	width: auto;
+	float: left;
+
+}
+
+.comment-author span.says {
+
+	margin-right: 5px;
+}
+.comment-list .avatar {
     border-radius: 3px;
     box-shadow: 0 1px 2px #CCCCCC;
-    left: -102px;
+    left: -50px;
     padding: 0;
-    position: absolute;
-    top: 0;
+    top: 2.2em;
+	position: absolute;
 }
-.commentlist > li:before {
-    content: url("images/comment-arrow.png");
-    left: -21px;
-    position: absolute;
-}
-.commentlist > li.pingback:before {
-    content: "";
-}
-.commentlist .children .avatar {
+
+.comment-list .children .avatar {
     background: none repeat scroll 0 0 rgba(0, 0, 0, 0);
     box-shadow: none;
     left: 2.2em;
