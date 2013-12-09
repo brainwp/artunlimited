@@ -1703,7 +1703,7 @@ height: 100%;
 .content-premios {
 	float: left;
 	margin: 0 50px 50px 130px;
-    width: auto;
+   	 width: auto;
 }
 
 .header-sub-content {
@@ -1795,6 +1795,17 @@ height: 100%;
 
 /* Clientes
 ----------------------------------------------- */
+
+.content-intro-clientes {
+	float: left;
+	margin: 0 50px 0 130px;
+   	 width: auto;
+}
+
+.content-intro-clientes #gallery-1 {
+	display: none;
+}
+
 .content-clientes {
     float: left;
     margin: 40px 0 0 110px;
@@ -2418,10 +2429,10 @@ a.titulo-resumo {
 
 .archive-portfolio {
 	float: left;
-    margin: 0 0 0 50px;
-    max-width: 1230px;
+	margin: 0 0 0 50px;
+	max-width: 1230px;
 	height: auto;
-    overflow: hidden;
+	overflow: hidden;
 }
 
 .home-portfolio {

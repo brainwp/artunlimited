@@ -74,7 +74,7 @@ get_header( 'home' ); ?>
 			<div class="titulo-header"><h2><?php echo $premios->post_title; ?></h2></div>
 		</div>
 						  
-				<div class="content-premios">
+		<div class="content-premios">
                 <?php echo $content_premios; ?>
                 </div><!-- .content-premios -->
             
@@ -96,6 +96,7 @@ get_header( 'home' ); ?>
 	$clientes = get_page_by_title( 'Clientes e Parceiros' );
 	$thumbnail_clientes = wp_get_attachment_image_src( get_post_thumbnail_id($clientes->ID), '', false, '' );
 	$attachment_clientes = get_attachment_link($clientes->ID);
+	$content_clientes = apply_filters('the_content', $clientes->post_content);
 ?>  
 	<div class="thumb-sub-content-direita">
 		<img src="<?php echo $thumbnail_clientes[0]; ?>" /> 
@@ -103,37 +104,44 @@ get_header( 'home' ); ?>
 
 <div class="left-sub-content">
 
-<div class="header-sub-content">
-	<div class="seta-header"></div>
-    <div class="titulo-header"><h2><?php echo $clientes->post_title; ?></h2></div>
-</div>
+	<div class="header-sub-content">
+		<div class="seta-header"></div>
+	    	<div class="titulo-header"><h2><?php echo $clientes->post_title; ?></h2></div>
+	</div>
 
-	<div class="scroll-panes">            	                   
-			<div class="content-clientes">
+		<div class="content-intro-clientes">
+  			<?php echo $content_clientes; ?>
 
-	<?php if ( have_posts() ) : while ( have_posts() ) : the_post();    
-    	$args_clientes = array(
-        	'post_type' => 'attachment',
-            'numberposts' => -1,
-            'post_status' => null,
-            'post_parent' => $clientes->ID,
-		);
+                </div><!-- .content-intro-clientes -->
+        	                   
+		<div class="content-clientes">
+	<div class="scroll-panes">   
+		<?php   
+	    	$args_clientes = array(
+			'post_type' => 'attachment',
+			'numberposts' => -1,
+			'post_status' => null,
+			'post_parent' => $clientes->ID,
+			'orderby' => 'menu_order',
+			'order' => 'ASC'
+			);
 
-		$attachments_clientes = get_posts( $args_clientes );
-		if ( $attachments_clientes ) {
-			foreach ( $attachments_clientes as $attachment_cliente ) {
-			$image_attributes_cliente = wp_get_attachment_image_src( $attachment_cliente->ID );
-			echo '<div class="imagens-cliente">';
-			echo '<img src="'.$image_attributes_cliente[0].'">';
-			echo '</div>';
-	  		}
-		}
-    	endwhile; endif; ?>
+			$attachments_clientes = get_posts( $args_clientes );
+			if ( $attachments_clientes ) {
+				foreach ( $attachments_clientes as $attachment_cliente ) {
+				$image_attributes_cliente = wp_get_attachment_image_src( $attachment_cliente->ID );
+				echo '<div class="imagens-cliente">';
+				echo '<img src="'.$image_attributes_cliente[0].'">';
+				echo '</div>';
+		  		}
+			}
+	    	?>
 
-	    <?php wp_reset_postdata(); // reset the query ?>   
+		    <?php wp_reset_postdata(); // reset the query ?>   
 
-			</div><!-- .content-clientes -->
 	</div><!-- .scroll-pane -->
+
+		</div><!-- .content-clientes -->
 	
 	</div>
 
