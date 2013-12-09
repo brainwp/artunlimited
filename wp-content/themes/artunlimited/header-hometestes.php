@@ -57,7 +57,7 @@
              jQuery ('.slide-out-div').tabSlideOut({
                  tabHandle: '.handle',                              //class of the element that will be your tab
                  imageHeight: '122px',                               //height of tab image
-                 imageWidth: '40px',                               //width of tab image    
+                 imageWidth: '50px',                               //width of tab image    
                  tabLocation: 'right',                               //side of screen where tab lives, top, right, bottom, or left
                  speed: 400,                                        //speed of animation
                  action: 'click',                                   //options: 'click' or 'hover', action to trigger animation
@@ -90,7 +90,7 @@
 		</a>
 	</div>
 		
-		<div class="archive-portfolio">
+		<div class="home-portfolio">
 			
 			        <div class="header-portfolio">
                         <div id="busca-aba" class="portfolio">
@@ -136,7 +136,7 @@
 						}
 						?>
 
-		</div> <!-- .archive-portfolio -->
+		</div> <!-- .home-portfolio -->
 
 
     </div>

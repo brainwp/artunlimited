@@ -2423,6 +2423,15 @@ a.titulo-resumo {
 	height: auto;
     overflow: hidden;
 }
+
+.home-portfolio {
+	float: left;
+	margin: 0 0 0 0;
+	max-width: 1230px;
+	height: auto;
+	overflow: hidden;
+}
+
 #busca-aba {
 	float: left;
 	margin: 10px 10px 0;
@@ -2827,10 +2836,15 @@ object {
 .handle	  {
 
 	   background: url("images/contact_tab.gif") no-repeat top center #4d449b;
-	   width: 40px;
+	   width: 50px;
 	   height: 100%;
 
-	   }
+	   }a
+
+.slide-out-div.archive-portfolio {
+margin: 0 !important;
+}
+
 
 /* =Responsive Structure
 
