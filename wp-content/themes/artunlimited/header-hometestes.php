@@ -25,12 +25,16 @@
 <!--[if lt IE 9 ]><script src="/lib/respond.min.js"></script><![endif]-->
 <?php wp_head(); ?>
 <script type="text/javascript">
-    jQuery(function() {
-	    if (jQuery('.scroll-pane').length)
-	        jQuery('.scroll-pane').jScrollPane();
-	    if (jQuery('.scroll-panes').length)
-            jQuery('.scroll-panes').jScrollPane();
-    });
+
+	jQuery(function() {
+		var s = {'mouseWheelSpeed':30};
+
+		if (jQuery('.scroll-pane').length)
+			jQuery('.scroll-pane').jScrollPane(s);
+		if (jQuery('.scroll-panes').length)
+			jQuery('.scroll-panes').jScrollPane(s);	
+
+	});
 
     jQuery.fn.toggleText = function(a,b) {
 	    return this.html(this.html().replace(new RegExp("("+a+"|"+b+")"),function(x){return(x==a)?b:a;}));
@@ -43,17 +47,13 @@
 	        jQuery(this).next().slideToggle('slow')
                 .siblings('.tgl:visible')
                 .slideToggle('fast');
-            // aqui começa o funcionamento do plugin
+            // aqui comeÃ§a o funcionamento do plugin
 	        jQuery(this).toggleText('Acesso Restrito','Fechar')
 	            .siblings('span').next('.tgl:visible').prev()
 	            .toggleText('Acesso Restrito','Fechar')
 	    });
-    });
-</script>
 
-
-         <script>
-         jQuery(function(){
+        jQuery(function(){
              jQuery ('.slide-out-div').tabSlideOut({
                  tabHandle: '.handle',                              //class of the element that will be your tab
                  imageHeight: '122px',                               //height of tab image
@@ -66,7 +66,22 @@
              });
          });
 
-         </script>
+
+		jQuery('.barra-portfolio').click(function(e){
+
+			if (jQuery('.overlay:visible').length > 0) {
+				jQuery('html').css('overflow-y','scroll');
+				jQuery('.overlay').css('display','none');
+	
+			} else {
+				jQuery('html').css('overflow-y','hidden');
+				jQuery('.overlay').css('display','block');
+
+			}
+		});
+
+});
+</script>
 
 </head>
 
@@ -81,7 +96,7 @@
 ?>
 
 <body <?php body_class(); ?>>
-
+<div class="overlay"></div>
 <div id="page" class="hfeed site site-home">
 
     <div class="slide-out-div">	
@@ -90,6 +105,8 @@
 		</a>
 	</div>
 		
+	<div class="scroll-panes">   
+
 		<div class="home-portfolio">
 			
 			        <div class="header-portfolio">
@@ -104,9 +121,9 @@
                     </div><!-- .header-categories -->
 			
 						<?php
-							/* $paged é a variável para paginação do Loop CPT Projetos */	$paged = (get_query_var('paged')) ? get_query_var('paged') : 1;
+							/* $paged Ã© a variÃ¡vel para paginaÃ§Ã£o do Loop CPT Projetos */	$paged = (get_query_var('paged')) ? get_query_var('paged') : 1;
 
-							/* $args_loop_cpt_projetos são os argumentos para o Loop */
+							/* $args_loop_cpt_projetos sÃ£o os argumentos para o Loop */
 							$args_loop_cpt_projetos = array(
 							'post_type' => 'portfolio',
 							'orderby' => 'date',
@@ -137,6 +154,7 @@
 						?>
 
 		</div> <!-- .home-portfolio -->
+	</div>
 
 
     </div>

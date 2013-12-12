@@ -124,6 +124,24 @@ body {
 .fonte-roxa {
 	color: #4d449b;	
 }
+
+body.no-scroll {
+    overflow: hidden;
+}
+
+.overlay {
+    background: none repeat scroll 0 0 rgba(0, 0, 0, 0.5);
+    display: none;
+    height: 100%;
+    left: 0;
+    pointer-events: none;
+    position: fixed;
+    top: 0;
+    width: 100%;
+	z-index: 999999;
+}
+
+
 #home .top-wrapper {
 	margin-top: 0px;
 }
@@ -1808,7 +1826,7 @@ height: 100%;
 
 .content-clientes {
     float: left;
-    margin: 40px 0 0 110px;
+    margin: 20px 0 0 110px;
     width: auto;
 	max-width: 820px;
 }
