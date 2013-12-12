@@ -1978,6 +1978,7 @@ text-decoration: none;
 }
 #sidebar ul li {
 	list-style: none;
+	margin-bottom: 10px;
 }
 #sidebar ul li a {
 	text-decoration: none;
