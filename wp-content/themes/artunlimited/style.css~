@@ -1978,6 +1978,7 @@ text-decoration: none;
 }
 #sidebar ul li {
 	list-style: none;
+	margin-bottom: 10px;
 }
 #sidebar ul li a {
 	text-decoration: none;
@@ -2588,6 +2589,26 @@ a.titulo-resumo {
 	color: #222;
 	font-weight: 100;
 }
+
+/* =Preloader
+----------------------------------------------- */
+
+
+.archive-portfolio { list-style:none; }
+
+.thumb-cada-projeto a { display:block; padding:0; }
+
+#carousel_wrap { list-style:none; }
+#carousel_wrap li { float:left; display:block; padding:0; }
+
+#carousel_wrap li a { display:block; padding:0; }
+#carousel_wrap img { margin:0; padding:0; }
+
+
+.cada-slides { display:block; padding:0; }
+
+.preloader { background:url('images/loader.gif') center 150px no-repeat #F4F4F4;  }
+
 
 /* =Asides
 ----------------------------------------------- */

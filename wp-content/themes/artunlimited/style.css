@@ -2590,6 +2590,26 @@ a.titulo-resumo {
 	font-weight: 100;
 }
 
+/* =Preloader
+----------------------------------------------- */
+
+
+.archive-portfolio { list-style:none; }
+
+.thumb-cada-projeto a { display:block; padding:0; }
+
+#carousel_wrap { list-style:none; }
+#carousel_wrap li { float:left; display:block; padding:0; }
+
+#carousel_wrap li a { display:block; padding:0; }
+#carousel_wrap img { margin:0; padding:0; }
+
+
+.cada-slides { display:block; padding:0; }
+
+.preloader { background:url('images/loader.gif') center 250px no-repeat #F4F4F4;  }
+
+
 /* =Asides
 ----------------------------------------------- */
 .blog .format-aside .entry-title,

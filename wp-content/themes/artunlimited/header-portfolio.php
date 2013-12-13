@@ -15,6 +15,15 @@
 <link href='http://fonts.googleapis.com/css?family=Roboto:400,300,300italic,400italic,500,500italic,700,700italic' rel='stylesheet' type='text/css'>
 <link href='http://fonts.googleapis.com/css?family=Gentium+Book+Basic' rel='stylesheet' type='text/css'>
 <?php wp_head(); ?>
+
+<script type="text/javascript">
+jQuery(function(){
+	
+	jQuery('.cada-slides').preloader();
+	
+	});
+</script>
+
 </head>
 <body <?php body_class(); ?>>
 <div id="page" class="hfeed site">

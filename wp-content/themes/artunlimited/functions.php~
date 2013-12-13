@@ -283,4 +283,3 @@ function limit_words($string, $word_limit) {
 
 //Adiciona as Minhas Opções
 require_once (get_stylesheet_directory() . '/options/admin_options.php');
-
