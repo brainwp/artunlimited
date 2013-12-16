@@ -792,6 +792,7 @@ a:active {
 	float: left;
 	width: 45%;
 	font-family: 'Roboto', Arial, sans-serif;
+	font-size: 0.9em;
 	margin: 50px 5px 0 10px;
 }
 .navigation-main-interno {

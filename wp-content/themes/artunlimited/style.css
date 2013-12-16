@@ -1693,6 +1693,7 @@ height: 100%;
 
 
 #thumbs-quem-somos {
+	display: none;
 	width: 150%;
 	margin: 0 auto;
 	height: 180px;
