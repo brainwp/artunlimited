@@ -19,7 +19,8 @@
 <script type="text/javascript">
 jQuery(function(){
 	
-	jQuery('.cada-slides').preloader();
+	jQuery('.cada-slides').preloader(),
+	jQuery('.thumb-cada-projeto').preloader();
 	
 	});
 </script>
@@ -31,7 +32,7 @@ jQuery(function(){
 	<a class="barra" href="<?php echo home_url(); ?>">
     <div class="top-barra"></div>
     </a>
-    <a class="a-etiqueta" href="<?php echo home_url('/portfolio/'); ?>">
+    <a class="a-etiqueta" href="<?php echo home_url('index.php/portfolio/'); ?>">
 	<div class="etiqueta-barra-portfolio-archive"></div>
     </a>
 </div><!-- .barra -->

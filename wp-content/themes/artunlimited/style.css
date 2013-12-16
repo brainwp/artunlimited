@@ -2607,7 +2607,7 @@ a.titulo-resumo {
 
 .cada-slides { display:block; padding:0; }
 
-.preloader { background:url('images/loader.gif') center 250px no-repeat #F4F4F4;  }
+.preloader { background:url('images/loader.gif') center 250px no-repeat #FFFFFF;  }
 
 
 /* =Asides
@@ -2885,7 +2885,7 @@ object {
 
 .handle	  {
 
-	   background: url("images/contact_tab.gif") no-repeat top center #4d449b;
+	   background: top center #4d449b;
 	   width: 50px;
 	   height: 100%;
 
@@ -2894,6 +2894,18 @@ object {
 .slide-out-div.archive-portfolio {
 margin: 0 !important;
 }
+
+.home-portfolio .header-portfolio {
+	display: none;
+}
+
+.home-portfolio .cada-projeto {
+
+    margin: 0 2% 1.5% 0;
+    min-height: 280px;
+    width: 31.3%;
+}
+
 
 
 /* =Responsive Structure
