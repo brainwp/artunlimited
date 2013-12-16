@@ -31,11 +31,11 @@ get_header( 'interno' ); ?>
 
 	</header><!-- .entry-header -->
 
-					<div class="full-thumb">
+					<!-- <div class="full-thumb">
 
-						<?php the_post_thumbnail ( 'full' ); ?>
+						<?php // the_post_thumbnail ( 'full' ); ?>
 
-					</div><!-- .full-thumb -->
+					</div> -->
 
 	<div class="entry-content">
 

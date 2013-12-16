@@ -33,7 +33,7 @@ get_header( 'interno' ); ?>
 
 						<h1 class="titulo-noticias"><a href="<?php the_permalink(); ?>" rel="bookmark"><?php the_title(); ?></a></h1>
 
-						<?php if ( 'post' == get_post_type() ) : ?>
+							<?php if ( 'post' == get_post_type() ) : ?>
 
 						<div class="entry-meta">
 
@@ -45,11 +45,14 @@ get_header( 'interno' ); ?>
 
 					</header><!-- .entry-header -->
 
-					<div class="full-thumb">
+					<div class="clear"></div>
+						
 
-						<?php the_post_thumbnail ( 'full' ); ?>
+					<!-- <div class="full-thumb">
 
-					</div><!-- .full-thumb -->
+						<?php // the_post_thumbnail ( 'full' ); ?>
+
+					</div> -->
 
 					<?php if ( is_search() ) : // Only display Excerpts for Search ?>
 

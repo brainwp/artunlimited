@@ -67,7 +67,7 @@
 <div id="page" class="hfeed site site-home">
 
 	<div class="barra-portfolio">
-		<a class="etiqueta-barra-portfolio" href="<?php echo home_url('portfolio'); ?>">
+		<a class="etiqueta-barra-portfolio" href="<?php echo home_url('index.php/portfolio'); ?>">
 		</a>
 	</div>
 
@@ -134,6 +134,7 @@
 		
 				<ul class="menu">
 					<li class="first-menu-item menu-item menu-item-type-post_type menu-item-object-page menu-item-336" id="menu-item-336"><a href="javascript:scroll_to('#nav-quem-somos');">Quem Somos</a></li>
+					<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-30" id="menu-item-1327"><a href="<?php echo home_url('index.php/portfolio'); ?>">Portfolio</a></li>
 					<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-30" id="menu-item-30"><a href="javascript:scroll_to('#nav-premios');">Pr&ecirc;mios</a></li>
 					<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-28" id="menu-item-28"><a href="javascript:scroll_to('#nav-clientes-parceiros');">Clientes e Parceiros</a></li>
 					<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-288" id="menu-item-288"><a href="javascript:scroll_to('#nav-noticias');">Not&iacute;cias</a></li>
@@ -143,7 +144,7 @@
 			</nav><!-- #site-navigation -->
 			
 	<div class="botao-portfolio-menu">
-		<a class="etiqueta-barra-botao-portfolio-menu" href="<?php echo home_url('portfolio'); ?>">
+		<a class="etiqueta-barra-botao-portfolio-menu" href="<?php echo home_url('index.php/portfolio'); ?>">
 		</a>
 	</div>
         
