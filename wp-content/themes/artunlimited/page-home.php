@@ -177,6 +177,7 @@ get_header( 'home' ); ?>
                     while($custom_query->have_posts()) : $custom_query->the_post(); ?>
                     
                     <div class="cada-noticia">
+						<a href="<?php the_permalink(); ?>">						
 						<div class="data-cada-noticia">
                         <?php
 						$mes = get_the_date( 'M' );
@@ -185,6 +186,7 @@ get_header( 'home' ); ?>
 						<p class="p-mes"><?php echo $mes; ?></p>
                         <p class="p-dia"><?php echo $dia; ?></p>
             			</div><!-- .data-cada-noticia -->
+						</a>
                         
                         <div class="thumb-cada-noticia">
                         <a href="<?php the_permalink(); ?>"><?php the_post_thumbnail( 'thumb-projetos' ); ?></a>
