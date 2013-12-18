@@ -37,8 +37,8 @@
 							</div><!-- .thumb-cada-projeto -->
 						
 							<div class="rodape-cada-projeto">
-								<h3><a class="titulo-resumo" href="<?php the_permalink(); ?>"><?php the_title(); ?>
-								 <?php
+								<h3><a class="titulo-resumo" href="<?php the_permalink(); ?>"><?php the_title(); ?><br />
+								<?php
 								// Pega os dados e salva em variáveis
 								$metaportfolio_2alinhatitulo = get_post_meta($post->ID,'metaportfolio_2alinhatitulo',TRUE);
 								?>

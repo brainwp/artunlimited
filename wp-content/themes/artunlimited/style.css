@@ -790,9 +790,9 @@ a:active {
 .navigation-main {
 	display: block;
 	float: left;
-	width: 45%;
+	width: 47%;
 	font-family: 'Roboto', Arial, sans-serif;
-	font-size: 0.9em;
+	font-size: 0.85em;
 	margin: 50px 5px 0 10px;
 }
 .navigation-main-interno {
@@ -1693,7 +1693,6 @@ height: 100%;
 
 
 #thumbs-quem-somos {
-	display: none;
 	width: 150%;
 	margin: 0 auto;
 	height: 180px;
@@ -1746,7 +1745,7 @@ height: 100%;
 	margin: 40px 0 10px 40px;
 	float: left;
 	height: 56px;
-	background: url("images/img-sprite.png") no-repeat scroll -605px 0 transparent;
+	/*background: url("images/img-sprite.png") no-repeat scroll -605px 0 transparent;*/
 }
 .titulo-header {
     float: left;
@@ -1754,6 +1753,14 @@ height: 100%;
     width: auto;
 	font-family: 'Roboto', Arial, sans-serif
 }
+
+.titulo-header-noticias {
+    float: left;
+    margin: 40px 0 0 0;
+    width: auto;
+	font-family: 'Roboto', Arial, sans-serif
+}
+
 .seta-premios {
 	width: 56px;
 	margin: 55px 0 0 40px;
@@ -1864,11 +1871,27 @@ height: 100%;
 	background: #4D4899;
 	padding: 3px 5px;
 }
+
+.titulo-header-noticias span a {
+   display: block;
+    float: left;
+    font-weight: bold;
+    margin: 12px 0 0 12px;
+    padding: 3px 5px;
+    text-decoration: none;
+    text-transform: uppercase;
+}
+.titulo-header-noticias span a:hover {
+	color: #FFF;
+	background: #4D4899;
+	padding: 3px 5px;
+}
+
 .cada-noticia{
 	float: left;
 	max-width: 310px;
 	min-width: 200px;
-	min-height: 305px;
+	height: 315px;
 	background: #efefef;
 	margin: 0 50px 25px 0;
 }

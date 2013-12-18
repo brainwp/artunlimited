@@ -169,7 +169,7 @@ get_header( 'home' ); ?>
 			
 		<div class="header-sub-content">
 	<div class="seta-header"></div>
-    <div class="titulo-header"> <h2><?php echo $noticias->post_title; ?></h2><span><a href="<?php echo home_url('index.php/noticias'); ?>">Ver todas</a></span></div>
+    <div class="titulo-header-noticias"> <h2><?php echo $noticias->post_title; ?></h2><span><a href="<?php echo home_url('index.php/noticias'); ?>">Ver todas</a></span></div>
 		</div>
 
 					<div class="todas-noticias">

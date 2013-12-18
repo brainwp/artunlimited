@@ -50,7 +50,15 @@
                         
 					</div><!-- .cada-outro-projeto -->
 					<div class="titulo-outros-projetos">
-					 <?php the_title(); ?>
+					 <?php the_title(); ?><br />
+								<?php
+								// Pega os dados e salva em variáveis
+								$metaportfolio_2alinhatitulo = get_post_meta($post->ID,'metaportfolio_2alinhatitulo',TRUE);
+								?>
+								<?php if (empty($metaportfolio_2alinhatitulo)) {
+								} else { ?>
+									  <?php echo $metaportfolio_2alinhatitulo; ?>
+								<?php }	?>
 					<span class="data-cada-outro-projeto"><?php the_time( 'Y' ); ?></span>
 					</div><!-- .titulo-outros-projetos -->
                     </a><!-- .a-outro  -->		

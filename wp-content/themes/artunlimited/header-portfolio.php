@@ -18,10 +18,7 @@
 
 <script type="text/javascript">
 jQuery(function(){
-	
-	jQuery('.cada-slides').preloader(),
-	jQuery('.thumb-cada-projeto').preloader();
-	
+	jQuery('.cada-slides').preloader()
 	});
 </script>
 
