@@ -1778,7 +1778,7 @@ height: 100%;
 }
 
 .content-contatos {
-	width: 70%;
+	width: 75%;
 	float: left;
     margin: 0 0 -30px 128px;
 }
@@ -1789,7 +1789,7 @@ height: 100%;
     font-size: 1.1em;
     margin: 0 0 20px;
     min-height: 85px;
-    width: 45%;
+    width: 55%;
 }
 
 .direita-contatos {
@@ -3232,6 +3232,27 @@ margin: 0 !important;
 	margin: 0;
 	}
 
+	.esquerda-contatos {
+		color: #4D449D;
+		float: left;
+		font-size: 1.1em;
+		margin: 0 0 0 0;
+		min-height: 85px;
+		width: 100%%;
+	}
+
+	.direita-contatos {
+		color: #4D449D;
+		float: left;
+		font-size: 1.1em;
+		margin: 0 0 20px;
+		min-height: 85px;
+		text-align: left;
+		width: 100%;
+	}
+
+
+
 }
 
 
@@ -3477,7 +3498,6 @@ margin: 0 !important;
 	    font-size: 6em;
 	    margin: 50px 0 0;
 	}
-
 
 }
 
