@@ -1,7 +1,7 @@
 // JavaScript Document
 jQuery(function() {
 	jQuery('#carousel').carouFredSel({
-	width: "100%",
+	width: '100%',
     align: 'center',
     responsive: true,
     items: { width: "variable", visible: 2},
@@ -23,13 +23,13 @@ jQuery(function() {
 		circular: true,
 		infinite: true,
 		responsive: true,
-		direction: "left",
-		width: null, // automatically calculated
-		//height: null, // automatically calculated
-		align: "center",
+		direction: 'left',
+		width: 'null', // automatically calculated
+		height: 'null', // automatically calculated
+		align: 'center',
 		items: {
 			visible: 1,
-			start: "random"
+			start: 'random'
 		}
 	});
 });

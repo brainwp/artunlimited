@@ -138,6 +138,7 @@ function artunlimited_scripts() {
 	wp_enqueue_script( 'jquery.jscrollpane', get_template_directory_uri() . '/js/scroll/script/jquery.jscrollpane.js', array('jquery') );
 	wp_enqueue_script( 'jquery-mousewheel', get_template_directory_uri() . '/js/scroll/script/jquery.mousewheel.js', array('jquery') );
 	wp_enqueue_script( 'mwheelIntent', get_template_directory_uri() . '/js/scroll/script/mwheelIntent.js' );
+	wp_enqueue_script( 'jquery.preloader', get_template_directory_uri() . '/js/jquery.preloader.js' );
 	wp_enqueue_script( 'jquery.scroll_to', get_template_directory_uri() . '/js/scroll_to.js', array('jquery') );
 	wp_enqueue_script( 'mobile-nav', get_stylesheet_directory_uri() . '/js/mobile_nav.js', array('jquery'));
 	
@@ -156,51 +157,36 @@ function artunlimited_scripts() {
 
 }
 add_action( 'wp_enqueue_scripts', 'artunlimited_scripts' );
-
 /**
  * Custom template tags for this theme.
  */
-
 require get_template_directory() . '/inc/template-tags.php';
 
 /**
  * Custom functions that act independently of the theme templates.
  */
-
 require get_template_directory() . '/inc/extras.php';
-
 /**
  * Customizer additions.
  */
-
 require get_template_directory() . '/inc/customizer.php';
-
 /**
  * Load Jetpack compatibility file.
  */
-
 require get_template_directory() . '/inc/jetpack.php';
-
 /**
  * Load Metabox.
  */
-
 require get_template_directory() . '/inc/metaboxes.php';
-
 require get_template_directory() . '/inc/metaboxes-portfolio.php';
-
 require get_template_directory() . '/inc/metaboxes-novosprojetos.php';
-
 /**
  * Load CPT Portfolios.
  */
-
 require get_template_directory() . '/custom-portfolio.php';
-
 /**
  * Load CPT Novos Projetos
  */
-
 require get_template_directory() . '/custom-novos-projetos.php';
 
 

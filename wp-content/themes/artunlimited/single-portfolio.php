@@ -39,15 +39,13 @@ get_header( 'portfolio' ); ?>
 										$description = $anexo->post_content;
 										$url = wp_get_attachment_url( $attachment_id ); 
 										?>
-								<li>
-								<div class="cada-slides">                        
+								<li class="cada-slide">                        
 									<?php
 									if ($description):
 									echo '<div id="desc-slide">' . $description . '</div>';
 									endif;
 									?>
 									<img src="<?php echo $image_attributes[0]; ?>" alt="<?php echo apply_filters('the_title', $anexo->post_title); ?>">
-								</div>
 								</li>
 								<?php } } ?>
 							</ul>				

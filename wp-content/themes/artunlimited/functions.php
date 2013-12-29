@@ -132,7 +132,7 @@ function artunlimited_scripts() {
 	wp_enqueue_script( 'jquery' );
 	// wp_enqueue_script( 'artunlimited-navigation', get_template_directory_uri() . '/js/navigation.js', array(), null, true );
 	wp_enqueue_script( 'artunlimited-skip-link-focus-fix', get_template_directory_uri() . '/js/skip-link-focus-fix.js', array(), null, true );
-    wp_enqueue_script( 'caroufredsel', get_template_directory_uri() . '/js/jquery.carouFredSel-6.1.0-packed.js', array('jquery') );
+    wp_enqueue_script( 'caroufredsel', get_template_directory_uri() . '/js/jquery.carouFredSel-6.2.1-packed.js', array('jquery') );
     wp_enqueue_script( 'tabslideout', get_template_directory_uri() . '/js/jquery.tabSlideOut.v1.3.js', array('jquery') );
     wp_enqueue_script( 'caroufredsel_pre', get_template_directory_uri() . '/js/caroufredsel_pre.js', array('caroufredsel') );
 	wp_enqueue_script( 'jquery.jscrollpane', get_template_directory_uri() . '/js/scroll/script/jquery.jscrollpane.js', array('jquery') );
@@ -157,51 +157,36 @@ function artunlimited_scripts() {
 
 }
 add_action( 'wp_enqueue_scripts', 'artunlimited_scripts' );
-
 /**
  * Custom template tags for this theme.
  */
-
 require get_template_directory() . '/inc/template-tags.php';
 
 /**
  * Custom functions that act independently of the theme templates.
  */
-
 require get_template_directory() . '/inc/extras.php';
-
 /**
  * Customizer additions.
  */
-
 require get_template_directory() . '/inc/customizer.php';
-
 /**
  * Load Jetpack compatibility file.
  */
-
 require get_template_directory() . '/inc/jetpack.php';
-
 /**
  * Load Metabox.
  */
-
 require get_template_directory() . '/inc/metaboxes.php';
-
 require get_template_directory() . '/inc/metaboxes-portfolio.php';
-
 require get_template_directory() . '/inc/metaboxes-novosprojetos.php';
-
 /**
  * Load CPT Portfolios.
  */
-
 require get_template_directory() . '/custom-portfolio.php';
-
 /**
  * Load CPT Novos Projetos
  */
-
 require get_template_directory() . '/custom-novos-projetos.php';
 
 
