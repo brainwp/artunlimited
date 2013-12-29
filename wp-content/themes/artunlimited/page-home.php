@@ -192,9 +192,10 @@ get_header( 'home' ); ?>
                         <a href="<?php the_permalink(); ?>"><?php the_post_thumbnail( 'thumb-projetos' ); ?></a>
             			</div><!-- .thumb-cada-noticia -->
                         
-                        <div class="content-cada-noticia">
-                        <a class="titulo-cada-noticia" href="<?php the_permalink(); ?>"><?php the_title(); ?></a><br />
-                        <?php limit_words(get_the_excerpt(), '20'); ?>...
+						<a class="titulo-cada-noticia" href="<?php the_permalink(); ?>"><?php the_title(); ?></a>
+						<div class="clear"></div>                        
+						<div class="content-cada-noticia">
+						<?php limit_words(get_the_excerpt(), '20'); ?>...
 			            </div><!-- .content-cada-noticia -->
                         
                         <div class="footer-cada-noticia">

@@ -1891,7 +1891,6 @@ height: 100%;
 	float: left;
 	max-width: 310px;
 	min-width: 200px;
-	height: 315px;
 	background: #efefef;
 	margin: 0 50px 25px 0;
 }
@@ -1925,20 +1924,24 @@ text-decoration: none;
 }
 .content-cada-noticia {
 	width: 90%;
-	margin: 10px auto 0 auto;
+	margin: 0 auto;
 	font-size: 0.9em;
 }
 .titulo-cada-noticia {
-	text-transform: uppercase;
-	font-size: 1.4em;
-	line-height: 1.3;
-	font-family: 'Roboto', Arial, sans-serif;
-	font-weight: 500;
+    float: left;
+    font-family: 'Roboto',Arial,sans-serif;
+    font-size: 1.4em;
+    font-weight: 500;
+    line-height: 1.3;
+    margin: 15px 0 10px 15px;
+    text-transform: uppercase;
+	width: 90%;
 }
 .footer-cada-noticia {
 	width: 90%;
-	margin: 10px auto;
+	margin: 15px 0 15px 15px;
 	 overflow: hidden;
+	float: left; 
 }
 .categorias-cada-noticia {
     float: left;
