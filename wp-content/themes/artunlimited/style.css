@@ -2639,10 +2639,11 @@ a.titulo-resumo {
 
 .thumb-cada-projeto a { display:block; padding:0; }
 
+/* =Preloader desativado
 
+.preloader { background:url("../images/loader.gif") center 250px no-repeat #FFFFFF;  }
 
-.preloader { background:url('images/loader.gif') center 250px no-repeat #FFFFFF;  }
-
+*/
 
 /* =Asides
 ----------------------------------------------- */

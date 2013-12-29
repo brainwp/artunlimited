@@ -69,7 +69,7 @@ jQuery.fn.preloader = function(options){
 	var icon = jQuery("<img />",{
 		
 		id : 'loadingicon' ,
-		src : '../images/loader.gif'
+		src : 'http://artunlimited.com.br/wp-content/themes/artunlimited/images/loader.gif'
 		
 		}).hide().appendTo("body");
 	

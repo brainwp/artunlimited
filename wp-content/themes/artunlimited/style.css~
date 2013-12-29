@@ -2149,7 +2149,7 @@ ul#carousel li {
 	position: relative;
     text-align: center;
     overflow: hidden;
-	width: auto;
+	min-width: 300px;
 }
 
 ul#carousel li .content {
@@ -2641,7 +2641,7 @@ a.titulo-resumo {
 
 
 
-.preloader { background:url('images/loader.gif') center 250px no-repeat #FFFFFF;  }
+.preloader { background:url("http://artunlimited.com.br/wp-content/themes/artunlimited/images/loader.gif") center 250px no-repeat #FFFFFF;  }
 
 
 /* =Asides

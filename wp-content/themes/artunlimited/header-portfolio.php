@@ -16,12 +16,6 @@
 <link href='http://fonts.googleapis.com/css?family=Gentium+Book+Basic' rel='stylesheet' type='text/css'>
 <?php wp_head(); ?>
 
-<script type="text/javascript">
-jQuery(function(){
-	jQuery('.cada-slides').preloader()
-	});
-</script>
-
 </head>
 <body <?php body_class(); ?>>
 <div id="page" class="hfeed site">
