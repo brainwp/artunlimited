@@ -2639,10 +2639,11 @@ a.titulo-resumo {
 
 .thumb-cada-projeto a { display:block; padding:0; }
 
+/* =Preloader desativado
 
+.preloader { background:url("../images/loader.gif") center 250px no-repeat #FFFFFF;  }
 
-.preloader { background:url("http://artunlimited.com.br/wp-content/themes/artunlimited/images/loader.gif") center 250px no-repeat #FFFFFF;  }
-
+*/
 
 /* =Asides
 ----------------------------------------------- */
@@ -3266,7 +3267,7 @@ margin: 0 !important;
 
 
 /* @media (max-width: 650px) Reduce font-sizes for better readability on smaller devices */
-@media screen and (max-width: 650px) {
+@media (max-width: 650px) {
 
 	body, input, textarea {
 
@@ -3329,7 +3330,7 @@ margin: 0 !important;
 	}
 	
 	.area-3-header {
-    margin-right: 65px;
+    display: none;
 	}
 	
 	.slide-content {
@@ -3508,6 +3509,45 @@ margin: 0 !important;
 	    margin: 50px 0 0;
 	}
 
+	.scroll-panes {
+    display: none;
+	}
+
+	
+	.seta-header {
+	display: none;
+	}
+
+	.footer-sub-content {
+    height: 40px;
+	}
+
+	.content-quem-somos {
+    margin: 0 90px 0 30px;
+	}
+
+	.content-premios {
+    margin: 0 90px 0 30px;
+	}
+
+	.content-intro-clientes {
+    margin: 0 90px 0 30px;
+	}
+
+	.content-contatos {
+		margin: 0 20px 0 30px;
+	}
+
+
+	.titulo-header-noticias {
+		margin: 40px 0 0 30px;
+	}
+
+
+}
+
+
+
 }
 
 @media (max-width: 360px) {
@@ -3531,10 +3571,7 @@ margin: 0 !important;
 
 	}
 
-
-}
-
-@media only screen and (min-device-width: 320px) and (max-device-width: 480px) {
+	
 
 	body {
 		padding: 0;
