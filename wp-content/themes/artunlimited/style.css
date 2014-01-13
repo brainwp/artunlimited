@@ -2014,11 +2014,24 @@ text-decoration: none;
 }
 /* Contato
 ----------------------------------------------- */
-.contact-form input[type="text"], .contact-form input[type="email"], .contact-form textarea {
+.contact-form input[type="text"], .contact-form input[type="email"]{
 	background: #CCC;
 	border: 0 none;
     padding: 4px;
+	max-width: 98%;
+    width: 60% !important;
+
 }
+
+.contact-form textarea {
+	background: #CCC;
+	border: 0 none;
+    padding: 4px;
+	max-width: 98%;
+    width: 80% !important;
+
+}
+
 .contact-form label {
     display: block;
     float: none;
@@ -2800,6 +2813,7 @@ object {
 	max-width: 100%;
 
 }
+
 
 
 
