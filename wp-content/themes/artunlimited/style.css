@@ -2551,6 +2551,12 @@ a.titulo-resumo {
     position: absolute;
     width: 30px;
 }
+.esquerda-title-single-portfolio {
+	float: left;
+	width: 55%;
+	margin: 0 0 -25px 5%;
+}
+
 .esquerda-single-portfolio {
 	float: left;
 	width: 55%;
@@ -2560,13 +2566,13 @@ a.titulo-resumo {
 .direita-single-portfolio {
 	float: left;
 	width: 350px;
-	margin: 6% 0 0 5%;
+	margin: 0 0 0 5%;
 }
 
 .compartilhe-sidebar {
 	width: 100%;
 	overflow: hidden;
-	margin-top: 25px;
+	margin-top: 10px;
 }
 
 .compartilhe-sidebar-facebook {

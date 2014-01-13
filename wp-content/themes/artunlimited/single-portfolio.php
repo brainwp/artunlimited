@@ -67,8 +67,8 @@ get_header( 'portfolio' ); ?>
 				<p><span>Fotografias: </span>&copy; <?php echo $metaportfolio_credito; ?></p>
 				</div><!-- #creditos-portfolio -->
 				<?php }	?>
-        
-	<div class="esquerda-single-portfolio">
+
+	<div class="esquerda-title-single-portfolio">
 
 		<header class="entry-header">
 			<h1 class="entry-title-interno"><?php the_title(); ?></h1>
@@ -93,6 +93,12 @@ get_header( 'portfolio' ); ?>
 				<?php }	?>
 		</header><!-- .entry-header -->
 
+	</div><!-- .esquerda-title-single-portfolio -->
+
+			<div class="clear"></div>
+        
+	<div class="esquerda-single-portfolio">
+
 		<div class="entry-content">
 			<?php the_content(); ?>
 			<?php
@@ -109,9 +115,10 @@ get_header( 'portfolio' ); ?>
 				<?php wp_reset_query(); // reset query ?>
 	</div>
 			<!-- .esquerda-single-portfolio -->
-			<div class="direita-single-portfolio">
+		
+	<div class="direita-single-portfolio">
 			<?php get_sidebar( 'portfolio' ); ?>
-			</div><!-- #direita-single-portfolio -->
+	</div><!-- #direita-single-portfolio -->
 			
 		</div><!-- #content -->
 		
