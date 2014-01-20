@@ -3282,6 +3282,29 @@ margin: 0 !important;
 	}
 
 
+	.content-quem-somos {
+    margin: 0 90px 0 30px;
+	}
+
+	.content-premios {
+    margin: 0 90px 0 30px;
+	}
+
+	.content-intro-clientes {
+    margin: 0 90px 0 30px;
+	}
+
+	.content-contatos {
+		margin: 0 20px 0 30px;
+	}
+
+	
+	.seta-header {
+	display: none;
+	}
+
+
+
 
 }
 
@@ -3533,31 +3556,9 @@ margin: 0 !important;
     display: none;
 	}
 
-	
-	.seta-header {
-	display: none;
-	}
-
 	.footer-sub-content {
     height: 40px;
 	}
-
-	.content-quem-somos {
-    margin: 0 90px 0 30px;
-	}
-
-	.content-premios {
-    margin: 0 90px 0 30px;
-	}
-
-	.content-intro-clientes {
-    margin: 0 90px 0 30px;
-	}
-
-	.content-contatos {
-		margin: 0 20px 0 30px;
-	}
-
 
 	.titulo-header-noticias {
 		margin: 40px 0 0 60px;
