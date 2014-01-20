@@ -3297,13 +3297,14 @@ margin: 0 !important;
 	.content-contatos {
 		margin: 0 20px 0 30px;
 	}
-
 	
 	.seta-header {
 	display: none;
 	}
 
-
+	.titulo-header-noticias {
+		margin: 40px 0 0 60px;
+	}
 
 
 }
@@ -3559,11 +3560,6 @@ margin: 0 !important;
 	.footer-sub-content {
     height: 40px;
 	}
-
-	.titulo-header-noticias {
-		margin: 40px 0 0 60px;
-	}
-
 
 }
 
