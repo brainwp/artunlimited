@@ -131,7 +131,7 @@
         </div><!-- .area-4-header -->
 
 	<div class="botao-portfolio-menu">
-		<a class="etiqueta-barra-botao-portfolio-menu" href="<?php echo home_url('portfolio'); ?>">
+		<a class="etiqueta-barra-botao-portfolio-menu" href="<?php echo home_url('index.php/portfolio'); ?>">
 		</a>
 	</div>
         

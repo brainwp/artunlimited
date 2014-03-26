@@ -71,7 +71,7 @@
 <div id="page" class="hfeed site site-home">
 
 	<div class="barra-portfolio">
-		<a class="etiqueta-barra-portfolio" href="<?php echo home_url('portfolio'); ?>">
+		<a class="etiqueta-barra-portfolio" href="<?php echo home_url('index.php/portfolio'); ?>">
 		</a>
 	</div>
 
@@ -140,7 +140,7 @@
 		</nav><!-- #site-navigation -->
 
 	<div class="botao-portfolio-menu">
-		<a class="etiqueta-barra-botao-portfolio-menu" href="<?php echo home_url('portfolio'); ?>">
+		<a class="etiqueta-barra-botao-portfolio-menu" href="<?php echo home_url('index.php/portfolio'); ?>">
 		</a>
 	</div>
         
