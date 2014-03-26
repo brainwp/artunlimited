@@ -3412,9 +3412,6 @@ a.comment-reply-link > span {
 
 #respond {
 
-	background: #ddd;
-
-	border: 1px solid #d3d3d3;
 
 	-moz-border-radius: 3px;
 
@@ -3546,7 +3543,7 @@ a.comment-reply-link > span {
 
 #respond p {
 
-	margin: 10px 0;
+	margin: 0 0 10px 0;
 
 }
 
