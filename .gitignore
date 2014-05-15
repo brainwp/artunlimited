@@ -8,6 +8,8 @@ wp-content/upgrade/
 .vagrant
 Vagrantfile
 
+sftp-config.json
+
 *.swp
 *.swo
 *~
