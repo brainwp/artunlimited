@@ -1602,18 +1602,12 @@ height: 70px;
 }
 
 .jspContainer {
-	max-width: 950px !important;
 }
-
 
 .horizontal-only {
-
 	height: auto;
 	max-height: 200px;
-
 }
-
-
 
 .sub-content h1, .sub-content h2, .sub-content h3, .sub-content h4, .sub-content h5, .sub-contenth6 {
 
@@ -1714,17 +1708,18 @@ height: 100%;
 	margin: 0;
 }
 
-.content-premios {
-	float: left;
-	margin: 0 50px 50px 130px;
-   	 width: auto;
+#nav-premios .center-content .content-premios {
+	margin: 0 50px 50px 0;
+   	width: auto;
+}
+
+#nav-premios .center-content .titulo-header {
+	margin: 40px 0 0 0;
 }
 
 .header-sub-content {
-
 	width: auto;
 	overflow: hidden;
-
 }
 
 .header-sub-content #noticias {
@@ -1773,9 +1768,9 @@ height: 100%;
 }
 
 .content-contatos {
-	width: 75%;
+	width: 85%;
 	float: left;
-    margin: 0 0 -30px 128px;
+    margin: 0 0 -30px 0;
 }
 
 .esquerda-contatos {
@@ -1785,6 +1780,15 @@ height: 100%;
     margin: 0 0 20px;
     min-height: 85px;
     width: 55%;
+}
+
+#nav-contatos .center-content {
+	margin: 0 auto;
+   	width: 80%;
+}
+
+#nav-contatos .center-content .titulo-header {
+	margin: 40px 0 0 0;
 }
 
 .direita-contatos {
@@ -1817,6 +1821,13 @@ height: 100%;
 
 /* Clientes
 ----------------------------------------------- */
+#nav-clientes-parceiros .center-content .header-sub-content .titulo-header {
+	margin: 40px 0 0 0;
+}
+
+#nav-clientes-parceiros .center-content .content-intro-clientes {
+	margin: 0 auto;
+}
 
 .content-intro-clientes {
 	float: left;
@@ -1830,9 +1841,8 @@ height: 100%;
 
 .content-clientes {
     float: left;
-    margin: 20px 0 0 110px;
-    width: auto;
-	max-width: 820px;
+    margin: 20px auto ;
+    width: 100%;
 }
 
 .imagens-cliente {
@@ -1846,12 +1856,12 @@ height: 100%;
 ----------------------------------------------- */
 
 .todas-noticias {
-    float: left;
     height: auto;
-    margin: 15px 0 50px 80px;
+    margin: 15px auto 50px;
     overflow: hidden;
     width: auto;
 }
+
 .titulo-header span a {
    display: block;
     float: left;
@@ -1884,14 +1894,22 @@ height: 100%;
 
 .cada-noticia{
 	float: left;
-	max-width: 310px;
+	max-width: 300px;
 	min-width: 200px;
 	background: #efefef;
-	margin: 0 50px 25px 0;
+	margin: 0 40px 25px 0;
 }
+
 .cada-noticia a{
-text-decoration: none;
+	text-decoration: none;
 }
+
+.clear_noticia {
+	width: 100%;
+	clear: both;
+	height: 1px;
+}
+
 .data-cada-noticia {
     background: #4D4899;
     color: #FFFFFF;
@@ -1970,18 +1988,19 @@ text-decoration: none;
 	height: 56px;
 	background: url("images/img-sprite.png") no-repeat scroll -605px -67px transparent;
 }
+
 #sidebar {
 	float: right;
 	width: 25%;
 	margin-top: 2em;
 }
+
 #sidebar ul h2 {
 	font-family: 'Roboto', Arial, sans-serif;
 	font-weight: 200;
 	color: #006bb5;
 	text-transform: uppercase;
 }
-
 
 .widget-title {
 
@@ -2007,6 +2026,7 @@ text-decoration: none;
 	text-decoration: none;
 	padding: 3px 5px;
 }
+
 /* Contato
 ----------------------------------------------- */
 .contact-form input[type="text"], .contact-form input[type="email"]{
@@ -2014,16 +2034,13 @@ text-decoration: none;
     padding: 4px;
 	max-width: 98%;
     width: 60% !important;
-
 }
 
 .contact-form textarea {
-
 	border: 1px solid #CCC;
     padding: 4px;
 	max-width: 98%;
     width: 80% !important;
-
 }
 
 .contact-form label {
@@ -2047,7 +2064,6 @@ text-decoration: none;
 	color: #4D449B;
 	font-size: 0.8em;
 }
-
 
 .contact-form label span {
     display: none;
