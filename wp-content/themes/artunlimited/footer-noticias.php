@@ -19,11 +19,11 @@
 
 		<div id="redes">
          	<div id="facebook">
-             	<a class="a-redes" href="<?php echo get_option( 'mo_facebook' ); ?>"></a>
+             	<a class="a-redes" href="<?php echo get_option( 'mo_facebook' ); ?>" target="_blank"></a>
              </div><!-- #facebook -->
              
              <div id="linkedin">
-             	<a class="a-redes" href="<?php echo get_option( 'mo_linkedin' ); ?>"></a>
+             	<a class="a-redes" href="<?php echo get_option( 'mo_linkedin' ); ?>" target="_blank"></a>
  		    </div><!-- #linkedin -->
          </div><!-- #redes -->
             
