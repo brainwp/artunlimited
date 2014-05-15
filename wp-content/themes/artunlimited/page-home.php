@@ -40,19 +40,12 @@ get_header( 'home' ); ?>
 
 	    <?php wp_reset_postdata(); // reset the query ?>   
 
-	<div class="center">
-    
-		<div class="header-sub-content">
-			<div class="seta-header"></div>
-			<div class="titulo-header"><h2><?php echo $quem_somos->post_title; ?></h2></div>
-		</div>
+	<div class="center-content">
         <?php $content_quem_somos = apply_filters('the_content', $quem_somos->post_content); ?>
         <div class="content-quem-somos">
             <?php echo $content_quem_somos; ?>
         </div><!-- .content-quem-somos -->
-    </div><!-- .center -->
-<div class="footer-sub-content">
-</div>
+    </div><!-- .center-content -->
     </div><!-- .sub-content -->
 <!-- Final Quem Somos -->
 

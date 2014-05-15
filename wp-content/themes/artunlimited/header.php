@@ -81,15 +81,6 @@
 		</nav><!-- #site-navigation -->
         
         <div class="area-3-header">
-        <div id="redes">
-        	<div id="facebook">
-            	<a class="a-redes" href="<?php echo get_option( 'mo_facebook' ); ?>"></a>
-            </div><!-- #facebook -->
-            
-            <div id="linkedin">
-            	<a class="a-redes" href="<?php echo get_option( 'mo_linkedin' ); ?>"></a>
-		    </div><!-- #linkedin -->
-        </div><!-- #redes -->
         
         <div id="linguas">
         	<div id="en">
