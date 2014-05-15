@@ -237,11 +237,9 @@ get_header( 'home' ); ?>
 			
 				<div class="footer-sub-content"></div>
 			
-
-
 			</div><!-- .center-content -->
 
         </div><!-- .sub-content -->
 		<!-- Final Contatos -->
 
-<?php get_footer( 'vazio' ); ?>
+<?php get_footer( 'noticias' ); ?>
