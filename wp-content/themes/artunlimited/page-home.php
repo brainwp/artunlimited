@@ -1,5 +1,6 @@
-<?php /** * Template Name: Inicial (Home) */
-
+<?php 
+/** Template Name: Inicial (Home) 
+*/
 get_header( 'home' ); ?>
  
 <div id="slider">
@@ -140,7 +141,7 @@ get_header( 'home' ); ?>
 			</div><!-- .header-sub-content -->
 
 			<div class="todas-noticias">
-			<?php $custom_query = new WP_Query('posts_per_page=4');
+			<?php $custom_query = new WP_Query('posts_per_page=3');
 			$count_n = 0;
             while($custom_query->have_posts()) : $custom_query->the_post(); ?>
             
@@ -213,17 +214,17 @@ get_header( 'home' ); ?>
 	             
 			        <div class="content-contatos">
 							
-			  			<div class="esquerda-contatos">
-				            <?php echo get_post_meta($contatos->ID,'meta_endereco',true); ?><br />
-				            <?php echo get_post_meta($contatos->ID,'meta_bairro',true); ?><br />
-				            <?php echo get_post_meta($contatos->ID,'meta_cep',true); ?><br />
-				            <?php echo get_post_meta($contatos->ID,'meta_cidade_uf_pais',true); ?><br />
-			            </div><!-- .esquerda-contatos -->
+			  			<!--<div class="esquerda-contatos">
+				            <?php // echo get_post_meta($contatos->ID,'meta_endereco',true); ?><br />
+				            <?php // echo get_post_meta($contatos->ID,'meta_bairro',true); ?><br />
+				            <?php // echo get_post_meta($contatos->ID,'meta_cep',true); ?><br />
+				            <?php // echo get_post_meta($contatos->ID,'meta_cidade_uf_pais',true); ?><br />
+			            </div> .esquerda-contatos -->
 							
-			  			<div class="direita-contatos">
-			            	Tel. <?php echo get_post_meta($contatos->ID,'meta_telefone_a',true); ?><br />
-			            	<?php echo get_post_meta($contatos->ID,'meta_telefone_b',true); ?><br />
-			            </div><!-- .direita-contatos -->
+			  			<!--<div class="direita-contatos">
+			            	Tel. <?php // echo get_post_meta($contatos->ID,'meta_telefone_a',true); ?><br />
+			            	<?php // echo get_post_meta($contatos->ID,'meta_telefone_b',true); ?><br />
+			            </div> .direita-contatos -->
 			            
 						<div class="clear"></div>
 						
