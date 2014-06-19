@@ -17,7 +17,9 @@ get_header( 'interno' ); ?>
 
 <article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
 		
-		<div class="seta-noticias"></div>
+					<!-- <div class="full-thumb">
+						<?php // the_post_thumbnail (); ?>
+					</div> -->
 	
 	<header class="entry-header-noticias">
 		
@@ -25,17 +27,13 @@ get_header( 'interno' ); ?>
 
 		<div class="entry-meta">
 
-			<?php echo get_the_date(); ?>
+			<?php the_time( get_option( 'date_format' ) ); ?> 
 
 		</div><!-- .entry-meta -->
 
 	</header><!-- .entry-header -->
 
-					<!-- <div class="full-thumb">
-
-						<?php // the_post_thumbnail ( 'full' ); ?>
-
-					</div> -->
+		<div class="clear"></div>
 
 	<div class="entry-content">
 

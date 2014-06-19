@@ -12,7 +12,7 @@
 	    <div class="seta-page"></div>
 		<div class="titulo-page"><h1><?php the_title(); ?></h1></div>
 	</header><!-- .entry-header-page -->
-
+		<div class="clear"></div>
 	<div class="entry-content">
 		<?php the_content(); ?>
 		<?php

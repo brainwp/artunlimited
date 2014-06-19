@@ -26,8 +26,10 @@ get_header( 'interno' ); ?>
 			<?php while ( have_posts() ) : the_post(); ?>
 
 				<article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
-					
-                    <div class="seta-noticias"></div>
+
+					<!-- <div class="full-thumb">
+						<?php // the_post_thumbnail (); ?>
+					</div> -->
 					
                     <header class="entry-header-noticias">
 
@@ -37,7 +39,7 @@ get_header( 'interno' ); ?>
 
 						<div class="entry-meta">
 
-							<?php echo get_the_date(); ?>
+							<?php the_time( get_option( 'date_format' ) ); ?> 
 
 						</div><!-- .entry-meta -->
 
@@ -47,12 +49,6 @@ get_header( 'interno' ); ?>
 
 					<div class="clear"></div>
 						
-
-					<!-- <div class="full-thumb">
-
-						<?php // the_post_thumbnail ( 'full' ); ?>
-
-					</div> -->
 
 					<?php if ( is_search() ) : // Only display Excerpts for Search ?>
 

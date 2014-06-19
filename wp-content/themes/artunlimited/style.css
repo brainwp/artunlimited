@@ -1232,7 +1232,7 @@ nav select {
 
 .entry-header-noticias {
     float: left;
-    margin: 5px 0 20px 5px;
+    margin: 5px 0 0 5px;
     width: 87%;
 }
 
@@ -1542,9 +1542,10 @@ div.sharedaddy div.sd-block {
 
 .hentry,
 .no-results {
+	border-bottom: 1px solid #ccc;
     float: left;
-    margin: 0 auto;
-    padding: 0 0 30px 3em;
+    margin: 0 0 40px 3em;
+    padding: 0;
     position: relative;
     width: 90%;
 }
