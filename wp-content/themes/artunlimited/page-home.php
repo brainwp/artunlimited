@@ -94,7 +94,7 @@ get_header( 'home' ); ?>
 	  		</div><!-- .content-intro-clientes -->
 		        	                   
 			<div class="content-clientes">
-				<div class="scroll-panes">   
+				<!-- <div class="scroll-panes">  -->   
 					<?php   
 				    	$args_clientes = array(
 							'post_type' => 'attachment',
@@ -116,7 +116,7 @@ get_header( 'home' ); ?>
 						} ?>
 
 					    <?php wp_reset_postdata(); ?>   
-				</div><!-- .scroll-pane -->
+				<!-- </div> .scroll-pane -->
 			</div><!-- .content-clientes -->
 			
 		<div class="footer-sub-content"></div>
