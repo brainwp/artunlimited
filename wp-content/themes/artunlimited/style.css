@@ -221,6 +221,10 @@ ol.comment-list {
     line-height: 2.2em;
 }
 
+.comment-metadata time {
+	display: none;
+}
+
 .comment-author {
 	width: auto;
 	float: left;
