@@ -2488,7 +2488,7 @@ width: 105%;
 	color: #666;
 	line-height: 1.2;
 	margin: 10px 10px 0 0;
-	display: block;
+	display: none;
 }
 
 a.titulo-resumo {
