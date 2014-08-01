@@ -2481,6 +2481,7 @@ width: 105%;
 
 .data-cada-post {
 	color: #666;
+	display: none;
 }
 
 .data-cada-outro-projeto {
