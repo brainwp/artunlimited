@@ -964,6 +964,7 @@ nav select {
 
 #en {
 	background: url("images/img-sprite.png") no-repeat scroll -358px -8px rgba(0, 0, 0, 0);
+	display:none;
 }
 
 #en:hover {
