@@ -44,7 +44,7 @@
 
 		jQuery('.barra-portfolio').click(function(e){
 
-			if (jQuery('.overlay:visible').length > 0) {
+			if (jQuery('.overlay:visible').length > 0 || jQuery('.slide-out-div').hasClass('open')) {
 				jQuery('html').css('overflow-y','scroll');
 				jQuery('.overlay').css('display','none');
 	
