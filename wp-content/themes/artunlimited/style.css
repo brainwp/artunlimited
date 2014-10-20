@@ -3623,6 +3623,16 @@ margin: 0 !important;
 html,body{
 	overflow-x:hidden !important;
 }
-.slide-out-div{
-	width:60%;
+#portfolio-content{
+	display:none;
+	max-width:1280px;
+}
+#portfolio-container{
+	background: transparent;
+    transition:300ms ease all;
+	right:0;
+}
+#portfolio-container.open{
+	background:#f2f2f2;
+	transition:300ms ease all;
 }
