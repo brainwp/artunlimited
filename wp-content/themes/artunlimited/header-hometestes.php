@@ -37,9 +37,9 @@ if ( is_user_logged_in() ) {
 ?>
 
 <body <?php body_class(); ?>>
-<div class="overlay"></div>
+<div class="overlay close-portfolio"></div>
    <div class="slide-out-div">	
-	<div class="barra-portfolio handle">
+	<div class="barra-portfolio handle close-portfolio">
 		<a class="etiqueta-barra-portfolio" href="<?php echo home_url('portfolio'); ?>">
 		</a>
 	</div>

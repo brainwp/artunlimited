@@ -37,12 +37,12 @@
                  speed: 400,                                        //speed of animation
                  action: 'click',                                   //options: 'click' or 'hover', action to trigger animation
                  topPos: '0px',                                   //position from the top
-                 fixedPosition: false                               //options: true makes it stick(fixed position) on scroll
+                 fixedPosition: true                               //options: true makes it stick(fixed position) on scroll
              });
          });
 
 
-		jQuery('.barra-portfolio').click(function(e){
+		jQuery('.close-portfolio').click(function(e){
 
 			if (jQuery('.overlay:visible').length > 0 || jQuery('.slide-out-div').hasClass('open')) {
 				jQuery('html').css('overflow-y','scroll');
