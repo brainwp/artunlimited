@@ -3636,3 +3636,6 @@ html,body{
 	background:#f2f2f2;
 	transition:300ms ease all;
 }
+#page{
+	overflow: hidden;
+}
