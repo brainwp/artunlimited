@@ -32,8 +32,6 @@ function artunlimited_setup() {
 	 */
 	add_theme_support( 'post-thumbnails' );
 	/**
-	
-	/**
 	 * Add default posts and comments RSS feed links to head
 	 */
 	add_theme_support( 'automatic-feed-links' );
@@ -152,7 +150,8 @@ function artunlimited_scripts() {
 	//wp_enqueue_script( 'jquery.preloader', get_template_directory_uri() . '/js/jquery.preloader.js' );
 	wp_enqueue_script( 'jquery.scroll_to', get_template_directory_uri() . '/js/scroll_to.js', array('jquery') );
 	wp_enqueue_script( 'mobile-nav', get_stylesheet_directory_uri() . '/js/mobile_nav.js', array('jquery'));
-	
+	wp_enqueue_script( 'portfolio-js', get_stylesheet_directory_uri() . '/js/portfolio.js', array('jquery'));
+
     if(!is_admin()){
         wp_enqueue_script('thickbox',null,array('jquery'));
         wp_enqueue_style('thickbox.css', '/'.WPINC.'/js/thickbox/thickbox.css', null, '1.0');

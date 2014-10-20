@@ -15,91 +15,30 @@
 <!--[if (gt IE 9)|!(IE)]><!-->
 <html <?php language_attributes(); ?> class="js no-flexbox flexbox-legacy canvas canvastext webgl no-touch geolocation postmessage no-websqldatabase indexeddb hashchange history draganddrop websockets rgba hsla multiplebgs backgroundsize borderimage borderradius boxshadow textshadow opacity cssanimations csscolumns cssgradients no-cssreflections csstransforms csstransforms3d csstransitions fontface generatedcontent video audio localstorage sessionstorage webworkers applicationcache svg inlinesvg smil svgclippaths pointerevents"><!--<![endif]-->
 <head>
-<meta charset="<?php bloginfo( 'charset' ); ?>" />
-<meta name="viewport" content="width=device-width" />
-<title><?php wp_title( '|', true, 'right' ); ?></title>
-<link rel="profile" href="http://gmpg.org/xfn/11" />
-<link rel="pingback" href="<?php bloginfo( 'pingback_url' ); ?>" />
-<link href='http://fonts.googleapis.com/css?family=Roboto:400,400italic,500,500italic,700,700italic' rel='stylesheet' type='text/css'>
-<link href='http://fonts.googleapis.com/css?family=Gentium+Book+Basic' rel='stylesheet' type='text/css'>
-<!--[if lt IE 9 ]><script src="/lib/respond.min.js"></script><![endif]-->
-<?php wp_head(); ?>
-<script type="text/javascript">
-
-	jQuery(function() {
-		var s = {'mouseWheelSpeed':30};
-
-		if (jQuery('.scroll-pane').length)
-			jQuery('.scroll-pane').jScrollPane(s);
-		if (jQuery('.scroll-panes').length)
-			jQuery('.scroll-panes').jScrollPane(s);	
-
-	});
-
-    jQuery.fn.toggleText = function(a,b) {
-	    return this.html(this.html().replace(new RegExp("("+a+"|"+b+")"),function(x){return(x==a)?b:a;}));
-	}
-
-	jQuery(document).ready(function(){
-	    jQuery('.tgl').before('<span class="link-tgl">Acesso Restrito</span>');
-	    jQuery('.tgl').css('display', 'none')
-	    jQuery('span', '#link-login').click(function() {
-	        jQuery(this).next().slideToggle('slow')
-                .siblings('.tgl:visible')
-                .slideToggle('fast');
-            // aqui começa o funcionamento do plugin
-	        jQuery(this).toggleText('Acesso Restrito','Fechar')
-	            .siblings('span').next('.tgl:visible').prev()
-	            .toggleText('Acesso Restrito','Fechar')
-	    });
-
-        jQuery(function(){
-             jQuery ('.slide-out-div').tabSlideOut({
-                 tabHandle: '.handle',                              //class of the element that will be your tab
-                 imageHeight: '122px',                               //height of tab image
-                 imageWidth: '50px',                               //width of tab image    
-                 tabLocation: 'right',                               //side of screen where tab lives, top, right, bottom, or left
-                 speed: 400,                                        //speed of animation
-                 action: 'click',                                   //options: 'click' or 'hover', action to trigger animation
-                 topPos: '0px',                                   //position from the top
-                 fixedPosition: false                               //options: true makes it stick(fixed position) on scroll
-             });
-         });
-
-
-		jQuery('.barra-portfolio').click(function(e){
-
-			if (jQuery('.overlay:visible').length > 0) {
-				jQuery('html').css('overflow-y','scroll');
-				jQuery('.overlay').css('display','none');
-	
-			} else {
-				jQuery('html').css('overflow-y','hidden');
-				jQuery('.overlay').css('display','block');
-
-			}
-		});
-
-});
-</script>
-
+	<meta charset="<?php bloginfo( 'charset' ); ?>" />
+	<meta name="viewport" content="width=device-width" />
+	<title><?php wp_title( '|', true, 'right' ); ?></title>
+	<link rel="profile" href="http://gmpg.org/xfn/11" />
+	<link rel="pingback" href="<?php bloginfo( 'pingback_url' ); ?>" />
+	<link href='http://fonts.googleapis.com/css?family=Roboto:400,400italic,500,500italic,700,700italic' rel='stylesheet' type='text/css'>
+	<link href='http://fonts.googleapis.com/css?family=Gentium+Book+Basic' rel='stylesheet' type='text/css'>
+	<!--[if lt IE 9 ]><script src="/lib/respond.min.js"></script><![endif]-->
+	<?php wp_head(); ?>
 </head>
 
 <?php
-	global $current_user;
-	get_currentuserinfo();
-	if ( is_user_logged_in() ) {
-		$d = 'ol&aacute;, '.  $current_user->user_login .'!';
-	} else {
-		$d = 'acesso restrito';
-	}
+global $current_user;
+get_currentuserinfo();
+if ( is_user_logged_in() ) {
+	$d = 'ol&aacute;, '.  $current_user->user_login .'!';
+} else {
+	$d = 'acesso restrito';
+}
 ?>
 
 <body <?php body_class(); ?>>
 <div class="overlay"></div>
-<div id="page" class="hfeed site site-home">
-
-    <div class="slide-out-div">	
+   <div class="slide-out-div">	
 	<div class="barra-portfolio handle">
 		<a class="etiqueta-barra-portfolio" href="<?php echo home_url('portfolio'); ?>">
 		</a>
@@ -156,8 +95,8 @@
 		</div> <!-- .home-portfolio -->
 	</div>
 
-
     </div>
+<div id="page" class="hfeed site site-home">
 
 	<header id="masthead" class="site-header" role="banner">
 		        
