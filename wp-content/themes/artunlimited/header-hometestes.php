@@ -42,7 +42,7 @@ if ( is_user_logged_in() ) {
 	<div class="slide-out-div" id="portfolio-container">	
 
 			<div class="barra-portfolio handle">
-				<a id="portfolio-click" class="etiqueta-barra-portfolio" data-show="false">
+				<a href="javascript:scroll_to('#page');" id="portfolio-click" class="etiqueta-barra-portfolio" data-show="false">
 				</a>
 			</div>
 			<div class="home-portfolio" id="portfolio-content">

@@ -82,7 +82,7 @@
 				jQuery('#portfolio-content').show('slow');
 				//jQuery('html').css('overflow-y','hidden');
 				jQuery('.overlay').css('display','block');
-
+				scroll_to('#page');
 			}
 		});
 
