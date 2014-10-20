@@ -76,7 +76,7 @@
         
         var properties = {
                     containerWidth: parseInt(obj.outerWidth(), 10) + 'px',
-                    containerHeight: jQuery('#portfolio-content').height() + 40 + 'px',
+                    containerHeight: jQuery(document).height() + 'px',
                     tabWidth: parseInt(settings.tabHandle.outerWidth(), 10) + 'px',
                     tabHeight: parseInt(settings.tabHandle.outerHeight(), 10) + 'px'
                 };
