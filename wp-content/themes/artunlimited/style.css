@@ -3628,13 +3628,14 @@ html,body{
 	max-width:1280px;
 }
 #portfolio-container{
+	overflow-y:scroll !important;
 	background: transparent;
     transition:300ms ease all;
     background:#f2f2f2;
 	right:0;
 }
 #portfolio-container.open{
-
+	padding:20px;
 	transition:300ms ease all;
 }
 #page{

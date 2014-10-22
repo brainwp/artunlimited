@@ -59,7 +59,7 @@
         jQuery(function(){
              jQuery ('.slide-out-div').tabSlideOut({
                  tabHandle: '.handle',                              //class of the element that will be your tab
-                 imageHeight: jQuery(document).height() + 'px',                               //height of tab image
+                 //imageHeight: jQuery(document).height() + 'px',                               //height of tab image
                  imageWidth: '50px',                               //width of tab image    
                  tabLocation: 'right',                               //side of screen where tab lives, top, right, bottom, or left
                  speed: 400,                                        //speed of animation
@@ -69,20 +69,20 @@
              });
          });
 
-
+        jQuery('#portfolio-click').css('height', jQuery(document).height() + 'px');
 		jQuery('.barra-portfolio').click(function(e){
 
 			if (jQuery('#portfolio-container').hasClass('open')) {
 				jQuery('#portfolio-content').hide('slow');
-				//jQuery('html').css('overflow-y','scroll');
+				jQuery('html').css('overflow-y','scroll');
 				jQuery('.overlay').css('display','none');
-				jQuery('#portfolio-content').css('height',jQuery(document).height() + 'px');
+				//jQuery('#portfolio-content').css('height',jQuery(document).height() + 'px');
 	
 			} else {
 				jQuery('#portfolio-content').show('slow');
-				//jQuery('html').css('overflow-y','hidden');
+				jQuery('html').css('overflow-y','hidden');
 				jQuery('.overlay').css('display','block');
-				scroll_to('#page');
+				//scroll_to('#page');
 			}
 		});
 
@@ -93,7 +93,7 @@
 				jQuery('#portfolio-content').hide('slow');
 				//jQuery('html').css('overflow-y','scroll');
 				jQuery('.overlay').css('display','none');
-				jQuery('#portfolio-content').css('height',jQuery(document).height() + 'px');
+				//jQuery('#portfolio-content').css('height',jQuery(document).height() + 'px');
         }
 });
 
