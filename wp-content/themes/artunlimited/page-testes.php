@@ -221,7 +221,7 @@ get_header('hometestes'); ?>
             ?>
 
    			<div class="thumb-sub-content-direita">
-            	<?php echo do_shortcode('[google-map-sc id="22" width="280" height="760" margin="0" zoom="15"]'); ?>
+            	<?php echo do_shortcode('[google-map-sc width="280" height="760" margin="0" zoom="15"]'); ?>
             </div><!-- .thumb-sub-content-direita -->
 			
 			<div class="left-sub-content">

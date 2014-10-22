@@ -3634,10 +3634,16 @@ html,body{
     background:#f2f2f2;
 	right:0;
 }
-#portfolio-container.open{
+#portfolio-container.isopen{
 	padding:20px;
 	transition:300ms ease all;
 }
 #page{
 	overflow: hidden;
+}
+#portfolio-click{
+	height:100%;
+}
+#nav-contatos{
+	margin-right:50px;
 }

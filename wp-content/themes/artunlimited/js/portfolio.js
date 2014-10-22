@@ -42,7 +42,6 @@
     jQuery.fn.toggleText = function(a,b) {
 	    return this.html(this.html().replace(new RegExp("("+a+"|"+b+")"),function(x){return(x==a)?b:a;}));
 	}
-
 	jQuery(document).ready(function(){
 	    jQuery('.tgl').before('<span class="link-tgl">Acesso Restrito</span>');
 	    jQuery('.tgl').css('display', 'none')
@@ -72,27 +71,30 @@
         jQuery('#portfolio-click').css('height', jQuery(document).height() + 'px');
 		jQuery('.barra-portfolio').click(function(e){
 
-			if (jQuery('#portfolio-container').hasClass('open')) {
+			if (jQuery('#portfolio-container').hasClass('isopen')) {
+				jQuery('#nav-contatos').css('display','block');
 				jQuery('#portfolio-content').hide('slow');
 				jQuery('html').css('overflow-y','scroll');
 				jQuery('.overlay').css('display','none');
 				//jQuery('#portfolio-content').css('height',jQuery(document).height() + 'px');
 	
 			} else {
+				jQuery('#nav-contatos').css('display','none');
 				jQuery('#portfolio-content').show('slow');
 				jQuery('html').css('overflow-y','hidden');
 				jQuery('.overlay').css('display','block');
-				//scroll_to('#page');
+				scroll_to('#page');
 			}
 		});
 
 		jQuery(document).click(function (e){
         var container = jQuery("#portfolio-container");
 
-        if (jQuery('#portfolio-container').hasClass('open') && !container.is(e.target) && container.has(e.target).length === 0){
+        if (jQuery('#portfolio-container').hasClass('isopen') && !container.is(e.target) && container.has(e.target).length === 0){
 				jQuery('#portfolio-content').hide('slow');
-				//jQuery('html').css('overflow-y','scroll');
+				jQuery('html').css('overflow-y','scroll');
 				jQuery('.overlay').css('display','none');
+			    jQuery('#nav-contatos').css('display','block');
 				//jQuery('#portfolio-content').css('height',jQuery(document).height() + 'px');
         }
 });
