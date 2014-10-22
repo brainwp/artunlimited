@@ -1226,7 +1226,7 @@ nav select {
 	display: none;
 }
 
-/* =Notícias
+/* =Not\EDcias
 ----------------------------------------------- */
 
 .entry-header {
@@ -1646,10 +1646,10 @@ height: 70px;
 }
 
 .thumb-sub-content-direita {
-    width: 280px;
+	width: 280px;
 	height: 100%;
-    position: absolute;
-    right: 50px;
+	position: absolute;
+	right: 0;
 	overflow: hidden;
 }
 
@@ -1855,7 +1855,7 @@ height: 100%;
 	width: 155px;
 }
 
-/* Notícias
+/* Not\EDcias
 ----------------------------------------------- */
 
 .todas-noticias {
@@ -2073,7 +2073,7 @@ height: 100%;
     display: none;
 }
 
-/* Galeria Carousel do Plugin (Necessária)
+/* Galeria Carousel do Plugin (Necess\E1ria)
 ----------------------------------------------- */
 .list_carousel {
     overflow: hidden;
@@ -2165,7 +2165,7 @@ height: 100%;
     display: none;
 }
 
-/* carousel do projeto em questão*/
+/* carousel do projeto em quest\E3o*/
 
 ul#carousel li {
 	display: block;
@@ -3626,6 +3626,7 @@ html,body{
 #portfolio-content{
 	display:none;
 	max-width:1280px;
+	padding-bottom: 100px;
 }
 #portfolio-container{
 	overflow-y:scroll !important;
@@ -3635,8 +3636,9 @@ html,body{
 	right:0;
 }
 #portfolio-container.isopen{
-	padding:20px;
+	padding:20px 10px 60px 20px;
 	transition:300ms ease all;
+	margin-bottom: 100px;
 }
 #page{
 	overflow: hidden;

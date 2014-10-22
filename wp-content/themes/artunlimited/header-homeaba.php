@@ -130,27 +130,17 @@ if ( is_user_logged_in() ) {
 				</div><!-- #link-login -->
 			</div><!-- .area-4-header -->
 
-			<div class="area-3-header">
-				<div id="redes">
-					<div id="facebook">
-						<a class="a-redes" href="<?php echo get_option( 'mo_facebook' ); ?>"></a>
-					</div><!-- #facebook -->
-
-					<div id="linkedin">
-						<a class="a-redes" href="<?php echo get_option( 'mo_linkedin' ); ?>"></a>
-					</div><!-- #linkedin -->
-				</div><!-- #redes -->
-
-				<div id="linguas">
-					<div id="en">
-						<a class="a-linguas" href=""></a>
-					</div><!-- #en -->
-
-					<div id="pt">
-						<a class="a-linguas" href=""></a>	
-					</div><!-- #pt -->
-				</div><!-- #linguas -->
-			</div><!-- .area-3-header -->
+	<div class="area-3-header">
+		<div id="linguas">
+			<div id="en">
+		    	<a class="a-linguas" href=""></a>
+			    </div><!-- #en -->
+		    
+		    <div id="pt">
+				<a class="a-linguas" href=""></a>	
+			    </div><!-- #pt -->
+		</div><!-- #linguas -->
+   	 </div><!-- .area-3-header -->
 
 
 			<nav id="site-navigation" class="navigation-main" role="navigation">
