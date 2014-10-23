@@ -1149,6 +1149,14 @@ nav select {
     margin: 230px 0 0;
     width: 50px;
 }
+
+.etiqueta-barra-novosprojetos-archive {
+    background: url("images/escrita-novos-projetos.png") no-repeat scroll 0 -20px #4D449B;
+    height: 4000px;
+    margin: 230px 0 0;
+    width: 50px;
+}
+
 .a-etiqueta a {
 	line-height: 50px;
     height: 400px;
