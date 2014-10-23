@@ -4,7 +4,7 @@
  * @package artunlimited
  */
 
-get_header( 'portfolio' ); ?>
+get_header( 'novosprojetos' ); ?>
 
 	<div class="content-single-portfolio">
 		<div id="content-interno" class="site-content" role="main">
@@ -54,7 +54,7 @@ get_header( 'portfolio' ); ?>
 	</div>
 			<!-- .esquerda-single-portfolio -->
 			<div class="direita-single-portfolio">
-			<?php get_sidebar( 'portfolio' ); ?>
+			<?php get_sidebar( 'novosprojetos' ); ?>
 			</div><!-- #direita-single-portfolio -->
 			
 		</div><!-- #content -->
