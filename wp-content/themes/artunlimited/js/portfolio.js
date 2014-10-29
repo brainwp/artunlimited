@@ -36,6 +36,25 @@
 			jQuery('.scroll-pane').jScrollPane(s);
 		if (jQuery('.scroll-panes').length)
 			jQuery('.scroll-panes').jScrollPane(s);	
+	});
+	jQuery(function($) {
+		function isElementVisible(elementToBeChecked){
+			var TopView = $(window).scrollTop();
+			var BotView = TopView + $(window).height();
+			var TopElement = $(elementToBeChecked).offset().top;
+			var BotElement = TopElement + $(elementToBeChecked).height();
+			return ((BotElement <= BotView) && (TopElement >= TopView));
+		}
+
+		$(window).scroll(function () {
+			if(isElementVisible('#contato-mapa')){
+				$('#masthead').attr('style','width:94%;');
+			}
+			else if(isElementVisible('#nav-noticias')){
+				$('#masthead').removeAttr('style');
+			}
+			console.log(isElementVisible('#contato-mapa'));
+        });
 
 	});
 

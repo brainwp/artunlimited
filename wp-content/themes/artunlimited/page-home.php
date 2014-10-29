@@ -195,8 +195,8 @@ get_header( 'home' ); ?>
 	
         <div class="sub-content" id="nav-contatos">
 
-   			<div class="thumb-sub-content-direita">
-            	<?php echo do_shortcode('[google-map-sc id="22" width="280" height="760" margin="0" zoom="15"]'); ?>
+   			<div class="thumb-sub-content-direita" id="contato-mapa">
+            	<?php echo do_shortcode('[google-map-sc id="22" width="280" height="960" margin="0" zoom="15"]'); ?>
             </div><!-- .thumb-sub-content-direita -->
 
         	<div class="center-content">
