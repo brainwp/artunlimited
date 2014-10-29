@@ -68,7 +68,7 @@
              });
          });
 
-        jQuery('#portfolio-click').css('height', jQuery(document).height() + 'px');
+       // jQuery('#portfolio-click').css('height', jQuery(document).height() + 'px');
 		jQuery('.barra-portfolio').click(function(e){
 
 			if (jQuery('#portfolio-container').hasClass('isopen')) {
