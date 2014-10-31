@@ -47,13 +47,13 @@
 		}
 
 		$(window).scroll(function () {
-			if(isElementVisible('#contato-mapa')){
-				$('#masthead').attr('style','width:94%;');
+			if(isElementVisible('.footer-noticias')){
+				$('#masthead').attr('style','width:90%;');
 			}
 			else if(isElementVisible('#nav-noticias')){
 				$('#masthead').removeAttr('style');
 			}
-			console.log(isElementVisible('#contato-mapa'));
+			console.log(isElementVisible('.footer-noticias'));
         });
 
 	});

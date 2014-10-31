@@ -76,6 +76,7 @@
         
         var properties = {
          containerWidth: parseInt(obj.outerWidth(), 10) + 'px',
+         containerWidthNum: parseInt(obj.outerWidth(), 10),
          containerHeight: $(window).height() + 'px',
          tabWidth: parseInt(settings.tabHandle.outerWidth(), 10) + 'px',
          tabHeight: parseInt(settings.tabHandle.outerHeight(), 10) + 'px'
