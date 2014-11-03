@@ -114,13 +114,14 @@
 			$('.overlay').css('display','none');
 		    $('#nav-contatos').css('display','block');
 		    $('#portfolio-container').removeClass('isopen');
-
-		    $('#portfolio-content').hide('slow', {start: function(){
-		    	$('#portfolio-container').css('right','-'+containerWidth);
-		    }}, function(){
-		    	$('#portfolio-container').css('display','none');
-		    	$('#portfolio-banner').css('display','block');
-		    });
+		    $('#portfolio-content').animate({opacity: "hide"}, {
+		    	duration: "slow", start: function(){
+		    		$('#portfolio-container').css('right','-'+containerWidth);		    		
+		    	}, complete: function(){
+		    		$('#portfolio-container').css('display','none');
+		    		$('#portfolio-banner').css('display','block');
+		    	}}
+		   );
 		   // $('#portfolio-container').animate({right:'-'+containerWidth}, duration: 400});
         }
         $(document).click(function (e){
