@@ -84,6 +84,7 @@
 
 });
 	jQuery(function($) {
+		isopen = false;
 		$(document).ready(function(){
 			var containerHeight = parseInt($(window).outerHeight(), 10) + 'px';
 			var containerWidth = parseInt($('#portfolio-container').outerWidth(), 10) + 'px';
@@ -95,15 +96,15 @@
 	    });
 
         $('#portfolio-banner').on('click',function(e){
-        	$('#portfolio-container').css('display','block');
-            $('#portfolio-banner').css('display','none');
-            $('#nav-contatos').css('display','none');
-			$('#portfolio-content').show('slow');
-			$('html').css('overflow-y','hidden');
-			$('.overlay').css('display','block');
-			scroll_to('#page');
-            $('#portfolio-container').addClass('isopen');
-            isopen = true;
+        	$('html, body').animate({ scrollTop: 0 }, 200, function(){
+        		$('#portfolio-container').css('display','block');
+        		$('#portfolio-banner').css('display','none');
+        		$('#nav-contatos').css('display','none');
+        		$('#portfolio-content').show('slow');
+        		$('html').css('overflow-y','hidden');
+        		$('.overlay').css('display','block');
+        		$('#portfolio-container').addClass('isopen');
+        	});
 			//$('#portfolio-open').trigger('click');
 			//$('#portfolio-open').trigger('click');
         });
@@ -113,22 +114,19 @@
 			$('.overlay').css('display','none');
 		    $('#nav-contatos').css('display','block');
 		    $('#portfolio-container').removeClass('isopen');
+
 		    $('#portfolio-content').hide('slow', {start: function(){
 		    	$('#portfolio-container').css('right','-'+containerWidth);
-		    }, complete: function(){
-		    	$('#portfolio-container').css('display','none');
-		    	$('#portfolio-banner').css('display','block');
 		    }}, function(){
 		    	$('#portfolio-container').css('display','none');
 		    	$('#portfolio-banner').css('display','block');
 		    });
-		    isopen = true;
 		   // $('#portfolio-container').animate({right:'-'+containerWidth}, duration: 400});
         }
         $(document).click(function (e){
         var container = $("#portfolio-container");
         var barra = $("#portfolio-banner");
-        if (isopen == true && !container.is(e.target) && container.has(e.target).length === 0 && !barra.is(e.target) && barra.has(e.target).length === 0){
+        if (!container.is(e.target) && container.has(e.target).length === 0 && !barra.is(e.target) && barra.has(e.target).length === 0){
         	closePortfolio();
         }
         $('#portfolio-open').on('click',function(){
