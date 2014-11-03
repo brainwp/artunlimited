@@ -37,26 +37,6 @@
 		if (jQuery('.scroll-panes').length)
 			jQuery('.scroll-panes').jScrollPane(s);	
 	});
-	jQuery(function($) {
-		function isElementVisible(elementToBeChecked){
-			var TopView = $(window).scrollTop();
-			var BotView = TopView + $(window).height();
-			var TopElement = $(elementToBeChecked).offset().top;
-			var BotElement = TopElement + $(elementToBeChecked).height();
-			return ((BotElement <= BotView) && (TopElement >= TopView));
-		}
-
-		$(window).scroll(function () {
-			if(isElementVisible('.footer-noticias')){
-				$('#masthead').attr('style','width:90%;');
-			}
-			else if(isElementVisible('#nav-noticias')){
-				$('#masthead').removeAttr('style');
-			}
-			console.log(isElementVisible('.footer-noticias'));
-        });
-
-	});
 
     jQuery.fn.toggleText = function(a,b) {
 	    return this.html(this.html().replace(new RegExp("("+a+"|"+b+")"),function(x){return(x==a)?b:a;}));
@@ -74,21 +54,8 @@
 	            .toggleText('Acesso Restrito','Fechar')
 	    });
 
-        jQuery(function(){
-             jQuery ('.slide-out-div').tabSlideOut({
-                 tabHandle: '.handle',                              //class of the element that will be your tab
-                 //imageHeight: jQuery(document).height() + 'px',                               //height of tab image
-                 imageWidth: '50px',                               //width of tab image    
-                 tabLocation: 'right',                               //side of screen where tab lives, top, right, bottom, or left
-                 speed: 400,                                        //speed of animation
-                 action: 'click',                                   //options: 'click' or 'hover', action to trigger animation
-                 topPos: '0px',                                   //position from the top
-                 fixedPosition: false                               //options: true makes it stick(fixed position) on scroll
-             });
-         });
-
        // jQuery('#portfolio-click').css('height', jQuery(document).height() + 'px');
-		jQuery('.barra-portfolio').click(function(e){
+		jQuery('#portfolio-open').click(function(e){
 
 			if (jQuery('#portfolio-container').hasClass('isopen')) {
 				jQuery('#nav-contatos').css('display','block');
@@ -97,19 +64,14 @@
 				jQuery('.overlay').css('display','none');
 				//jQuery('#portfolio-content').css('height',jQuery(document).height() + 'px');
 	
-			} else {
-				jQuery('#nav-contatos').css('display','none');
-				jQuery('#portfolio-content').show('slow');
-				jQuery('html').css('overflow-y','hidden');
-				jQuery('.overlay').css('display','block');
-				scroll_to('#page');
 			}
 		});
 
-		jQuery(document).click(function (e){
+/*		jQuery(document).click(function (e){
         var container = jQuery("#portfolio-container");
 
         if (jQuery('#portfolio-container').hasClass('isopen') && !container.is(e.target) && container.has(e.target).length === 0){
+				alert('triggeou aqui')
 				jQuery('#portfolio-content').hide('slow');
 				jQuery('html').css('overflow-y','scroll');
 				jQuery('.overlay').css('display','none');
@@ -117,7 +79,62 @@
 				//jQuery('#portfolio-content').css('height',jQuery(document).height() + 'px');
         }
 });
-
+*/
 
 
 });
+	jQuery(function($) {
+		$(document).ready(function(){
+			var containerHeight = parseInt($(window).outerHeight(), 10) + 'px';
+			var containerWidth = parseInt($('#portfolio-container').outerWidth(), 10) + 'px';
+			var tabWidth = parseInt($('#portfolio-open').outerWidth(), 10) + 'px';
+			$('#portfolio-container').css('right','-'+containerWidth);
+			$('#portfolio-container').css('height',containerHeight);
+			$('#portfolio-open').css('left','-' + tabWidth);
+			$('#portfolio-open').css('height',containerHeight);
+	    });
+
+        $('#portfolio-banner').on('click',function(e){
+        	$('#portfolio-container').css('display','block');
+            $('#portfolio-banner').css('display','none');
+            $('#nav-contatos').css('display','none');
+			$('#portfolio-content').show('slow');
+			$('html').css('overflow-y','hidden');
+			$('.overlay').css('display','block');
+			scroll_to('#page');
+            $('#portfolio-container').addClass('isopen');
+            isopen = true;
+			//$('#portfolio-open').trigger('click');
+			//$('#portfolio-open').trigger('click');
+        });
+        var closePortfolio = function(){
+            var containerWidth = parseInt($('#portfolio-container').outerWidth(), 10) + 'px';
+			$('html').css('overflow-y','scroll');
+			$('.overlay').css('display','none');
+		    $('#nav-contatos').css('display','block');
+		    $('#portfolio-container').removeClass('isopen');
+		    $('#portfolio-content').hide('slow', {start: function(){
+		    	$('#portfolio-container').css('right','-'+containerWidth);
+		    }, complete: function(){
+		    	$('#portfolio-container').css('display','none');
+		    	$('#portfolio-banner').css('display','block');
+		    }}, function(){
+		    	$('#portfolio-container').css('display','none');
+		    	$('#portfolio-banner').css('display','block');
+		    });
+		    isopen = true;
+		   // $('#portfolio-container').animate({right:'-'+containerWidth}, duration: 400});
+        }
+        $(document).click(function (e){
+        var container = $("#portfolio-container");
+        var barra = $("#portfolio-banner");
+        if (isopen == true && !container.is(e.target) && container.has(e.target).length === 0 && !barra.is(e.target) && barra.has(e.target).length === 0){
+        	closePortfolio();
+        }
+        $('#portfolio-open').on('click',function(){
+            closePortfolio();
+        })
+    });
+
+
+	});

@@ -39,9 +39,15 @@ if ( is_user_logged_in() ) {
 <body <?php body_class(); ?>>
 	<div class="overlay"></div>
 	<div id="page" class="hfeed site site-home">
+	<div id="portfolio-banner">
+		<div class="barra-portfolio handle">
+				<a class="etiqueta-barra-portfolio" data-show="false">
+				</a>
+		</div>
+	</div><!-- #portfolio-banner -->
 	<div class="slide-out-div" id="portfolio-container">	
 
-			<div class="barra-portfolio handle">
+			<div class="barra-portfolio handle" id="portfolio-open">
 				<a href="javascript:scroll_to('#page');" id="portfolio-click" class="etiqueta-barra-portfolio" data-show="false">
 				</a>
 			</div>

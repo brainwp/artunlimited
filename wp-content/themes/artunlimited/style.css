@@ -3639,14 +3639,19 @@ html,body{
 #portfolio-container{
 	overflow-y:scroll !important;
 	background: transparent;
-    transition:300ms ease all;
+	transition:500ms ease all;
     background:#f2f2f2;
 	right:0;
 }
+#portfolio-container{
+	display:none;
+	position: absolute;
+}
 #portfolio-container.isopen{
 	padding:20px 10px 60px 20px;
-	transition:300ms ease all;
 	margin-bottom: 100px;
+	display: block;
+	right:-3px !important;
 }
 #page{
 	overflow: hidden;
@@ -3655,6 +3660,22 @@ html,body{
 	height:100%;
 }
 #nav-contatos{
-	margin-right:64px;
 	height:600px;
+}
+#portfolio-open{
+	display: block;
+    text-indent:-99999px;
+    outline:none;
+    position:absolute;
+}
+#portfolio-banner{
+	display: block;
+	position: absolute;
+	right:0;
+	height:100%;
+	z-index:99998;
+	cursor: pointer;
+}
+#portfolio-banner a{
+	height:100%;
 }
