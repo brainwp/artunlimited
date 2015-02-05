@@ -13,16 +13,16 @@ function create_post_type_novosprojetos() {
 		'name' => _x('Novos Projetos', 'post type general name'),
 		'singular_name' => _x('Projeto', 'post type singular name'),
 		'add_new' => _x('Novo Projeto', 'projeto'),
-	    'add_new_item' => __('Novo Projeto'),
-	    'edit_item' => __('Editar Projeto'),
-	    'new_item' => __('Novo Projeto'),
-	    'all_items' => __('Ver Todos'),
-	    'view_item' => __('Ver Projeto'),
-	    'search_items' => __('Procurar Projetos'),
-	    'not_found' =>  __('Nenhum projeto encontrado'),
-	    'not_found_in_trash' => __('Nenhum projeto encontrado no lixo'),
-	    'parent_item_colon' => '',
-	    'menu_name' => 'Novos Projetos'
+		'add_new_item' => __('Novo Projeto'),
+		'edit_item' => __('Editar Projeto'),
+		'new_item' => __('Novo Projeto'),
+		'all_items' => __('Ver Todos'),
+		'view_item' => __('Ver Projeto'),
+		'search_items' => __('Procurar Projetos'),
+		'not_found' =>  __('Nenhum projeto encontrado'),
+		'not_found_in_trash' => __('Nenhum projeto encontrado no lixo'),
+		'parent_item_colon' => '',
+		'menu_name' => 'Novos Projetos'
     );
 
 /**     * Registamos o tipo de post portfolios através desta função     
@@ -30,21 +30,21 @@ function create_post_type_novosprojetos() {
  */
     register_post_type( 'novosprojetos', array(
 		'labels' => $labels,
-	    'public' => true,
-	    'publicly_queryable' => true,
-	    'show_ui' => true,
-	    'show_in_menu' => true,
-	    'has_archive' => 'projetos',
-	    'query_var' => true,
+		'public' => true,
+		'publicly_queryable' => true,
+		'show_ui' => true,
+		'show_in_menu' => true,
+		'has_archive' => 'projetos',
+		'query_var' => true,
 		'rewrite' => array(
 			'slug' => 'projetos',
 			'with_front' => false,
-	    ),
-	    'capability_type' => 'post',
-	    'has_archive' => true,
-	    'hierarchical' => true,
-	    'menu_position' => null,
-	    'supports' => array('title','editor','thumbnail')
+		),
+		'capability_type' => 'post',
+		'has_archive' => true,
+		'hierarchical' => true,
+		'menu_position' => null,
+		'supports' => array('title','editor','thumbnail')
 		)    );
 
 	flush_rewrite_rules();}

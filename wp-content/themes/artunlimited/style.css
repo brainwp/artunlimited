@@ -1322,9 +1322,10 @@ nav select {
 .titulo-taxonomy h1 {
 	margin: 30px 0 0 30px;
 	color: #4d449b;
-    text-transform: uppercase;
-    font-family: 'Roboto',Arial,sans-serif;
-    font-weight: 200;
+	text-transform: uppercase;
+	font-family: 'Roboto',Arial,sans-serif;
+	font-weight: 200;
+	margin-top: 0px;
 }
 
 .entry-meta {	
@@ -2332,45 +2333,45 @@ body.single-projects #carousel_wrap { margin: 15px 0 30px }
     white-space: nowrap;
 }
 .header-categories  {
-    overflow: hidden;
-    padding: 16px 20px;
-	max-width: 1230px;
+	overflow: hidden;
+	padding: 16px 20px;
+	max-width: 790px;
 	position: relative;
-    background: none repeat scroll 0 0 #e5e5e5;
-    box-shadow: 0 2px 2px rgba(0, 0, 0, 0.15);
-    text-transform: lowercase;
-    z-index: 1;
-    margin: 0;
+	text-transform: lowercase;
+	z-index: 1;
+	margin: 12px 0px 0px 13px;
+	float: left;
+	display: inherit;
 }
 
-.header-portfolio  {
+.header-categories ul {
+    float: left;
     overflow: hidden;
     padding: 0;
-	max-width: 1230px;
-	position: relative;
-    z-index: 1;
-    margin: 0;
+    text-transform: lowercase;
+    width: auto;
 }
 
 .header-categories a{
 	text-decoration: none;
 }
+
 .header-categories  .search {
-    border-radius: 5px 5px 5px 5px;
-    border-top: 0 none;
-    padding: 5px;
-    position: relative;
+	border-radius: 5px 5px 5px 5px;
+	border-top: 0 none;
+	padding: 5px;
+	position: relative;
 	background: none repeat scroll 0 0 #FFFFFF;
-    float: left;
-    width: 25%;
+	float: left;
+	width: 25%;
 }
 
 
 .header-categories .search .field {
-    margin: 0 15px;
-    padding: 0 0 0 10px;
-	 border-bottom: 0 none;
-    position: relative;
+	margin: 0 15px;
+	padding: 0 0 0 10px;
+	border-bottom: 0 none;
+	position: relative;
 }
 
 .header-categories .search .clear {
@@ -2392,38 +2393,45 @@ body.single-projects #carousel_wrap { margin: 15px 0 30px }
     top: 1px;
 }
 
-.header-categories ul {
-    float: left;
-    overflow: hidden;
-    padding: 0;
-    text-transform: lowercase;
-    width: 75%;
-}
-
 .separated-list {
     display: inline-block;
     margin: 10px 0;
     vertical-align: middle;
 }
 
+.header-portfolio  {
+	overflow: hidden;
+	padding: 0;
+	max-width: 1230px;
+	position: relative;
+	z-index: 1;
+	margin: 0;
+}
+
 .separated-list li {
     float: left;
-    margin: 0 0 0 14px;
+    margin: 0 0 0 20px;
     position: relative;
     list-style: disc outside none;
 }
 
 .separated-list li.primeiro-li {
-	list-style: none;
+	list-style: outside none none;
+	margin-left: 0px;
+}
+.separated-list li.categoria-li {
+	list-style: outside none none;
+	margin-right: 5px;
+	font-size: 1.2em;
 }
 
 .separated-list li a {
-	color: #4d4e5a;
-    display: block;
-    font-size: 1.4em;
-    font-weight: inherit;
-    margin: 5px 10px 0 0;
-    text-decoration: none;
+	color: #4D4E5A;
+	display: block;
+	font-weight: inherit;
+	margin: 0px;
+	text-decoration: none;
+	font-size: 1.2em;
 }
 
 .separated-list li a:hover {
@@ -2529,6 +2537,7 @@ a.titulo-resumo {
 	max-width: 1230px;
 	height: auto;
 	overflow: hidden;
+	width: 100%;
 }
 
 .home-portfolio {
@@ -2547,7 +2556,7 @@ a.titulo-resumo {
 
 #busca-aba.portfolio {
 	float: right !important;
-    margin: 1.5% 3% 0 !important;
+        margin: 2% 3% 0 !important;
 }
 
 #busca-aba.portfolio #searchform input{
