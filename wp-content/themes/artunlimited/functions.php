@@ -37,7 +37,7 @@ function artunlimited_setup() {
 	add_theme_support( 'automatic-feed-links' );
 	// This theme uses Featured Images (also known as post thumbnails) for per-post/per-page Custom Header images
 	add_image_size( 'thumb-premios', 120, 9999);
-    add_image_size( 'thumb-projetos',370, 9999);
+        add_image_size( 'thumb-projetos',370, 9999);
 	add_image_size( 'thumb-outros-projetos', 300, 9999);
 	add_image_size( 'projetos', 900, 500);
 	
@@ -141,8 +141,8 @@ function artunlimited_scripts() {
 	wp_enqueue_script( 'jquery' );
 	// wp_enqueue_script( 'artunlimited-navigation', get_template_directory_uri() . '/js/navigation.js', array(), null, true );
 	wp_enqueue_script( 'artunlimited-skip-link-focus-fix', get_template_directory_uri() . '/js/skip-link-focus-fix.js', array(), null, true );
-    wp_enqueue_script( 'caroufredsel', get_template_directory_uri() . '/js/jquery.carouFredSel-6.2.1-packed.js', array('jquery') );
-    wp_enqueue_script( 'caroufredsel_pre', get_template_directory_uri() . '/js/caroufredsel_pre.js', array('caroufredsel') );
+        wp_enqueue_script( 'caroufredsel', get_template_directory_uri() . '/js/jquery.carouFredSel-6.2.1-packed.js', array('jquery') );
+        wp_enqueue_script( 'caroufredsel_pre', get_template_directory_uri() . '/js/caroufredsel_pre.js', array('caroufredsel') );
 	wp_enqueue_script( 'jquery.jscrollpane', get_template_directory_uri() . '/js/scroll/script/jquery.jscrollpane.js', array('jquery') );
 	wp_enqueue_script( 'jquery-mousewheel', get_template_directory_uri() . '/js/scroll/script/jquery.mousewheel.js', array('jquery') );
 	wp_enqueue_script( 'mwheelIntent', get_template_directory_uri() . '/js/scroll/script/mwheelIntent.js' );
@@ -188,7 +188,7 @@ require get_template_directory() . '/inc/jetpack.php';
  */
 require get_template_directory() . '/inc/metaboxes.php';
 require get_template_directory() . '/inc/metaboxes-portfolio.php';
-require get_template_directory() . '/inc/metaboxes-novosprojetos.php';
+// require get_template_directory() . '/inc/metaboxes-novosprojetos.php';
 /**
  * Load CPT Portfolios.
  */
@@ -196,7 +196,7 @@ require get_template_directory() . '/custom-portfolio.php';
 /**
  * Load CPT Novos Projetos
  */
-require get_template_directory() . '/custom-novos-projetos.php';
+// require get_template_directory() . '/custom-novos-projetos.php';
 
 
 
@@ -273,8 +273,8 @@ function limit_words($string, $word_limit) {
 
 }
 
-//Imprime todos os filtros correntes do wp inteiro
+//Imprime todos os filtros correntes do wp inteiro - para uso no desenvolvimento
 //add_action ('all', create_function ('', 'var_dump (current_filter ());')); 
 
-//Adiciona as Minhas Opções
+//Adiciona o Minhas Opcoes
 require_once (get_stylesheet_directory() . '/options/admin_options.php');
