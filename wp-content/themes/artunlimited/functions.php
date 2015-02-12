@@ -199,6 +199,33 @@ require get_template_directory() . '/custom-portfolio.php';
 // require get_template_directory() . '/custom-novos-projetos.php';
 
 
+/**
+ * Custom logo login.
+ */
+add_action('login_head', 'custom_logo_login');
+function custom_logo_login()
+{
+    echo '
+	<style type="text/css">
+		body.login div#login {
+			padding: 8% 0 0;
+		}
+		body.login div#login h1 {
+			text-align: center;
+			margin: 0 auto;
+		}
+		body.login div#login h1, body.login div#login h1 a {
+			width: 260px;
+			height: 75px;
+		}
+		body.login div#login h1 a {
+			background: url( ' . get_template_directory_uri() . '/images/logo-artunlimited.png) no-repeat center top !important;
+			padding: 0;
+		}
+	</style>
+	';
+}
+
 
 function id_por_slug( $slug ) {
 

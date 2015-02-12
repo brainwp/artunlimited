@@ -13,16 +13,16 @@ function create_post_type_portfolios() {
 		'name' => _x('Portfolio', 'post type general name'),
 		'singular_name' => _x('Portfolio', 'post type singular name'),
 		'add_new' => _x('Novo Portfolio', 'portfolio'),
-	    'add_new_item' => __('Novo Portfolio'),
-	    'edit_item' => __('Editar Portfolio'),
-	    'new_item' => __('Novo Portfolio'),
-	    'all_items' => __('Ver Todos'),
-	    'view_item' => __('Ver Portfolio'),
-	    'search_items' => __('Procurar Projetos'),
-	    'not_found' =>  __('Nenhum portfolio encontrado'),
-	    'not_found_in_trash' => __('Nenhum portfolio encontrado no lixo'),
-	    'parent_item_colon' => '',
-	    'menu_name' => 'Portfolio'
+		'add_new_item' => __('Novo Portfolio'),
+		'edit_item' => __('Editar Portfolio'),
+		'new_item' => __('Novo Portfolio'),
+		'all_items' => __('Ver Todos'),
+		'view_item' => __('Ver Portfolio'),
+		'search_items' => __('Procurar Projetos'),
+		'not_found' =>  __('Nenhum portfolio encontrado'),
+		'not_found_in_trash' => __('Nenhum portfolio encontrado no lixo'),
+		'parent_item_colon' => '',
+		'menu_name' => 'Portfolio'
     );
 
 /**     * Registamos o tipo de post portfolios através desta função     
@@ -30,21 +30,21 @@ function create_post_type_portfolios() {
  */
     register_post_type( 'portfolio', array(
 		'labels' => $labels,
-	    'public' => true,
-	    'publicly_queryable' => true,
-	    'show_ui' => true,
-	    'show_in_menu' => true,
-	    'has_archive' => 'portfolio',
-	    'query_var' => true,
+		'public' => true,
+		'publicly_queryable' => true,
+		'show_ui' => true,
+		'show_in_menu' => true,
+		'has_archive' => 'portfolio',
+		'query_var' => true,
 		'rewrite' => array(
-			'slug' => 'portfolio',
-			'with_front' => false,
+		'slug' => 'portfolio',
+		'with_front' => false,
 	    ),
 	    'capability_type' => 'post',
 	    'has_archive' => true,
 	    'hierarchical' => true,
 	    'menu_position' => null,
-	    'supports' => array('title','editor','thumbnail')
+	    'supports' => array('title','editor','page-attributes','thumbnail')
 		)    );
 
 	flush_rewrite_rules();}
