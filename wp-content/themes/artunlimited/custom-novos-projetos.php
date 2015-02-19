@@ -61,26 +61,4 @@ register_taxonomy(
 	)
 );
 
-// Adiciona a coluna Tipos ao Custom Post Type Novos Projetos
-add_filter( 'manage_projetos_posts_columns', 'ilc_cpt2_columns' );
-add_action('manage_projetos_posts_custom_column', 'ilc_cpt2_custom_column', 10, 2);
-
-function ilc_cpt2_columns($defaults) {
-    $defaults['tipo'] = 'Tipo';
-    return $defaults;
-}
-
-function ilc_cpt2_custom_column($column_name, $post_id) {
-    $taxonomy = $column_name;
-    $post_type = get_post_type($post_id);
-    $terms = get_the_terms($post_id, $taxonomy);
- 
-    if ( !empty($terms) ) {
-        foreach ( $terms as $term )
-            $post_terms[] = "<a href='edit.php?post_type={$post_type}&{$taxonomy}={$term->slug}'> " . esc_html(sanitize_term_field('name', $term->name, $term->term_id, $taxonomy, 'edit')) . "</a>";
-        echo join( ', ', $post_terms );
-    }
-    else echo '<i>Nenhum tipo.</i>';
-}
-
 ?>
