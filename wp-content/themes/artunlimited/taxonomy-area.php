@@ -1,14 +1,14 @@
-<?php get_header( 'novosprojetos' ); ?>
+<?php get_header( 'portfolio' ); ?>
 
 <div id="content-interno" class="site-content" role="main">
 
     <div class="archive-portfolio">
         		<div class="header-portfolio">
 				<div class="header-categories">
-					<ul class="separated-list menu"><li class="categoria-li">Categorias:</li></ul>					
+					<ul class="separated-list menu"><li class="categoria-li">Áreas:</li></ul>					
 					<ul class="separated-list menu">
 					<?php
-					  $myterms = get_terms( 'tipo' );
+					  $myterms = get_terms( 'area' );
 					    $conta = 0;
 					  foreach($myterms as $term){
 					    $root_url = get_bloginfo('url');

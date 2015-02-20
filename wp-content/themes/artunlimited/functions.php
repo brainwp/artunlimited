@@ -25,7 +25,7 @@ function artunlimited_setup() {
 	 * to change 'artunlimited' to the name of your theme in all the template files
 	 */
 	load_theme_textdomain( 'artunlimited', get_template_directory() . '/languages' );
-	
+
 	/* Enable support for Post Thumbnails on posts and pages
 	 *
 	 * @link http://codex.wordpress.org/Function_Reference/add_theme_support#Post_Thumbnails
@@ -40,7 +40,7 @@ function artunlimited_setup() {
         add_image_size( 'thumb-projetos',370, 9999);
 	add_image_size( 'thumb-outros-projetos', 300, 9999);
 	add_image_size( 'projetos', 900, 500);
-	
+
 	/**
 	 * This theme uses wp_nav_menu() in one location.
 	 */
@@ -150,6 +150,7 @@ function artunlimited_scripts() {
 	wp_enqueue_script( 'jquery.scroll_to', get_template_directory_uri() . '/js/scroll_to.js', array('jquery') );
 	wp_enqueue_script( 'mobile-nav', get_stylesheet_directory_uri() . '/js/mobile_nav.js', array('jquery'));
 	wp_enqueue_script( 'portfolio-js', get_stylesheet_directory_uri() . '/js/portfolio.js', array('jquery'));
+	wp_localize_script( 'portfolio-js', 'portfolio', array( 'ajax_url' => admin_url( 'admin-ajax.php' )));
 
     if(!is_admin()){
         wp_enqueue_script('thickbox',null,array('jquery'));
@@ -188,7 +189,7 @@ require get_template_directory() . '/inc/jetpack.php';
  */
 require get_template_directory() . '/inc/metaboxes.php';
 require get_template_directory() . '/inc/metaboxes-portfolio.php';
-// require get_template_directory() . '/inc/metaboxes-novosprojetos.php';
+require get_template_directory() . '/inc/metaboxes-novosprojetos.php';
 /**
  * Load CPT Portfolios.
  */
@@ -196,7 +197,7 @@ require get_template_directory() . '/custom-portfolio.php';
 /**
  * Load CPT Novos Projetos
  */
-// require get_template_directory() . '/custom-novos-projetos.php';
+require get_template_directory() . '/custom-novos-projetos.php';
 
 
 /**
@@ -301,7 +302,7 @@ function limit_words($string, $word_limit) {
 }
 
 //Imprime todos os filtros correntes do wp inteiro - para uso no desenvolvimento
-//add_action ('all', create_function ('', 'var_dump (current_filter ());')); 
+//add_action ('all', create_function ('', 'var_dump (current_filter ());'));
 
 //Adiciona o Minhas Opcoes
 require_once (get_stylesheet_directory() . '/options/admin_options.php');
