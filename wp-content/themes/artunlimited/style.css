@@ -2958,6 +2958,10 @@ object {
     margin-top: 5px !important;
 }
 
+a.zilla-button.blue {
+background: none repeat scroll 0 0 #4D449B !important;
+border: #0d507a !important;
+}
 
 
 /* Testes de Aba
