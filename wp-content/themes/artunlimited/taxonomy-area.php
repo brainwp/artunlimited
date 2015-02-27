@@ -5,7 +5,7 @@
     <div class="archive-portfolio">
         		<div class="header-portfolio">
 				<div class="header-categories">
-					<ul class="separated-list menu"><li class="categoria-li">Áreas:</li></ul>					
+					<ul class="separated-list menu"><li class="categoria-li">Areas:</li></ul>					
 					<ul class="separated-list menu">
 					<?php
 					  $myterms = get_terms( 'area' );

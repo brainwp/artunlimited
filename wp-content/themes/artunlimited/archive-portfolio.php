@@ -7,7 +7,9 @@
 			<div class="header-portfolio">
 
 				<div class="header-categories">
-					<ul class="separated-list menu"><li class="categoria-li">Áreas:</li></ul>
+
+					<ul class="separated-list menu"><li class="categoria-li">Areas:</li></ul>
+
 					<ul class="separated-list menu">
 					<?php
 					  $myterms = get_terms( 'area' );
@@ -49,6 +51,8 @@
 		/* $args_loop_cpt_projetos são os argumentos para o Loop */
 		$args_loop_cpt_projetos = array(
 		'post_type' => 'portfolio',
+		'public' => true,
+		'post_parent' => 0,		
 		'orderby' => 'date',
 		'order' => 'DESC',
 		'posts_per_page' => '66',
