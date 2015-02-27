@@ -122,7 +122,7 @@ body {
 	padding: 0;
 }
 .fonte-roxa {
-	color: #4d449b;	
+	color: #4d449b;
 }
 
 body.no-scroll {
@@ -303,7 +303,7 @@ a.comment-reply-link > span {
     height: auto;
     margin: 0 auto;
     max-width: 80%;
-    overflow: hidden;	
+    overflow: hidden;
 }
 
 .right-sub-content {
@@ -1122,7 +1122,7 @@ nav select {
     padding: 0.2em 0.7em;
 	cursor: pointer; /* Improves usability and consistency of cursor style between image-type 'input' and others */
 	-webkit-appearance: button; /* Corrects inability to style clickable 'input' types in iOS */
-	
+
 }
 
 
@@ -1328,7 +1328,7 @@ nav select {
 	margin-top: 0px;
 }
 
-.entry-meta {	
+.entry-meta {
 	font-family: 'Roboto', Arial, sans-serif;
 	font-weight: 400;
 	font-size: 12px;
@@ -1966,7 +1966,7 @@ height: 100%;
 	width: 90%;
 	margin: 15px 0 15px 15px;
 	 overflow: hidden;
-	float: left; 
+	float: left;
 }
 .categorias-cada-noticia {
     float: left;
@@ -2288,7 +2288,7 @@ body.single-projects #carousel_wrap { margin: 15px 0 30px }
 #primary.content-single-portfolio {
 	padding-top: 0 !important;
 	}
-	
+
 	#primary.content-noticias {
 	padding-top: 0 !important;
 	}
@@ -3006,7 +3006,7 @@ a.slide-out-div.archive-portfolio {
 		margin: 10px 0 10px 20px;
 		width: 95%;
 	}
-	
+
 	#slider {
     margin-top: 125px;
 
@@ -3020,12 +3020,12 @@ a.slide-out-div.archive-portfolio {
 		min-height: 200px !important;
 
 	}
-	
+
 	.cada-projeto {
     margin: 2.5% 0 0 2.5%;
     width: 46%;
 	}
-	
+
 	.slide-content {
 
 	font-size: 4em;
@@ -3123,7 +3123,7 @@ a.slide-out-div.archive-portfolio {
 	}
 
 	article.feature-image.small .entry-summary p a {
-	
+
 		left: 0;
 		padding-left: 20px;
 		padding-right: 20px;
@@ -3215,17 +3215,17 @@ a.slide-out-div.archive-portfolio {
 		margin-right: 0;
 		width: auto;
 	}
-	
+
 	a.titulo-resumo {
 	font-size: 0.65em;
 	}
-	
-	
+
+
 	.separated-list li a {
 
 	    font-size: 1.15em;
 	}
-	
+
 	.esquerda-single-portfolio {
 	width: 80%;
 	}
@@ -3253,7 +3253,7 @@ a.slide-out-div.archive-portfolio {
 	.seta-noticias {
 	    display: none;
 	}
-	
+
 
 }
 
@@ -3262,19 +3262,19 @@ a.slide-out-div.archive-portfolio {
 	.thumb-sub-content-esquerda {
 	display: none;
 	}
-	
+
 	.thumb-sub-content-direita {
 	display: none;
 	}
-	
+
 	.right-sub-content {
 	margin: 0 50px 0 0;
 	}
-	
+
 	.left-sub-content {
 	margin:  0 50px 0 0;
 	}
-	
+
 	.center {
 	margin: 0;
 	}
@@ -3287,7 +3287,7 @@ a.slide-out-div.archive-portfolio {
 	#sidebar {
 	display: none;
 	}
-	
+
 	#primary {
 	width: 100%;
 	margin: 0;
@@ -3328,7 +3328,7 @@ a.slide-out-div.archive-portfolio {
 	.content-contatos {
 		margin: 0 20px 0 30px;
 	}
-	
+
 	.seta-header {
 	display: none;
 	}
@@ -3349,24 +3349,24 @@ a.slide-out-div.archive-portfolio {
 		font-size: 13px;
 
 	}
-	
+
 	#thumbs-quem-somos {
     display: none;
 	}
-	
+
 	.cada-projeto {
     margin: 2.5% 0 0 2.5%;
     width: 95%;
 	}
-	
+
 	#busca-aba {
 	display: none;
 	}
-	
+
 	.header-categories ul {
 	width: 100%;
 	}
-	
+
 	.barra-portfolio {
 	display: none;
 	}
@@ -3374,19 +3374,19 @@ a.slide-out-div.archive-portfolio {
 	#portfolio-banner{
 	display: none;
 	}
-	
+
 	#slider {
     margin-right: 0;
 	}
-	
+
 	.left-sub-content {
 	margin: 0;
 	}
-	
+
 	.right-sub-content {
 	margin: 0;
 	}
-	
+
 	.botao-portfolio-menu {
 	display: block;
 	}
@@ -3403,21 +3403,21 @@ a.slide-out-div.archive-portfolio {
 	#access ul {
 		font-size: 12px;
 	}
-	
+
 	.area-4-header {
     display: none;
 	}
-	
+
 	.area-3-header {
     display: none;
 	}
-	
+
 	.slide-content {
     left: 20% !important;
     top: 55% !important;
     width: 70% !important;
 	}
-		
+
 	article.intro .entry-content {
 		font-size: 12px;
 
@@ -3556,7 +3556,7 @@ a.slide-out-div.archive-portfolio {
 		height: auto;
 
 	}
-	
+
 	.menu-toggle,
 	.main-small-navigation ul.nav-menu.toggled-on {
 
@@ -3570,12 +3570,12 @@ a.slide-out-div.archive-portfolio {
 		display: none;
 
 	}
-	
+
 	nav select {
 	display: inline-block;
 	margin-left: 15px;
 	}
-	
+
 	#redes {
 	display: none;
 	}
@@ -3616,14 +3616,14 @@ a.slide-out-div.archive-portfolio {
 		height: auto;
 
 	}
-	
+
 	.caroufredsel_wrapper {
 
 		min-height: 80px !important;
 
 	}
 
-	
+
 
 	body {
 		padding: 0;
@@ -3638,7 +3638,7 @@ a.slide-out-div.archive-portfolio {
 	#branding {
 		border-top: none;
 	}
-	
+
 
 }
 html,body{
@@ -3692,4 +3692,7 @@ html,body{
 }
 #portfolio-banner a{
 	height:100%;
+}
+.portfolio-ajax{
+	cursor:pointer;
 }
