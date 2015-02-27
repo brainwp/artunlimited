@@ -91,12 +91,16 @@ function portfolio_query_ajax() {
 	if($area == 'false'){
 		$args = array (
 			'post_type'              => 'portfolio',
+			'public' 		 => true,
+			'post_parent' 		 => 0,
 			'posts_per_page'         => -1
 		);
 	}
 	else{
 		$args = array (
 			'post_type'              => 'portfolio',
+			'public' 		 => true,
+			'post_parent' 		 => 0,
 			'posts_per_page'         => -1,
 			'area'                   => $area,
 		);
