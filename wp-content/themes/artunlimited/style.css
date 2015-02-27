@@ -2959,8 +2959,15 @@ object {
 }
 
 a.zilla-button.blue {
-background: none repeat scroll 0 0 #4D449B !important;
-border: #0d507a !important;
+	background: none repeat scroll 0 0 #4D449B !important;
+	border: #0d507a !important;
+}
+a.zilla-button.blue:hover {
+	background: none repeat scroll 0 0 #3B289F !important;
+}
+
+.embed-youtube {
+    text-align: left !important;
 }
 
 
