@@ -70,6 +70,7 @@ if ( is_user_logged_in() ) {
 				/* $args_loop_cpt_projetos são os argumentos para o Loop */
 				$args_loop_cpt_projetos = array(
 					'post_type' => 'portfolio',
+					'post_parent' => 0,
 					'orderby' => 'date',
 					'order' => 'DESC',
 					'posts_per_page' => '66',
