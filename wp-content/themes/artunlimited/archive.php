@@ -8,7 +8,7 @@
  * @package artunlimited
  */
 
-get_header(); ?>
+get_header( 'interno' ); ?>
 
 	<div id="content-pages">
 		<div id="content" class="page-content" role="main">

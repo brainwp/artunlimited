@@ -25,4 +25,4 @@ get_header( 'interno' ); ?>
 		</div><!-- #content -->
 	</div><!-- #content-pages -->
 
-<?php get_footer( 'noticias' ); ?>
+<?php get_footer(); ?>

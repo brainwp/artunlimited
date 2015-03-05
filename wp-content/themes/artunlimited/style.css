@@ -4,7 +4,7 @@ Theme URI: http://underscores.me/
 Author: Brasa
 Author URI: http://brasa.art.br/
 Description: Tema desenvolvido pela Brasa para a Art Unlimited, com design de Ludo Design.
-Version: 0.8
+Version: 0.9
 License: GNU General Public License
 License URI: license.txt
 Tags:
@@ -2903,7 +2903,7 @@ object {
     margin: 25px 0 0;
 }
 .infos-rodape {
-    color: #333
+    color: #333;
     float: left;
     font-weight: 300;
     margin: 20px 0 0 10px;

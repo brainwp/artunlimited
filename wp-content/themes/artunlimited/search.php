@@ -36,7 +36,6 @@ get_header( 'interno' ); ?>
 		
 			            <div class="clearfix">
 						</div>
-						
-				<?php get_footer( 'noticias' ); ?>
 		
 	</div><!-- #content-pages -->
+<?php get_footer(); ?>

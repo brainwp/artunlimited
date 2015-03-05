@@ -8,31 +8,29 @@
 
 				<div class="header-categories">
 
-					<ul class="separated-list menu"><li class="categoria-li">Areas:</li></ul>
-
 					<ul class="separated-list menu">
-					<?php
-					  $myterms = get_terms( 'area' );
-					    $conta = 0;
-					  foreach($myterms as $term){
-					    $term_taxonomy = $term->taxonomy;
-					    $term_slug = $term->slug;
-					    $term_name = $term->name;
-					    /*$output .= "<option value='".$link."'>".$term_name."</option>";*/
+						<?php
+						  $myterms = get_terms( 'area' );
+						    $conta = 0;
+						  foreach($myterms as $term){
+						    $term_taxonomy = $term->taxonomy;
+						    $term_slug = $term->slug;
+						    $term_name = $term->name;
+						    /*$output .= "<option value='".$link."'>".$term_name."</option>";*/
 
-					 if ($conta < 1){
-					    $i = "<li class=\"primeiro-li\"><a class=\"portfolio-ajax\" data-href=";
-					} else {
-					    $i = "<li><a class=\"portfolio-ajax\" data-href=";
-					}
-					echo $i;
-					  echo $term_slug . ">" . $term_name;
-					  echo "</a></li>";
-					$conta++;
-					  }
-					?>
-					<li><a class="portfolio-ajax" data-href="false">Exibir todas</a></li>
-				    </ul>
+						 if ($conta < 1){
+						    $i = "<li class=\"primeiro-li\"><a class=\"portfolio-ajax\" data-href=";
+						} else {
+						    $i = "<li><a class=\"portfolio-ajax\" data-href=";
+						}
+						echo $i;
+						  echo $term_slug . ">" . $term_name;
+						  echo "</a></li>";
+						$conta++;
+						  }
+						?>
+						<li><a class="portfolio-ajax" data-href="false">Exibir todas</a></li>
+					</ul>
 				</div><!-- .header-categories -->
 
                        		<div id="busca-aba" class="portfolio">

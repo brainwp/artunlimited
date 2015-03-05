@@ -243,4 +243,4 @@ get_header( 'home' ); ?>
         </div><!-- .sub-content -->
 		<!-- Final Contatos -->
 
-<?php get_footer( 'noticias' ); ?>
+<?php get_footer(); ?>
