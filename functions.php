@@ -189,7 +189,7 @@ require get_template_directory() . '/inc/jetpack.php';
  */
 require get_template_directory() . '/inc/metaboxes.php';
 require get_template_directory() . '/inc/metaboxes-portfolio.php';
-require get_template_directory() . '/inc/metaboxes-novosprojetos.php';
+// require get_template_directory() . '/inc/metaboxes-novosprojetos.php';
 /**
  * Load CPT Portfolios.
  */
@@ -197,7 +197,7 @@ require get_template_directory() . '/custom-portfolio.php';
 /**
  * Load CPT Novos Projetos
  */
-require get_template_directory() . '/custom-novos-projetos.php';
+// require get_template_directory() . '/custom-novos-projetos.php';
 
 
 /**
