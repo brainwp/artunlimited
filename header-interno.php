@@ -39,10 +39,16 @@ if ( is_user_logged_in() ) {
 <body <?php body_class(); ?>>
 	<div class="overlay"></div>
 	<div id="page" class="hfeed site site-home">
+	<div id="portfolio-banner">
+		<div class="barra-portfolio handle">
+				<a class="etiqueta-barra-portfolio" data-show="false">
+				</a>
+		</div>
+	</div><!-- #portfolio-banner -->
 	<div class="slide-out-div" id="portfolio-container">	
 
-			<div class="barra-portfolio handle">
-				<a href="javascript:scroll_to('#page');" id="portfolio-click" class="etiqueta-barra-portfolio" data-show="false">
+			<div class="barra-portfolio handle" id="portfolio-open">
+				<a id="portfolio-click" class="etiqueta-barra-portfolio" data-show="false">
 				</a>
 			</div>
 			<div class="home-portfolio" id="portfolio-content">
@@ -64,6 +70,7 @@ if ( is_user_logged_in() ) {
 				/* $args_loop_cpt_projetos são os argumentos para o Loop */
 				$args_loop_cpt_projetos = array(
 					'post_type' => 'portfolio',
+					'post_parent' => 0,
 					'orderby' => 'date',
 					'order' => 'DESC',
 					'posts_per_page' => '66',

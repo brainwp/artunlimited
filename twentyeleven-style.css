@@ -2770,10 +2770,9 @@ section.recent-posts .other-recent-posts li:after {
 #content nav {
 
 	clear: both;
-
 	overflow: hidden;
-
 	padding: 0 0 1.625em;
+	margin-left: 3em;
 
 }
 
