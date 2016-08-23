@@ -15,7 +15,8 @@ get_header( 'home' ); ?>
     <div id="thumbs-quem-somos">
     <?php
     $quem_somos = "";
-    $quem_somos = get_page_by_title( 'Art Unlimited' );
+    $quem_somos = get_page_by_slug('art-unlimited');
+ 
     $attachment_page = get_attachment_link($quem_somos->ID); ?>
 
 	<?php if ( have_posts() ) : while ( have_posts() ) : the_post();    
@@ -55,12 +56,13 @@ get_header( 'home' ); ?>
 
     	<div class="center-content">
 	        <?php
-		        $premios = get_page_by_title( 'Premios' );
+		        $premios = get_page_by_slug( 'premios' );
 	    	    $content_premios = apply_filters('the_content', $premios->post_content);
 	        ?>
 
 			<div class="header-sub-content">
-				<div class="titulo-header"><h2><?php echo $premios->post_title; ?></h2></div>
+				
+				<div class="titulo-header"><h2><?php echo apply_filters('the_title',$premios->post_title); ?></h2></div>
 			</div>
 							  
 			<div class="content-premios">
@@ -80,13 +82,13 @@ get_header( 'home' ); ?>
 		<div class="center-content">
 		<?php
 			$clientes = "";
-			$clientes = get_page_by_title( 'Clientes e Parceiros' );
+			$clientes = get_page_by_slug( 'clientes-e-parceiros' );
 			$attachment_clientes = get_attachment_link($clientes->ID);
 			$content_clientes = apply_filters('the_content', $clientes->post_content);
 		?>  
 
 			<div class="header-sub-content">
-		    	<div class="titulo-header"><h2><?php echo $clientes->post_title; ?></h2></div>
+		    	<div class="titulo-header"><h2><?php echo apply_filters('the_title',$clientes->post_title); ?></h2></div>
 			</div>
 
 			<div class="content-intro-clientes">
@@ -132,11 +134,11 @@ get_header( 'home' ); ?>
 	
 		<div class="center-content">
 
-		<?php $noticias = get_page_by_title( 'Noticias' ); ?>
+		<?php $noticias = get_page_by_slug( 'noticias' ); ?>
 	
 			<div class="header-sub-content">
 			    <div class="titulo-header-noticias">
-			    	<h2><?php echo $noticias->post_title; ?></h2><span><a href="<?php echo home_url('index.php/noticias'); ?>">Ver todas</a></span>
+			    	<h2><?php echo apply_filters('the_title',$noticias->post_title); ?></h2><span><a href="<?php echo home_url('index.php/noticias'); ?>"><?php echo __('[:en]See all[:pb]Ver todas[:]');?></a></span>
 			    </div>
 			</div><!-- .header-sub-content -->
 
@@ -202,14 +204,15 @@ get_header( 'home' ); ?>
         	<div class="center-content">
 
             <?php
-	            $contatos = get_page_by_title( 'Contatos' );
+	            $contatos = get_page_by_slug('contatos');
+	            // print_r($contatos);
 				$content_contatos = apply_filters('the_content', $contatos->post_content);
 				$endereco = get_post_meta($contatos->ID,'meta_endereco',true);
 				$bairro = get_post_meta($contatos->ID,'meta_bairro',true);
             ?>
 	
 					<div class="header-sub-content">
-						<div class="titulo-header"><h2>Onde nos Encontrar:</h2></div>
+						<div class="titulo-header"><h2><?php echo __('[:en]Where to find us[:pb]Onde nos Encontrar:[:]'); ?></h2></div>
 					</div><!-- .header-sub-content -->
 	             
 			        <div class="content-contatos">
