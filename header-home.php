@@ -139,14 +139,15 @@ if ( is_user_logged_in() ) {
     </div><!-- .area-4-header -->
 		
 	<div class="area-3-header">
+
         <div id="linguas">
-        	<div id="en">
-            	<a class="a-linguas" href=""></a>
-		    </div><!-- #en -->
-            
-            <div id="pt">
-				<a class="a-linguas" href=""></a>	
-		    </div><!-- #pt -->
+        	
+            <?php 	
+            	if (function_exists('dynamic_sidebar')) {
+					dynamic_sidebar('Widget no menu');
+				} 
+			?>
+         
         </div><!-- #linguas -->
     </div><!-- .area-3-header -->
 		
@@ -155,12 +156,12 @@ if ( is_user_logged_in() ) {
 				<?php  // wp_nav_menu( array( 'theme_location' => 'primary', 'items_wrap' => '<ul class="menu"><li class="first-menu-item"></li>%3$s</ul>' ) ); ?>
 		
 				<ul class="menu">
-					<li class="first-menu-item menu-item menu-item-type-post_type menu-item-object-page menu-item-336" id="menu-item-336"><a href="javascript:scroll_to('#nav-quem-somos');">Quem Somos</a></li>
-					<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-30" id="menu-item-1327"><a href="<?php echo home_url('index.php/portfolio'); ?>">Portf&oacute;lio</a></li>
-					<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-30" id="menu-item-30"><a href="javascript:scroll_to('#nav-premios');">Pr&ecirc;mios</a></li>
-					<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-28" id="menu-item-28"><a href="javascript:scroll_to('#nav-clientes-parceiros');">Clientes e Parceiros</a></li>
-					<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-288" id="menu-item-288"><a href="javascript:scroll_to('#nav-noticias');">Not&iacute;cias</a></li>
-					<li class="last-menu-item menu-item menu-item-type-post_type menu-item-object-page menu-item-29" id="menu-item-29"><a href="javascript:scroll_to('#nav-contatos');">Contatos</a></li>
+					<li class="first-menu-item menu-item menu-item-type-post_type menu-item-object-page menu-item-336" id="menu-item-336"><a href="javascript:scroll_to('#nav-quem-somos');"><?php echo __('[:en]About us[:pb]Quem somos[:]') ?></a></li>
+					<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-30" id="menu-item-1327"><a href="<?php echo home_url('index.php/portfolio'); ?>"><?php echo __('[:en]Portfolio[:pb]Portf&oacute;lio[:]'); ?></a></li>
+					<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-30" id="menu-item-30"><a href="javascript:scroll_to('#nav-premios');"><?php echo __('[:en]Awards[:pb]Pr&ecirc;mios[:]'); ?></a></li>
+					<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-28" id="menu-item-28"><a href="javascript:scroll_to('#nav-clientes-parceiros');"><?php echo __('[:en]Clients and partners[:pb]Clientes e Parceiros[:]'); ?></a></li>
+					<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-288" id="menu-item-288"><a href="javascript:scroll_to('#nav-noticias');"><?php echo __('[:en]News[:pb]Not&iacute;cias[:]'); ?></a></li>
+					<li class="last-menu-item menu-item menu-item-type-post_type menu-item-object-page menu-item-29" id="menu-item-29"><a href="javascript:scroll_to('#nav-contatos');"><?php echo __('[:en]Contact[:pb]Contatos[:]'); ?></a></li>
 				</ul>
 		
 			</nav><!-- #site-navigation -->

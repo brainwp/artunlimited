@@ -950,6 +950,11 @@ nav select {
 	height: 30px;
 	float: left;
 	margin: 38px 5px 0 0;
+    float: right;
+
+}
+.single-portfolio #linguas{
+	float:left;
 }
 
 #en, #pt {
@@ -963,7 +968,7 @@ nav select {
 
 #en {
 	background: url("images/img-sprite.png") no-repeat scroll -358px -8px rgba(0, 0, 0, 0);
-	display:none;
+	display:block;
 }
 
 #en:hover {
@@ -979,7 +984,7 @@ nav select {
 
 #pt {
 	background: url(images/img-sprite.png) -391px -8px no-repeat;
-	display: none;
+	display: block;
 	margin-left: 5px;
 }
 
@@ -989,6 +994,16 @@ nav select {
 
 	background-position: -391px -37px;
 
+}
+.qtranxs_widget ul li {
+    
+    float: left;
+    display: block;
+}
+
+
+.qtranxs_widget ul {
+    width: 100px;
 }
 
 

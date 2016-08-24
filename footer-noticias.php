@@ -9,7 +9,7 @@
     <div class="footer-noticias">
 		<?php wp_footer(); ?>
 		<div class="infos-rodape">
-			<?php $contatos = get_page_by_title( 'Contatos' ); ?>
+            <?php $contatos = get_page_by_slug('contatos'); ?>
 			<?php echo get_post_meta($contatos->ID,'meta_endereco',true); ?>,
             <?php echo get_post_meta($contatos->ID,'meta_bairro',true); ?> - 
             <?php echo get_post_meta($contatos->ID,'meta_cidade_uf_pais',true); ?>

@@ -5,14 +5,25 @@
 		<div class="archive-portfolio">
 			
 			        <div class="header-portfolio">
+
                         <div id="busca-aba" class="portfolio">
                             <div id="lupa-aba"></div>
                             <form id="searchform" action="<?php bloginfo('url'); ?>/" method="get">
-								<input class="inlineSearch" type="text" name="s" value="busca" onblur="if (this.value == '') {this.value = 'busca';}" onfocus="if (this.value == 'busca') {this.value = '';}" />
+								
+								<input class="inlineSearch" type="text" name="s" value="<?php echo __('[:en]search[:pb]busca[:]'); ?>" onblur="if (this.value == '') {this.value = '<?php echo __('[:en]search[:pb]busca[:]'); ?>';}" onfocus="if (this.value == '<?php echo __('[:en]search[:pb]busca[:]'); ?>') {this.value = '';}" />
 								<input type="hidden" name="post_type" value="portfolio" />
 								<!-- <input class="inlineSubmit" id="searchsubmit" type="submit" alt="Search" value="Buscar" /> -->
                             </form>
                         </div><!-- #busca-aba -->
+                        <div id="linguas">
+        	
+				            <?php 	
+				            	if (function_exists('dynamic_sidebar')) {
+									dynamic_sidebar('Widget no menu');
+								} 
+							?>
+				         
+				        </div><!-- #linguas -->
                     </div><!-- .header-categories -->
 			
 						<?php

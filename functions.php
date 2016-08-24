@@ -337,3 +337,15 @@ function get_page_by_slug( $page_slug, $output = OBJECT, $post_type = 'page' ) {
 
 	return 'null';
 }
+// Adds a widget area to house qtranslate flags. See also accompanying css.
+if (function_exists('register_sidebar')) {
+	register_sidebar(array(
+		'name' => 'Widget no menu',
+		'id' => 'extra-widget',
+		'description' => 'Widget Menu',
+		'before_widget' => '<div class="widget %2$s" id="%1$s">',
+		'after_widget' => '</div>',
+		'before_title' => '<h2>',
+		'after_title' => '</h2>'
+	));
+}

@@ -67,7 +67,7 @@ get_header( 'portfolio' ); ?>
 		<?php if (empty($metaportfolio_credito)) {
 		} else { ?>
 		<div class="creditos-portfolio">
-			<p><span>Fotografias: </span>&copy; <?php echo $metaportfolio_credito; ?></p>
+			<p><span><?php echo __('[:en]Photos[:pb]Fotografias:[:]'); ?> </span>&copy; <?php echo $metaportfolio_credito; ?></p>
 		</div><!-- #creditos-portfolio -->
 		<?php }	?>
 
