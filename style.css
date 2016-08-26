@@ -883,14 +883,19 @@ nav select {
 /* Area 3 Header */
 .area-3-header {
 	float: right;
-	width: auto;
+	min-width: 6%;
+}
+
+.area-3-header.portfolio {
+    margin-right: 30px;
+    margin-top: -20px;
+
 }
 
 #redes {
-	width: 80px;
+	width: 90px;
 	height: 35px;
-	float: left;
-	margin: 35px 5px 0 0;
+	float: right;
 }
 
 #facebook, #linkedin {
@@ -936,7 +941,6 @@ nav select {
 
 
 .a-redes {
-
 	width: 34px;
 	height: 34px;
 	position: absolute;
@@ -946,18 +950,14 @@ nav select {
 
 
 #linguas {
-	width: 36px;
-	height: 30px;
-	float: left;
+	width: 60px;
 	margin: 38px 5px 0 0;
     float: right;
 
 }
-.single-portfolio #linguas{
-	float:left;
-}
 
-#en, #pt {
+
+.qtranxs_widget ul.qtranxs_language_chooser li {
 	width: 30px;
 	height: 30px;
 	-webkit-border-radius: 3px;
@@ -966,35 +966,45 @@ nav select {
 	float: left
 }
 
-#en {
-	background: url("images/img-sprite.png") no-repeat scroll -358px -8px rgba(0, 0, 0, 0);
-	display:block;
-}
-
-#en:hover {
-	background-position: -358px -37px;
-}
-
-
-.a-linguas {
+.qtranxs_widget ul.qtranxs_language_chooser li a{
 	width: 30px;
 	height: 30px;
 	position: absolute;
 }
 
-#pt {
+li.lang-en  {
+	background: url("images/img-sprite.png") no-repeat scroll -358px -8px rgba(0, 0, 0, 0);
+	display:block;
+}
+
+li.lang-en .active {
+	background-position: -358px -37px;
+}
+
+
+li.lang-pb {
 	background: url(images/img-sprite.png) -391px -8px no-repeat;
 	display: block;
 	margin-left: 5px;
 }
 
 
-
-#pt:hover {
-
+li.lang-pb .active {
 	background-position: -391px -37px;
-
 }
+
+.qtranxs_widget img {
+    display: none !important;
+}
+
+
+.single-portfolio #linguas{
+	float:left;
+	width: 100%;
+	margin-bottom: 1.5em;
+}
+
+
 .qtranxs_widget ul li {
     
     float: left;
@@ -2915,19 +2925,19 @@ object {
    margin: 0;
 }
 .footer #redes, .footer-noticias #redes {
-    margin: 25px 0 0;
+    margin: 12px 0 0;
 }
 .infos-rodape {
     color: #333;
     float: left;
     font-weight: 300;
-    margin: 20px 0 0 10px;
-    width: 90%;
+    margin: 10px 20px 0 0px;
+    width: 76%;
 }
 
 .footer-noticias {
     background: none repeat scroll 0 0 #E5E5E5;
-    height: 70px;
+    height: 60px;
     margin: 0 50px 0 0;
     max-width: 1190px;
     overflow: hidden;
@@ -3352,7 +3362,7 @@ a.slide-out-div.archive-portfolio {
 	}
 
 	.content-contatos {
-		margin: 0 20px 0 30px;
+		margin: 0 20px 0 0px;
 	}
 
 	.seta-header {
@@ -3371,9 +3381,12 @@ a.slide-out-div.archive-portfolio {
 @media (max-width: 650px) {
 
 	body, input, textarea {
-
 		font-size: 13px;
 
+	}
+
+	#wpadminbar {
+	    position: fixed;
 	}
 
 	#thumbs-quem-somos {
@@ -3430,206 +3443,38 @@ a.slide-out-div.archive-portfolio {
 		font-size: 12px;
 	}
 
+	#link-login {
+	    width: 30px;
+	    text-indent: -99999px;
+	}
+
+	.area-3-header.portfolio {
+    margin-right: 60px;
+	}
+
 	.area-4-header {
-    display: none;
+    margin-right: 0;
 	}
 
-	.area-3-header {
-    display: none;
-	}
-
-	.slide-content {
-    left: 20% !important;
-    top: 55% !important;
-    width: 70% !important;
-	}
-
-	article.intro .entry-content {
-		font-size: 12px;
-
-	}
-
-	.entry-title {
-		font-size: 21px;
-
-	}
-
-	.featured-post .entry-title {
-		font-size: 14px;
-
-	}
-
-	.singular .entry-title {
-		font-size: 28px;
-
-	}
-
-	.entry-meta {
-		font-size: 12px;
-
-	}
-
-	blockquote {
-		margin: 0;
-
-	}
-
-	blockquote.pull {
-		font-size: 17px;
-
-	}
-
-	/* Reposition the site title and description slightly */
-
-	#site-title {
-		padding: 5.30625em 0 0;
-
-	}
-
-	#site-title,
-	#site-description {
-
-		margin-right: 0;
-
-	}
-
-	/* Make sure the logo and search form don't collide */
-
-	#branding #searchform {
-		top: 1.625em !important;
-
-	}
-
-	/* Floated content doesn't work well at this size */
-
-	.alignleft,
-	.alignright {
-		display: block;
-		float: none;
-		margin-left: 0;
-		margin-right: 0;
-
-	}
-
-	/* Make sure the post-post navigation doesn't collide with anything */
-
-	#nav-single {
-		display: block;
-		position: static;
-
-	}
-
-	.singular .hentry {
-		padding: 1.625em 0 0;
-
-	}
-
-	.singular.page .hentry {
-		padding: 1.625em 0 0;
-
-	}
-
-	/* Talking avatars take up too much room at this size */
-
-	.commentlist > li.comment,
-	.commentlist > li.pingback {
-
-		margin-left: 0 !important;
-
-	}
-
-	.commentlist .avatar {
-	background: transparent;
-	display: block;
-	padding: 0;
-	position: static;
-
-	}
-
-	.commentlist .children .avatar {
-	background: none;
-	left: 2.2em;
-	padding: 0;
-	position: absolute;
-	top: 2.2em;
-
-	}
-
-	/* Use the available space in the smaller comment form */
-
-	#respond input[type="text"] {
-
-		width: 95%;
-	}
-
-	#respond .comment-form-author .required,
-	#respond .comment-form-email .required {
-
-		left: 95%;
-
-	}
-
-	#content .gallery-columns-3 .gallery-item {
-
-		width: 31%;
-		padding-right: 2%;
-
-	}
-
-	#content .gallery-columns-3 .gallery-item img {
-
-		width: 100%;
-		height: auto;
-
-	}
-
-	.menu-toggle,
-	.main-small-navigation ul.nav-menu.toggled-on {
-
-		display: block;
-
-	}
-
-
-	nav.navigation-main li {
-
-		display: none;
-
-	}
-
-	nav select {
-	display: inline-block;
-	margin-left: 15px;
-	}
-
-	#redes {
-	display: none;
+	#content-index {
+    margin-right: 0px;
 	}
 
 	.footer-noticias {
-	    margin: 0;
-	}
-	.titulo-page-404 h1 {
-	    font-size: 6em;
-	    margin: 50px 0 0;
+    margin: 0;
 	}
 
-	.scroll-panes {
-    display: none;
+	.infos-rodape {
+	    margin-top: 0;
 	}
-
-	.footer-sub-content {
-    height: 40px;
+	.footer #redes, .footer-noticias #redes {
+	    margin: 0px 0 0;
+	    width: 16%;
 	}
-
-}
-
-
 
 }
 
 @media (max-width: 360px) {
-
 
 	#content .gallery-columns-2 .gallery-item {
 		width: 45%;
@@ -3637,26 +3482,21 @@ a.slide-out-div.archive-portfolio {
 	}
 
 	#content .gallery-columns-2 .gallery-item img {
-
 		width: 100%;
 		height: auto;
 
 	}
 
 	.caroufredsel_wrapper {
-
 		min-height: 80px !important;
 
 	}
-
-
 
 	body {
 		padding: 0;
 	}
 
 	#page {
-
 	margin-top: 0;
 
 	}
@@ -3665,8 +3505,8 @@ a.slide-out-div.archive-portfolio {
 		border-top: none;
 	}
 
-
 }
+
 html,body{
 	overflow-x:hidden !important;
 }
@@ -3697,6 +3537,7 @@ html,body{
 }
 #portfolio-click{
 	height:100%;
+	cursor: pointer;
 }
 #nav-contatos{
 	height:600px;
@@ -3707,6 +3548,7 @@ html,body{
     outline:none;
     position:absolute;
 	margin-top: -20px;
+	cursor: pointer;
 }
 #portfolio-banner{
 	display: block;
