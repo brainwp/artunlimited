@@ -3,28 +3,54 @@
 		<div id="content-interno" class="site-content" role="main">
 		
 		<div class="archive-portfolio">
-			
-			        <div class="header-portfolio">
 
-                        <div id="busca-aba" class="portfolio">
-                            <div id="lupa-aba"></div>
-                            <form id="searchform" action="<?php bloginfo('url'); ?>/" method="get">
-								
-								<input class="inlineSearch" type="text" name="s" value="<?php echo __('[:en]search[:pb]busca[:]'); ?>" onblur="if (this.value == '') {this.value = '<?php echo __('[:en]search[:pb]busca[:]'); ?>';}" onfocus="if (this.value == '<?php echo __('[:en]search[:pb]busca[:]'); ?>') {this.value = '';}" />
-								<input type="hidden" name="post_type" value="portfolio" />
-								<!-- <input class="inlineSubmit" id="searchsubmit" type="submit" alt="Search" value="Buscar" /> -->
-                            </form>
-                        </div><!-- #busca-aba -->
-                        <div id="linguas">
+		  <div class="header-portfolio">
+
+       <div class="area-4-header">
+        <!-- <div id="link-login">
+        	<div id="cadeado"></div>
+			<div id="form-login" class="tgl">	
+				<?php // if (!(current_user_can('level_0'))){ ?>
+				<form action="<?php // bloginfo( 'home' ); ?>/wp-login.php" method="post">
+				<div class="linha-form">
+					<div class="linha-form-a-login">Login</div>
+					<div class="linha-form-b"><input type="text" name="log" id="log" value="<?php // echo wp_specialchars(stripslashes($user_login), 1) ?>" size="20" />
+					</div>
+				</div>
+
+				<div class="linha-form">
+					<div class="linha-form-a-senha">Senha</div>
+					<div class="linha-form-b"><input type="password" name="pwd" id="pwd" size="15" /><input type="submit" name="submit" value="ok" class="button" /></div>
+				</div>
+					<input type="hidden" name="redirect_to" value="<?php // echo $_SERVER['REQUEST_URI']; ?>" />
+				</form>
+				<a href="<?php // bloginfo( 'home' ); ?>/wp-login.php?action=lostpassword">Esqueceu a Senha?</a>
+				<?php // } else { ?>
+				<div class="linha-form-logada">				
+				<a href="<?php // echo wp_logout_url( get_permalink() ); ?>" title="Sair">Sair</a>
+				<a href="<?php // bloginfo( 'home' ); ?>/wp-admin/">Admin</a>
+				</div>
+				<?php // }?>
+			</div>
+        </div> -->
+    </div><!-- .area-4-header -->
+		
+	<div class="area-3-header portfolio">
+
+        <div id="linguas">
         	
-				            <?php 	
-				            	if (function_exists('dynamic_sidebar')) {
-									dynamic_sidebar('Widget no menu');
-								} 
-							?>
-				         
-				        </div><!-- #linguas -->
-                    </div><!-- .header-categories -->
+            <?php 	
+            	if (function_exists('dynamic_sidebar')) {
+					dynamic_sidebar('Widget no menu');
+				} 
+			?>
+         
+        </div><!-- #linguas -->
+    </div><!-- .area-3-header -->
+
+      
+    </div><!-- .header-portfolio -->
+
 			
 						<?php
 							/* $paged é a variável para paginação do Loop CPT Projetos */	$paged = (get_query_var('paged')) ? get_query_var('paged') : 1;

@@ -1,6 +1,6 @@
 <?php
 
-$themename = "Minhas Op&ccedil;&otilde;es";
+$themename = "Redes Sociais";
 $shortname = "mo";
 
 $categories = get_categories('hide_empty=0&orderby=name');
@@ -111,7 +111,7 @@ case "close":
  
 case "title":
 ?>
-<p>Use <?php echo $themename;?> para configurar algumas partes do seu tema.</p>
+<p>Use as caixas abaixo para preencher as <?php echo $themename;?> do seu tema.</p>
 
  
 <?php break;

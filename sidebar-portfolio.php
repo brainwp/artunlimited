@@ -6,6 +6,7 @@
  */
 ?>
     <div id="linguas">
+    <h2 class="fonte-roxa"><?php echo __('[:en]Choose language[:pb]Escolha o Idioma[:]'); ?></h2>
     <?php 	
     	if (function_exists('dynamic_sidebar')) {
 			dynamic_sidebar('Widget no menu');
@@ -14,7 +15,7 @@
 	</div><!-- #linguas -->
 
 	<div class="compartilhe-sidebar">
-	<h2 class="fonte-roxa"><?php echo __('[:en]Share![:pb]compartilhe![:]'); ?></h2>
+	<h2 class="fonte-roxa"><?php echo __('[:en]Share![:pb]Compartilhe![:]'); ?></h2>
 	<div class="compartilhe-sidebar-facebook">
 	<a class="a-compartilhe" href="<?php the_permalink() ?>?share=facebook&nb=1" target="_blank"></a>
 	</div><!-- .compartilhe-sidebar-facebook -->
@@ -27,7 +28,7 @@
 	
 	<div class="outros-projetos">
 		
-			<h2 class="fonte-roxa"><?php echo __('[:en]Other Projects:[:pb]outros projetos:[:]'); ?></h2>
+			<h2 class="fonte-roxa"><?php echo __('[:en]Other projects:[:pb]Outros projetos:[:]'); ?></h2>
 			<div class="setas-outros">
 			<a id="prev3" href="#"><div class="seta-outros-anteriores">
 			</div></a>

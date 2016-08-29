@@ -142,13 +142,11 @@ if ( is_user_logged_in() ) {
 		 <div class="area-3-header">
         
         <div id="linguas">
-        	
             <?php 	
             	if (function_exists('dynamic_sidebar')) {
 					dynamic_sidebar('Widget no menu');
 				} 
 			?>
-         
         </div><!-- #linguas -->
         </div><!-- .area-3-header -->
 		
