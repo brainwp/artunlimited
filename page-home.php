@@ -212,23 +212,11 @@ get_header( 'home' ); ?>
             ?>
 	
 					<div class="header-sub-content">
-						<div class="titulo-header"><h2><?php echo __('[:en]Where to find us[:pb]Onde nos Encontrar:[:]'); ?></h2></div>
+						<div class="titulo-header"><h2><?php the_title(); ?></h2></div>
 					</div><!-- .header-sub-content -->
 	             
 			        <div class="content-contatos">
 							
-			  			<!--<div class="esquerda-contatos">
-				            <?php // echo get_post_meta($contatos->ID,'meta_endereco',true); ?><br />
-				            <?php // echo get_post_meta($contatos->ID,'meta_bairro',true); ?><br />
-				            <?php // echo get_post_meta($contatos->ID,'meta_cep',true); ?><br />
-				            <?php // echo get_post_meta($contatos->ID,'meta_cidade_uf_pais',true); ?><br />
-			            </div> .esquerda-contatos -->
-							
-			  			<!--<div class="direita-contatos">
-			            	Tel. <?php // echo get_post_meta($contatos->ID,'meta_telefone_a',true); ?><br />
-			            	<?php // echo get_post_meta($contatos->ID,'meta_telefone_b',true); ?><br />
-			            </div> .direita-contatos -->
-			            
 						<div class="clear"></div>
 						
 						<?php echo $content_contatos; ?>
