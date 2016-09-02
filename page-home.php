@@ -212,7 +212,7 @@ get_header( 'home' ); ?>
             ?>
 	
 					<div class="header-sub-content">
-						<div class="titulo-header"><h2><?php the_title(); ?></h2></div>
+						<div class="titulo-header"><h2><?php echo apply_filters('the_title',$contatos->post_title); ?></h2></div>
 					</div><!-- .header-sub-content -->
 	             
 			        <div class="content-contatos">

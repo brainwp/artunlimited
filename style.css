@@ -1401,21 +1401,12 @@ li.lang-pb .active {
 
 div.slider-nav span.left {
 	background: url("images/setas.png") no-repeat scroll -5px center transparent !important;
+	left: 0;
 }
 
 div.slider-nav span.right {
 	background: url("images/setas.png") no-repeat scroll -75px center transparent !important;
 }
-
-
-div.slider-nav span.left {
-    background: url("images/left-arrow.png") repeat scroll 0 0 rgba(0, 0, 0, 0);
-    left: 0;
-}
-div.slider-nav span.left {
-    background: url("images/setas.png") no-repeat scroll -5px center rgba(0, 0, 0, 0) !important;
-}
-
 
 #orbit-inside img.orbit-slide {
     height: 100%;
@@ -1782,7 +1773,7 @@ height: 100%;
 
 .titulo-header-noticias {
     float: left;
-    margin: 40px 0 0 0;
+    margin: 40px 0 0 60px;
     width: auto;
 	font-family: 'Roboto', Arial, sans-serif
 }
@@ -2707,6 +2698,61 @@ a.titulo-resumo {
 	font-weight: 100;
 }
 
+#portfolio-content{
+	display:none;
+	max-width:1280px;
+	padding-bottom: 100px;
+}
+#portfolio-container{
+	overflow-y:scroll !important;
+	background: transparent;
+	transition:500ms ease all;
+    background:#f2f2f2;
+	right:0;
+}
+#portfolio-container{
+	display:none;
+	position: absolute;
+}
+#portfolio-container.isopen{
+	padding:20px 10px 60px 20px;
+	margin-bottom: 100px;
+	display: block;
+	right:-3px !important;
+}
+#page{
+	overflow: hidden;
+}
+#portfolio-click{
+	height:100%;
+	cursor: pointer;
+}
+#nav-contatos{
+	height:600px;
+}
+#portfolio-open{
+	display: block;
+    text-indent:-99999px;
+    outline:none;
+    position:absolute;
+	margin-top: -20px;
+	cursor: pointer;
+}
+#portfolio-banner{
+	display: block;
+	position: absolute;
+	right:0;
+	height:100%;
+	z-index:99998;
+	cursor: pointer;
+}
+#portfolio-banner a{
+	height:100%;
+}
+.portfolio-ajax{
+	cursor:pointer;
+}
+
 /* =Preloader
 ----------------------------------------------- */
 
@@ -2996,21 +3042,19 @@ a.zilla-button.blue:hover {
 }
 
 
-/* Testes de Aba
+/* Aba Portfolio
 ----------------------------------------------- */
 
 .slide-out-div {
-        width: 70%;
-        background: #f2f2f2;
-	z-index: 99999;
+		width: 70%;
+		background: #f2f2f2;
+		z-index: 99999;
     }
 
-.handle	  {
-
+.handle	 {
 	   background: top center #4d449b;
 	   width: 50px;
 	   height: 100%;
-
 	   }
 
 a.slide-out-div.archive-portfolio {
@@ -3022,12 +3066,10 @@ a.slide-out-div.archive-portfolio {
 }
 
 .home-portfolio .cada-projeto {
-
     margin: 0 2% 1.5% 0;
     min-height: 280px;
     width: 31.3%;
 }
-
 
 
 /* =Responsive Structure
@@ -3370,7 +3412,7 @@ a.slide-out-div.archive-portfolio {
 	}
 
 	.titulo-header-noticias {
-		margin: 40px 0 0 60px;
+		margin: 40px 0 0 0px;
 	}
 
 
@@ -3382,8 +3424,26 @@ a.slide-out-div.archive-portfolio {
 
 	body, input, textarea {
 		font-size: 13px;
-
 	}
+
+	.menu-toggle, .main-small-navigation ul.nav-menu.toggled-on {
+	display: block;
+	}
+
+	nav.navigation-main li {
+		display: none;
+	}
+
+	nav select {
+		display: inline-block;
+		margin-left: 15px;
+	}
+
+	div.slider-nav span.right {
+		width: 45px;
+		margin-right: 15px;
+	}
+
 
 	#wpadminbar {
 	    position: fixed;
@@ -3476,6 +3536,27 @@ a.slide-out-div.archive-portfolio {
 
 @media (max-width: 360px) {
 
+	.botao-portfolio-menu {
+    display: none;
+	}
+
+	.navigation-main {
+	margin: 17px 0 20px 20px;
+    width: 60%;
+	}
+
+	#linguas {
+    margin: 10px 20px 0 0;
+	}
+
+	.area-4-header {
+    display: none;
+	}
+
+	.area-3-header.portfolio {
+    margin-top: 0px;
+	}
+
 	#content .gallery-columns-2 .gallery-item {
 		width: 45%;
 		padding-right: 4%;
@@ -3505,62 +3586,12 @@ a.slide-out-div.archive-portfolio {
 		border-top: none;
 	}
 
-}
+	#redes {
+	display: none;
+	}
 
-html,body{
-	overflow-x:hidden !important;
-}
-#portfolio-content{
-	display:none;
-	max-width:1280px;
-	padding-bottom: 100px;
-}
-#portfolio-container{
-	overflow-y:scroll !important;
-	background: transparent;
-	transition:500ms ease all;
-    background:#f2f2f2;
-	right:0;
-}
-#portfolio-container{
-	display:none;
-	position: absolute;
-}
-#portfolio-container.isopen{
-	padding:20px 10px 60px 20px;
-	margin-bottom: 100px;
-	display: block;
-	right:-3px !important;
-}
-#page{
-	overflow: hidden;
-}
-#portfolio-click{
-	height:100%;
-	cursor: pointer;
-}
-#nav-contatos{
-	height:600px;
-}
-#portfolio-open{
-	display: block;
-    text-indent:-99999px;
-    outline:none;
-    position:absolute;
-	margin-top: -20px;
-	cursor: pointer;
-}
-#portfolio-banner{
-	display: block;
-	position: absolute;
-	right:0;
-	height:100%;
-	z-index:99998;
-	cursor: pointer;
-}
-#portfolio-banner a{
-	height:100%;
-}
-.portfolio-ajax{
-	cursor:pointer;
+	.infos-rodape {
+    width: 100%;
+	}
+
 }
