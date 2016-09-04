@@ -912,50 +912,37 @@ nav select {
 	background: url(images/img-sprite.png) -269px 0 no-repeat;
 }
 
-
-
 #facebook:hover {
-
 	background-position: -269px -34px;
-
 }
-
-
 
 #linkedin {
-
 	background: url(images/img-sprite.png) -310px 0 no-repeat;
-
 	margin-left: 5px;
-
 }
-
 
 
 #linkedin:hover {
-
 	background-position: -310px -34px;
-
 }
-
-
 
 .a-redes {
 	width: 34px;
 	height: 34px;
 	position: absolute;
-
 }
-
-
 
 #linguas {
 	width: 60px;
 	margin: 38px 5px 0 0;
     float: right;
-
 }
 
+.archive-portfolio #linguas {
+	width: 60px;
+	margin: 38px 40px 0 0;
+    float: right;
+}
 
 .qtranxs_widget ul.qtranxs_language_chooser li {
 	width: 30px;
@@ -1167,12 +1154,21 @@ li.lang-pb .active {
 .top-barra:hover {
 	background-position: -50px 20px;
 }
-.etiqueta-barra-portfolio-archive {
+
+html[lang="pt-BR"] .etiqueta-barra-portfolio-archive {
     background: url("images/escrita-portfolio.png") no-repeat scroll 0 -20px #4D449B;
     height: 4000px;
     margin: 230px 0 0;
     width: 50px;
 }
+
+html[lang="en-US"] .etiqueta-barra-portfolio-archive {
+    background: url("images/escrita-portfolio-en.png") no-repeat scroll 0 -20px #4D449B;
+    height: 4000px;
+    margin: 230px 0 0;
+    width: 50px;
+}
+
 
 .etiqueta-barra-novosprojetos-archive {
     background: url("images/escrita-novos-projetos.png") no-repeat scroll 0 -20px #4D449B;
@@ -1194,7 +1190,7 @@ li.lang-pb .active {
 	z-index: 99999;
 }
 
-.etiqueta-barra-portfolio {
+html[lang="pt-BR"] .etiqueta-barra-portfolio {
 	background: url("images/escrita-portfolio.png") no-repeat scroll center top #4D449B;
 	width: 50px;
 	height: 210px;
@@ -1205,6 +1201,16 @@ li.lang-pb .active {
 	box-shadow:         -7px 0px 6px rgba(50, 50, 50, 0.27);
 }
 
+html[lang="en-US"] .etiqueta-barra-portfolio {
+	background: url("images/escrita-portfolio-en.png") no-repeat scroll center top #4D449B;
+	width: 50px;
+	height: 210px;
+	position: fixed;
+	display: block;
+	-webkit-box-shadow: -7px 0px 6px rgba(50, 50, 50, 0.27);
+	-moz-box-shadow:    -7px 0px 6px rgba(50, 50, 50, 0.27);
+	box-shadow:         -7px 0px 6px rgba(50, 50, 50, 0.27);
+}
 
 .botao-portfolio-menu {
    	background-color: #4D449B;
@@ -1773,7 +1779,7 @@ height: 100%;
 
 .titulo-header-noticias {
     float: left;
-    margin: 40px 0 0 60px;
+    margin: 40px 0 0 0px;
     width: auto;
 	font-family: 'Roboto', Arial, sans-serif
 }
@@ -3411,11 +3417,6 @@ a.slide-out-div.archive-portfolio {
 	display: none;
 	}
 
-	.titulo-header-noticias {
-		margin: 40px 0 0 0px;
-	}
-
-
 }
 
 
@@ -3509,7 +3510,7 @@ a.slide-out-div.archive-portfolio {
 	}
 
 	.area-3-header.portfolio {
-    margin-right: 60px;
+    margin-right: 40px;
 	}
 
 	.area-4-header {
