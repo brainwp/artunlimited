@@ -25,17 +25,6 @@
 	<!--[if lt IE 9 ]><script src="/lib/respond.min.js"></script><![endif]-->
 	<?php wp_head(); ?>
 </head>
-
-<?php
-global $current_user;
-get_currentuserinfo();
-if ( is_user_logged_in() ) {
-	$d = 'ol&aacute;, '.  $current_user->user_login .'!';
-} else {
-	$d = 'acesso restrito';
-}
-?>
-
 <body <?php body_class(); ?>>
 	<div class="overlay"></div>
 	<div id="page" class="hfeed site site-home">
@@ -110,32 +99,14 @@ if ( is_user_logged_in() ) {
         </div><!-- #logo -->
                 
         <div class="area-4-header">
-        <div id="link-login">
-        	<div id="cadeado"></div><!-- #cadeado -->
-			<div id="form-login" class="tgl">	
-				<?php if (!(current_user_can('level_0'))){ ?>
-				<form action="<?php bloginfo( 'home' ); ?>/wp-login.php" method="post">
-				<div class="linha-form">
-					<div class="linha-form-a-login">Login</div>
-					<div class="linha-form-b"><input type="text" name="log" id="log" value="<?php echo wp_specialchars(stripslashes($user_login), 1) ?>" size="20" />
-					</div>
-				</div>
-
-				<div class="linha-form">
-					<div class="linha-form-a-senha">Senha</div>
-					<div class="linha-form-b"><input type="password" name="pwd" id="pwd" size="15" /><input type="submit" name="submit" value="ok" class="button" /></div>
-				</div>
-					<input type="hidden" name="redirect_to" value="<?php echo $_SERVER['REQUEST_URI']; ?>" />
-				</form>
-				<a href="<?php bloginfo( 'home' ); ?>/wp-login.php?action=lostpassword">Esqueceu a Senha?</a>
-				<?php } else { ?>
-				<div class="linha-form-logada">				
-				<a href="<?php echo wp_logout_url( get_permalink() ); ?>" title="Sair">Sair</a>
-				<a href="<?php bloginfo( 'home' ); ?>/wp-admin/">Admin</a>
-				</div>
-				<?php }?>
-
-			</div><!-- #form-login -->
+              <div id="link-login">
+        <a href="<?php bloginfo( 'home' ); ?>/wp-admin/">
+        	<div id="cadeado">
+			</div><!-- #cadeado -->
+			<spam class="link-tgl">			
+				<?php echo __('[:en]Login Area[:pb]Acesso Restrito[:]');?>
+			</span>
+		</a>
         </div><!-- #link-login -->
         </div><!-- .area-4-header -->
 		

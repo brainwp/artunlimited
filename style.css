@@ -1044,7 +1044,7 @@ li.lang-pb .active {
 	width: 30px;
 	height: 34px;
 	background: url(images/img-sprite.png) -430px 0 no-repeat;
-	margin: 0 5px 0 0;
+	margin: 0 3px 0 0;
 }
 
 
@@ -1061,6 +1061,8 @@ li.lang-pb .active {
     cursor: pointer;
     display: block;
     margin: 15px 0 15px;
+    float: left;
+    font-size: 1.2em;
 }
 
 
