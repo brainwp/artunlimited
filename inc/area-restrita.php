@@ -1,8 +1,9 @@
 <?php 
-// cria user 'client'
-// cria user 'client'
-// cria user 'client'
-$result = add_role( 'client', __('Client' ), array(
+
+// cria user 'parceiro'
+// cria user 'parceiro'
+// cria user 'parceiro'
+$result = add_role( 'parceiro', __('Parceiro' ), array(
 	'read' => true, // true allows this capability
 	'edit_posts' => false, // Allows user to edit their own posts
 	'edit_pages' => false, // Allows user to edit pages
@@ -19,15 +20,15 @@ $result = add_role( 'client', __('Client' ), array(
 
 );
 
-//redireciona user 'client' para página projetos
-//redireciona user 'client' para página projetos
-//redireciona user 'client' para página projetos
+//redireciona user 'parceiro' para página projetos
+//redireciona user 'parceiro' para página projetos
+//redireciona user 'parceiro' para página projetos
 function redireciona_login( $redirect_to, $request, $user ) {
     global $user;
     if ( isset( $user->roles ) && is_array( $user->roles ) ) 
     {
         //check for admins
-        if ( in_array( 'client', $user->roles ) ) 
+        if ( in_array( 'parceiro', $user->roles ) ) 
         {
 
             return get_home_url( ).'/projetos';
@@ -42,14 +43,14 @@ add_filter( 'login_redirect', 'redireciona_login', 10, 3 );
 
 
 
-// impede user 'client' de usar admin
-// impede user 'client' de usar admin
-// impede user 'client' de usar admin
+// impede user 'parceiro' de usar admin
+// impede user 'parceiro' de usar admin
+// impede user 'parceiro' de usar admin
 function tira_do_admin()
 {
     global $current_user;
     wp_get_current_user();
- 	if ( in_array( 'client', $current_user->roles ) ) {
+ 	if ( in_array( 'parceiro', $current_user->roles ) ) {
          // wp_redirect( home_url() ); exit;
 
     }
@@ -59,11 +60,11 @@ add_action('admin_init', 'tira_do_admin');
 
 
 
-// remove barra de admin do user 'client'
-// remove barra de admin do user 'client'
-// remove barra de admin do user 'client'
+// remove barra de admin do user 'parceiro'
+// remove barra de admin do user 'parceiro'
+// remove barra de admin do user 'parceiro'
 
 function remove_barra_admin($content) {
-	return ( !current_user_can( 'client' ) ) ? $content : false;
+	return ( !current_user_can( 'parceiro' ) ) ? $content : false;
 }
 add_filter( 'show_admin_bar' , 'remove_barra_admin');
