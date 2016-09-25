@@ -20,7 +20,6 @@ if ( $role != 'parceiro' AND $role!= "administrator") {
 		<div id="content-interno" class="site-content" role="main">
 		
 		<div class="archive-portfolio">
-			<a href="<?php echo wp_logout_url( get_home_url()); ?>">Logout</a>
 
 			        <div class="header-portfolio">
                         <div id="busca-aba" class="portfolio">
