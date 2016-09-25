@@ -197,7 +197,11 @@ require get_template_directory() . '/custom-portfolio.php';
 /**
  * Load CPT Novos Projetos
  */
-// require get_template_directory() . '/custom-novos-projetos.php';
+require get_template_directory() . '/custom-novos-projetos.php';
+/**
+ * Load CPT Novos Projetos
+ */
+require get_template_directory() . '/inc/area-restrita.php';
 
 
 /**

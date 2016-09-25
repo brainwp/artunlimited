@@ -177,7 +177,7 @@ $i++;
 ?>
 
 <div class="rm_section">
-<div class="rm_title"><h3><img src="<?php bloginfo('stylesheet_directory')?>/options/images/trans.png" class="inactive" alt="""><?php echo $value['name']; ?></h3><span class="submit"><input name="save<?php echo $i; ?>" class="button-primary" type="submit" value="Salvar Altera&ccedil;&otilde;es" />
+<div class="rm_title"><h3><img src="<?php bloginfo('stylesheet_directory')?>/options/images/trans.png" class="inactive" alt=""><?php echo $value['name']; ?></h3><span class="submit"><input name="save<?php echo $i; ?>" class="button-primary" type="submit" value="Salvar Altera&ccedil;&otilde;es" />
 </span><div class="clearfix"></div></div>
 <div class="rm_options">
 
@@ -204,5 +204,5 @@ $i++;
 ?>
 <?php
 add_action('admin_init', 'mytheme_add_init');
-add_action('admin_menu', 'mytheme_add_admin');
+// add_action('admin_menu', 'mytheme_add_admin');
 ?>

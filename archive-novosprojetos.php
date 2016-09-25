@@ -1,9 +1,27 @@
+<?php 
+if (!is_user_logged_in()) {
+	header( 'Location: '.get_home_url( ) ) ; 
+	die();
+}
+	global $current_user, $wpdb;
+	$role = $wpdb->prefix . 'capabilities';
+	$current_user->role = array_keys($current_user->$role);
+
+	$role = $current_user->role[0];
+	
+if ( $role != 'parceiro' AND $role!= "administrator") {
+	header( 'Location: '.get_home_url( ) ) ; 
+	die();
+
+	} 
+?>
 <?php get_header( 'novosprojetos' ); ?>
 
 		<div id="content-interno" class="site-content" role="main">
 		
 		<div class="archive-portfolio">
-			
+			<a href="<?php echo wp_logout_url( get_home_url()); ?>">Logout</a>
+
 			        <div class="header-portfolio">
                         <div id="busca-aba" class="portfolio">
                             <div id="lupa-aba"></div>

@@ -45,7 +45,7 @@
 				<div class="header-portfolio">
 					<div id="busca-aba" class="portfolio">
 						<div id="lupa-aba"></div>
-						<form id="searchform" action="<?php bloginfo('url'); ?>/" method="get">
+						<form id="searchform" action="<?php home_url( );; ?>/" method="get">
 							<input class="inlineSearch" type="text" name="s" value="<?php echo __('[:en]search[:pb]busca[:]'); ?>" onblur="if (this.value == '') {this.value = '<?php echo __('[:en]search[:pb]busca[:]'); ?>';}" onfocus="if (this.value == '<?php echo __('[:en]search[:pb]busca[:]'); ?>') {this.value = '';}" />
 							<input type="hidden" name="post_type" value="portfolio" /> 
 							<!-- <input class="inlineSubmit" id="searchsubmit" type="submit" alt="Search" value="Buscar" /> -->
@@ -100,7 +100,7 @@
                 
         <div class="area-4-header">
               <div id="link-login">
-        <a href="<?php bloginfo( 'home' ); ?>/wp-admin/">
+        <a href="<?php echo get_site_url(); ?>/wp-admin/">
         	<div id="cadeado">
 			</div><!-- #cadeado -->
 			<spam class="link-tgl">			

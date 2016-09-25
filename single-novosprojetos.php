@@ -1,3 +1,20 @@
+<?php 
+if (!is_user_logged_in()) {
+	header( 'Location: '.get_home_url( ) ) ; 
+	die();
+}
+	global $current_user, $wpdb;
+	$role = $wpdb->prefix . 'capabilities';
+	$current_user->role = array_keys($current_user->$role);
+
+	$role = $current_user->role[0];
+	
+if ( $role != 'parceiro' AND $role!= "administrator" AND $role!='editor' ) {
+	header( 'Location: '.get_home_url( ) ) ; 
+	die();
+
+	} 
+?>
 <?php
 /**
  * The Template for displaying all single posts.

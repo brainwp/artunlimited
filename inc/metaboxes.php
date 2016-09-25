@@ -53,7 +53,7 @@
 		)
     );
 	
-add_action('admin_menu', 'mytheme_add_box');
+// add_action('admin_menu', 'mytheme_add_box');
    
 // Adiciona o MetaBox
 function mytheme_add_box() {
