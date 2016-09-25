@@ -51,7 +51,7 @@ function tira_do_admin()
     global $current_user;
     wp_get_current_user();
  	if ( in_array( 'parceiro', $current_user->roles ) ) {
-         // wp_redirect( home_url() ); exit;
+         wp_redirect( home_url() ); exit;
 
     }
 }

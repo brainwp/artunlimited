@@ -92,7 +92,7 @@
 
 			<div class="area-4-header">
 				        <div id="link-login">
-        <a href="<?php bloginfo( 'home' ); ?>/wp-admin/">
+        <a href="<?php home_url( ); ?>/wp-admin/">
         	<div id="cadeado">
 			</div><!-- #cadeado -->
 			<spam class="link-tgl">			
