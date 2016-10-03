@@ -65,6 +65,15 @@ add_action('admin_init', 'tira_do_admin');
 // remove barra de admin do user 'parceiro'
 
 function remove_barra_admin($content) {
-	return ( !current_user_can( 'parceiro' ) ) ? $content : false;
+    if (is_user_logged_in()){
+       global $current_user;
+        wp_get_current_user();
+        if ( in_array( 'parceiro', $current_user->roles ) ) {
+             return false;
+        }
+        return true; 
+    }
+    return false;
+	
 }
 add_filter( 'show_admin_bar' , 'remove_barra_admin');
