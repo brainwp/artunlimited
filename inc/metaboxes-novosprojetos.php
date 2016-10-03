@@ -30,7 +30,14 @@ $meta_box_novosprojetos = array(
 		'id' => $prefix . 'subtitulo',
 		'type' => 'text',
 		'std' => ''
-		)
+		),
+        array(
+        'name' => 'Cr&eacute;dito das Fotografias do Projeto',
+        'desc' => 'Adicione o nome do Fot&oacute;grafo do Projeto',
+        'id' => $prefix . 'credito',
+        'type' => 'text',
+        'std' => ''
+        ),
 	)
 );
 
@@ -96,38 +103,40 @@ function show_metanovosprojetos() {
 	
 	add_action('save_post', 'save_metanovosprojetos');
     // Save data from meta box
-    function save_metanovosprojetos($post_id) {
+function save_metanovosprojetos($post_id) {
     global $meta_box_novosprojetos;
-	
-
-	
     // verify nonce
-    if (!wp_verify_nonce($_POST['metanovosprojetos_nonce'], basename(__FILE__))) {
-    return $post_id;
+    if (isset($_POST['metanovosprojetos_nonce'])&&!wp_verify_nonce($_POST['metanovosprojetos_nonce'], basename(__FILE__))) {
+        return $post_id;
     }
     // Checa se AutoSave está ativo e o ignora
     if (defined('DOING_AUTOSAVE') && DOING_AUTOSAVE) {
-    return $post_id;
+        return $post_id;
     }
     // Checa as Permissões do Usuário
-    if ('page' == $_POST['post_type']) {
-    if (!current_user_can('edit_page', $post_id)) {
-    return $post_id;
-    }
-    } elseif (!current_user_can('edit_post', $post_id)) {
-    return $post_id;
+    if (isset($_POST['post_type'])&&'page' == $_POST['post_type']) {
+        if (!current_user_can('edit_page', $post_id)) {
+            return $post_id;
+        }
+    } 
+    elseif (!current_user_can('edit_post', $post_id)) {
+        return $post_id;
     }
     
 	foreach ($meta_box_novosprojetos['fields'] as $field) {
-    $old = get_post_meta($post_id, $field['id'], true);
-    $new = $_POST[$field['id']];
-    if ($new && $new != $old) {
-    update_post_meta($post_id, $field['id'], $new);
-    } elseif ('' == $new && $old) {
-    delete_post_meta($post_id, $field['id'], $old);
+        $old = get_post_meta($post_id, $field['id'], true);
+        if (isset($_POST[$field['id']])) {
+           $new = $_POST[$field['id']];
+           if ($new && $new != $old) {
+                update_post_meta($post_id, $field['id'], $new);
+            }
+            elseif ('' == $new && $old) {
+                delete_post_meta($post_id, $field['id'], $old);
+            }
+        }
+    
     }
-    }
-    }
+}
  /**
  * Adiciona o CSS para o jQuery DatePicker da Agenda e demais estilos
  */
