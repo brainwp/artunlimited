@@ -21,7 +21,7 @@ get_header( 'interno' ); ?>
 					<p><?php _e( 'Parece que n&atilde;o foi poss&iacute;vel encontrar o que voc&ecirc; est&aacute; buscando. Talvez fazer uma pesquisa possa ajudar.', 'artunlimited' ); ?></p>
 
 					<div class="form-content-interno">					
-						<form method="get" id="searchform-interno" class="searchform-interno" action="<?php echo esc_url( home_url( '/' ) ); ?>" role="search">
+						<form method="get" id="searchform-interno" class="searchform-interno" action="<?php echo esc_url( echo get_home_url( '/' ) ); ?>" role="search">
 						<label for="s" class="screen-reader-text"><?php _ex( 'Search', 'assistive text', 'artunlimited' ); ?></label>
 						<input type="search" class="field-interno" name="s" value="<?php echo esc_attr( get_search_query() ); ?>" placeholder="<?php echo esc_attr_x( 'pesquisar', 'placeholder', 'artunlimited' ); ?>" />
 						<input type="submit" class="submit-interno" id="searchsubmit" value="<?php echo esc_attr_x( 'busca', 'submit button', 'artunlimited' ); ?>" />

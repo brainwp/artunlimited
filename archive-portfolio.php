@@ -16,7 +16,7 @@
 		</div> -->
 		<!-- <div class="area-4-header">
 				<div id="link-login">
-					<a href="<?php // home_url( );?>/wp-admin/">
+					<a href="<?php // echo get_home_url( );?>/wp-admin/">
 						<div id="cadeado">
 						</div>
 						<span class="link-tgl">			

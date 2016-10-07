@@ -101,7 +101,7 @@
                 
     <div class="area-4-header">
         <div id="link-login">
-        <a href="<?php home_url( );?>/wp-admin/">
+        <a href="<?php echo get_home_url( );?>/wp-admin/">
         	<div id="cadeado">
 			</div><!-- #cadeado -->
 			<spam class="link-tgl">			
@@ -130,7 +130,7 @@
 		
 				<ul class="menu">
 					<li class="first-menu-item menu-item menu-item-type-post_type menu-item-object-page menu-item-336" id="menu-item-336"><a href="javascript:scroll_to('#nav-quem-somos');"><?php echo __('[:en]About us[:pb]Quem somos[:]') ?></a></li>
-					<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-30" id="menu-item-1327"><a href="<?php echo home_url('index.php/portfolio'); ?>"><?php echo __('[:en]Portfolio[:pb]Portf&oacute;lio[:]'); ?></a></li>
+					<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-30" id="menu-item-1327"><a href="<?php echo get_home_url('index.php/portfolio'); ?>"><?php echo __('[:en]Portfolio[:pb]Portf&oacute;lio[:]'); ?></a></li>
 					<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-30" id="menu-item-30"><a href="javascript:scroll_to('#nav-premios');"><?php echo __('[:en]Awards[:pb]Pr&ecirc;mios[:]'); ?></a></li>
 					<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-28" id="menu-item-28"><a href="javascript:scroll_to('#nav-clientes-parceiros');"><?php echo __('[:en]Clients and partners[:pb]Clientes e Parceiros[:]'); ?></a></li>
 					<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-288" id="menu-item-288"><a href="javascript:scroll_to('#nav-noticias');"><?php echo __('[:en]News[:pb]Not&iacute;cias[:]'); ?></a></li>
@@ -140,7 +140,7 @@
 			</nav><!-- #site-navigation -->
 			
 	<div class="botao-portfolio-menu">
-		<a class="etiqueta-barra-botao-portfolio-menu" href="<?php echo home_url('index.php/portfolio'); ?>">
+		<a class="etiqueta-barra-botao-portfolio-menu" href="<?php echo get_home_url('index.php/portfolio'); ?>">
 		</a>
 	</div>
         
