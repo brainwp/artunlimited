@@ -2331,7 +2331,7 @@ body.single-projects #carousel_wrap { margin: 15px 0 30px }
     height: 200px;
     width: 50px;
 }
-.single-portfolio #main {
+.single-portfolio #main, .single-novosprojetos #main {
 	max-width: 1230px;
 	clear: none;
 	margin-left: 50px;
