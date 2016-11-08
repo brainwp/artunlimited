@@ -23,7 +23,7 @@
 	<a class="barra" href="<?php echo get_home_url(); ?>">
     <div class="top-barra"></div>
     </a>
-    <a class="a-etiqueta" href="<?php echo get_home_url('index.php/projetos/'); ?>">
+    <a class="a-etiqueta" href="<?php echo get_home_url(); ?>/projetos/">
 	<div class="etiqueta-barra-novosprojetos-archive"></div>
     </a>
 </div><!-- .barra -->
