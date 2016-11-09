@@ -6,24 +6,24 @@
  */
 ?>
     <div id="linguas">
-    <h2 class="fonte-roxa"><?php echo __('[:en]Choose language[:pb]Escolha o Idioma[:]'); ?></h2>
-    <?php 	
-    	if (function_exists('dynamic_sidebar')) {
-			dynamic_sidebar('Widget no menu');
-		} 
-	?>
+	    <h2 class="fonte-roxa"><?php echo __('[:en]Choose language[:pb]Escolha o Idioma[:]'); ?></h2>
+	    <?php 	
+	    	if (function_exists('dynamic_sidebar')) {
+				dynamic_sidebar('Widget no menu');
+			} 
+		?>
 	</div><!-- #linguas -->
 
 	<div class="compartilhe-sidebar">
-	<h2 class="fonte-roxa"><?php echo __('[:en]Share![:pb]Compartilhe![:]'); ?></h2>
-	<div class="compartilhe-sidebar-facebook">
-	<a class="a-compartilhe" href="<?php the_permalink() ?>?share=facebook&nb=1" target="_blank"></a>
-	</div><!-- .compartilhe-sidebar-facebook -->
-	<div class="compartilhe-sidebar-email">
-	<a class="a-compartilhe" href="mailto:<?php echo get_option( 'mo_email' ); ?>" target="_blank"></a>
-	</div><!-- .compartilhe-sidebar-email -->
-	<div class="">
-	</div><!--  -->
+		<h2 class="fonte-roxa"><?php echo __('[:en]Share![:pb]Compartilhe![:]'); ?></h2>
+		<div class="compartilhe-sidebar-facebook">
+			<a class="a-compartilhe" href="<?php the_permalink() ?>?share=facebook&nb=1" target="_blank"></a>
+		</div><!-- .compartilhe-sidebar-facebook -->
+		<div class="compartilhe-sidebar-email">
+			<a class="a-compartilhe" href="mailto:<?php echo get_option( 'mo_email' ); ?>" target="_blank"></a>
+		</div><!-- .compartilhe-sidebar-email -->
+		<div class="">
+		</div><!--  -->
 	</div><!-- .compartilhe-sidebar -->
 	
 	<div class="outros-projetos">

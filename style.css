@@ -2308,7 +2308,9 @@ body.single-projects #carousel_wrap { margin: 15px 0 30px }
 
 /* =Projetos / Portfolio
 ----------------------------------------------- */
-
+.single-novosprojetos #linguas{
+	width: auto;
+}
 #primary.content-single-portfolio {
 	padding-top: 0 !important;
 	}
@@ -3088,6 +3090,9 @@ a.slide-out-div.archive-portfolio {
     min-height: 280px;
     width: 31.3%;
 }
+
+
+
 
 
 /* =Responsive Structure
