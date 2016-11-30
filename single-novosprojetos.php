@@ -10,7 +10,7 @@ if (!is_user_logged_in()) {
 	$role = $current_user->role[0];
 	
 if ( $role != 'parceiro' AND $role!= "administrator" AND $role!='editor' ) {
-	header( 'Location: '.get_home_url( ) ) ; 
+	header( 'Location: '.get_home_url('index.php/projetos/') ) ; 
 	die();
 
 	} 

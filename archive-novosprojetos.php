@@ -1,6 +1,6 @@
 <?php 
 if (!is_user_logged_in()) {
-	header( 'Location: '.get_home_url( ) ) ; 
+	header( 'Location: '.get_home_url('index.php/projetos/') ) ; 
 	die();
 }
 	global $current_user, $wpdb;
@@ -10,7 +10,7 @@ if (!is_user_logged_in()) {
 	$role = $current_user->role[0];
 	
 if ( $role != 'parceiro' AND $role!= "administrator") {
-	header( 'Location: '.get_home_url( ) ) ; 
+	header( 'Location: '.get_home_url('index.php/projetos/') ) ; 
 	die();
 
 	} 

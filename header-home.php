@@ -101,7 +101,7 @@
                 
     <div class="area-4-header">
         <div id="link-login">
-        <a href="<?php echo get_home_url( );?>/wp-admin/">
+        <a href="<?php echo get_home_url('index.php/wp-admin/');?>">
         	<div id="cadeado">
 			</div><!-- #cadeado -->
 			<spam class="link-tgl">			

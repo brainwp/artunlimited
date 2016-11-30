@@ -45,7 +45,7 @@
 				<div class="header-portfolio">
 					<div id="busca-aba" class="portfolio">
 						<div id="lupa-aba"></div>
-						<form id="searchform" action="<?php echo get_home_url( );; ?>/" method="get">
+						<form id="searchform" action="<?php echo get_home_url( ); ?>/" method="get">
 							<input class="inlineSearch" type="text" name="s" value="<?php echo __('[:en]search[:pb]busca[:]'); ?>" onblur="if (this.value == '') {this.value = '<?php echo __('[:en]search[:pb]busca[:]'); ?>';}" onfocus="if (this.value == '<?php echo __('[:en]search[:pb]busca[:]'); ?>') {this.value = '';}" />
 							<input type="hidden" name="post_type" value="portfolio" /> 
 							<!-- <input class="inlineSubmit" id="searchsubmit" type="submit" alt="Search" value="Buscar" /> -->
