@@ -3091,9 +3091,20 @@ a.slide-out-div.archive-portfolio {
     width: 31.3%;
 }
 
+/* = Jet Pack Carrousel
+----------------------------------------------- */
+.jp-carousel-overlay {
 
+	height: auto !important;
+}
 
+.jp-carousel-image-meta {
+	display: none;
+}
 
+.jp-carousel-left-column-wrapper {
+	display: none;	
+}
 
 /* =Responsive Structure
 

@@ -20,11 +20,11 @@
 <body <?php body_class(); ?>>
 <div id="page" class="hfeed site">
 <div class="barra">
-	<a class="barra" href="<?php echo get_home_url(); ?>">
+	<a class="barra" href="<?php echo home_url(); ?>">
     <div class="top-barra"></div>
     </a>
 
-    <a class="a-etiqueta" href="<?php echo get_home_url(); ?>/index.php/projetos/">
+    <a class="a-etiqueta" href="<?php echo home_url(); ?>/index.php/projetos/">
 	<div style="<?php echo _e("[:en]background: url('".get_stylesheet_directory_uri()."/images/escrita-novos-projetos-en.png') no-repeat scroll 0 -20px #4D449B;[:pb]background: url('".get_stylesheet_directory_uri()."/images/escrita-novos-projetos.png') no-repeat scroll 0 -20px #4D449B;[:]" ); ?>"class="etiqueta-barra-novosprojetos-archive"></div>
     </a>
 </div><!-- .barra -->
