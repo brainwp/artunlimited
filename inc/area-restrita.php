@@ -50,14 +50,12 @@ function tira_do_admin()
 {
     global $current_user;
     wp_get_current_user();
- 	if ( in_array( 'parceiro', $current_user->roles ) ) {
+ 	if ( in_array( 'parceiro', $current_user->roles )  && ! defined( 'DOING_AJAX' ) ) {
          wp_redirect( get_home_url().'/index.php/projetos' ); exit;
 
     }
 }
 add_action('admin_init', 'tira_do_admin');
-
-
 
 
 // remove barra de admin do user 'parceiro'

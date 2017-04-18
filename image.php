@@ -13,7 +13,16 @@ get_header( 'sem-aba' );
 			<article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
 				<header class="entry-header">
 					<nav role="navigation" id="image-navigation" class="navigation-image">
-						<div class="get-back"><a href="#" onClick="window.history.back()">Voltar</a></div>
+						<div class="get-back">
+								<?php
+									$metadata = wp_get_attachment_metadata();
+									printf( __( '<span class="entry-date">Voltar para: <a href="%1$s" title="Voltar para %2$s" rel="gallery">%3$s</a></span>', 'artunlimited' ),
+										esc_url( get_permalink( $post->post_parent ) ),
+										esc_attr( strip_tags( get_the_title( $post->post_parent ) ) ),
+										get_the_title( $post->post_parent )
+									);
+								?>
+						</div>
 						<div class="nav-previous"><?php previous_image_link( false, __( '<span class="meta-nav">&larr;</span> Anterior', 'artunlimited' ) ); ?></div>
 						<div class="nav-next"><?php next_image_link( false, __( 'Próximo <span class="meta-nav">&rarr;</span>', 'artunlimited' ) ); ?></div>
 					</nav><!-- #image-navigation -->
