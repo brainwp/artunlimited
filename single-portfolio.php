@@ -11,7 +11,6 @@ get_header( 'portfolio' ); ?>
 
 		<?php while ( have_posts() ) : the_post(); ?>
 		<?php global $post; ?>
-		<?php if(empty($post->post_parent) || $post->post_parent == 0): ?>
 
 		<div id="slider-portfolio">
 
@@ -19,51 +18,42 @@ get_header( 'portfolio' ); ?>
 				<a class="prev" id="prev2" href="#"><span>anterior</span></a>
 				<a class="next" id="next2" href="#"><span>seguinte</span></a>
 				<ul id="carousel">
+
 					<?php
-					$args = array(
-						'post_type' => 'attachment',
-						'numberposts' => -1,
-						'post_status' => null,
-						'post_parent' => $post->ID,
-						'order' => 'ASC',
-						'orderby' => 'menu_order'
-						);
+					$anexos = get_post_meta( $post->ID, 'portfolio_slider', true );
+					$anexos = explode( ',', $anexos );
 
-					$anexos = get_posts ( $args );
-
-					if ( $anexos ) {
-						foreach ( $anexos as $anexo ) { ?>
-
-						<?php 
-						$attachment_id = $anexo->ID;
+					if ( $anexos && is_array( $anexos) && ! empty( $anexos ) ) {
+						foreach ( $anexos as $attachment_id ) { ?>
+						<?php
+						$anexo = get_post( $anexo_id );
+						if ( ! $anexo ) {
+							continue;
+						}
 						$image_attributes = wp_get_attachment_image_src( $attachment_id, 'projetos' );
-						$attachment_page = get_attachment_link( $attachment_id ); 
+						$attachment_page = get_attachment_link( $attachment_id );
 						$description = $anexo->post_content;
-						$url = wp_get_attachment_url( $attachment_id ); 
+						$url = wp_get_attachment_url( $attachment_id );
 						?>
-						<li class="cada-slide">                        
+						<li class="cada-slide">
 							<?php
-							if ($description):
-								echo '<div id="desc-slide">' . $description . '</div>';
-							endif;
 							?>
 							<img src="<?php echo $image_attributes[0]; ?>" alt="<?php echo apply_filters('the_title', $anexo->post_title); ?>">
 						</li>
 						<?php } } ?>
-					</ul>				
+					</ul>
 
 					<div class="clearfix">
 					</div>
 
 				</div><!-- carousel_wrap -->
 			</div><!-- #sider-projetos -->
-		<?php endif; ?>
-		
+
 		<?php
-				// Pega os dados e salva em variáveis
+				// Pega os dados e salva em variÃ¡veis
 		$metaportfolio_credito = get_post_meta($post->ID,'metaportfolio_credito',TRUE);
 		?>
-		
+
 		<?php if (empty($metaportfolio_credito)) {
 		} else { ?>
 		<div class="creditos-portfolio">
@@ -77,7 +67,7 @@ get_header( 'portfolio' ); ?>
 				<h1 class="entry-title-interno"><?php the_title(); ?></h1>
 
 				<?php
-				// Pega os dados e salva em variáveis
+				// Pega os dados e salva em variÃ¡veis
 				$metaportfolio_2alinhatitulo = get_post_meta($post->ID,'metaportfolio_2alinhatitulo',TRUE);
 				?>
 
@@ -87,7 +77,7 @@ get_header( 'portfolio' ); ?>
 				<?php }	?>
 
 				<?php
-				// Pega os dados e salva em variáveis
+				// Pega os dados e salva em variÃ¡veis
 				$metaportfolio_subtitulo = get_post_meta($post->ID,'metaportfolio_subtitulo',TRUE);
 				?>
 				<?php if (empty($metaportfolio_subtitulo)) {
@@ -111,14 +101,14 @@ get_header( 'portfolio' ); ?>
 					) );
 					?>
 				</div><!-- .entry-content -->
-				
+
 				<?php // artunlimited_content_nav( 'nav-below' ); ?>
 			<?php endwhile; // end of the loop. ?>
 
 			<?php wp_reset_query(); // reset query ?>
 		</div>
 		<!-- .esquerda-single-portfolio -->
-		
+
 		<div class="direita-single-portfolio">
 			<?php get_sidebar( 'portfolio' ); ?>
 		</div><!-- #direita-single-portfolio -->

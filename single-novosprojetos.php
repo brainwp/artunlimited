@@ -1,6 +1,6 @@
-<?php 
+<?php
 if (!is_user_logged_in()) {
-	header( 'Location: '.get_home_url( ) ) ; 
+	header( 'Location: '.get_home_url( ) ) ;
 	die();
 }
 	global $current_user, $wpdb;
@@ -8,12 +8,12 @@ if (!is_user_logged_in()) {
 	$current_user->role = array_keys($current_user->$role);
 
 	$role = $current_user->role[0];
-	
+
 if ( $role != 'parceiro' AND $role!= "administrator" AND $role!='editor' ) {
-	header( 'Location: '.get_home_url('index.php/projetos/') ) ; 
+	header( 'Location: '.get_home_url('index.php/projetos/') ) ;
 	die();
 
-	} 
+	}
 ?>
 <?php
 /**
@@ -34,74 +34,64 @@ get_header( 'novosprojetos' ); ?>
 				<a class="prev" id="prev2" href="#"><span>anterior</span></a>
 				<a class="next" id="next2" href="#"><span>seguinte</span></a>
 				<ul id="carousel">
+
 					<?php
-					$args = array(
-						'post_type' => 'attachment',
-						'numberposts' => -1,
-						'post_status' => null,
-						'post_parent' => $post->ID,
-						'order' => 'ASC',
-						'orderby' => 'menu_order'
-						);
+					$anexos = get_post_meta( $post->ID, 'portfolio_slider', true );
+					$anexos = explode( ',', $anexos );
 
-					$anexos = get_posts ( $args );
-
-					if ( $anexos ) {
-						foreach ( $anexos as $anexo ) { ?>
-
-						<?php 
-						$attachment_id = $anexo->ID;
+					if ( $anexos && is_array( $anexos) && ! empty( $anexos ) ) {
+						foreach ( $anexos as $attachment_id ) { ?>
+						<?php
+						$anexo = get_post( $anexo_id );
+						if ( ! $anexo ) {
+							continue;
+						}
 						$image_attributes = wp_get_attachment_image_src( $attachment_id, 'projetos' );
-						$attachment_page = get_attachment_link( $attachment_id ); 
+						$attachment_page = get_attachment_link( $attachment_id );
 						$description = $anexo->post_content;
-						$url = wp_get_attachment_url( $attachment_id ); 
+						$url = wp_get_attachment_url( $attachment_id );
 						?>
-						<li class="cada-slide">                        
+						<li class="cada-slide">
 							<?php
-							if ($description):
-								echo '<div id="desc-slide">' . $description . '</div>';
-							endif;
 							?>
 							<img src="<?php echo $image_attributes[0]; ?>" alt="<?php echo apply_filters('the_title', $anexo->post_title); ?>">
 						</li>
 						<?php } } ?>
-					</ul>				
-
 					<div class="clearfix">
 					</div>
 
 				</div><!-- carousel_wrap -->
 			</div><!-- #sider-projetos -->
-		
+
 		<?php
-				// Pega os dados e salva em variáveis
+				// Pega os dados e salva em variÃ¡veis
 		$metaportfolio_credito = get_post_meta($post->ID,'metaportfolio_credito',TRUE);
 		?>
-		
+
 		<?php if (empty($metaportfolio_credito)) {
 		} else { ?>
 		<div class="creditos-portfolio">
 			<p><span><?php echo __('[:en]Photos[:pb]Fotografias:[:]'); ?> </span>&copy; <?php echo $metaportfolio_credito; ?></p>
 		</div><!-- #creditos-portfolio -->
 		<?php }	?>
-        
+
 	<div class="esquerda-single-portfolio">
 
 		<header class="entry-header">
 			<h1 class="entry-title-interno"><?php the_title(); ?></h1>
 
 			<?php
-				// Pega os dados e salva em variáveis
+				// Pega os dados e salva em variÃ¡veis
                 $metanovosprojetos_2alinhatitulo = get_post_meta($post->ID,'metanovosprojetos_2alinhatitulo',TRUE);
 				?>
-		
+
 				<?php if (empty($metanovosprojetos_2alinhatitulo)) {
                 } else { ?>
               <h1 class="entry-title-interno"><?php echo $metanovosprojetos_2alinhatitulo; ?></h1>
 			<?php } ?>
-			
+
 			    <?php
-				// Pega os dados e salva em variáveis
+				// Pega os dados e salva em variÃ¡veis
                 $metanovosprojetos_subtitulo = get_post_meta($post->ID,'metanovosprojetos_subtitulo',TRUE);
 				?>
 				<?php if (empty($metanovosprojetos_subtitulo)) {
@@ -119,24 +109,24 @@ get_header( 'novosprojetos' ); ?>
 				) );
 			?>
 		</div><!-- .entry-content -->
-				
+
 				<?php // artunlimited_content_nav( 'nav-below' ); ?>
 				<?php endwhile; // end of the loop. ?>
-				
+
 				<?php wp_reset_query(); // reset query ?>
 	</div>
 			<!-- .esquerda-single-portfolio -->
 			<div class="direita-single-portfolio">
 			<?php get_sidebar( 'novosprojetos' ); ?>
 			</div><!-- #direita-single-portfolio -->
-			
+
 		</div><!-- #content -->
-		
+
 			            <div class="clearfix">
 						</div>
 
 <?php get_footer( 'portfolio' ); ?>
 
 	</div><!-- #content-single-portfolio -->
-	
+
 

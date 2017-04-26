@@ -353,3 +353,27 @@ if (function_exists('register_sidebar')) {
 		'after_title' => '</h2>'
 	));
 }
+
+/**
+ *
+ * Odin Metabox
+ *
+ */
+ require_once (get_template_directory() . '/inc/class-odin-metabox.php' );
+ $portfolio_metabox = new Odin_Metabox(
+    'portfolio_metabox', // Slug/ID do Metabox (obrigatório)
+    'Configurações de portfolio', // Nome do Metabox  (obrigatório)
+    array( 'portfolio', 'novosprojetos'), // Slug do Post Type, sendo possível enviar apenas um valor ou um array com vários (opcional)
+    'normal', // Contexto (opções: normal, advanced, ou side) (opcional)
+    'high' // Prioridade (opções: high, core, default ou low) (opcional)
+);
+$portfolio_metabox->set_fields(
+    array(
+        array(
+            'id'          => 'portfolio_slider',
+            'label'       => 'Slider de imagens',
+            'type'        => 'image_plupload',
+            'description' => ''
+        )
+    )
+);
