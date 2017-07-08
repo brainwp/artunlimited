@@ -5,12 +5,13 @@
  * @package artunlimited
  */
 ?>
+<div class="fixed-sidebar">
     <div id="linguas">
 	    <h2 class="fonte-roxa"><?php echo __('[:en]Choose language[:pb]Escolha o Idioma[:]'); ?></h2>
-	    <?php 	
+	    <?php
 	    	if (function_exists('dynamic_sidebar')) {
 				dynamic_sidebar('Widget no menu');
-			} 
+			}
 		?>
 	</div><!-- #linguas -->
 
@@ -25,9 +26,9 @@
 		<div class="">
 		</div><!--  -->
 	</div><!-- .compartilhe-sidebar -->
-	
+
 	<div class="outros-projetos">
-		
+
 			<h2 class="fonte-roxa"><?php echo __('[:en]Other projects:[:pb]Outros projetos:[:]'); ?></h2>
 			<div class="setas-outros">
 			<a id="prev3" href="#"><div class="seta-outros-anteriores">
@@ -36,9 +37,9 @@
 			<a id="next3" href="#"><div class="seta-outros-posteriores">
 			</div></a><!-- .seta-outros-posteriores -->
 			</div><!-- setas-outros -->
-		
+
 		<div class="outros-slider">
-		
+
 			<div class="list_carousel">
 				<ul id="foo3">
 					<?php
@@ -46,7 +47,7 @@
 					$query = new WP_Query( array( 'post_type' => 'portfolio', 'orderby' => 'rand', 'post__not_in' => $esse_id ) );
 
 					if ( $query->have_posts() ) : ?>
-						   <?php while ( $query->have_posts() ) : $query->the_post(); ?> 				
+						   <?php while ( $query->have_posts() ) : $query->the_post(); ?>
 					<li>
                     <a class="a-outro" href="<?php the_permalink(); ?>">
 					<div class="cada-outro-projeto">
@@ -56,7 +57,7 @@
 						} else { ?>
 						<img src="<?php echo get_stylesheet_directory_uri(); ?>/images/default-outros-<?php echo mt_rand(1,3); ?>.jpg" alt="<?php the_title(); ?>" />
 						<?php } ?>
-                        
+
 					</div><!-- .cada-outro-projeto -->
 					<div class="titulo-outros-projetos">
 					 <?php the_title(); ?><br />
@@ -70,7 +71,7 @@
 								<?php }	?>
 					<span class="data-cada-outro-projeto"><?php the_time( 'Y' ); ?></span>
 					</div><!-- .titulo-outros-projetos -->
-                    </a><!-- .a-outro  -->		
+                    </a><!-- .a-outro  -->
 					</li>
 				   <?php endwhile; wp_reset_postdata(); ?>
 				   <!-- show pagination here -->
@@ -78,13 +79,14 @@
 						   <!-- show 404 error here -->
 					<?php endif; ?>
 				</ul>
-				
+
 				<?php wp_reset_query(); // reset query ?>
 				<div class="clearfix"></div>
-					
+
 			</div> <!-- .list_carrousel -->
-					
+
 
 		</div><!-- .outros-slider -->
-		
+
 	</div><!-- .outros-projetos -->
+</div>

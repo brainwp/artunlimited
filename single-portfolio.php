@@ -94,6 +94,18 @@ get_header( 'portfolio' ); ?>
 
 			<div class="entry-content">
 				<?php the_content(); ?>
+				<?php $sections = get_post_meta( get_the_ID(), 'portfolio_sections', false );?>
+				<?php if ( $sections && ! empty( $sections ) ) : ?>
+					<?php foreach ( $sections as $section ) : ?>
+						<?php if ( isset( $section[0][ 'title' ] ) && ! empty( $section[0][ 'title'] ) ) : ?>
+							<h2 class="fonte-roxa" id="<?php echo sanitize_title( $section[ 'title'] );?>"><?php echo apply_filters( 'the_title', $section[0][ 'title'] );?></h2>
+						<?php endif;?>
+						<?php if ( isset( $section[0][ 'content' ] ) && ! empty( $section[0][ 'content'] ) ) : ?>
+							<?php echo apply_filters( 'the_content', $section[0]['content'] );?>
+						<?php endif;?>
+
+					<?php endforeach;?>
+				<?php endif;?>
 				<?php
 				wp_link_pages( array(
 					'before' => '<div class="page-links">' . __( 'Pages:', 'artunlimited' ),

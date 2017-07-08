@@ -364,8 +364,8 @@ if (function_exists('register_sidebar')) {
     'portfolio_metabox', // Slug/ID do Metabox (obrigatório)
     'Configurações de portfolio', // Nome do Metabox  (obrigatório)
     array( 'portfolio', 'novosprojetos'), // Slug do Post Type, sendo possível enviar apenas um valor ou um array com vários (opcional)
-    'normal', // Contexto (opções: normal, advanced, ou side) (opcional)
-    'high' // Prioridade (opções: high, core, default ou low) (opcional)
+    'side', // Contexto (opções: normal, advanced, ou side) (opcional)
+    'low' // Prioridade (opções: high, core, default ou low) (opcional)
 );
 $portfolio_metabox->set_fields(
     array(
@@ -377,3 +377,58 @@ $portfolio_metabox->set_fields(
         )
     )
 );
+
+/**
+ *
+ * CMB2 Metabox
+ * https://github.com/CMB2/CMB2/wiki/Field-Types#group
+ *
+ */
+function artunlimited_add_cmb2_fields(){
+	if ( ! function_exists( 'new_cmb2_box' ) ) {
+		return;
+	}
+	/*
+	* Initiate the metabox
+	*/
+	$cmb = new_cmb2_box( array(
+		'id'            => '__portfolio_sections',
+		'title'         => 'Seções',
+		'object_types'  => array( 'portfolio', 'novosprojetos' ), // Post type
+		'context'       => 'normal',
+		'priority'      => 'high',
+		'show_names'    => true, // Show field names on the left
+	) );
+	$group_field_id = $cmb->add_field( array(
+		'id'          => 'portfolio_sections',
+		'type'        => 'group',
+		'description' => '',
+		'repeatable'  => true, // use false if you want non-repeatable group
+		'options'     => array(
+			'group_title'   => __( 'Entry {#}', 'cmb2' ), // since version 1.1.4, {#} gets replaced by row number
+			'add_button'    => __( 'Add Another Entry', 'cmb2' ),
+			'remove_button' => __( 'Remove Entry', 'cmb2' ),
+			'sortable'      => true, // beta
+			'closed'     => true, // true to have the groups closed by default
+		),
+	) );
+	// Id's for group's fields only need to be unique for the group. Prefix is not needed.
+	$cmb->add_group_field( $group_field_id, array(
+		'name' => 'Título da Seção',
+		'id'   => 'title',
+		'type' => 'text',
+		'attributes' => array(
+			'class' => 'cmb2-qtranslate'
+		)
+	) );
+	$cmb->add_group_field( $group_field_id, array(
+		'name' => 'Conteudo da seção',
+		'id'   => 'content',
+		'type' => 'wysiwyg',
+		'options' => array(
+			'editor_class' => 'cmb2-qtranslate'
+		)
+	) );
+
+}
+add_action( 'cmb2_admin_init','artunlimited_add_cmb2_fields' );
