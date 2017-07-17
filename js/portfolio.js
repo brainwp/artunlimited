@@ -444,4 +444,23 @@
 
 jQuery(function($) {
 	$( '.fixed-sidebar' ).sticky();
+
+	var menu_portfolio = function() {
+		$( '.esquerda-single-portfolio h2' ).each( function(){
+			if ( $( this ).has( 'span' ) ) {
+				var name = $( this ).children( 'span' ).html();
+			} else {
+				var name = $( this ).html();
+			}
+			if ( ':' === name.substr( name.length - 1) ) {
+				name = name.replace( ':', '' );
+			}
+			var id = name.replace(/\s/g,'');
+			var html = '<li><a href="#' + id + '">' + name + '</a></li>';
+			$( '#menu-items ul.sections' ).append( html );
+		});
+	}
+	$( window ).load(function() {
+		menu_portfolio();
+	});
 } );

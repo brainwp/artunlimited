@@ -14,7 +14,22 @@
 			}
 		?>
 	</div><!-- #linguas -->
+	<div id="menu-items">
+		<h2 class="fonte-roxa"><?php echo __('[:en]Sections[:pb]Seções[:]'); ?></h2>
+		<ul class="sections">
+			<li>
+				<a href="#slider-portfolio">
+					<?php echo __('[:en]Sections[:pb]Seções[:]');?>
+				</a>
+			</li>
+			<li>
+				<a href="#the-content">
+					<?php echo __('[:en]About[:pb]Sobre[:]');?>
+				</a>
+			</li>
 
+		</ul><!-- .sections -->
+	</div><!-- #menu-items -->
 	<div class="compartilhe-sidebar">
 		<h2 class="fonte-roxa"><?php echo __('[:en]Share![:pb]Compartilhe![:]'); ?></h2>
 		<div class="compartilhe-sidebar-facebook">

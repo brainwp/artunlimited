@@ -61,7 +61,7 @@ get_header( 'portfolio' ); ?>
 		</div><!-- #creditos-portfolio -->
 		<?php }	?>
 
-		<div class="esquerda-title-single-portfolio">
+		<div class="esquerda-title-single-portfolio" id="the-content">
 
 			<header class="entry-header">
 				<h1 class="entry-title-interno"><?php the_title(); ?></h1>
