@@ -19,7 +19,7 @@
 		<ul class="sections">
 			<li>
 				<a href="#slider-portfolio">
-					<?php echo __('[:en]Sections[:pb]Seções[:]');?>
+					<?php echo __('[:en]Photos[:pb]Fotos[:]');?>
 				</a>
 			</li>
 			<li>
