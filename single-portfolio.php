@@ -26,7 +26,7 @@ get_header( 'portfolio' ); ?>
 					if ( $anexos && is_array( $anexos) && ! empty( $anexos ) ) {
 						foreach ( $anexos as $attachment_id ) { ?>
 						<?php
-						$anexo = get_post( $anexo_id );
+						$anexo = get_post( $attachment_id );
 						if ( ! $anexo ) {
 							continue;
 						}
