@@ -463,4 +463,14 @@ jQuery(function($) {
 	$( window ).load(function() {
 		menu_portfolio();
 	});
+	$( document ).on( 'click', '#menu-items ul.sections li a', function(){
+		var hash = $( this ).attr( 'href');
+		$('html, body').animate({
+			scrollTop: $( hash ).offset().top
+		}, 400, function(){
+			// Add hash (#) to URL when done scrolling (default click behavior)
+			window.location.hash = hash;
+		});
+
+	})
 } );
