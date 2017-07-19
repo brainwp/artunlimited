@@ -993,7 +993,7 @@ li.lang-pb .active {
 
 
 .qtranxs_widget ul li {
-    
+
     float: left;
     display: block;
 }
@@ -2545,7 +2545,9 @@ a.titulo-resumo {
     font-size: 2.5em;
     line-height: 1.2;
 }
-
+.single-portfolio .entry-content h2 {
+	color:#4d449c;
+}
 .entry-sub-title-interno {
 	color: #4d449c;
     line-height: 1.2;
@@ -3103,7 +3105,7 @@ a.slide-out-div.archive-portfolio {
 }
 
 .jp-carousel-left-column-wrapper {
-	display: none;	
+	display: none;
 }
 
 /* =Responsive Structure

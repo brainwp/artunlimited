@@ -1,20 +1,20 @@
 <?php
 
 /*
-Classe metabox-portfolio para criaÁ„o de MetaBox's
-Vers„o 0.1
+Classe metabox-portfolio para cria√ß√£o de MetaBox's
+Vers√£o 0.1
 */
 
 $prefix = 'metaportfolio_';
 
 $meta_box_portfolio = array(
 	'id' => 'metabox-portfolio',
-	// TÌtulo do MetaBox
+	// T√≠tulo do MetaBox
 	'title' => 'Informa&ccedil;&otilde;es do Projeto',
 	// Tipo de Post a usar os MetaBox's
 	'page' => 'portfolio',
 	'context' => 'normal',
-	'priority' => 'high',
+	'priority' => 'low',
 	// Campos
 	'fields' => array(
 		array(
@@ -30,7 +30,7 @@ $meta_box_portfolio = array(
 		'id' => $prefix . 'subtitulo',
 		'type' => 'text',
 		'std' => ''
-		),	
+		),
 		array(
 		'name' => 'Cr&eacute;dito das Fotografias do Projeto',
 		'desc' => 'Adicione o nome do Fot&oacute;grafo do Projeto',
@@ -47,14 +47,14 @@ function add_metaportfolio() {
     global $meta_box_portfolio;
     add_meta_box(
 		$meta_box_portfolio['id'],
-		$meta_box_portfolio['title'], 
+		$meta_box_portfolio['title'],
 		'show_metaportfolio',
 		$meta_box_portfolio['page'],
 		$meta_box_portfolio['context'],
 		$meta_box_portfolio['priority']);
 }
-	
-	
+
+
 // Mostra os MetaBox's (metaportfolio)
 function show_metaportfolio() {
     global $meta_box_portfolio, $post;
@@ -66,7 +66,7 @@ function show_metaportfolio() {
     foreach ($meta_box_portfolio['fields'] as $field) {
     // get current post meta data
         $meta = get_post_meta($post->ID, $field['id'], true);
-    
+
     	// Inicia o tr
     	echo '<tr>',
         '<th style="width:20%"><label for="', $field['id'], '">', $field['name'], '</label></th></tr>',
@@ -100,26 +100,26 @@ function show_metaportfolio() {
     // Fecha a tabela
 	echo '</table><!-- .metaportfolio-table -->';
 }
-	
+
 	add_action('save_post', 'save_metaportfolio');
     // Save data from meta box
     function save_metaportfolio($post_id) {
         global $meta_box_portfolio;
-   
+
         // verify nonce
         if (isset($_POST['metaportfolio_nonce'])&&!wp_verify_nonce($_POST['metaportfolio_nonce'], basename(__FILE__))) {
             return $post_id;
         }
-        // Checa se AutoSave est· ativo e o ignora
+        // Checa se AutoSave est√° ativo e o ignora
         if (defined('DOING_AUTOSAVE') && DOING_AUTOSAVE) {
             return $post_id;
         }
-        // Checa as Permissıes do Usu·rio
+        // Checa as Permiss√µes do Usu√°rio
         if (isset($_POST['post_type']) &&'page' == $_POST['post_type']) {
             if (!current_user_can('edit_page', $post_id)) {
                 return $post_id;
             }
-        } 
+        }
         elseif (!current_user_can('edit_post', $post_id)) {
             return $post_id;
         }
@@ -129,7 +129,7 @@ function show_metaportfolio() {
                 $new = $_POST[$field['id']];
                 if ($new && $new != $old) {
                     update_post_meta($post_id, $field['id'], $new);
-                } 
+                }
                 elseif ('' == $new && $old) {
                     delete_post_meta($post_id, $field['id'], $old);
                 }

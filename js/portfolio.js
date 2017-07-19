@@ -447,29 +447,29 @@ jQuery(function($) {
 
 	var menu_portfolio = function() {
 		$( '.esquerda-single-portfolio h2' ).each( function(){
-			if ( $( this ).has( 'span' ) ) {
+			var name = $( this ).html();
+			console.log( $( this ).html() );
+			if ( $( this ).children( 'span' ).length > 0 ) {
 				var name = $( this ).children( 'span' ).html();
-			} else {
-				var name = $( this ).html();
 			}
-			if ( ':' === name.substr( name.length - 1) ) {
-				name = name.replace( ':', '' );
-			}
+
+			var name = name.replace( ':', '' );
 			var id = name.replace(/\s/g,'');
 			var html = '<li><a href="#' + id + '">' + name + '</a></li>';
+			$( this ).attr( 'id', id );
 			$( '#menu-items ul.sections' ).append( html );
+			console.log( name );
 		});
 	}
 	$( window ).load(function() {
 		menu_portfolio();
 	});
-	$( document ).on( 'click', '#menu-items ul.sections li a', function(){
+	$( document ).on( 'click', '#menu-items ul.sections li a', function( e ){
+		e.preventDefault();
 		var hash = $( this ).attr( 'href');
 		$('html, body').animate({
-			scrollTop: $( hash ).offset().top
+			scrollTop: $( hash ).offset().top - 40
 		}, 400, function(){
-			// Add hash (#) to URL when done scrolling (default click behavior)
-			window.location.hash = hash;
 		});
 
 	})
