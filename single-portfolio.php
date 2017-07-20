@@ -103,6 +103,25 @@ get_header( 'portfolio' ); ?>
 						<?php echo wp_oembed_get( $video_url );?>
 					<?php endforeach;?>
 				<?php endif;?>
+				<?php $graphic = get_post_meta( get_the_ID(), 'portfolio_graphic', true );?>
+				<?php if ( $graphic && ! empty( explode( ',', $graphic ) ) ) :?>
+					<h2 class="fonte-roxa">
+						<?php _e( '[:en]Graphic Design:[:pb]Material Gráfico:[:]' ); ?>
+					</h2><!-- .fonte-roxa -->
+					<?php $value = '<div id="graphic-design">[gallery ids="%s" type="thumbnails"]</div>';?>
+					<?php $value = sprintf( $value, $graphic );?>
+					<?php echo apply_filters( 'the_content', $value );?>
+				<?php endif;?>
+
+				<?php $clipping = get_post_meta( get_the_ID(), 'portfolio_clipping', true );?>
+				<?php if ( $clipping && ! empty( explode( ',', $clipping ) ) ) :?>
+					<h2 class="fonte-roxa">
+						<?php _e( '[:en]Media:[:pb]Clipping:[:]' ); ?>
+					</h2><!-- .fonte-roxa -->
+					<?php $value = '[gallery type="square" ids="%s" link="file"]';?>
+					<?php $value = sprintf( $value, $clipping );?>
+					<?php echo apply_filters( 'the_content', $value );?>
+				<?php endif;?>
 				<?php
 				wp_link_pages( array(
 					'before' => '<div class="page-links">' . __( 'Pages:', 'artunlimited' ),

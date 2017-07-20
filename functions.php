@@ -371,13 +371,25 @@ $portfolio_metabox->set_fields(
     array(
         array(
             'id'          => 'portfolio_slider',
-            'label'       => 'Slider de imagens',
+            'label'       => 'Slider de imagens no topo',
             'type'        => 'image_plupload',
             'description' => ''
-        )
+        ),
+        array(
+            'id'          => 'portfolio_graphic',
+            'label'       => 'Area de Material gráfico',
+            'type'        => 'image_plupload',
+            'description' => ''
+        ),
+        array(
+            'id'          => 'portfolio_clipping',
+            'label'       => 'Area de clipping',
+            'type'        => 'image_plupload',
+            'description' => ''
+        ),
+
     )
 );
-
 
 /**
  *

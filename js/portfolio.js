@@ -463,6 +463,10 @@ jQuery(function($) {
 	}
 	$( window ).load(function() {
 		menu_portfolio();
+		$( '#graphic-design div.gallery' ).each( function(){
+			$( this ).removeClass( 'gallery' );
+		});
+
 	});
 	$( document ).on( 'click', '#menu-items ul.sections li a', function( e ){
 		e.preventDefault();
@@ -471,6 +475,5 @@ jQuery(function($) {
 			scrollTop: $( hash ).offset().top - 40
 		}, 400, function(){
 		});
-
 	})
 } );
