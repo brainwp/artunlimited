@@ -108,7 +108,7 @@ get_header( 'portfolio' ); ?>
 					<h2 class="fonte-roxa">
 						<?php _e( '[:en]Graphic Design:[:pb]Material Gráfico:[:]' ); ?>
 					</h2><!-- .fonte-roxa -->
-					<?php $value = '<div id="graphic-design">[gallery ids="%s" type="thumbnails"]</div>';?>
+					<?php $value = '[gallery ids="%s" type="square"]';?>
 					<?php $value = sprintf( $value, $graphic );?>
 					<?php echo apply_filters( 'the_content', $value );?>
 				<?php endif;?>
@@ -118,7 +118,7 @@ get_header( 'portfolio' ); ?>
 					<h2 class="fonte-roxa">
 						<?php _e( '[:en]Media:[:pb]Clipping:[:]' ); ?>
 					</h2><!-- .fonte-roxa -->
-					<?php $value = '[gallery type="square" ids="%s" link="file"]';?>
+					<?php $value = '<div id="graphic-design">[gallery type="thumbnails" ids="%s" link="file"]</div>';?>
 					<?php $value = sprintf( $value, $clipping );?>
 					<?php echo apply_filters( 'the_content', $value );?>
 				<?php endif;?>
