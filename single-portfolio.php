@@ -109,7 +109,7 @@ get_header( 'portfolio' ); ?>
 					<h2 class="fonte-roxa">
 						<?php _e( '[:en]Media:[:pb]Clipping:[:]' ); ?>
 					</h2><!-- .fonte-roxa -->
-					<?php $value = '<div id="graphic-design">[gallery type="thumbnails" ids="%s" link="file"]</div>';?>
+					<?php $value = '<div id="graphic-design">[gallery type="thumbnails" ids="%s"]</div>';?>
 					<?php $value = sprintf( $value, $clipping );?>
 					<?php echo apply_filters( 'the_content', $value );?>
 				<?php endif;?>
