@@ -94,15 +94,6 @@ get_header( 'portfolio' ); ?>
 
 			<div class="entry-content">
 				<?php the_content(); ?>
-				<?php $videos = get_post_meta( get_the_ID(), '_portfolio_videos', false );?>
-				<?php if ( $videos && isset( $videos[0] ) && ! empty( $videos[0] ) ) : ?>
-					<h2 class="fonte-roxa">
-						<?php _e('[:en]Videos:[:pb]Audiovisual:[:]'); ?>
-					</h2><!-- .fonte-roxa -->
-					<?php foreach( $videos[0] as $video_url ) : ?>
-						<?php echo wp_oembed_get( $video_url );?>
-					<?php endforeach;?>
-				<?php endif;?>
 				<?php $graphic = get_post_meta( get_the_ID(), 'portfolio_graphic', true );?>
 				<?php if ( $graphic && ! empty( explode( ',', $graphic ) ) ) :?>
 					<h2 class="fonte-roxa">
@@ -122,6 +113,17 @@ get_header( 'portfolio' ); ?>
 					<?php $value = sprintf( $value, $clipping );?>
 					<?php echo apply_filters( 'the_content', $value );?>
 				<?php endif;?>
+
+				<?php $videos = get_post_meta( get_the_ID(), '_portfolio_videos', false );?>
+				<?php if ( $videos && isset( $videos[0] ) && ! empty( $videos[0] ) ) : ?>
+					<h2 class="fonte-roxa">
+						<?php _e('[:en]Videos:[:pb]Audiovisual:[:]'); ?>
+					</h2><!-- .fonte-roxa -->
+					<?php foreach( $videos[0] as $video_url ) : ?>
+						<?php echo wp_oembed_get( $video_url );?>
+					<?php endforeach;?>
+				<?php endif;?>
+
 				<?php
 				wp_link_pages( array(
 					'before' => '<div class="page-links">' . __( 'Pages:', 'artunlimited' ),
