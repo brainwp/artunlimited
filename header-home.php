@@ -101,7 +101,7 @@
                 
     <div class="area-4-header">
         <div id="link-login">
-        <a href="<?php home_url( );?>/wp-admin/">
+        <a href="<?php echo get_home_url();?>/wp-admin/">
         	<div id="cadeado">
 			</div><!-- #cadeado -->
 			<spam class="link-tgl">			
@@ -140,7 +140,7 @@
 			</nav><!-- #site-navigation -->
 			
 	<div class="botao-portfolio-menu">
-		<a class="etiqueta-barra-botao-portfolio-menu" href="<?php echo home_url('index.php/portfolio'); ?>">
+		<a class="etiqueta-barra-botao-portfolio-menu" href="<?php echo get_home_url('index.php/portfolio'); ?>">
 		</a>
 	</div>
         

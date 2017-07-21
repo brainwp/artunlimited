@@ -993,7 +993,7 @@ li.lang-pb .active {
 
 
 .qtranxs_widget ul li {
-    
+
     float: left;
     display: block;
 }
@@ -2308,7 +2308,9 @@ body.single-projects #carousel_wrap { margin: 15px 0 30px }
 
 /* =Projetos / Portfolio
 ----------------------------------------------- */
-
+.single-novosprojetos #linguas{
+	width: auto;
+}
 #primary.content-single-portfolio {
 	padding-top: 0 !important;
 	}
@@ -2331,7 +2333,7 @@ body.single-projects #carousel_wrap { margin: 15px 0 30px }
     height: 200px;
     width: 50px;
 }
-.single-portfolio #main {
+.single-portfolio #main, .single-novosprojetos #main {
 	max-width: 1230px;
 	clear: none;
 	margin-left: 50px;
@@ -2543,7 +2545,9 @@ a.titulo-resumo {
     font-size: 2.5em;
     line-height: 1.2;
 }
-
+.single-portfolio .entry-content h2 {
+	color:#4d449c;
+}
 .entry-sub-title-interno {
 	color: #4d449c;
     line-height: 1.2;
@@ -3122,6 +3126,20 @@ a.slide-out-div.archive-portfolio {
     width: 31.3%;
 }
 
+/* = Jet Pack Carrousel
+----------------------------------------------- */
+.jp-carousel-overlay {
+
+	height: auto !important;
+}
+
+.jp-carousel-image-meta {
+	display: none;
+}
+
+.jp-carousel-left-column-wrapper {
+	display: none;
+}
 
 /* =Responsive Structure
 

@@ -1,6 +1,6 @@
 <?php 
 if (!is_user_logged_in()) {
-	header( 'Location: '.get_home_url( ) ) ; 
+	header( 'Location: '.get_home_url('index.php/projetos/') ) ; 
 	die();
 }
 	global $current_user, $wpdb;
@@ -9,8 +9,8 @@ if (!is_user_logged_in()) {
 
 	$role = $current_user->role[0];
 	
-if ( $role != 'parceiro' AND $role!= "administrator") {
-	header( 'Location: '.get_home_url( ) ) ; 
+if ( $role != 'parceiro' AND $role!= "administrator" AND $role!='editor' ) {
+	header( 'Location: '.get_home_url('index.php/projetos/') ) ; 
 	die();
 
 	} 
@@ -22,15 +22,32 @@ if ( $role != 'parceiro' AND $role!= "administrator") {
 		<div class="archive-portfolio">
 
 			        <div class="header-portfolio">
-                        <div id="busca-aba" class="portfolio">
-                            <div id="lupa-aba"></div>
-                            <form id="searchform" action="<?php bloginfo('url'); ?>/" method="get">
-								<input class="inlineSearch" type="text" name="s" value="busca" onblur="if (this.value == '') {this.value = 'busca';}" onfocus="if (this.value == 'busca') {this.value = '';}" />
-								<input type="hidden" name="post_type" value="portfolio" />
-								<!-- <input class="inlineSubmit" id="searchsubmit" type="submit" alt="Search" value="Buscar" /> -->
-                            </form>
-                        </div><!-- #busca-aba -->
-                    </div><!-- .header-categories -->
+                      
+       <div class="area-4-header">
+        <div id="link-login">
+   		    <a href="<?php echo wp_logout_url( get_permalink() ); ?>" title="Sair">
+				<div id="cadeado">
+				</div>
+				<span class="link-tgl">						
+					<?php echo __('[:en]Logout[:pb]Sair[:]');?>
+				</span>
+			</a>
+        </div>
+    </div><!-- .area-4-header -->
+		
+	<div class="area-3-header">
+
+        <div id="linguas">
+        	
+            <?php 	
+            	if (function_exists('dynamic_sidebar')) {
+					dynamic_sidebar('Widget no menu');
+				} 
+			?>
+         
+        </div><!-- #linguas -->
+    </div><!-- .area-3-header -->
+                    </div><!-- .header-portfolio -->
 			
 						<?php
 							/* $paged é a variável para paginação do Loop CPT Projetos */	$paged = (get_query_var('paged')) ? get_query_var('paged') : 1;

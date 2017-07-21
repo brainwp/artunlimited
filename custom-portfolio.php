@@ -77,8 +77,11 @@ function ilc_cpt_custom_column($column_name, $post_id) {
 
     if ( !empty($terms) ) {
         foreach ( $terms as $term )
-            $post_terms[] = "<a href='edit.php?post_type={$post_type}&{$taxonomy}={$term->slug}'> " . esc_html(sanitize_term_field('name', $term->name, $term->term_id, $taxonomy, 'edit')) . "</a>";
-        echo join( ', ', $post_terms );
+        	if (is_object($term)) {
+        		$post_terms[] = "<a href='edit.php?post_type={$post_type}&{$taxonomy}={$term->slug}'> " . esc_html(sanitize_term_field('name', $term->name, $term->term_id, $taxonomy, 'edit')) . "</a>";
+        		echo join( ', ', $post_terms );
+        	}
+            
     }
     else echo '<i>Nenhuma area.</i>';
 }

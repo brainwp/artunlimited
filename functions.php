@@ -189,7 +189,7 @@ require get_template_directory() . '/inc/jetpack.php';
  */
 require get_template_directory() . '/inc/metaboxes.php';
 require get_template_directory() . '/inc/metaboxes-portfolio.php';
-// require get_template_directory() . '/inc/metaboxes-novosprojetos.php';
+require get_template_directory() . '/inc/metaboxes-novosprojetos.php';
 /**
  * Load CPT Portfolios.
  */
@@ -353,3 +353,70 @@ if (function_exists('register_sidebar')) {
 		'after_title' => '</h2>'
 	));
 }
+
+/**
+ *
+ * Odin Metabox
+ *
+ */
+ require_once (get_template_directory() . '/inc/class-odin-metabox.php' );
+ $portfolio_metabox = new Odin_Metabox(
+    'portfolio_metabox', // Slug/ID do Metabox (obrigatório)
+    'Configurações de portfolio', // Nome do Metabox  (obrigatório)
+    array( 'portfolio', 'novosprojetos'), // Slug do Post Type, sendo possível enviar apenas um valor ou um array com vários (opcional)
+    'normal', // Contexto (opções: normal, advanced, ou side) (opcional)
+    'high' // Prioridade (opções: high, core, default ou low) (opcional)
+);
+$portfolio_metabox->set_fields(
+    array(
+        array(
+            'id'          => 'portfolio_slider',
+            'label'       => 'Slider de imagens no topo',
+            'type'        => 'image_plupload',
+            'description' => ''
+        ),
+        array(
+            'id'          => 'portfolio_graphic',
+            'label'       => 'Area de Material gráfico',
+            'type'        => 'image_plupload',
+            'description' => ''
+        ),
+        array(
+            'id'          => 'portfolio_clipping',
+            'label'       => 'Area de clipping',
+            'type'        => 'image_plupload',
+            'description' => ''
+        ),
+
+    )
+);
+
+/**
+ *
+ * CMB2 Metabox
+ * https://github.com/CMB2/CMB2/wiki/Field-Types#group
+ *
+ */
+function artunlimited_add_cmb2_fields(){
+	if ( ! function_exists( 'new_cmb2_box' ) ) {
+		return;
+	}
+	/*
+	* Initiate the metabox
+	*/
+	$videos = new_cmb2_box( array(
+		'id'            => '__portfolio_sections',
+		'title'         => 'Area de audivisual (videos)',
+		'object_types'  => array( 'portfolio', 'novosprojetos' ), // Post type
+		'context'       => 'advanced',
+		'priority'      => 'high',
+		'show_names'    => true, // Show field names on the left
+	) );
+	$videos->add_field( array(
+		'name' => 'Preencha com o URL do vídeo no YouTube, Vimeo, etc.',
+		'id'   => '_portfolio_videos',
+		'type' => 'oembed',
+		'repeatable' => true,
+	) );
+}
+add_action( 'cmb2_admin_init','artunlimited_add_cmb2_fields' );

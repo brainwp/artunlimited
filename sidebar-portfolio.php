@@ -5,29 +5,45 @@
  * @package artunlimited
  */
 ?>
+<div class="fixed-sidebar">
     <div id="linguas">
-    <h2 class="fonte-roxa"><?php echo __('[:en]Choose language[:pb]Escolha o Idioma[:]'); ?></h2>
-    <?php 	
-    	if (function_exists('dynamic_sidebar')) {
-			dynamic_sidebar('Widget no menu');
-		} 
-	?>
+	    <h2 class="fonte-roxa"><?php echo __('[:en]Choose language[:pb]Escolha o Idioma[:]'); ?></h2>
+	    <?php
+	    	if (function_exists('dynamic_sidebar')) {
+				dynamic_sidebar('Widget no menu');
+			}
+		?>
 	</div><!-- #linguas -->
+	<div id="menu-items">
+		<h2 class="fonte-roxa"><?php echo __('[:en]Sections[:pb]Seções[:]'); ?></h2>
+		<ul class="sections">
+			<li>
+				<a href="#slider-portfolio">
+					<?php echo __('[:en]Photos[:pb]Fotos[:]');?>
+				</a>
+			</li>
+			<li>
+				<a href="#the-content">
+					<?php echo __('[:en]About[:pb]Sobre[:]');?>
+				</a>
+			</li>
 
+		</ul><!-- .sections -->
+	</div><!-- #menu-items -->
 	<div class="compartilhe-sidebar">
-	<h2 class="fonte-roxa"><?php echo __('[:en]Share![:pb]Compartilhe![:]'); ?></h2>
-	<div class="compartilhe-sidebar-facebook">
-	<a class="a-compartilhe" href="<?php the_permalink() ?>?share=facebook&nb=1" target="_blank"></a>
-	</div><!-- .compartilhe-sidebar-facebook -->
-	<div class="compartilhe-sidebar-email">
-	<a class="a-compartilhe" href="mailto:<?php echo get_option( 'mo_email' ); ?>" target="_blank"></a>
-	</div><!-- .compartilhe-sidebar-email -->
-	<div class="">
-	</div><!--  -->
+		<h2 class="fonte-roxa"><?php echo __('[:en]Share![:pb]Compartilhe![:]'); ?></h2>
+		<div class="compartilhe-sidebar-facebook">
+			<a class="a-compartilhe" href="<?php the_permalink() ?>?share=facebook&nb=1" target="_blank"></a>
+		</div><!-- .compartilhe-sidebar-facebook -->
+		<div class="compartilhe-sidebar-email">
+			<a class="a-compartilhe" href="mailto:<?php echo get_option( 'mo_email' ); ?>" target="_blank"></a>
+		</div><!-- .compartilhe-sidebar-email -->
+		<div class="">
+		</div><!--  -->
 	</div><!-- .compartilhe-sidebar -->
-	
+
 	<div class="outros-projetos">
-		
+
 			<h2 class="fonte-roxa"><?php echo __('[:en]Other projects:[:pb]Outros projetos:[:]'); ?></h2>
 			<div class="setas-outros">
 			<a id="prev3" href="#"><div class="seta-outros-anteriores">
@@ -36,9 +52,9 @@
 			<a id="next3" href="#"><div class="seta-outros-posteriores">
 			</div></a><!-- .seta-outros-posteriores -->
 			</div><!-- setas-outros -->
-		
+
 		<div class="outros-slider">
-		
+
 			<div class="list_carousel">
 				<ul id="foo3">
 					<?php
@@ -46,7 +62,7 @@
 					$query = new WP_Query( array( 'post_type' => 'portfolio', 'orderby' => 'rand', 'post__not_in' => $esse_id ) );
 
 					if ( $query->have_posts() ) : ?>
-						   <?php while ( $query->have_posts() ) : $query->the_post(); ?> 				
+						   <?php while ( $query->have_posts() ) : $query->the_post(); ?>
 					<li>
                     <a class="a-outro" href="<?php the_permalink(); ?>">
 					<div class="cada-outro-projeto">
@@ -56,7 +72,7 @@
 						} else { ?>
 						<img src="<?php echo get_stylesheet_directory_uri(); ?>/images/default-outros-<?php echo mt_rand(1,3); ?>.jpg" alt="<?php the_title(); ?>" />
 						<?php } ?>
-                        
+
 					</div><!-- .cada-outro-projeto -->
 					<div class="titulo-outros-projetos">
 					 <?php the_title(); ?><br />
@@ -70,7 +86,7 @@
 								<?php }	?>
 					<span class="data-cada-outro-projeto"><?php the_time( 'Y' ); ?></span>
 					</div><!-- .titulo-outros-projetos -->
-                    </a><!-- .a-outro  -->		
+                    </a><!-- .a-outro  -->
 					</li>
 				   <?php endwhile; wp_reset_postdata(); ?>
 				   <!-- show pagination here -->
@@ -78,13 +94,14 @@
 						   <!-- show 404 error here -->
 					<?php endif; ?>
 				</ul>
-				
+
 				<?php wp_reset_query(); // reset query ?>
 				<div class="clearfix"></div>
-					
+
 			</div> <!-- .list_carrousel -->
-					
+
 
 		</div><!-- .outros-slider -->
-		
+
 	</div><!-- .outros-projetos -->
+</div>

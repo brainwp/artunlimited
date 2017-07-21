@@ -144,7 +144,7 @@ get_header('homeaba'); ?>
 	
 			<div class="header-sub-content">
 			    <div class="titulo-header-noticias">
-			    	<h2><?php echo $noticias->post_title; ?></h2><span><a href="<?php echo home_url('index.php/noticias'); ?>">Ver todas</a></span>
+			    	<h2><?php echo $noticias->post_title; ?></h2><span><a href="<?php echo get_home_url('index.php/noticias'); ?>">Ver todas</a></span>
 			    </div>
 			</div><!-- .header-sub-content -->
 
