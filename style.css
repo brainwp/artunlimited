@@ -3141,6 +3141,26 @@ a.slide-out-div.archive-portfolio {
 	display: none;
 }
 
+
+/* = Portfolio Anchor menu styles
+----------------------------------------------- */
+
+ul.sections {
+    display: inline-flex;
+}
+
+ul.sections li {
+    padding: 7px 7px;
+    margin-right: 5px;
+    background-color: #4d449b;
+    color: #FFF;
+    border-radius: 5px;
+}
+
+ul.sections li a {
+    color: #FFF;
+}
+
 /* =Responsive Structure
 
 ----------------------------------------------- */
