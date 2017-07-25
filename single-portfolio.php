@@ -97,7 +97,7 @@ get_header( 'portfolio' ); ?>
 				<?php $graphic = get_post_meta( get_the_ID(), 'portfolio_graphic', true );?>
 				<?php if ( $graphic && ! empty( explode( ',', $graphic ) ) ) :?>
 					<h2 class="fonte-roxa">
-						<?php _e( '[:en]Graphic Design:[:pb]Material Gráfico:[:]' ); ?>
+						<?php _e( '[:en]Graphic:[:pb]Gráfico:[:]' ); ?>
 					</h2><!-- .fonte-roxa -->
 					<?php $value = '[gallery ids="%s" type="square"]';?>
 					<?php $value = sprintf( $value, $graphic );?>
