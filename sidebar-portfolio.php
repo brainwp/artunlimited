@@ -15,7 +15,7 @@
 		?>
 	</div><!-- #linguas -->
 	<div id="menu-items">
-		<h2 class="fonte-roxa"><?php echo __('[:en]Navegue no conteúdo[:pb]Browse content[:]'); ?></h2>
+		<h2 class="fonte-roxa"><?php echo __('[:pb]Navegue no conteúdo[:en]Browse content[:]'); ?></h2>
 		<ul class="sections">
 			<li>
 				<a href="#slider-portfolio">
