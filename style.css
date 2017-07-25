@@ -2802,6 +2802,10 @@ a.titulo-resumo {
 	text-align:center;
 }
 
+.attachment .hentry {
+    width: 93%;
+}
+
 .entry-content img.wp-smiley,
 
 .comment-content img.wp-smiley {
@@ -3063,6 +3067,35 @@ a.zilla-button.blue:hover {
     text-align: left !important;
 }
 
+/* = FooGallery Styles
+
+----------------------------------------------- */
+
+.foogallery-image-viewer .foogallery-caption {
+    bottom: 0px;
+    background: rgba(0,0,0,0.8);
+}
+
+
+/* = JetPack Carousel Styles
+
+----------------------------------------------- */
+
+.jp-carousel-image-meta {
+	display:none;
+}
+
+#jp-carousel-comment-form {
+	display:none;
+}
+
+.jp-carousel-comments {	
+	display:none;
+}
+
+#jp-carousel-comments-loading {
+	display:none;
+}
 
 /* Aba Portfolio
 ----------------------------------------------- */
@@ -3106,6 +3139,26 @@ a.slide-out-div.archive-portfolio {
 
 .jp-carousel-left-column-wrapper {
 	display: none;
+}
+
+
+/* = Portfolio Anchor menu styles
+----------------------------------------------- */
+
+ul.sections {
+    display: inline-flex;
+}
+
+ul.sections li {
+    padding: 7px 7px;
+    margin-right: 5px;
+    background-color: #4d449b;
+    color: #FFF;
+    border-radius: 5px;
+}
+
+ul.sections li a {
+    color: #FFF;
 }
 
 /* =Responsive Structure

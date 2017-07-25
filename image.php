@@ -23,8 +23,10 @@ get_header( 'sem-aba' );
 									);
 								?>
 						</div>
-						<div class="nav-previous"><?php previous_image_link( false, __( '<span class="meta-nav">&larr;</span> Anterior', 'artunlimited' ) ); ?></div>
-						<div class="nav-next"><?php next_image_link( false, __( 'Próximo <span class="meta-nav">&rarr;</span>', 'artunlimited' ) ); ?></div>
+						<div class="nav-previous"><?php previous_image_link( false, __( '<span class="meta-nav">&larr;</span> Anterior', 'artunlimited' ) ); ?>
+						</div>
+						<div class="nav-next"><?php next_image_link( false, __( 'Próximo <span class="meta-nav">&rarr;</span>', 'artunlimited' ) ); ?>
+						</div>
 					</nav><!-- #image-navigation -->
 				</header><!-- .entry-header -->
 
