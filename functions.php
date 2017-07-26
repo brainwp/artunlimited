@@ -417,6 +417,9 @@ function artunlimited_add_cmb2_fields(){
 		'id'   => '_portfolio_videos',
 		'type' => 'oembed',
 		'repeatable' => true,
+		'options' => array(
+ 			'add_row_text' => 'Adicionar Vídeo'
+		)
 	) );
 }
 add_action( 'cmb2_admin_init','artunlimited_add_cmb2_fields' );
