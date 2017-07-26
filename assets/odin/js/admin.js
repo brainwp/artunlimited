@@ -227,8 +227,6 @@
 			$( '#post-body-content ul.qtranxs-lang-switch-wrap:first-child' ).remove();
 			$( '#qtranxs-meta-box-lsb' ).remove();
 			$( '#post-body-content ul.qtranxs-lang-switch-wrap:last-child' ).remove();
-
-			$( '.cmb-type-oembed .cmb-add-row' ).insertAfter( '.cmb-type-oembed .cmb-th label' ).css( 'margin', '1em 0' );
 		});
 	});
 
