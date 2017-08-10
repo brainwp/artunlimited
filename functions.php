@@ -376,11 +376,18 @@ $portfolio_metabox->set_fields(
             'description' => ''
         ),
         array(
+            'id'          => 'portfolio_graphic_content',
+            'label'       => 'Area de Material gráfico - Texto',
+            'type'        => 'editor',
+            'description' => ''
+        ),
+        array(
             'id'          => 'portfolio_graphic',
-            'label'       => 'Area de Material gráfico',
+            'label'       => 'Area de Material gráfico - Imagens',
             'type'        => 'image_plupload',
             'description' => ''
         ),
+
         array(
             'id'          => 'portfolio_clipping',
             'label'       => 'Area de clipping',

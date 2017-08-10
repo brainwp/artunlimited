@@ -220,7 +220,7 @@
 				return;
 			}
 			$( '#metabox-portfolio' ).insertBefore( '#postdivrich' );
-			$( '#portfolio_metabox' ).insertAfter( '#postdivrich' ).css( 'margin-top', '20px' );
+			//$( '#portfolio_metabox' ).insertAfter( '#postdivrich' ).css( 'margin-top', '20px' );
 			$( '#__portfolio_sections' ).insertAfter( '#portfolio_metabox' ).css( 'margin-top', '20px' );
 			$( '.cmb-td' ).css( 'width', '100%' );
 			$( '.cmb-th' ).css( 'width', '100%' );
