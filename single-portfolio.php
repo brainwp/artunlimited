@@ -107,8 +107,13 @@ get_header( 'portfolio' ); ?>
 				<?php $graphic = get_post_meta( get_the_ID(), 'portfolio_graphic', true );?>
 				<?php if ( $graphic && ! empty( explode( ',', $graphic ) ) ) :?>
 					<h2 class="fonte-roxa">
-						<?php _e( '[:en]Graphic:[:pb]Gráfico:[:]' ); ?>
+						<?php _e( '[:en]Graphic:[:pb]Material Gráfico:[:]' ); ?>
 					</h2><!-- .fonte-roxa -->
+					<?php $content_value = get_post_meta( get_the_ID(), 'portfolio_graphic_content', true ); ?>
+					<?php if ( ! $content_value || ! is_string( $content_value) ) {
+						$content_value = '';
+					}?>
+					<?php echo apply_filters( 'the_content', $content_value );?>
 					<?php $value = '[gallery ids="%s" type="square"]';?>
 					<?php $value = sprintf( $value, $graphic );?>
 					<?php echo apply_filters( 'the_content', $value );?>
