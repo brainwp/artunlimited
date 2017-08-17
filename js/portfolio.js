@@ -452,7 +452,9 @@ jQuery(function($) {
 			if ( $( this ).children( 'span' ).length > 0 ) {
 				var name = $( this ).children( 'span' ).html();
 			}
-
+			if ( $( this ).attr( 'data-text') ) {
+				var name = $( this ).attr( 'data-text' );
+			}
 			var name = name.replace( ':', '' );
 			var id = name.replace(/\s/g,'');
 			var html = '<li><a href="#' + id + '">' + name + '</a></li>';
