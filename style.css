@@ -125,6 +125,11 @@ body {
 	color: #4d449b;
 }
 
+.fonte-branca {
+	color: #FFF;
+}
+
+
 body.no-scroll {
     overflow: hidden;
 }
@@ -934,7 +939,7 @@ nav select {
 
 #linguas {
 	width: 60px;
-	margin: 38px 5px 0 0;
+	margin: 20px 5px 0 10px;
     float: right;
 }
 
@@ -2626,7 +2631,22 @@ a.titulo-resumo {
 .direita-single-portfolio {
 	float: left;
 	width: 350px;
-	margin: 0 0 0 5%;
+	margin: -5% 0 0 5%;
+}
+
+#menu-items {
+    background-color: #4D449D;
+	padding: 0;
+	width: 123%;
+}
+
+#menu-items h2.fonte-branca {
+	padding-left: 10px;
+}
+
+.menu-items-content {
+	margin: 0;
+	padding: 1em 0 1em 0em;
 }
 
 .compartilhe-sidebar {
@@ -2657,7 +2677,7 @@ a.titulo-resumo {
 .outros-projetos {
 	width: 350px;
 	overflow: hidden;
-	margin-top: 1.5em;
+	margin: 1.5em 0 0 10px;
 }
 
 .setas-outros {
@@ -3150,15 +3170,18 @@ ul.sections {
 }
 
 ul.sections li {
-    padding: 7px 7px;
+    padding: 10px 0px;
     margin-right: 5px;
-    background-color: #4d449b;
     color: #FFF;
-    border-radius: 5px;
+}
+
+ul.sections li:hover {
+	background-color: #3B289F
 }
 
 ul.sections li a {
     color: #FFF;
+    padding: 0 10px;
 }
 
 /* =Responsive Structure
@@ -3451,8 +3474,17 @@ ul.sections li a {
 	    min-height: 295px;
 	}
 
-	#sidebar {
-	display: none;
+	#menu-items {
+		display: none;
+	}
+
+	.esquerda-title-single-portfolio {
+    width: 80%;
+	}
+
+	.creditos-portfolio {
+    margin-right: 20px;
+    margin-left: 5%;
 	}
 
 	#primary {
@@ -3631,6 +3663,10 @@ ul.sections li a {
 
 	#linguas {
     margin: 10px 20px 0 0;
+	}
+
+	.outros-projetos {
+    margin: 1.5em 0 0 0px;
 	}
 
 	.area-4-header {

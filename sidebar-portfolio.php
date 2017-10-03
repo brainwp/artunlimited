@@ -6,7 +6,26 @@
  */
 ?>
 <div class="fixed-sidebar">
-    <div id="linguas">
+	<div id="menu-items">
+		<div class="menu-items-content">
+			<h2 class="fonte-branca"><?php echo __('[:pb]Navegue no conteúdo[:en]Browse content[:]'); ?></h2>
+			<ul class="sections">
+				<li>
+					<a href="#slider-portfolio">
+						<?php echo __('[:en]Photos[:pb]Fotos[:]');?>
+					</a>
+				</li>
+				<li>
+					<a href="#the-content">
+						<?php echo __('[:en]About[:pb]Sobre[:]');?>
+					</a>
+				</li>
+
+			</ul><!-- .sections -->
+		</div>
+	</div><!-- #menu-items -->
+
+	<div id="linguas">
 	    <h2 class="fonte-roxa"><?php echo __('[:en]Choose language[:pb]Escolha o Idioma[:]'); ?></h2>
 	    <?php
 	    	if (function_exists('dynamic_sidebar')) {
@@ -14,33 +33,6 @@
 			}
 		?>
 	</div><!-- #linguas -->
-	<div id="menu-items">
-		<h2 class="fonte-roxa"><?php echo __('[:pb]Navegue no conteúdo[:en]Browse content[:]'); ?></h2>
-		<ul class="sections">
-			<li>
-				<a href="#slider-portfolio">
-					<?php echo __('[:en]Photos[:pb]Fotos[:]');?>
-				</a>
-			</li>
-			<li>
-				<a href="#the-content">
-					<?php echo __('[:en]About[:pb]Sobre[:]');?>
-				</a>
-			</li>
-
-		</ul><!-- .sections -->
-	</div><!-- #menu-items -->
-	<div class="compartilhe-sidebar">
-		<h2 class="fonte-roxa"><?php echo __('[:en]Share![:pb]Compartilhe![:]'); ?></h2>
-		<div class="compartilhe-sidebar-facebook">
-			<a class="a-compartilhe" href="<?php the_permalink() ?>?share=facebook&nb=1" target="_blank"></a>
-		</div><!-- .compartilhe-sidebar-facebook -->
-		<div class="compartilhe-sidebar-email">
-			<a class="a-compartilhe" href="mailto:<?php echo get_option( 'mo_email' ); ?>" target="_blank"></a>
-		</div><!-- .compartilhe-sidebar-email -->
-		<div class="">
-		</div><!--  -->
-	</div><!-- .compartilhe-sidebar -->
 
 	<div class="outros-projetos">
 
@@ -104,4 +96,5 @@
 		</div><!-- .outros-slider -->
 
 	</div><!-- .outros-projetos -->
+
 </div>
