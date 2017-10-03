@@ -138,7 +138,7 @@ get_header( 'home' ); ?>
 	
 			<div class="header-sub-content">
 			    <div class="titulo-header-noticias">
-			    	<h2><?php echo apply_filters('the_title',$noticias->post_title); ?></h2><span><a href="<?php echo get_home_url('index.php/noticias'); ?>"><?php echo __('[:en]See all[:pb]Ver todas[:]');?></a></span>
+			    	<h2><?php echo apply_filters('the_title',$noticias->post_title); ?></h2><span><a href="<?php echo get_home_url('/noticias'); ?>"><?php echo __('[:en]See all[:pb]Ver todas[:]');?></a></span>
 			    </div>
 			</div><!-- .header-sub-content -->
 

@@ -128,7 +128,7 @@
 		</nav><!-- #site-navigation -->
 
 	<div class="botao-portfolio-menu">
-		<a class="etiqueta-barra-botao-portfolio-menu" href="<?php echo get_home_url('index.php/portfolio'); ?>">
+		<a class="etiqueta-barra-botao-portfolio-menu" href="<?php echo get_home_url('/portfolio'); ?>">
 		</a>
 	</div>
         

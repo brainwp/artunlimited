@@ -31,7 +31,7 @@ function redireciona_login( $redirect_to, $request, $user ) {
         if ( in_array( 'parceiro', $user->roles ) ) 
         {
 
-            return get_home_url( ).'/index.php/projetos';
+            return get_home_url( ).'/projetos';
         }
     }
 
@@ -51,7 +51,7 @@ function tira_do_admin()
     global $current_user;
     wp_get_current_user();
  	if ( in_array( 'parceiro', $current_user->roles )  && ! defined( 'DOING_AJAX' ) ) {
-         wp_redirect( get_home_url().'/index.php/projetos' ); exit;
+         wp_redirect( get_home_url().'/projetos' ); exit;
 
     }
 }

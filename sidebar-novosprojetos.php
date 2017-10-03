@@ -13,7 +13,7 @@
 				} 
 			?>
 			<br>
-	    <a class="a-etiqueta" href="<?php echo home_url('index.php/projetos/'); ?>"><h3>Voltar</h3></a>
+	    <a class="a-etiqueta" href="<?php echo home_url('/projetos'); ?>"><h3>Voltar</h3></a>
 
 	</div><!-- #linguas -->
 
