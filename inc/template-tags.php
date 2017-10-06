@@ -115,7 +115,7 @@ if ( ! function_exists( 'artunlimited_the_attached_image' ) ) :
  */
 function artunlimited_the_attached_image() {
 	$post                = get_post();
-	$attachment_size     = apply_filters( 'artunlimited_attachment_size', array( 1200, 1200 ) );
+	$attachment_size     = apply_filters( 'artunlimited_attachment_size', 'full' );
 	$next_attachment_url = wp_get_attachment_url();
 
 	/**
@@ -150,7 +150,7 @@ function artunlimited_the_attached_image() {
 			$next_attachment_url = get_attachment_link( $attachments[0]->ID );
 	}
 
-	printf( '<a href="%1$s" title="%2$s" rel="attachment">%3$s</a>',
+	printf( '<div alt="%1$s" title="%2$s" rel="attachment">%3$s</div>',
 		esc_url( $next_attachment_url ),
 		the_title_attribute( array( 'echo' => false ) ),
 		wp_get_attachment_image( $post->ID, $attachment_size )
