@@ -939,7 +939,7 @@ nav select {
 
 #linguas {
 	width: 60px;
-	margin: 20px 5px 0 10px;
+	margin: 25px 5px 0 10px;
     float: right;
 }
 
@@ -1022,7 +1022,7 @@ li.lang-pb .active {
 	width: 150px;
 	height: auto;
 	overflow: hidden;
-	margin: 33px 0 0 5px;
+	margin: 21px 0 0 5px;
 	float:left;
 }
 
