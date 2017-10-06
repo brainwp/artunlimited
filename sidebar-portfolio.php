@@ -8,7 +8,7 @@
 <div class="fixed-sidebar">
 	<div id="menu-items">
 		<div class="menu-items-content">
-			<h2 class="fonte-branca"><?php echo __('[:pb]Navegue no conteúdo[:en]Browse content[:]'); ?></h2>
+			<h2 class="fonte-branca"><?php echo __('[:pb]Navegue pelo conteúdo[:en]Browse content[:]'); ?></h2>
 			<ul class="sections">
 				<li>
 					<a href="#slider-portfolio">
