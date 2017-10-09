@@ -23,6 +23,14 @@ font-family: 'Gentium Book Basic', Times, serif;
 
 */
 
+
+/* =Hide News from home
+-------------------------------------------------------------- */
+
+div#nav-noticias {
+    display: none;
+}
+
 /* =Reset
 -------------------------------------------------------------- */
 html, body, div, span, applet, object, iframe,

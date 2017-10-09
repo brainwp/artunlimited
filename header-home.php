@@ -133,7 +133,7 @@
 					<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-30" id="menu-item-1327"><a href="<?php echo home_url('index.php/portfolio'); ?>"><?php echo __('[:en]Portfolio[:pb]Portf&oacute;lio[:]'); ?></a></li>
 					<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-30" id="menu-item-30"><a href="javascript:scroll_to('#nav-premios');"><?php echo __('[:en]Awards[:pb]Pr&ecirc;mios[:]'); ?></a></li>
 					<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-28" id="menu-item-28"><a href="javascript:scroll_to('#nav-clientes-parceiros');"><?php echo __('[:en]Clients and partners[:pb]Clientes e Parceiros[:]'); ?></a></li>
-					<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-288" id="menu-item-288"><a href="javascript:scroll_to('#nav-noticias');"><?php echo __('[:en]News[:pb]Not&iacute;cias[:]'); ?></a></li>
+					<!-- <li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-288" id="menu-item-288"><a href="javascript:scroll_to('#nav-noticias');"><?php // echo __('[:en]News[:pb]Not&iacute;cias[:]'); ?></a></li> -->
 					<li class="last-menu-item menu-item menu-item-type-post_type menu-item-object-page menu-item-29" id="menu-item-29"><a href="javascript:scroll_to('#nav-contatos');"><?php echo __('[:en]Contact[:pb]Contatos[:]'); ?></a></li>
 				</ul>
 		
