@@ -224,7 +224,6 @@
 			$( '#__portfolio_sections' ).insertAfter( '#portfolio_metabox' ).css( 'margin-top', '20px' );
 			$( '.cmb-td' ).css( 'width', '100%' );
 			$( '.cmb-th' ).css( 'width', '100%' );
-			$( '#post-body-content ul.qtranxs-lang-switch-wrap:first-child' ).remove();
 			$( '#qtranxs-meta-box-lsb' ).remove();
 			$( '#post-body-content ul.qtranxs-lang-switch-wrap:last-child' ).remove();
 		});
