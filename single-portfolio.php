@@ -106,7 +106,7 @@ get_header( 'portfolio' ); ?>
 
 				<?php $graphic = get_post_meta( get_the_ID(), 'portfolio_graphic', true );?>
 				<?php if ( $graphic && ! empty( explode( ',', $graphic ) ) ) :?>
-					<h2 class="fonte-roxa" data-text="<?php _e( '[:en]Graphic:[:pb]Gráfico:[:]' );?>">
+					<h2 class="fonte-roxa" data-text="<?php _e( '[:en]Graphic Design:[:pb] Design Gráfico:[:]' );?>">
 						<?php _e( '[:en]Graphic Design:[:pb]Material Gráfico:[:]' ); ?>
 					</h2><!-- .fonte-roxa -->
 					<?php $content_value = get_post_meta( get_the_ID(), 'portfolio_graphic_content', true ); ?>
