@@ -44,7 +44,7 @@ function create_post_type_novosprojetos() {
 	    'has_archive' => true,
 	    'hierarchical' => true,
 	    'menu_position' => null,
-	    'supports' => array('title','editor','thumbnail')
+	    'supports' => array('title','editor','thumbnail','revisions')
 		)    );
 
 	flush_rewrite_rules();}
