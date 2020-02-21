@@ -193,7 +193,7 @@ get_header( 'home' ); ?>
         <div class="sub-content" id="nav-contatos">
 
    			<div class="thumb-sub-content-direita" id="contato-mapa">
-            	<?php echo do_shortcode(''); ?>
+            	<?php echo do_shortcode('[wpgmza id="1"]'); ?>
             </div><!-- .thumb-sub-content-direita -->
 
         	<div class="center-content">
@@ -218,7 +218,7 @@ get_header( 'home' ); ?>
 									
 						<div class="clear"></div>
 
-						<?php get_sidebar('contatohome'); ?>
+						<?php // get_sidebar('contatohome'); ?>
 						
 			        </div><!-- .content-contatos -->
 			
