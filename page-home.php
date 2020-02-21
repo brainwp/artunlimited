@@ -50,31 +50,6 @@ get_header( 'home' ); ?>
     </div><!-- .center-content -->
     </div><!-- .sub-content -->
 <!-- Final Quem Somos -->
-
-<!-- Prêmios -->
-    <div class="sub-content" id="nav-premios">
-
-    	<div class="center-content">
-	        <?php
-		        $premios = get_page_by_slug( 'premios' );
-	    	    $content_premios = apply_filters('the_content', $premios->post_content);
-	        ?>
-
-			<div class="header-sub-content">
-				
-				<div class="titulo-header"><h2><?php echo apply_filters('the_title',$premios->post_title); ?></h2></div>
-			</div>
-							  
-			<div class="content-premios">
-	        	<?php echo $content_premios; ?>
-	        </div><!-- .content-premios -->
-    	</div><!-- .center-content -->
-            
-    </div><!-- .sub-content -->
-      
-<!-- slider container -->
-<!-- Final Prêmios -->
-    
 <!-- Clientes e Parceiros -->
 
 	<div class="sub-content" id="nav-clientes-parceiros">
@@ -127,8 +102,29 @@ get_header( 'home' ); ?>
 
 	</div><!-- .sub-content -->
 <!-- Final Clientes e Parceiros -->
-    
-    
+<!-- Prêmios -->
+    <div class="sub-content" id="nav-premios">
+
+    	<div class="center-content">
+	        <?php
+		        $premios = get_page_by_slug( 'premios' );
+	    	    $content_premios = apply_filters('the_content', $premios->post_content);
+	        ?>
+
+			<div class="header-sub-content">
+				
+				<div class="titulo-header"><h2><?php echo apply_filters('the_title',$premios->post_title); ?></h2></div>
+			</div>
+							  
+			<div class="content-premios">
+	        	<?php echo $content_premios; ?>
+	        </div><!-- .content-premios -->
+    	</div><!-- .center-content -->
+            
+    </div><!-- .sub-content -->
+      
+<!-- slider container -->
+<!-- Final Prêmios --> 
 <!-- Notícias -->
 	<div class="sub-content" id="nav-noticias">
 	
@@ -192,13 +188,12 @@ get_header( 'home' ); ?>
 
     </div><!-- .sub-content -->
 <!-- Final Notícias -->
-
-   	<!-- Contatos -->
+<!-- Contatos -->
 	
         <div class="sub-content" id="nav-contatos">
 
    			<div class="thumb-sub-content-direita" id="contato-mapa">
-            	<?php echo do_shortcode('[google-map-sc id="22" width="280" height="960" margin="0" zoom="15"]'); ?>
+            	<?php echo do_shortcode(''); ?>
             </div><!-- .thumb-sub-content-direita -->
 
         	<div class="center-content">
