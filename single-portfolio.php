@@ -128,6 +128,11 @@ get_header( 'portfolio' ); ?>
 					<?php $value = sprintf( $value, $clipping );?>
 					<?php echo apply_filters( 'the_content', $value );?>
 				<?php endif;?>
+				<?php $content_value_2 = get_post_meta( get_the_ID(), 'portfolio_clipping_content', true ); ?>
+					<?php if ( ! $content_value_2 || ! is_string( $content_value_2) ) {
+						$content_value_2 = '';
+					}?>
+					<?php echo apply_filters( 'the_content', $content_value_2 );?>
 
 				<?php
 				wp_link_pages( array(
