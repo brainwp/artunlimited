@@ -217,6 +217,8 @@ get_header( 'home' ); ?>
 						<?php echo $content_contatos; ?>
 									
 						<div class="clear"></div>
+
+						<?php // get_sidebar('contatohome'); ?>
 						
 			        </div><!-- .content-contatos -->
 			
