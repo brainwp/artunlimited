@@ -4,8 +4,8 @@
 get_header( 'home' ); ?>
  
 <div id="slider">
-
-	<?php echo do_shortcode( '[orbit-slider]' );?>
+	 <?php echo do_shortcode('[smartslider3 slider="2"]');
+?> 
 
 </div><!-- #slider -->
 	
@@ -193,8 +193,8 @@ get_header( 'home' ); ?>
         <div class="sub-content" id="nav-contatos">
 
    			<div class="thumb-sub-content-direita" id="contato-mapa">
-            	<?php echo do_shortcode('[wpgmza id="1"]'); ?>
-            </div><!-- .thumb-sub-content-direita -->
+            	<div class="map_static"></div>
+            		</div><!-- .map-sub-content-direita -->
 
         	<div class="center-content">
 

@@ -1434,6 +1434,10 @@ div.slider-nav span.right {
 	width: 100%;
 	}
 
+div#n2-ss-2 .nextend-arrow {
+    margin-right: 50px;
+}
+
 /* =Slider Single
 ----------------------------------------------- */
 #slider-portfolio {
@@ -1698,10 +1702,6 @@ height: 70px;
 	overflow: hidden;
 }
 
-.thumb-sub-content-direita img {
-height: 100%;
-}
-
 .texto-sub-content {
 	width: 75%;
 	max-width: 650px;
@@ -1891,6 +1891,12 @@ height: 100%;
     float: left;
     margin: 20px auto ;
     width: 100%;
+}
+
+@media (max-width:740px) {
+	.content-clientes {
+		display: none;
+	}
 }
 
 .imagens-cliente {
@@ -3191,6 +3197,24 @@ ul.sections li:hover {
 ul.sections li a {
     color: #FFF;
     padding: 0 10px;
+}
+
+.map_static {
+	background: url("images/static-map-artun.png") no-repeat scroll -192px top transparent;
+	width: 280px;
+	height: 600px;
+	position: absolute;
+	margin: 0 auto;
+	overflow: hidden;
+}
+}
+
+.seta-premios {
+	width: 56px;
+	margin: 55px 0 0 40px;
+	float: left;
+	height: 56px;
+
 }
 
 /* =Responsive Structure
